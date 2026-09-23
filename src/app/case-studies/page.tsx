@@ -167,12 +167,12 @@ export default function CaseStudiesPage() {
               >
                 <div>
                   {/* Visual Header with Image & Live Badges */}
-                  <div className="h-44 relative overflow-hidden bg-neutral-100 dark:bg-black">
+                  <div className="h-48 relative overflow-hidden bg-neutral-100 dark:bg-black border-b border-neutral-200 dark:border-white/10">
                     <div 
-                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 opacity-90 dark:opacity-60"
+                      className="absolute inset-0 bg-cover bg-top transition-transform duration-500 group-hover:scale-105 opacity-100"
                       style={{ backgroundImage: `url(${cs.heroImage})` }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-black/10 dark:from-[#0F0F11] dark:via-[#0F0F11]/50 dark:to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
                     
                     {/* Top Badges */}
                     <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between">

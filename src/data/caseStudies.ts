@@ -42,7 +42,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     service: 'Web',
     liveUrl: 'https://rahulbkavaleandco.com/',
     summary: 'Architected a 100% Lighthouse-scoring corporate website for a premier professional services firm, generating a 35% increase in verified inbound client inquiries.',
-    heroImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop',
+    heroImage: '/images/case-studies/rahul-b-kavale.jpg',
     accentColor: '#06b6d4',
     tags: ['Next.js', 'Tailwind CSS', 'Vercel', 'TypeScript', 'Secure Forms'],
     metrics: [
@@ -76,7 +76,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     service: 'Web',
     liveUrl: 'https://yashodeep-agro.vercel.app/',
     summary: 'Developed a dynamic agri-tech platform modernizing agricultural commerce with ultra-responsive mobile accessibility for farmers and distributors across Maharashtra.',
-    heroImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop',
+    heroImage: '/images/case-studies/yashodeep-agro.jpg',
     accentColor: '#10b981',
     tags: ['React', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
     metrics: [
@@ -110,7 +110,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     service: 'SaaS',
     liveUrl: 'https://dairy-flow-pro.vercel.app/',
     summary: 'Engineered an end-to-end multi-tenant dairy ERP SaaS with real-time milk collection metrics, automated fat/SNF billing, and sub-second tabular query times.',
-    heroImage: 'https://images.unsplash.com/photo-1527153857715-3908f2ae5e81?q=80&w=1200&auto=format&fit=crop',
+    heroImage: '/images/case-studies/dairy-flow-pro.jpg',
     accentColor: '#3b82f6',
     tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
     metrics: [
@@ -144,7 +144,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     service: 'Web',
     liveUrl: 'https://santosh-phadtare.vercel.app/',
     summary: 'Engineered a centralized political engagement portal mobilizing grassroots workers, digitizing 1,000+ volunteers, and guaranteeing 99.99% uptime during major announcements.',
-    heroImage: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop',
+    heroImage: '/images/case-studies/santosh-phadtare.jpg',
     accentColor: '#f59e0b',
     tags: ['Next.js', 'Firebase', 'Tailwind CSS', 'Vercel Edge Network'],
 
@@ -175,7 +175,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     service: 'Web',
     liveUrl: 'https://trustcarrylogistics.vercel.app/',
     summary: 'Engineered an interactive fleet and shipment tracking portal driving a 25% surge in B2B inquiries and a 30% decline in repetitive status inquiry calls.',
-    heroImage: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop',
+    heroImage: '/images/case-studies/trust-carry.jpg',
     accentColor: '#6366f1',
     tags: ['Next.js', 'Node.js', 'MongoDB', 'Mapbox API', 'Vercel'],
     metrics: [
@@ -210,7 +210,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     service: 'Web',
     liveUrl: 'https://shivsena-sangola.vercel.app/',
     summary: 'Architected a mobile-first SSG campaign portal with local Development Tracker, sub-1.5s 3G speeds, and zero server degradation during viral traffic spikes.',
-    heroImage: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=1200&auto=format&fit=crop',
+    heroImage: '/images/case-studies/shivsena-sangola.jpg',
     accentColor: '#ea580c',
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel Edge Functions'],
     metrics: [
@@ -245,7 +245,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     service: 'Web',
     liveUrl: 'https://pasarnikar-payal-amit.vercel.app/',
     summary: 'Designed an animation-rich personal branding hub and spokesperson portal centralizing media appearances, ideological journey, and high-converting supporter signups.',
-    heroImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop',
+    heroImage: '/images/case-studies/pasarnikar-payal-amit.jpg',
     accentColor: '#ec4899',
     tags: ['Next.js', 'Framer Motion', 'Tailwind CSS', 'Vercel', 'TypeScript'],
     metrics: [

@@ -79,25 +79,6 @@ export default function HomePage() {
           </a>
         </div>
 
-        {/* Real Commercial Guarantees */}
-        <div className="mt-12 pt-8 border-t border-slate-100 dark:border-white/10 flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-            <span>100% GitHub Code Ownership (Day 1)</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-            <span>18% GST Compliant Tax Invoices</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-            <span>Direct WhatsApp Group with Developers</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-            <span>Working Code Every Friday</span>
-          </div>
-        </div>
 
       </section>
 
@@ -413,18 +394,13 @@ export default function HomePage() {
             >
               <div>
                 {/* Visual Header */}
-                <div className="h-44 rounded-2xl overflow-hidden relative mb-5 bg-slate-100">
+                <div className="h-48 rounded-2xl overflow-hidden relative mb-5 bg-slate-100 border border-slate-200/80 dark:border-white/10">
                   <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                    className="absolute inset-0 bg-cover bg-top transition-transform duration-500 group-hover:scale-105"
                     style={{ backgroundImage: `url(${cs.heroImage})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-                  
-                  <div className="absolute top-3 left-3">
-                    <span className="text-[11px] font-mono font-bold px-3 py-1 rounded-full bg-white/95 text-slate-900 shadow-xs">
-                      {cs.category}
-                    </span>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-black/20" />
+
 
                   <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-xs text-white font-medium">
                     <MapPin className="w-3.5 h-3.5 text-emerald-400" />
