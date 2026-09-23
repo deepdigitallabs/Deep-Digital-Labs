@@ -224,30 +224,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
           {/* Tech Stack & Testimonial */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="space-y-1">
-              <span className="text-xs font-mono uppercase tracking-widest text-slate-500 dark:text-gray-400 font-bold">
-                Production Tooling
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
-                Technologies Used
-              </h2>
-            </div>
 
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 dark:bg-[#0F0F11] dark:border-white/10 space-y-3 shadow-xs">
-              <p className="text-xs text-slate-600 dark:text-gray-400">
-                Core technologies chosen for this implementation:
-              </p>
-              <div className="flex flex-wrap gap-2 pt-2">
-                {cs.techStack.map((tech) => (
-                  <span 
-                    key={tech}
-                    className="px-3 py-1.5 rounded-lg text-xs font-mono bg-white border border-slate-200 text-slate-700 dark:bg-white/5 dark:border-white/10 dark:text-gray-200 shadow-xs"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
 
             {/* Testimonial Quote */}
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 dark:bg-[#0F0F11] dark:border-white/10 relative shadow-xs">

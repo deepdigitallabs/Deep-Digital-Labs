@@ -40,42 +40,42 @@ export default function HomePage() {
           <span>Pune Engineering Studio • Serving Businesses Pan-India</span>
         </div>
 
-        {/* Headline: Display Font, High Contrast, Impactful */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12] max-w-4xl mx-auto font-display">
-          We Build Custom Software, Mobile Apps &amp; Websites for <span className="underline decoration-emerald-500/50 underline-offset-8">Indian Businesses</span>.
+        {/* Headline: Proportionate, Clean, Elegant */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.18] max-w-3xl mx-auto font-display">
+          We Build Custom Software, Mobile Apps &amp; Websites for <span className="underline decoration-emerald-500/50 underline-offset-6">Indian Businesses</span>.
         </h1>
 
-        {/* Subheadline: Refined, Clear, Persuasive */}
-        <p className="mt-7 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+        {/* Subheadline: Refined, Readable Size */}
+        <p className="mt-5 text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
           No outsourced interns, no locked code repositories, and no Silicon Valley textbook jargon. We build software that solves operational bottlenecks, communicates directly over WhatsApp, and delivers working code every Friday.
         </p>
 
         {/* Action Buttons */}
-        <div className="mt-10 flex flex-col sm:flex-row gap-3.5 justify-center items-center">
+        <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
           <button
             onClick={() => setCallModalOpen(true)}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-8 py-4 rounded-full font-semibold text-base transition-all active:scale-98 shadow-sm cursor-pointer text-center"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-6 py-3 rounded-full font-semibold text-sm transition-all active:scale-98 shadow-xs cursor-pointer text-center"
           >
             <span>Book a Call</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-3.5 h-3.5" />
           </button>
           
           <a
             href="https://wa.me/919823012345?text=Hi,%20I%20want%20to%20discuss%20a%20software%20project%20for%20my%20business."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 text-white hover:bg-emerald-700 px-7 py-4 rounded-full font-semibold text-base transition-all active:scale-98 shadow-sm text-center"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 text-white hover:bg-emerald-700 px-6 py-3 rounded-full font-semibold text-sm transition-all active:scale-98 shadow-xs text-center"
           >
-            <MessageSquare className="w-4 h-4 fill-white/20" />
+            <MessageSquare className="w-3.5 h-3.5 fill-white/20" />
             <span>Chat on WhatsApp</span>
           </a>
 
           <a
             href="#work"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-slate-300 dark:border-white/15 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 px-7 py-4 rounded-full font-semibold text-base transition-all text-center"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-slate-300 dark:border-white/15 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 px-6 py-3 rounded-full font-semibold text-sm transition-all text-center"
           >
             <span>View 7 Live Projects</span>
-            <span className="text-xs bg-slate-200 dark:bg-white/10 px-2 py-0.5 rounded-full font-mono">↓</span>
+            <span className="text-[11px] bg-slate-200 dark:bg-white/10 px-1.5 py-0.2 rounded-full font-mono">↓</span>
           </a>
         </div>
 
@@ -85,22 +85,22 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* SECTION 2: VERIFIABLE STATS */}
       {/* ========================================================================= */}
-      <section className="border-y border-slate-200 bg-slate-50">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+      <section className="border-y border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.02]">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-200 dark:divide-white/10">
           {[
             { num: "7", label: "Live Client Platforms Deployed", detail: "In Maharashtra & Pan-India" },
             { num: "< 1.2s", label: "Page Load Speed", detail: "Optimized for Jio & Airtel 4G/5G" },
             { num: "100%", label: "Source Code Ownership", detail: "Transferred to client GitHub" },
             { num: "0", label: "Outsourced Freelancers", detail: "In-house Pune engineering only" }
           ].map((stat, i) => (
-            <div key={i} className="p-7 text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-slate-900 font-mono tracking-tight mb-1">
+            <div key={i} className="p-5 text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white font-mono tracking-tight mb-1">
                 {stat.num}
               </div>
-              <div className="text-xs font-bold text-slate-800 uppercase tracking-wide">
+              <div className="text-[11px] sm:text-xs font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wide">
                 {stat.label}
               </div>
-              <div className="text-[11px] text-slate-500 mt-0.5">
+              <div className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
                 {stat.detail}
               </div>
             </div>
@@ -417,17 +417,7 @@ export default function HomePage() {
                   {cs.summary}
                 </p>
 
-                {/* Tech Stack Tags */}
-                <div className="flex flex-wrap gap-1.5 mb-5">
-                  {cs.tags.slice(0, 4).map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 border border-slate-200"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+
               </div>
 
               {/* Card Footer Actions */}

@@ -176,14 +176,7 @@ export default function CaseStudiesPage() {
                     
                     {/* Top Badges */}
                     <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between">
-                      <div className="flex gap-1.5">
-                        <span className="text-[10px] font-mono uppercase font-bold px-2.5 py-0.5 rounded-full bg-white/95 dark:bg-black/80 text-neutral-900 dark:text-[#D4FF00] border border-neutral-200 dark:border-white/15 backdrop-blur-md shadow-xs">
-                          {cs.industry}
-                        </span>
-                        <span className="text-[10px] font-mono uppercase font-bold px-2 py-0.5 rounded-full bg-white/90 dark:bg-black/80 text-neutral-700 dark:text-gray-200 border border-neutral-200 dark:border-white/15 backdrop-blur-md shadow-xs">
-                          {cs.service}
-                        </span>
-                      </div>
+
 
                       {cs.liveUrl && (
                         <span className="flex items-center gap-1.5 text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 backdrop-blur-md font-bold shadow-xs">
@@ -215,22 +208,7 @@ export default function CaseStudiesPage() {
                       {cs.summary}
                     </p>
 
-                    {/* Tech Stack Chips */}
-                    <div className="flex flex-wrap gap-1 pt-1">
-                      {cs.techStack.slice(0, 4).map((tech) => (
-                        <span
-                          key={tech}
-                          className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-neutral-100 dark:bg-white/5 text-neutral-700 dark:text-gray-300 border border-neutral-200 dark:border-white/10"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                      {cs.techStack.length > 4 && (
-                        <span className="text-[10px] font-mono px-1.5 py-0.5 text-neutral-400 dark:text-gray-500">
-                          +{cs.techStack.length - 4}
-                        </span>
-                      )}
-                    </div>
+
                   </div>
                 </div>
 
