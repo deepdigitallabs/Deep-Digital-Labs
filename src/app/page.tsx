@@ -82,31 +82,7 @@ export default function HomePage() {
 
       </section>
 
-      {/* ========================================================================= */}
-      {/* SECTION 2: VERIFIABLE STATS */}
-      {/* ========================================================================= */}
-      <section className="border-y border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.02]">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-200 dark:divide-white/10">
-          {[
-            { num: "7", label: "Live Client Platforms Deployed", detail: "In Maharashtra & Pan-India" },
-            { num: "< 1.2s", label: "Page Load Speed", detail: "Optimized for Jio & Airtel 4G/5G" },
-            { num: "100%", label: "Source Code Ownership", detail: "Transferred to client GitHub" },
-            { num: "0", label: "Outsourced Freelancers", detail: "In-house Pune engineering only" }
-          ].map((stat, i) => (
-            <div key={i} className="p-5 text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white font-mono tracking-tight mb-1">
-                {stat.num}
-              </div>
-              <div className="text-[11px] sm:text-xs font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wide">
-                {stat.label}
-              </div>
-              <div className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
-                {stat.detail}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+
 
       {/* ========================================================================= */}
       {/* SECTION 3: THE 4 CORE PILLARS (CLEAN EDITORIAL BENTO GRID) */}
