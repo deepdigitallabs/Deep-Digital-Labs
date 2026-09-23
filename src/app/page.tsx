@@ -1,310 +1,529 @@
-"use client";
+'use client';
 
-import Image from "next/image";
+import React, { useState } from 'react';
+import Link from 'next/link';
 import { 
   ArrowRight, 
-  Sparkles, 
+  ExternalLink, 
+  MapPin, 
   Code2, 
-  Palette, 
-  Rocket, 
-  Layers, 
-  Zap, 
-  Globe, 
-  ShieldCheck, 
+  Smartphone, 
+  Search, 
+  Server,
   CheckCircle2, 
+  ShieldCheck, 
   MessageSquare,
-  ChevronRight,
-  TrendingUp,
-  Cpu
-} from "lucide-react";
+  Sparkles,
+  Zap,
+  Users
+} from 'lucide-react';
+import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
+import { CASE_STUDIES } from '@/data/caseStudies';
 
-export default function Home() {
-  const services = [
-    {
-      icon: <Palette className="w-6 h-6 text-cyan-400" />,
-      title: "UI/UX & Brand Identity",
-      desc: "Architecting bespoke digital experiences that captivate audiences, inspire loyalty, and elevate brand perception."
-    },
-    {
-      icon: <Code2 className="w-6 h-6 text-indigo-400" />,
-      title: "Full-Stack Web & Mobile",
-      desc: "Robust, scalable, and high-performance applications built with modern frameworks and resilient cloud infrastructure."
-    },
-    {
-      icon: <Cpu className="w-6 h-6 text-purple-400" />,
-      title: "AI & Workflow Automation",
-      desc: "Integrating state-of-the-art AI systems and intelligent workflow automation to unlock exponential operational efficiency."
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6 text-emerald-400" />,
-      title: "Growth & SEO Architecture",
-      desc: "Data-backed conversion optimization and search visibility engineering to fuel sustainable customer acquisition."
-    },
-  ];
-
-  const highlights = [
-    "Enterprise-grade Next.js & React architecture",
-    "Tailored aesthetic experiences with micro-interactions",
-    "Scalable, cloud-native deployments with 99.9% uptime",
-    "Continuous iteration and dedicated technical stewardship"
-  ];
+export default function HomePage() {
+  const [callModalOpen, setCallModalOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-[#090b10] text-slate-100 overflow-x-hidden">
-      {/* Background Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none -z-10">
-        <div className="absolute top-12 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-24 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
-      </div>
+    <div className="flex flex-col min-h-screen bg-white text-slate-900 selection:bg-slate-900 selection:text-white transition-colors duration-200">
+      
+      {/* ========================================================================= */}
+      {/* SECTION 1: HERO (HONEST, GROUNDED, HUMAN) */}
+      {/* ========================================================================= */}
+      <section className="pt-36 pb-20 px-6 max-w-5xl mx-auto text-center">
+        
 
-      {/* Navigation */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-[#090b10]/80 border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20">
-              D
-            </div>
-            <div>
-              <span className="font-extrabold tracking-tight text-lg text-white">Deep Digital Labs</span>
-              <span className="block text-[10px] text-cyan-400 font-mono tracking-widest uppercase">Digital Agency & Studio</span>
-            </div>
+        {/* Headline: Plain English, Zero AI Buzzwords */}
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.12] max-w-4xl mx-auto">
+          We Build Custom Software, Mobile Apps &amp; Websites for Indian Businesses.
+        </h1>
+
+        {/* Subheadline: Authentic, Specific, Grounded */}
+        <p className="mt-7 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          No outsourced interns, no locked code repositories, and no Silicon Valley textbook jargon. We build software that solves operational problems, communicates directly over WhatsApp, and delivers working code every Friday.
+        </p>
+
+        {/* Action Buttons */}
+        <div className="mt-10 flex flex-col sm:flex-row gap-3.5 justify-center items-center">
+          <button
+            onClick={() => setCallModalOpen(true)}
+            className="w-full sm:w-auto bg-slate-900 text-white hover:bg-slate-800 px-8 py-4 rounded-full font-semibold text-base transition-all active:scale-98 shadow-sm cursor-pointer text-center"
+          >
+            Book a Call →
+          </button>
+          
+          <a
+            href="https://wa.me/919823012345?text=Hi,%20I%20want%20to%20discuss%20a%20software%20project%20for%20my%20business."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 text-white hover:bg-emerald-700 px-7 py-4 rounded-full font-semibold text-base transition-all active:scale-98 shadow-sm text-center"
+          >
+            <MessageSquare className="w-4 h-4" />
+            <span>Chat on WhatsApp</span>
+          </a>
+
+          <a
+            href="#work"
+            className="w-full sm:w-auto border border-slate-300 text-slate-700 hover:bg-slate-50 px-7 py-4 rounded-full font-semibold text-base transition-all text-center"
+          >
+            View 7 Live Projects
+          </a>
+        </div>
+
+        {/* Real Commercial Guarantees */}
+        <div className="mt-12 pt-8 border-t border-slate-100 flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-xs sm:text-sm text-slate-600">
+          <div className="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+            <span>100% GitHub Code Ownership (Day 1)</span>
           </div>
-
-          <nav className="hidden md:flex items-center gap-8 text-sm text-slate-400">
-            <a href="#services" className="hover:text-cyan-400 transition-colors">Services</a>
-            <a href="#about" className="hover:text-cyan-400 transition-colors">About</a>
-            <a href="#impact" className="hover:text-cyan-400 transition-colors">Impact</a>
-            <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a>
-          </nav>
-
-          <div className="flex items-center gap-4">
-            <a
-              href="#contact"
-              className="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white shadow-md shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5"
-            >
-              Start Project
-            </a>
+          <div className="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+            <span>18% GST Compliant Tax Invoices</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+            <span>Direct WhatsApp Group with Developers</span>
           </div>
         </div>
-      </header>
 
-      {/* Hero Section */}
-      <section className="relative pt-16 pb-24 md:pt-24 md:pb-32 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
-            
-            <div className="lg:col-span-7 space-y-8">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-medium">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Modern Digital Product Engineering</span>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* SECTION 2: VERIFIABLE STATS */}
+      {/* ========================================================================= */}
+      <section className="border-y border-slate-200 bg-slate-50">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+          {[
+            { num: "7", label: "Live Client Platforms Deployed", detail: "In Maharashtra & Pan-India" },
+            { num: "< 1.2s", label: "Page Load Speed", detail: "Optimized for Jio & Airtel 4G/5G" },
+            { num: "100%", label: "Source Code Ownership", detail: "Transferred to client GitHub" },
+            { num: "0", label: "Outsourced Freelancers", detail: "In-house Pune engineering only" }
+          ].map((stat, i) => (
+            <div key={i} className="p-7 text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-slate-900 font-mono tracking-tight mb-1">
+                {stat.num}
               </div>
+              <div className="text-xs font-bold text-slate-800 uppercase tracking-wide">
+                {stat.label}
+              </div>
+              <div className="text-[11px] text-slate-500 mt-0.5">
+                {stat.detail}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
-                We engineer digital experiences that <span className="bg-gradient-to-r from-cyan-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">dominate markets</span>.
-              </h1>
+      {/* ========================================================================= */}
+      {/* SECTION 3: THE 4 CORE PILLARS (CLEAN EDITORIAL BENTO GRID) */}
+      {/* ========================================================================= */}
+      <section id="services" className="py-24 px-6 max-w-6xl mx-auto">
+        <div className="max-w-2xl mb-14">
+          <div className="text-xs font-mono uppercase tracking-widest text-slate-500 font-bold mb-2">
+            What We Do
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight">
+            Our Services
+          </h2>
+          <p className="text-slate-600 text-base mt-3 leading-relaxed">
+            We focus on building reliable web applications, mobile apps, and digital growth that deliver real business results.
+          </p>
+        </div>
 
-              <p className="text-base sm:text-lg text-slate-400 max-w-xl leading-relaxed">
-                Deep Digital Labs crafts custom web applications, design systems, and intelligent digital products designed to scale brands faster and outperform expectations.
+        {/* 4 Cards Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          {/* Card 1: SaaS & Web Development (2 columns) */}
+          <div className="md:col-span-2 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 hover:border-slate-400 transition-all flex flex-col justify-between shadow-xs">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-100 text-slate-800 font-bold">
+                  01
+                </span>
+                <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-800">
+                  <Code2 className="w-5 h-5" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                SaaS &amp; Web Development
+              </h3>
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 max-w-xl">
+                We build custom cloud software, internal ERPs, billing portals, and corporate websites. Clean Next.js architecture with role-based user access, database management, and payment integrations.
+              </p>
+              
+              <div className="flex flex-wrap gap-2 mb-8">
+                {['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Tailwind CSS'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 border border-slate-200 text-slate-700"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
+              <Link
+                href="/services/saas-web-development"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-900 hover:underline"
+              >
+                <span>View Deliverables &amp; Timeline →</span>
+              </Link>
+              <span className="text-xs text-slate-500 font-mono">
+                Ships in 4–8 Weeks
+              </span>
+            </div>
+          </div>
+
+          {/* Card 2: Mobile App Development (1 column) */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 hover:border-slate-400 transition-all flex flex-col justify-between shadow-xs">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-100 text-slate-800 font-bold">
+                  02
+                </span>
+                <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-800">
+                  <Smartphone className="w-5 h-5" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                Mobile App Development
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                Fast Android and iOS apps built with Flutter and React Native. Built for Indian network realities: works offline, caches data, and syncs seamlessly.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-medium text-sm bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold shadow-lg shadow-cyan-500/25 transition-all"
-                >
-                  <span>Schedule Consultation</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-                <a
-                  href="#services"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-medium text-sm border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white transition-all bg-slate-900/40"
-                >
-                  <span>Explore Capabilities</span>
-                </a>
-              </div>
-
-              {/* Stat badges */}
-              <div className="grid grid-cols-3 gap-6 pt-6 border-t border-slate-800/80">
-                <div>
-                  <div className="text-2xl sm:text-3xl font-bold text-white">99.9%</div>
-                  <div className="text-xs text-slate-400 mt-1">Uptime Reliability</div>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-bold text-cyan-400">10x</div>
-                  <div className="text-xs text-slate-400 mt-1">Performance Velocity</div>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-bold text-indigo-400">100%</div>
-                  <div className="text-xs text-slate-400 mt-1">Production Tested</div>
-                </div>
+              <div className="flex flex-wrap gap-2 mb-8">
+                {['Flutter', 'React Native', 'Android', 'iOS', 'Offline Sync'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 border border-slate-200 text-slate-700"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
 
-            {/* Visual Hero Card */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative mx-auto rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-indigo-950/50 bg-slate-900/60 backdrop-blur-xl p-3">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                  <Image
-                    src="/images/hero-creative-team.jpg"
-                    alt="Deep Digital Labs Creative & Engineering Team"
-                    fill
-                    priority
-                    className="object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#090b10] via-transparent to-transparent opacity-80" />
-                </div>
-
-                <div className="p-4 space-y-3">
-                  <div className="flex items-center justify-between text-xs text-slate-400">
-                    <span className="flex items-center gap-1.5 text-cyan-400 font-mono">
-                      <Zap className="w-3.5 h-3.5" /> High Precision Lab
-                    </span>
-                    <span>Next.js 16 • React 19</span>
-                  </div>
-                  <p className="text-sm font-medium text-slate-200">
-                    Where avant-garde aesthetic craft meets robust architectural discipline.
-                  </p>
-                </div>
-              </div>
-
-              {/* Floating Accent Card */}
-              <div className="absolute -bottom-6 -left-6 hidden sm:flex items-center gap-3 p-4 rounded-2xl bg-[#121622]/90 border border-white/10 shadow-xl backdrop-blur-md">
-                <div className="p-2.5 rounded-xl bg-cyan-500/20 text-cyan-400">
-                  <ShieldCheck className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-white">Full Stack Ready</div>
-                  <div className="text-[11px] text-slate-400">Vercel & Cloud Native</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section id="services" className="py-20 px-6 border-t border-white/5 bg-[#0b0e17]">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="text-center max-w-2xl mx-auto space-y-4">
-            <h2 className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-semibold">Our Expertise</h2>
-            <p className="text-3xl sm:text-4xl font-extrabold text-white">
-              Engineered for transformative business results
-            </p>
-            <p className="text-slate-400 text-sm sm:text-base">
-              From conception to deployment, we build digital products that combine speed, resilience, and visual prestige.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((item, idx) => (
-              <div
-                key={idx}
-                className="group relative p-6 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 flex flex-col justify-between"
+            <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
+              <Link
+                href="/services/mobile-app-development"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-900 hover:underline"
               >
-                <div className="space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-                <div className="pt-6 flex items-center text-xs font-medium text-cyan-400 opacity-80 group-hover:opacity-100 transition-opacity">
-                  <span>Learn more</span>
-                  <ChevronRight className="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-1 transition-transform" />
+                <span>Mobile Details →</span>
+              </Link>
+              <span className="text-xs text-slate-500 font-mono">
+                Single Codebase
+              </span>
+            </div>
+          </div>
+
+          {/* Card 3: Digital Growth & SEO (1 column) */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 hover:border-slate-400 transition-all flex flex-col justify-between shadow-xs">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-100 text-slate-800 font-bold">
+                  03
+                </span>
+                <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-800">
+                  <Search className="w-5 h-5" />
                 </div>
               </div>
-            ))}
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                Digital Growth &amp; SEO
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                Technical SEO and local Google Maps optimization to rank your business in Pune, Mumbai, or pan-India without paying endless agency retainer fees.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-8">
+                {['Technical SEO', 'Google Maps', 'Schema Markup', 'Analytics'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 border border-slate-200 text-slate-700"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
+              <Link
+                href="/services/digital-growth-seo"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-slate-900 hover:underline"
+              >
+                <span>Growth Details →</span>
+              </Link>
+              <span className="text-xs text-slate-500 font-mono">
+                Organic Traffic
+              </span>
+            </div>
           </div>
+
+          {/* Card 4: Cloud & Ongoing Support (2 columns) */}
+          <div className="md:col-span-2 p-8 sm:p-10 rounded-3xl bg-slate-900 text-white transition-all flex flex-col justify-between shadow-md">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs font-mono px-3 py-1 rounded-full bg-white/15 text-white font-bold">
+                  04 • Cloud &amp; Support
+                </span>
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white">
+                  <Server className="w-5 h-5" />
+                </div>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                AWS Cloud &amp; Dedicated Support
+              </h3>
+              <p className="text-slate-300 text-base leading-relaxed mb-6 max-w-xl">
+                We host and maintain your applications on high-performance cloud infrastructure. Routine security audits, daily automated backups, and 24/7 emergency uptime monitoring.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-8">
+                {['Cloud Hosting', 'Docker', 'Vercel', 'Daily Backups', '24/7 SLA'].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 rounded-md text-xs font-mono bg-white/10 border border-white/10 text-slate-200"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-6 border-t border-white/10 flex items-center justify-between">
+              <Link
+                href="/services/cloud-ongoing-support"
+                className="inline-flex items-center gap-2 text-sm font-bold text-white hover:underline"
+              >
+                <span>Explore Support Retainers →</span>
+              </Link>
+              <span className="text-xs text-emerald-400 font-mono font-semibold">
+                99.9% Uptime Guarantee
+              </span>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      {/* Highlights / About Section */}
-      <section id="about" className="py-24 px-6 relative">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative rounded-3xl overflow-hidden border border-white/10 aspect-[4/3] bg-slate-900">
-            <Image
-              src="/images/creatix-hero-woman.jpg"
-              alt="Deep Digital Labs Vision"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#090b10] via-transparent to-transparent opacity-75" />
-          </div>
-
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-indigo-400">
-              <Rocket className="w-3.5 h-3.5" />
-              <span>Built For Uncompromising Leaders</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-              We eliminate friction between technical execution and brand brilliance.
+      {/* ========================================================================= */}
+      {/* SECTION 4: THE ANTI-AGENCY PROMISE (FOUNDER TRANSPARENCY) */}
+      {/* ========================================================================= */}
+      <section className="py-20 px-6 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          
+          <div className="max-w-3xl mb-14">
+            <span className="text-xs font-mono uppercase tracking-widest text-slate-500 font-bold">
+              The Anti-Agency Difference
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mt-1">
+              Why We Don’t Operate Like A Typical IT Agency
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-              At Deep Digital Labs, we reject standard cookie-cutter templates. Every project is crafted with bespoke typography, curated color palettes, optimized Core Web Vitals, and fluid reactivity.
+            <p className="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+              Most Indian business owners have had a bad experience with software companies: junior developers swapped in secret, zero communication after payment, and code held hostage. Here is how we do things differently at Deep Digital Labs.
             </p>
-
-            <div className="space-y-3 pt-2">
-              {highlights.map((h, i) => (
-                <div key={i} className="flex items-center gap-3 text-sm text-slate-300">
-                  <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
-                  <span>{h}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="pt-4">
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-slate-800 hover:bg-slate-700 px-6 py-3 rounded-xl border border-white/10 transition-colors"
-              >
-                <span>Partner With Us</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div className="p-7 rounded-2xl bg-white border border-slate-200 space-y-3">
+              <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
+                <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs">1</span>
+                <span>You Own 100% of Your Code on GitHub</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-8">
+                From Day 1, all code is pushed directly to your own GitHub or GitLab repository. If you ever want to bring development in-house or pause, you have all source files, passwords, and database access. Zero vendor lock-in.
+              </p>
+            </div>
+
+            <div className="p-7 rounded-2xl bg-white border border-slate-200 space-y-3">
+              <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
+                <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs">2</span>
+                <span>Direct WhatsApp Communication With Developers</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-8">
+                No slow email ticketing systems or non-technical account managers. You get a direct WhatsApp group with the developers writing your code for immediate status updates and quick fixes.
+              </p>
+            </div>
+
+            <div className="p-7 rounded-2xl bg-white border border-slate-200 space-y-3">
+              <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
+                <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs">3</span>
+                <span>Built for Real Indian Internet &amp; Hardware</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-8">
+                Software built in Silicon Valley assumes everyone has 1Gbps fiber. We build for Indian reality: offline local storage, instant OTP login, light bundle sizes that load in &lt;1.2 seconds on 4G, and bilingual English/Marathi/Hindi interfaces.
+              </p>
+            </div>
+
+            <div className="p-7 rounded-2xl bg-white border border-slate-200 space-y-3">
+              <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
+                <span className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs">4</span>
+                <span>Transparent Milestone Billing with GST Invoices</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-8">
+                Fixed-scope sprint estimates tied to measurable milestones (e.g. Prototype, Alpha, Production Launch). Every payment is backed by a valid 18% GST tax invoice for your business accounting and input tax credit.
+              </p>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
-      {/* CTA / Contact Section */}
-      <section id="contact" className="py-20 px-6 border-t border-white/5 bg-gradient-to-b from-[#0b0e17] to-[#090b10]">
-        <div className="max-w-4xl mx-auto rounded-3xl p-8 sm:p-12 border border-cyan-500/20 bg-gradient-to-r from-cyan-950/20 via-indigo-950/30 to-purple-950/20 text-center space-y-6">
-          <span className="text-xs font-mono tracking-widest uppercase text-cyan-400 font-medium">Ready To Launch?</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-            Let&apos;s build something extraordinary together.
-          </h2>
-          <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
-            Reach out directly to kickstart your next digital flagship. Fast turnaround, zero fluff, maximum impact.
+      {/* ========================================================================= */}
+      {/* SECTION 5: REAL CLIENT DELIVERABLES (PORTFOLIO PROOF) */}
+      {/* ========================================================================= */}
+      <section id="work" className="py-24 px-6 max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+          <div>
+            <div className="text-xs font-mono uppercase tracking-widest text-slate-500 font-bold mb-2">
+              Verifiable Track Record
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight">
+              Real Software Deployed in India
+            </h2>
+          </div>
+          <p className="text-slate-600 text-sm sm:text-base max-w-md">
+            Browse our delivered products across CA firm portals, agro-tech commerce, municipal civic systems, and dairy ERPs.
           </p>
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        </div>
+
+        {/* 3-Column Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {CASE_STUDIES.map((cs) => (
+            <div
+              key={cs.slug}
+              className="bg-white border border-slate-200 rounded-3xl p-6 flex flex-col justify-between hover:border-slate-400 transition-all group shadow-xs"
+            >
+              <div>
+                {/* Visual Header */}
+                <div className="h-44 rounded-2xl overflow-hidden relative mb-5 bg-slate-100">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${cs.heroImage})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                  
+                  <div className="absolute top-3 left-3">
+                    <span className="text-[11px] font-mono font-bold px-3 py-1 rounded-full bg-white/95 text-slate-900 shadow-xs">
+                      {cs.category}
+                    </span>
+                  </div>
+
+                  <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-xs text-white font-medium">
+                    <MapPin className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>{cs.location}</span>
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-slate-700 transition-colors leading-snug">
+                  {cs.title}
+                </h3>
+                
+                <p className="text-xs sm:text-sm text-slate-600 mb-5 line-clamp-2 leading-relaxed">
+                  {cs.summary}
+                </p>
+
+                {/* Tech Stack Tags */}
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {cs.tags.slice(0, 4).map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 text-slate-700 border border-slate-200"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Card Footer Actions */}
+              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <Link
+                  href={`/case-studies/${cs.slug}`}
+                  className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold text-slate-900 hover:underline"
+                >
+                  <span>Case Study</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+
+                {cs.liveUrl && (
+                  <a
+                    href={cs.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-slate-600 hover:text-slate-900 px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors font-medium"
+                  >
+                    <span>Visit Live Site</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link
+            href="/case-studies"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-bold text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-all"
+          >
+            <span>View All 7 Client Case Studies →</span>
+          </Link>
+        </div>
+
+      </section>
+
+      {/* ========================================================================= */}
+      {/* SECTION 6: FOOTER CALL TO ACTION (HONEST FOUNDER ACCESS) */}
+      {/* ========================================================================= */}
+      <footer className="px-6 pb-12 pt-6 max-w-6xl mx-auto w-full">
+        <div className="bg-slate-900 text-white rounded-3xl p-10 sm:p-14 text-center shadow-lg">
+          
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-xs font-mono text-emerald-400 font-semibold mb-6">
+            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+            <span>Currently Taking New Projects</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-4 leading-tight">
+            Have a project in mind? <br /> Let’s talk and build it.
+          </h2>
+
+          <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
+            Talk directly with our developer team in Pune. We’ll understand what you need, give you a clear timeline and fair pricing, and build working software.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3.5 justify-center items-center">
+            <button
+              onClick={() => setCallModalOpen(true)}
+              className="w-full sm:w-auto bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 rounded-full font-bold text-sm sm:text-base transition-all active:scale-98 shadow-md cursor-pointer"
+            >
+              Book a Quick Call →
+            </button>
             <a
-              href="mailto:contact@deepdigitallabs.com"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm bg-cyan-400 hover:bg-cyan-300 text-slate-950 shadow-lg shadow-cyan-400/20 transition-all"
+              href="https://wa.me/919823012345?text=Hi,%20I%20want%20to%20discuss%20a%20software%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 text-white hover:bg-emerald-700 px-8 py-4 rounded-full font-bold text-sm sm:text-base transition-all active:scale-98 shadow-md"
             >
               <MessageSquare className="w-4 h-4" />
-              <span>Get In Touch</span>
+              <span>Direct WhatsApp (+91)</span>
             </a>
           </div>
-        </div>
-      </section>
 
-      {/* Footer */}
-      <footer className="py-10 px-6 border-t border-white/5 text-center text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="font-semibold text-slate-400">
-            © {new Date().getFullYear()} Deep Digital Labs. All rights reserved.
-          </div>
-          <div className="flex items-center gap-6">
-            <a href="#services" className="hover:text-slate-300 transition-colors">Services</a>
-            <a href="#about" className="hover:text-slate-300 transition-colors">About</a>
-            <a href="#contact" className="hover:text-slate-300 transition-colors">Contact</a>
-          </div>
         </div>
       </footer>
+
+      {/* Discovery Call Booking Modal */}
+      <DiscoveryCallModal 
+        isOpen={callModalOpen} 
+        onClose={() => setCallModalOpen(false)} 
+      />
+
     </div>
   );
 }
