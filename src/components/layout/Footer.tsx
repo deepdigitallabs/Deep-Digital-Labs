@@ -59,7 +59,7 @@ export function Footer() {
               <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-gray-400">
                 <MessageSquare className="w-4 h-4 text-neutral-700 dark:text-[#D4FF00] shrink-0" />
                 <a href="https://wa.me/919175152244" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 dark:hover:text-[#D4FF00] transition-colors">
-                  +91 091751 52244 (WhatsApp / Call)
+                  Chat on WhatsApp
                 </a>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-gray-400">

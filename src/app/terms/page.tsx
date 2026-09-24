@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { FileText, ArrowLeft, ShieldCheck, Mail, Phone, MapPin } from 'lucide-react';
+import { FileText, ArrowLeft, ShieldCheck, Mail, MessageSquare, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Deep Digital Labs',
@@ -293,9 +293,9 @@ export default function TermsOfServicePage() {
                 </a>
               </div>
               <div className="flex items-center gap-2.5 text-slate-600 dark:text-gray-300">
-                <Phone className="w-4 h-4 text-slate-500 shrink-0" />
+                <MessageSquare className="w-4 h-4 text-slate-500 shrink-0" />
                 <a href="https://wa.me/919175152244" target="_blank" rel="noopener noreferrer" className="text-slate-900 dark:text-[#D4FF00] font-medium hover:underline">
-                  +91 091751 52244 (Phone &amp; WhatsApp)
+                  Chat on WhatsApp
                 </a>
               </div>
             </div>

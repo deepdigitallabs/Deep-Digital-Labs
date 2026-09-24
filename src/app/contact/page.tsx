@@ -179,7 +179,7 @@ export default function ContactPage() {
                           <input
                             type="tel"
                             required
-                            placeholder="+91 91751 52244"
+                            placeholder="+91 98765 43210"
                             value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                             className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-white/[0.03] border border-neutral-300 dark:border-white/10 text-sm text-neutral-900 dark:text-white focus:outline-none focus:border-neutral-900 dark:focus:border-[#D4FF00] placeholder:text-neutral-400 dark:placeholder:text-gray-600 transition-colors shadow-sm"
@@ -457,7 +457,7 @@ export default function ContactPage() {
                   <div>
                     <div className="text-neutral-500 dark:text-gray-500">WhatsApp / Slack Direct</div>
                     <a href="https://wa.me/919175152244" target="_blank" rel="noopener noreferrer" className="text-neutral-900 dark:text-white font-medium hover:underline">
-                      +91 091751 52244
+                      Chat on WhatsApp
                     </a>
                   </div>
                 </div>

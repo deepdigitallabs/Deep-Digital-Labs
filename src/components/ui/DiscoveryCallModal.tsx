@@ -176,7 +176,7 @@ export function DiscoveryCallModal({ isOpen, onClose }: DiscoveryCallModalProps)
                   <input
                     type="tel"
                     required
-                    placeholder="+91 091751 52244"
+                    placeholder="+91 98765 43210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-300 dark:border-white/10 text-sm text-neutral-900 dark:text-white focus:outline-none focus:border-neutral-900 dark:focus:border-[#D4FF00] transition-colors"
