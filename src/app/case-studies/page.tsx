@@ -276,7 +276,7 @@ export default function CaseStudiesPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-all shadow-md active:scale-95"
             >
-              <span>Chat on WhatsApp (+91 091751 52244)</span>
+              <span>Chat on WhatsApp</span>
             </a>
           </div>
         </div>
