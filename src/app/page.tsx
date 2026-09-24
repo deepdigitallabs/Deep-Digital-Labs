@@ -837,19 +837,51 @@ export default function HomePage() {
           {[
             {
               q: "Do I really own 100% of the code?",
-              a: "Yes. We push all code to your GitHub/GitLab account from Day 1. You own the IP, the domain, and the database. There is zero vendor lock-in."
+              content: (
+                <p>
+                  Yes. We push all code to your GitHub/GitLab account from Day 1. You own the IP, the domain, and the database. There is zero vendor lock-in.
+                </p>
+              )
             },
             {
               q: "What is the typical timeline for a project?",
-              a: "A standard MVP (Minimum Viable Product) takes 4 to 8 weeks. Larger enterprise ERPs or multi-tenant SaaS platforms typically take 3 to 6 months, delivered in 2-week measurable sprints."
+              content: (
+                <div className="space-y-3">
+                  <p>It depends on the scope, but here&apos;s a rough guide:</p>
+                  <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm">
+                    <li><strong>Simple websites or landing pages:</strong> 2–3 weeks</li>
+                    <li><strong>Custom web apps or MVPs:</strong> 4–8 weeks</li>
+                    <li><strong>Complex SaaS platforms or ERPs:</strong> 3–6 months</li>
+                  </ul>
+                  <p>
+                    We work in 2-week sprints, so you&apos;ll see working features every Friday. No disappearing for months and coming back with surprises.
+                  </p>
+                </div>
+              )
             },
             {
               q: "Do you work with startups or only large enterprises?",
-              a: "Both. We help early-stage startups build capital-efficient MVPs to secure funding, and we help established enterprises modernize legacy systems and scale operations."
+              content: (
+                <p>
+                  Both! We love helping early-stage startups build capital-efficient MVPs to secure funding, and we also work with established businesses to modernize legacy systems or scale operations. Whether you&apos;re a solo founder in Pune or a 500-person company in Mumbai, we&apos;ll tailor our approach to your budget and goals.
+                </p>
+              )
             },
             {
               q: "What happens after the product is launched?",
-              a: "We offer flexible, transparent Monthly Retainer or AMC (Annual Maintenance) packages for server monitoring, bug fixes, and adding new features as your business grows."
+              content: (
+                <div className="space-y-3">
+                  <p>We don&apos;t just hand over the keys and disappear. After launch, you get:</p>
+                  <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm">
+                    <li><strong>30 days of free bug fixes</strong> (our warranty period)</li>
+                    <li><strong>100% of the code and credentials</strong> transferred to you</li>
+                    <li><strong>Optional ongoing support</strong> through flexible monthly retainers or annual maintenance contracts (AMC) if you want us to keep monitoring servers, adding features, or scaling as you grow</li>
+                  </ul>
+                  <p>
+                    You&apos;re never locked into a long-term contract. If you want to bring development in-house later, you have everything you need to do it.
+                  </p>
+                </div>
+              )
             }
           ].map((faq, index) => {
             const isOpen = openFaq === index;
@@ -868,12 +900,39 @@ export default function HomePage() {
                 </button>
                 {isOpen && (
                   <div className="px-5 pb-6 sm:px-6 text-xs sm:text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-slate-800/60 pt-4">
-                    {faq.a}
+                    {faq.content}
                   </div>
                 )}
               </div>
             );
           })}
+        </div>
+
+        {/* Still Have Questions Box */}
+        <div className="mt-10 p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-[#0c101c] border border-slate-200 dark:border-slate-800 text-center space-y-3">
+          <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+            Still have questions?
+          </h3>
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
+            Chat with us on WhatsApp or book a free 30-minute discovery call. We&apos;ll answer everything honestly—no sales pitch, just real talk about your project.
+          </p>
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://wa.me/919175152244?text=Hi,%20I%20have%20a%20question%20about%20starting%20a%20project%20with%20Deep%20Digital%20Labs."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm transition-all shadow-xs"
+            >
+              <MessageSquare className="w-4 h-4" />
+              <span>Chat with us on WhatsApp</span>
+            </a>
+            <button
+              onClick={() => setCallModalOpen(true)}
+              className="inline-flex items-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm transition-all shadow-xs cursor-pointer"
+            >
+              <span>Book a free 30-min discovery call</span>
+            </button>
+          </div>
         </div>
       </section>
 
