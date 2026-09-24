@@ -208,12 +208,6 @@ export default function CaseStudiesPage() {
                       {cs.summary}
                     </p>
 
-                    {cs.keyResult && (
-                      <div className="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-lg border border-emerald-200 dark:border-emerald-800/40 line-clamp-1">
-                        ⭐ {cs.keyResult}
-                      </div>
-                    )}
-
                     {cs.techStack && cs.techStack.length > 0 && (
                       <div className="flex flex-wrap gap-1 pt-1">
                         {cs.techStack.map((tech) => (

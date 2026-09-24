@@ -36,7 +36,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: 'During high-stakes campaign weeks when tens of thousands accessed our candidate manifesto simultaneously, our portal never stuttered for a single millisecond. Zero server degradation and volunteers onboarded seamlessly.',
     author: 'Santosh Phadtare Campaign Office',
     role: 'Chief Digital Strategist',
-    company: 'Karyala Jodo Initiative',
+    company: 'Santosh Phadtare Campaign',
     location: 'Maharashtra, India 🇮🇳',
     rating: 5
   },
@@ -45,7 +45,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: 'Dairy Flow Pro eliminated hours of manual spreadsheet bookkeeping every week. Their engineering pod operates with speed and high technical rigor.',
     author: 'Chief Executive Officer',
     role: 'Founder & Managing Director',
-    company: 'Dairy Flow Pro SaaS',
+    company: 'Dairy Flow Pro (In-House SaaS)',
     location: 'Pune, India 🇮🇳',
     rating: 5
   }

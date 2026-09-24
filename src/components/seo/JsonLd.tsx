@@ -27,6 +27,7 @@ export function JsonLd() {
           availableLanguage: ['English', 'Hindi', 'Marathi']
         },
         sameAs: [
+          'https://www.instagram.com/deepdigitallabs/',
           'https://linkedin.com/company/deep-digital-labs',
           'https://twitter.com/deepdigitallabs',
           'https://github.com/deepdigitallabs'

@@ -10,6 +10,16 @@ import {
   MessageSquare
 } from 'lucide-react';
 
+function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="bg-neutral-50 dark:bg-[#050505] border-t border-neutral-200 dark:border-white/10 pt-20 pb-12 relative overflow-hidden text-neutral-800 dark:text-white transition-colors duration-200">
@@ -55,6 +65,12 @@ export function Footer() {
                 <MessageSquare className="w-4 h-4 text-neutral-700 dark:text-[#D4FF00] shrink-0" />
                 <a href="https://wa.me/919823012345" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 dark:hover:text-[#D4FF00] transition-colors">
                   +91 98230 12345 (WhatsApp / Slack)
+                </a>
+              </div>
+              <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-gray-400">
+                <InstagramIcon className="w-4 h-4 text-pink-500 shrink-0" />
+                <a href="https://www.instagram.com/deepdigitallabs/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600 dark:hover:text-pink-400 transition-colors">
+                  Message on Instagram (@deepdigitallabs)
                 </a>
               </div>
             </div>
@@ -139,6 +155,17 @@ export function Footer() {
               Connect
             </h3>
             <ul className="space-y-2.5 text-sm">
+              <li>
+                <a 
+                  href="https://www.instagram.com/deepdigitallabs/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-neutral-600 hover:text-neutral-900 dark:text-gray-400 dark:hover:text-[#D4FF00] transition-colors flex items-center gap-2"
+                >
+                  <InstagramIcon className="w-4 h-4 text-pink-500" />
+                  <span>Instagram</span>
+                </a>
+              </li>
               <li>
                 <a 
                   href="https://linkedin.com/company/deep-digital-labs" 

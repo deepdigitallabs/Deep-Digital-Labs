@@ -106,24 +106,24 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: 'dairy-flow-pro',
     title: 'Dairy Flow Pro',
-    client: 'Dairy Flow Pro',
+    client: 'Deep Digital Labs (In-House Product)',
     location: 'Pune / Maharashtra, India',
     category: 'Enterprise Dairy ERP & Automated Billing SaaS',
-    industry: 'Agri-Tech',
+    industry: 'Agri-Tech (In-House SaaS)',
     service: 'SaaS',
     liveUrl: 'https://dairy-flow-pro.vercel.app/',
-    summary: 'Engineered an end-to-end multi-tenant dairy ERP SaaS with real-time milk collection metrics, automated fat/SNF billing, and sub-second tabular query times.',
+    summary: 'Engineered an end-to-end multi-tenant dairy ERP SaaS with real-time milk collection metrics, automated fat/SNF billing, and sub-second tabular query times — built as our proprietary in-house product.',
     heroImage: '/images/case-studies/dairy-flow-pro.jpg',
     accentColor: '#3b82f6',
-    tags: ['Next.js', 'PostgreSQL', 'Node.js', 'Tailwind CSS'],
+    tags: ['Next.js', 'PostgreSQL', 'Node.js', 'Tailwind CSS', 'In-House Product'],
     techStack: ['Next.js', 'PostgreSQL', 'Node.js', 'Tailwind CSS'],
     keyResult: '15+ hours saved weekly on automated milk billing',
     metrics: [
       { label: 'Time Saved Weekly', value: '15+ hrs', change: 'Eliminated spreadsheets' },
       { label: 'Table Load Speed', value: '<300ms', change: 'Server-Side Rendering (SSR)' }
     ],
-    challenge: 'Dairy management requires precise, real-time tracking of inventory, collections, and billing. The client needed a unified SaaS platform to replace fragmented spreadsheets and legacy software.',
-    solution: 'We engineered "Dairy Flow Pro," a comprehensive, multi-tenant SaaS dashboard. Features include real-time milk collection tracking, automated billing generation, role-based access control (for admins, collectors, and farmers), and data visualization charts.',
+    challenge: 'Dairy management requires precise, real-time tracking of inventory, collections, and billing. We engineered Dairy Flow Pro as our own in-house SaaS platform to solve spreadsheet fragmentation and billing reconciliation errors for dairy cooperatives and private processors.',
+    solution: 'Engineered entirely in-house by Deep Digital Labs as our proprietary SaaS product, Dairy Flow Pro is a comprehensive, multi-tenant SaaS dashboard. Features include real-time milk collection tracking, automated fat/SNF billing generation, role-based access control (for admins, collectors, and farmers), and sub-second data visualization dashboards.',
     architectureHighlights: [
       'Sub-second Server-Side Rendering (SSR) for complex multi-thousand row collection sheets',
       'Automated dynamic rate calculation engine with instant farmer invoice dispatch',
@@ -132,15 +132,15 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     testimonial: {
       quote: 'Dairy Flow Pro eliminated 15 hours of manual spreadsheet bookkeeping every week and wiped out 90% of billing reconciliation disputes. It is the backbone of our dairy operations.',
-      author: 'Chief Executive Officer',
-      role: 'Founder & Managing Director',
-      company: 'Dairy Flow Pro'
+      author: 'Operations & Product Lead',
+      role: 'In-House Venture Lead',
+      company: 'Dairy Flow Pro (Deep Digital Labs)'
     },
     featured: true
   },
   {
     slug: 'santosh-phadtare-portal',
-    title: 'Karyala Jodo',
+    title: 'Santosh Phadtare',
     client: 'Santosh Phadtare Campaign Office',
     location: 'Maharashtra, India',
     category: 'Political Tech & Grassroots Mobilization Portal',
@@ -158,7 +158,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { label: 'Peak Uptime', value: '99.99%', change: 'Zero downtime during rallies' }
     ],
     challenge: 'A prominent political leader needed a centralized, highly reliable digital hub to mobilize grassroots workers ("karyakartas"), manage volunteer data, and communicate their developmental vision directly to constituents, bypassing traditional media filters.',
-    solution: 'We engineered "Karyala Jodo," a dynamic political engagement portal. It features streamlined volunteer onboarding workflows, a real-time event and rally calendar, a digital manifesto section, and a robust Headless CMS allowing the core team to publish press releases and updates in seconds.',
+    solution: 'We engineered the "Santosh Phadtare" portal, a dynamic political engagement platform. It features streamlined volunteer onboarding workflows, a real-time event and rally calendar, a digital manifesto section, and a robust Headless CMS allowing the core team to publish press releases and updates in seconds.',
     architectureHighlights: [
       'Streamlined volunteer onboarding workflow optimized for mobile-first karyakarta signups',
       'Real-time political event and rally calendar with direct constituent engagement',
@@ -166,10 +166,10 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Firebase and Vercel Edge Network architecture guaranteeing 99.99% uptime during peak announcements'
     ],
     testimonial: {
-      quote: 'Karyala Jodo allowed us to mobilize over 1,000 grassroots volunteers seamlessly and communicate our vision directly to the people with zero reliance on media intermediaries.',
+      quote: 'The portal engineered by Deep Digital Labs allowed us to mobilize over 1,000 grassroots volunteers seamlessly and communicate our vision directly to the people with zero reliance on media intermediaries.',
       author: 'Santosh Phadtare Campaign Office',
       role: 'Chief Digital Strategist',
-      company: 'Karyala Jodo Political Initiative'
+      company: 'Santosh Phadtare Campaign Office'
     },
     featured: true
   },
@@ -247,8 +247,8 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'pasarnikar-payal-amit',
-    title: 'Prasaraka (Payal & Amit Pasarnikar)',
-    client: 'Payal & Amit Pasarnikar (Prasaraka)',
+    title: 'Pasarnikar Payal Amit',
+    client: 'Pasarnikar Payal Amit',
     location: 'India / Global',
     category: 'Political Personal Branding & Spokesperson Portal',
     industry: 'Political Tech',
@@ -265,7 +265,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { label: 'Supporter Outreach', value: '3x Growth', change: 'Verified constituent reach' },
       { label: 'Speaking Inquiries', value: '+200%', change: 'Direct spokesperson requests' }
     ],
-    challenge: 'Emerging political figures and spokespersons ("Prasaraka") need to build a strong, trustworthy, and modern personal brand to stand out in a crowded political landscape, while providing a central hub for media, supporters, and party workers.',
+    challenge: 'Emerging political figures and spokespersons need to build a strong, trustworthy, and modern personal brand to stand out in a crowded political landscape, while providing a central hub for media, supporters, and party workers.',
     solution: 'We designed and developed a premium, animation-rich personal branding website. Utilizing Framer Motion for smooth, professional scroll interactions, the site elegantly showcases their political journey, core ideologies, media gallery (rallies, interviews, speeches), and a direct "Join the Movement" supporter sign-up module.',
     architectureHighlights: [
       'Interactive scroll physics and micro-interactions creating an authoritative brand persona',
@@ -276,8 +276,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     testimonial: {
       quote: 'The visual elegance and fluidity of the website created an unforgettable first impression for everyone who visits. Our speaking requests and partnership inquiries have tripled.',
       author: 'Payal & Amit Pasarnikar',
-      role: 'Spokespersons & Founders',
-      company: 'Prasaraka'
+      role: 'Spokespersons & Leaders',
+      company: 'Pasarnikar Payal Amit'
     },
     featured: true
   }

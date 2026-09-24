@@ -103,11 +103,11 @@ export default function HomePage() {
             {[
               { name: 'Rahul B. Kavale & Co.', role: 'CA & Corporate Advisory' },
               { name: 'Yashodeep Agro', role: 'Agri-Tech Commerce' },
-              { name: 'Dairy Flow Pro', role: 'Enterprise Dairy ERP' },
-              { name: 'Karyala Jodo', role: 'Political Civic Tech' },
+              { name: 'Dairy Flow Pro', role: 'In-House Dairy SaaS' },
+              { name: 'Santosh Phadtare', role: 'Political Civic Tech' },
               { name: 'Trust Carry Logistics', role: 'Fleet & Supply Chain' },
               { name: 'Sangola Vikas Sankalp', role: 'Civic Development' },
-              { name: 'Prasaraka', role: 'Political Media & Branding' }
+              { name: 'Pasarnikar Payal Amit', role: 'Political Media & Branding' }
             ].map((client) => (
               <div
                 key={client.name}
@@ -707,7 +707,7 @@ export default function HomePage() {
                 Operations Head
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-400">
-                Dairy Flow Pro • Industrial Dairy ERP
+                Dairy Flow Pro • In-House Dairy ERP SaaS
               </div>
             </div>
           </div>
@@ -754,12 +754,7 @@ export default function HomePage() {
                     <span>{cs.location}</span>
                   </div>
 
-                  {cs.keyResult && (
-                    <div className="absolute bottom-3 left-3 right-3 text-[11px] text-emerald-300 font-semibold bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-emerald-500/20 line-clamp-1">
-                      ⭐ {cs.keyResult}
-                    </div>
-                  )}
-                </div>
+                  </div>
 
                 {/* Category & Title */}
                 <span className="text-[11px] font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold block mb-1">

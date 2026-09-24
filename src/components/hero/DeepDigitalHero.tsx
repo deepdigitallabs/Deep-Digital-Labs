@@ -153,7 +153,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="text-[10px] font-mono uppercase tracking-widest text-[#00FFA3] font-semibold">
-                        SaaS ERP Platform • Live Production
+                        In-House SaaS Product • Live Production
                       </div>
                       <div className="text-base font-bold text-white">Dairy Flow Pro Multi-Tenant System</div>
                     </div>
@@ -197,7 +197,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
                 </div>
               )}
 
-              {/* Tab 2: Civic Tech Portal (Sangola & Karyala Jodo) */}
+              {/* Tab 2: Civic Tech Portal (Sangola & Santosh Phadtare) */}
               {activeTab === 'civic' && (
                 <div className="p-5 space-y-4 font-sans animate-in fade-in duration-200">
                   <div className="flex items-center justify-between">
@@ -205,7 +205,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
                       <div className="text-[10px] font-mono uppercase tracking-widest text-[#00FFA3] font-semibold">
                         Civic Tech &amp; Campaign Infrastructure
                       </div>
-                      <div className="text-base font-bold text-white">Sangola Vikas &amp; Karyala Jodo</div>
+                      <div className="text-base font-bold text-white">Sangola Vikas &amp; Santosh Phadtare</div>
                     </div>
                     <span className="px-2.5 py-1 rounded-full text-[10px] font-mono bg-[#27272A] text-slate-300">
                       Edge SSG

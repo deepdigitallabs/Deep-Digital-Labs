@@ -19,6 +19,16 @@ import {
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 
+function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
 export default function ContactPage() {
   const [step, setStep] = useState(1);
   const [callModalOpen, setCallModalOpen] = useState(false);
@@ -448,6 +458,16 @@ export default function ContactPage() {
                     <div className="text-neutral-500 dark:text-gray-500">WhatsApp / Slack Direct</div>
                     <a href="https://wa.me/919823012345" target="_blank" rel="noopener noreferrer" className="text-neutral-900 dark:text-white font-medium hover:underline">
                       +91 98230 12345
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <InstagramIcon className="w-4 h-4 text-pink-500 shrink-0 mt-0.5" />
+                  <div>
+                    <div className="text-neutral-500 dark:text-gray-500">Instagram DM</div>
+                    <a href="https://www.instagram.com/deepdigitallabs/" target="_blank" rel="noopener noreferrer" className="text-neutral-900 dark:text-white font-medium hover:underline">
+                      @deepdigitallabs (Direct Message)
                     </a>
                   </div>
                 </div>

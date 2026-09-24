@@ -65,12 +65,12 @@ export function TechMarquee({ headline }: TechMarqueeProps) {
 export function ClientTrustMarquee() {
   const clients = [
     { name: 'Rahul B. Kavale & Co.', market: 'Corporate & Legal' },
-    { name: 'Dairy Flow Pro', market: 'SaaS / Dairy ERP' },
+    { name: 'Dairy Flow Pro', market: 'In-House Dairy SaaS ERP' },
     { name: 'Yashodeep Agro', market: 'Agri-Tech Platform' },
     { name: 'Trust Carry Logistics', market: 'Logistics & Supply Chain' },
-    { name: 'Karyala Jodo', market: 'Political Tech & Mobilization' },
+    { name: 'Santosh Phadtare', market: 'Political Tech & Mobilization' },
     { name: 'Sangola Vikas Sankalp', market: 'Civic & Campaign Portal' },
-    { name: 'Prasaraka (Payal & Amit)', market: 'Political Branding & Spokesperson' }
+    { name: 'Pasarnikar Payal Amit', market: 'Political Branding & Spokesperson' }
   ];
 
   const duplicated = [...clients, ...clients];
