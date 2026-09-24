@@ -71,13 +71,13 @@ export default function HomePage() {
           </button>
           
           <a
-            href="https://wa.me/919823012345?text=Hi,%20I%20want%20to%20discuss%20a%20software%20project%20for%20my%20business."
+            href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20software%20project%20for%20my%20business."
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 text-white hover:bg-emerald-700 px-6 py-3.5 rounded-full font-semibold text-sm transition-all active:scale-98 shadow-sm text-center"
           >
             <MessageSquare className="w-3.5 h-3.5 fill-white/20" />
-            <span>Chat on WhatsApp (+91 98230 12345)</span>
+            <span>Chat on WhatsApp (+91 091751 52244)</span>
           </a>
 
           <a
@@ -904,13 +904,13 @@ export default function HomePage() {
               Book a 30-Minute Discovery Call
             </button>
             <a
-              href="https://wa.me/919823012345?text=Hi,%20I%20want%20to%20discuss%20a%20software%20project."
+              href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20software%20project."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 text-white hover:bg-emerald-700 px-8 py-4 rounded-full font-bold text-sm sm:text-base transition-all active:scale-98 shadow-md"
             >
               <MessageSquare className="w-4 h-4" />
-              <span>Chat on WhatsApp (+91 98230 12345)</span>
+              <span>Chat on WhatsApp (+91 091751 52244)</span>
             </a>
           </div>
 

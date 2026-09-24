@@ -144,8 +144,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 dark:bg-[#0F0F11] dark:border-white/10 space-y-2 mt-4 text-xs sm:text-sm">
               <div className="font-bold text-slate-900 dark:text-white">Deep Digital Labs</div>
-              <div className="text-slate-600 dark:text-gray-400">Level 5, Amar Paradigm, Baner-Hinjawadi Tech Corridor</div>
-              <div className="text-slate-600 dark:text-gray-400">Pune, Maharashtra 411045, India</div>
+              <div className="text-slate-600 dark:text-gray-400">Pune, MH 411001, India</div>
               <div className="pt-2">
                 <a href="mailto:deepdigitallabs@gmail.com" className="text-slate-900 dark:text-white font-semibold hover:underline">
                   Email: deepdigitallabs@gmail.com

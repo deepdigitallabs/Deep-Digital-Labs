@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { 
   Terminal, 
   MapPin, 
-  Clock, 
   Mail, 
   ArrowUpRight, 
   ShieldCheck,
@@ -49,11 +48,7 @@ export function Footer() {
             <div className="pt-2 space-y-3">
               <div className="flex items-start gap-2.5 text-xs text-neutral-600 dark:text-gray-400">
                 <MapPin className="w-4 h-4 text-neutral-700 dark:text-[#D4FF00] shrink-0 mt-0.5" />
-                <span>Level 5, Amar Paradigm, Baner-Hinjawadi Tech Corridor, Pune, MH 411045, India</span>
-              </div>
-              <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-gray-400">
-                <Clock className="w-4 h-4 text-neutral-700 dark:text-[#D4FF00] shrink-0" />
-                <span>IST (UTC+5:30) • Active 16-Hour Overlap with US, UK &amp; APAC</span>
+                <span>Pune, MH 411001, India</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-gray-400">
                 <Mail className="w-4 h-4 text-neutral-700 dark:text-[#D4FF00] shrink-0" />
@@ -63,8 +58,8 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-gray-400">
                 <MessageSquare className="w-4 h-4 text-neutral-700 dark:text-[#D4FF00] shrink-0" />
-                <a href="https://wa.me/919823012345" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 dark:hover:text-[#D4FF00] transition-colors">
-                  +91 98230 12345 (WhatsApp / Slack)
+                <a href="https://wa.me/919175152244" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 dark:hover:text-[#D4FF00] transition-colors">
+                  +91 091751 52244 (WhatsApp / Call)
                 </a>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-gray-400">

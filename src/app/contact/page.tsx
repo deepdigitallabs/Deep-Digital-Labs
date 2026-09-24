@@ -179,7 +179,7 @@ export default function ContactPage() {
                           <input
                             type="tel"
                             required
-                            placeholder="+91 98230 12345"
+                            placeholder="+91 91751 52244"
                             value={formData.phone}
                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                             className="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-white/[0.03] border border-neutral-300 dark:border-white/10 text-sm text-neutral-900 dark:text-white focus:outline-none focus:border-neutral-900 dark:focus:border-[#D4FF00] placeholder:text-neutral-400 dark:placeholder:text-gray-600 transition-colors shadow-sm"
@@ -456,8 +456,8 @@ export default function ContactPage() {
                   <MessageSquare className="w-4 h-4 text-neutral-700 dark:text-[#D4FF00] shrink-0 mt-0.5" />
                   <div>
                     <div className="text-neutral-500 dark:text-gray-500">WhatsApp / Slack Direct</div>
-                    <a href="https://wa.me/919823012345" target="_blank" rel="noopener noreferrer" className="text-neutral-900 dark:text-white font-medium hover:underline">
-                      +91 98230 12345
+                    <a href="https://wa.me/919175152244" target="_blank" rel="noopener noreferrer" className="text-neutral-900 dark:text-white font-medium hover:underline">
+                      +91 091751 52244
                     </a>
                   </div>
                 </div>
@@ -480,17 +480,12 @@ export default function ContactPage() {
             <div className="p-6 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 space-y-3 shadow-sm">
               <div className="flex items-center gap-2 text-xs font-mono text-neutral-900 dark:text-[#D4FF00] font-bold">
                 <MapPin className="w-4 h-4" />
-                <span>Pune Global HQ</span>
+                <span>Pune, India</span>
               </div>
               <p className="text-xs text-neutral-700 dark:text-gray-300 leading-relaxed">
                 Deep Digital Labs<br />
-                Level 5, Amar Paradigm, Baner<br />
-                Hinjawadi Tech Corridor, Pune<br />
-                Maharashtra 411045, India 🇮🇳
+                Pune, MH 411001, India 🇮🇳
               </p>
-              <div className="text-[11px] text-neutral-500 dark:text-gray-500 font-mono pt-1">
-                Timezone: IST (UTC+5:30) • 16h Daily US/EU Overlap
-              </div>
             </div>
 
           </div>

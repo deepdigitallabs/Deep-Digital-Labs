@@ -13,15 +13,15 @@ export function JsonLd() {
         description: 'Engineering scalable SaaS, web platforms, and mobile apps for global brands. Built in Pune, India, deployed worldwide.',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Amar Paradigm, Baner-Hinjawadi Tech Corridor',
+          streetAddress: 'Pune',
           addressLocality: 'Pune',
           addressRegion: 'Maharashtra',
-          postalCode: '411045',
+          postalCode: '411001',
           addressCountry: 'IN'
         },
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+91-98230-12345',
+          telephone: '+91-091751-52244',
           contactType: 'Customer Support & Sales',
           email: 'deepdigitallabs@gmail.com',
           availableLanguage: ['English', 'Hindi', 'Marathi']
@@ -38,14 +38,14 @@ export function JsonLd() {
         '@id': 'https://deepdigitallabs.com/#localbusiness',
         name: 'Deep Digital Labs Pune HQ',
         image: 'https://deepdigitallabs.com/office.jpg',
-        telephone: '+91-98230-12345',
+        telephone: '+91-091751-52244',
         priceRange: '$$$',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Level 5, Amar Paradigm, Baner',
+          streetAddress: 'Pune',
           addressLocality: 'Pune',
           addressRegion: 'MH',
-          postalCode: '411045',
+          postalCode: '411001',
           addressCountry: 'IN'
         },
         geo: {

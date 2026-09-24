@@ -42,7 +42,7 @@ export default function AboutPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/919823012345?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20learn%20more%20about%20your%20services."
+              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20learn%20more%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-sm bg-emerald-600 text-white hover:bg-emerald-500 transition-all shadow-xl active:scale-95"
@@ -66,7 +66,7 @@ export default function AboutPage() {
                 Deep Digital Labs was founded on a simple principle: Indian enterprises, startups, and local business leaders deserve high-performance software without bloated agency overheads, slow timelines, or frustrating vendor lock-in.
               </p>
               <p>
-                Based in the Baner-Hinjawadi tech corridor of Pune, Maharashtra, we build SaaS platforms, cross-platform Android/iOS mobile apps, and high-converting web portals tailored to the Indian market. Every product comes with 100% source code ownership, GST-compliant invoicing, and direct WhatsApp support with our developer team in Pune.
+                Based in Pune, Maharashtra, we build SaaS platforms, cross-platform Android/iOS mobile apps, and high-converting web portals tailored to the Indian market. Every product comes with 100% source code ownership, GST-compliant invoicing, and direct WhatsApp support with our developer team in Pune.
               </p>
             </div>
           </div>

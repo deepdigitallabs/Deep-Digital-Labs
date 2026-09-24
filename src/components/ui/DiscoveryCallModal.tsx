@@ -63,7 +63,7 @@ export function DiscoveryCallModal({ isOpen, onClose }: DiscoveryCallModalProps)
               </p>
               <div className="pt-4 flex flex-col sm:flex-row gap-3 justify-center">
                 <a
-                  href={`https://wa.me/919823012345?text=Hi%20Deep%20Digital%20Labs,%20I%20just%20scheduled%20a%20call%20for%20${formData.name}.`}
+                  href={`https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20just%20scheduled%20a%20call%20for%20${formData.name}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full text-xs font-bold inline-flex items-center justify-center gap-1.5"
@@ -176,7 +176,7 @@ export function DiscoveryCallModal({ isOpen, onClose }: DiscoveryCallModalProps)
                   <input
                     type="tel"
                     required
-                    placeholder="+91 98230 12345"
+                    placeholder="+91 091751 52244"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-300 dark:border-white/10 text-sm text-neutral-900 dark:text-white focus:outline-none focus:border-neutral-900 dark:focus:border-[#D4FF00] transition-colors"

@@ -271,12 +271,12 @@ export default function CaseStudiesPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/919823012345?text=Hi,%20I%20want%20to%20discuss%20a%20software%20project."
+              href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20software%20project."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-all shadow-md active:scale-95"
             >
-              <span>Chat on WhatsApp (+91 98230 12345)</span>
+              <span>Chat on WhatsApp (+91 091751 52244)</span>
             </a>
           </div>
         </div>
