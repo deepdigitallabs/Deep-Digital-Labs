@@ -21,8 +21,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "SaaS, Web & Mobile App Development Company | Deep Digital Labs",
-  description: "Deep Digital Labs is a premier product engineering agency in Pune, India. We build scalable SaaS platforms, high-performance web apps, and mobile applications for global startups.",
+  title: "Custom Software & SaaS Development Company in Pune | Deep Digital Labs",
+  description: "Deep Digital Labs builds high-performance custom software, mobile apps, and SaaS platforms for Indian businesses. 100% code ownership, direct developer access, and Pune-based engineering.",
   keywords: [
     "SaaS development company India",
     "custom web app developers",

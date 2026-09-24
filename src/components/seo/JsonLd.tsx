@@ -23,7 +23,7 @@ export function JsonLd() {
           '@type': 'ContactPoint',
           telephone: '+91-98230-12345',
           contactType: 'Customer Support & Sales',
-          email: 'hello@deepdigitallabs.com',
+          email: 'deepdigitallabs@gmail.com',
           availableLanguage: ['English', 'Hindi', 'Marathi']
         },
         sameAs: [

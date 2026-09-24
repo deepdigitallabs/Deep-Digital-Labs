@@ -14,18 +14,20 @@ import {
   Clock
 } from 'lucide-react';
 import { CORE_SERVICES } from '@/data/services';
+import { TechBadge } from '@/components/ui/TechBadge';
 
 export const metadata: Metadata = {
-  title: 'Services | SaaS, Mobile & Growth Engineering | Deep Digital Labs',
-  description: 'Explore our services: SaaS & Web Development, Mobile App Development, Digital Growth & SEO, and Cloud & Ongoing Support.',
+  title: 'Services | Websites, Business Software, Mobile & Cloud | Deep Digital Labs',
+  description: 'Explore our services: Websites & Web Apps, Business Software & SaaS, Mobile App Development, Digital Growth & SEO, and Cloud, Hosting & Technical Support.',
 };
 
 export default function ServicesPage() {
   const iconMap: Record<string, React.ReactNode> = {
-    Layers: <Layers className="w-6 h-6 text-neutral-900 dark:text-[#D4FF00]" />,
-    Smartphone: <Smartphone className="w-6 h-6 text-neutral-900 dark:text-[#D4FF00]" />,
-    TrendingUp: <TrendingUp className="w-6 h-6 text-neutral-900 dark:text-[#D4FF00]" />,
-    ShieldCheck: <ShieldCheck className="w-6 h-6 text-neutral-900 dark:text-[#D4FF00]" />,
+    Code2: <Code2 className="w-6 h-6 text-blue-500 dark:text-[#D4FF00]" />,
+    Layers: <Layers className="w-6 h-6 text-indigo-500 dark:text-[#D4FF00]" />,
+    Smartphone: <Smartphone className="w-6 h-6 text-cyan-500 dark:text-[#D4FF00]" />,
+    TrendingUp: <TrendingUp className="w-6 h-6 text-emerald-500 dark:text-[#D4FF00]" />,
+    ShieldCheck: <ShieldCheck className="w-6 h-6 text-amber-500 dark:text-[#D4FF00]" />,
   };
 
   return (
@@ -86,21 +88,41 @@ export default function ServicesPage() {
                   ))}
                 </div>
 
-                {/* Tech Tags */}
-                <div className="pt-2">
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-gray-500 font-semibold block mb-2">
-                    Tech Stack &amp; Tools
+                {/* Tech Specializations */}
+                <div className="pt-2 space-y-3">
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-gray-500 font-semibold block">
+                    Specializations &amp; Stack
                   </span>
-                  <div className="flex flex-wrap gap-1.5">
-                    {service.techStack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2.5 py-1 rounded-md text-xs font-mono bg-white dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-gray-300"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                  {service.techSpecializations && service.techSpecializations.length > 0 ? (
+                    <div className="space-y-2.5">
+                      {service.techSpecializations.map((spec) => (
+                        <div key={spec.category} className="space-y-1">
+                          <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 dark:text-gray-500 font-medium">
+                            {spec.category}
+                          </span>
+                          <div className="flex flex-wrap gap-1.5">
+                            {spec.skills.map((skill) => (
+                              <TechBadge
+                                key={skill}
+                                name={skill}
+                                size="sm"
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex flex-wrap gap-2">
+                      {service.techStack.map((tech) => (
+                        <TechBadge
+                          key={tech}
+                          name={tech}
+                          size="sm"
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
 

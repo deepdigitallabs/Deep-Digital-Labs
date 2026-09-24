@@ -436,8 +436,8 @@ export default function ContactPage() {
                   <Mail className="w-4 h-4 text-neutral-700 dark:text-[#D4FF00] shrink-0 mt-0.5" />
                   <div>
                     <div className="text-neutral-500 dark:text-gray-500">Email Directly</div>
-                    <a href="mailto:hello@deepdigitallabs.com" className="text-neutral-900 dark:text-white font-medium hover:underline">
-                      hello@deepdigitallabs.com
+                    <a href="mailto:deepdigitallabs@gmail.com" className="text-neutral-900 dark:text-white font-medium hover:underline">
+                      deepdigitallabs@gmail.com
                     </a>
                   </div>
                 </div>

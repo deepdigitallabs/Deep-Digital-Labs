@@ -131,7 +131,7 @@ export default function PrivacyPolicyPage() {
               7. Your Rights
             </h2>
             <p>
-              Depending on your location, you have the right to request access to your personal data, request corrections, or request deletion of personal information where applicable by law. To exercise any of these rights, contact us at <a href="mailto:hello@deepdigitallabs.com" className="font-semibold text-slate-900 dark:text-white underline">hello@deepdigitallabs.com</a>.
+              Depending on your location, you have the right to request access to your personal data, request corrections, or request deletion of personal information where applicable by law. To exercise any of these rights, contact us at <a href="mailto:deepdigitallabs@gmail.com" className="font-semibold text-slate-900 dark:text-white underline">deepdigitallabs@gmail.com</a>.
             </p>
           </section>
 
@@ -147,8 +147,8 @@ export default function PrivacyPolicyPage() {
               <div className="text-slate-600 dark:text-gray-400">Level 5, Amar Paradigm, Baner-Hinjawadi Tech Corridor</div>
               <div className="text-slate-600 dark:text-gray-400">Pune, Maharashtra 411045, India</div>
               <div className="pt-2">
-                <a href="mailto:hello@deepdigitallabs.com" className="text-slate-900 dark:text-white font-semibold hover:underline">
-                  Email: hello@deepdigitallabs.com
+                <a href="mailto:deepdigitallabs@gmail.com" className="text-slate-900 dark:text-white font-semibold hover:underline">
+                  Email: deepdigitallabs@gmail.com
                 </a>
               </div>
             </div>

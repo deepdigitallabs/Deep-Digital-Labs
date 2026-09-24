@@ -208,7 +208,24 @@ export default function CaseStudiesPage() {
                       {cs.summary}
                     </p>
 
+                    {cs.keyResult && (
+                      <div className="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-lg border border-emerald-200 dark:border-emerald-800/40 line-clamp-1">
+                        ⭐ {cs.keyResult}
+                      </div>
+                    )}
 
+                    {cs.techStack && cs.techStack.length > 0 && (
+                      <div className="flex flex-wrap gap-1 pt-1">
+                        {cs.techStack.map((tech) => (
+                          <span
+                            key={tech}
+                            className="text-[10px] font-mono px-2 py-0.5 rounded bg-neutral-100 dark:bg-white/10 text-neutral-700 dark:text-gray-300"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -218,7 +235,7 @@ export default function CaseStudiesPage() {
                     href={`/case-studies/${cs.slug}`}
                     className="inline-flex items-center gap-1.5 font-bold text-neutral-900 dark:text-white hover:text-black dark:hover:text-[#D4FF00] transition-colors group-hover:underline"
                   >
-                    <span>Read Study</span>
+                    <span>Read Case Study</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </Link>
 
@@ -229,7 +246,7 @@ export default function CaseStudiesPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-900 hover:text-white dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black transition-all"
                     >
-                      <span>Live Site</span>
+                      <span>Visit Live Site</span>
                       <ArrowUpRight className="w-3 h-3" />
                     </a>
                   )}
@@ -246,19 +263,27 @@ export default function CaseStudiesPage() {
             Pune Developer Team
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight max-w-2xl mx-auto text-white">
-            Have a project in mind? Let’s build it together.
+            Let’s Build Something That Scales.
           </h2>
           <p className="text-base text-slate-300 max-w-xl mx-auto font-normal leading-relaxed">
-            Talk directly with our developer team in Pune. We’ll understand what you need, share our honest ideas, and deliver clean, working code.
+            Tell us about what you want to build. We’ll understand your requirements and get back to you directly with a clear timeline and fair pricing.
           </p>
-          <div className="pt-2">
+          <div className="pt-2 flex flex-col sm:flex-row gap-3.5 justify-center items-center">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm bg-white text-slate-900 hover:bg-slate-100 transition-all shadow-md active:scale-95"
             >
-              <span>Talk to Our Team</span>
+              <span>Book a 30-Minute Discovery Call</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
+            <a
+              href="https://wa.me/919823012345?text=Hi,%20I%20want%20to%20discuss%20a%20software%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-all shadow-md active:scale-95"
+            >
+              <span>Chat on WhatsApp (+91 98230 12345)</span>
+            </a>
           </div>
         </div>
 

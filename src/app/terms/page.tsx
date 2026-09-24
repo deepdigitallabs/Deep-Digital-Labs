@@ -161,8 +161,8 @@ export default function TermsOfServicePage() {
               <div className="text-slate-600 dark:text-gray-400">Level 5, Amar Paradigm, Baner-Hinjawadi Tech Corridor</div>
               <div className="text-slate-600 dark:text-gray-400">Pune, Maharashtra 411045, India</div>
               <div className="pt-2">
-                <a href="mailto:hello@deepdigitallabs.com" className="text-slate-900 dark:text-white font-semibold hover:underline">
-                  Email: hello@deepdigitallabs.com
+                <a href="mailto:deepdigitallabs@gmail.com" className="text-slate-900 dark:text-white font-semibold hover:underline">
+                  Email: deepdigitallabs@gmail.com
                 </a>
               </div>
             </div>

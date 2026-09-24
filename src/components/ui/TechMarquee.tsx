@@ -1,4 +1,5 @@
 import React from 'react';
+import { TechIcon } from './TechBadge';
 
 interface TechMarqueeProps {
   headline?: string;
@@ -47,7 +48,7 @@ export function TechMarquee({ headline }: TechMarqueeProps) {
             key={`${tech.name}-${index}`}
             className="flex items-center gap-3 px-5 py-2.5 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-cyan-500/40 hover:bg-slate-800/50 transition-all cursor-default shrink-0 shadow-sm"
           >
-            <span className="w-2 h-2 rounded-full bg-cyan-400/80" />
+            <TechIcon name={tech.name} className="w-4 h-4 shrink-0" />
             <span className="font-semibold text-sm text-slate-200 tracking-tight">
               {tech.name}
             </span>

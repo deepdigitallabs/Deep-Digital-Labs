@@ -13,8 +13,9 @@ import {
   ChevronRight,
   ArrowUpRight
 } from 'lucide-react';
-import { SERVICES } from '@/data/services';
+import { SERVICES, getServiceBySlug, ALIAS_SLUGS } from '@/data/services';
 import { CASE_STUDIES } from '@/data/caseStudies';
+import { TechBadge } from '@/components/ui/TechBadge';
 
 interface PageProps {
   params: Promise<{
@@ -23,14 +24,14 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return SERVICES.map((service) => ({
-    slug: service.slug,
-  }));
+  const directSlugs = SERVICES.map((service) => ({ slug: service.slug }));
+  const aliasSlugs = Object.keys(ALIAS_SLUGS).map((alias) => ({ slug: alias }));
+  return [...directSlugs, ...aliasSlugs];
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const service = SERVICES.find((s) => s.slug === slug);
+  const service = getServiceBySlug(slug);
   if (!service) return { title: 'Service Not Found' };
 
   return {
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ServiceDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const service = SERVICES.find((s) => s.slug === slug);
+  const service = getServiceBySlug(slug);
 
   if (!service) {
     notFound();
@@ -205,20 +206,41 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 </h2>
               </div>
 
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 dark:bg-[#0F0F11] dark:border-white/10 space-y-4 shadow-xs">
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 dark:bg-[#0F0F11] dark:border-white/10 space-y-6 shadow-xs">
                 <p className="text-xs text-slate-600 dark:text-gray-400 leading-relaxed">
-                  Strictly modern industry standards chosen for maximum uptime, developer velocity, and maintainability.
+                  Strictly modern industry standards chosen for maximum uptime, velocity, and maintainability.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {service.techStack.map((tech) => (
-                    <span 
-                      key={tech}
-                      className="px-3 py-1.5 rounded-lg text-xs font-mono bg-white border border-slate-200 text-slate-700 dark:bg-white/5 dark:border-white/10 dark:text-gray-300 shadow-xs"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+
+                {service.techSpecializations && service.techSpecializations.length > 0 ? (
+                  <div className="space-y-5">
+                    {service.techSpecializations.map((spec) => (
+                      <div key={spec.category} className="space-y-2">
+                        <span className="text-[11px] font-mono uppercase tracking-wider font-bold text-slate-500 dark:text-gray-400 block">
+                          {spec.category}
+                        </span>
+                        <div className="flex flex-wrap gap-2">
+                          {spec.skills.map((skill) => (
+                            <TechBadge 
+                              key={skill}
+                              name={skill}
+                              size="sm"
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="flex flex-wrap gap-2.5">
+                    {service.techStack.map((tech) => (
+                      <TechBadge 
+                        key={tech}
+                        name={tech}
+                        size="sm"
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 dark:bg-emerald-950/40 dark:border-emerald-800/40 text-xs text-emerald-900 dark:text-emerald-200 flex items-center gap-3 font-medium">

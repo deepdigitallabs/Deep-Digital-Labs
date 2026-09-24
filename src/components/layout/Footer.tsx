@@ -47,8 +47,8 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-gray-400">
                 <Mail className="w-4 h-4 text-neutral-700 dark:text-[#D4FF00] shrink-0" />
-                <a href="mailto:hello@deepdigitallabs.com" className="hover:text-neutral-900 dark:hover:text-[#D4FF00] transition-colors">
-                  hello@deepdigitallabs.com
+                <a href="mailto:deepdigitallabs@gmail.com" className="hover:text-neutral-900 dark:hover:text-[#D4FF00] transition-colors">
+                  deepdigitallabs@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-gray-400">
@@ -67,23 +67,28 @@ export function Footer() {
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/services/saas-web-development" className="text-neutral-600 hover:text-neutral-900 dark:text-gray-400 dark:hover:text-[#D4FF00] transition-colors">
-                  SaaS &amp; Web Development
+                <Link href="/services/websites-web-apps" className="text-neutral-600 hover:text-neutral-900 dark:text-gray-400 dark:hover:text-[#D4FF00] transition-colors">
+                  01 — Websites &amp; Web Apps
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/business-software-saas" className="text-neutral-600 hover:text-neutral-900 dark:text-gray-400 dark:hover:text-[#D4FF00] transition-colors">
+                  02 — Business Software
                 </Link>
               </li>
               <li>
                 <Link href="/services/mobile-app-development" className="text-neutral-600 hover:text-neutral-900 dark:text-gray-400 dark:hover:text-[#D4FF00] transition-colors">
-                  Mobile App Development
+                  03 — Mobile Apps
                 </Link>
               </li>
               <li>
                 <Link href="/services/digital-growth-seo" className="text-neutral-600 hover:text-neutral-900 dark:text-gray-400 dark:hover:text-[#D4FF00] transition-colors">
-                  Digital Growth &amp; SEO
+                  04 — Digital Growth &amp; SEO
                 </Link>
               </li>
               <li>
                 <Link href="/services/cloud-ongoing-support" className="text-neutral-600 hover:text-neutral-900 dark:text-gray-400 dark:hover:text-[#D4FF00] transition-colors">
-                  Cloud &amp; Ongoing Support
+                  05 — Cloud &amp; Technical Support
                 </Link>
               </li>
               <li className="pt-2">
@@ -179,16 +184,6 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-
-            <div className="p-4 rounded-2xl bg-white dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-sm">
-              <div className="flex items-center gap-2 text-xs font-semibold text-neutral-900 dark:text-[#D4FF00]">
-                <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-[#D4FF00]" />
-                <span>100% IP Ownership</span>
-              </div>
-              <p className="text-[11px] text-neutral-600 dark:text-gray-400 mt-1 leading-relaxed">
-                NDA signed upfront, zero vendor lock-in, full code repository ownership transferred.
-              </p>
-            </div>
           </div>
 
         </div>

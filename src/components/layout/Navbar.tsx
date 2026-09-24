@@ -7,6 +7,7 @@ import {
   X, 
   ChevronDown, 
   Layers, 
+  Code2,
   Smartphone,
   TrendingUp, 
   ShieldCheck, 
@@ -64,85 +65,104 @@ export function Navbar() {
               {/* Mega Menu Container */}
               {megaMenuOpen && (
                 <div 
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[720px] bg-white/95 dark:bg-[#0F0F11]/95 backdrop-blur-2xl border border-neutral-200 dark:border-white/10 rounded-3xl p-6 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 duration-200 text-left"
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[760px] bg-white/95 dark:bg-[#0F0F11]/95 backdrop-blur-2xl border border-neutral-200 dark:border-white/10 rounded-3xl p-6 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 duration-200 text-left"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <div className="grid grid-cols-2 gap-4 pb-4 border-b border-neutral-100 dark:border-white/10">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pb-4 border-b border-neutral-100 dark:border-white/10">
                     
-                    {/* Pillar 1: SaaS & Web Development */}
+                    {/* 1. Websites & Web Apps */}
                     <Link 
-                      href="/services/saas-web-development" 
+                      href="/services/websites-web-apps" 
                       onClick={() => setMegaMenuOpen(false)}
-                      className="p-4 rounded-2xl bg-neutral-50/70 dark:bg-white/[0.03] hover:bg-neutral-100 dark:hover:bg-white/10 border border-neutral-200/60 dark:border-white/5 transition-all group"
+                      className="p-3.5 rounded-2xl bg-neutral-50/70 dark:bg-white/[0.03] hover:bg-neutral-100 dark:hover:bg-white/10 border border-neutral-200/60 dark:border-white/5 transition-all group"
                     >
-                      <div className="flex items-center gap-2.5 mb-1.5">
-                        <div className="p-1.5 rounded-lg bg-white dark:bg-black/60 border border-neutral-200 dark:border-white/10">
-                          <Layers className="w-4 h-4 text-neutral-900 dark:text-[#D4FF00]" />
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <div className="p-1.5 rounded-lg bg-white dark:bg-black/60 border border-neutral-200 dark:border-white/10 shrink-0">
+                          <Code2 className="w-4 h-4 text-blue-500 dark:text-[#D4FF00]" />
                         </div>
-                        <span className="text-sm font-bold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-[#D4FF00] transition-colors">
-                          SaaS &amp; Web Development
+                        <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-[#D4FF00] transition-colors leading-tight">
+                          01 — Websites &amp; Web Apps
                         </span>
                       </div>
-                      <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed pl-8">
-                        Scalable software, startup MVPs, and high-performance Next.js websites.
+                      <p className="text-[11px] text-neutral-600 dark:text-gray-400 leading-relaxed pl-7">
+                        Business sites, e-commerce, custom web apps &amp; portals.
                       </p>
                     </Link>
 
-                    {/* Pillar 2: Mobile App Development */}
+                    {/* 2. Business Software */}
+                    <Link 
+                      href="/services/business-software-saas" 
+                      onClick={() => setMegaMenuOpen(false)}
+                      className="p-3.5 rounded-2xl bg-neutral-50/70 dark:bg-white/[0.03] hover:bg-neutral-100 dark:hover:bg-white/10 border border-neutral-200/60 dark:border-white/5 transition-all group"
+                    >
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <div className="p-1.5 rounded-lg bg-white dark:bg-black/60 border border-neutral-200 dark:border-white/10 shrink-0">
+                          <Layers className="w-4 h-4 text-indigo-500 dark:text-[#D4FF00]" />
+                        </div>
+                        <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-[#D4FF00] transition-colors leading-tight">
+                          02 — Business Software
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-neutral-600 dark:text-gray-400 leading-relaxed pl-7">
+                        CRM, ERP, internal management dashboards &amp; SaaS.
+                      </p>
+                    </Link>
+
+                    {/* 3. Mobile Apps */}
                     <Link 
                       href="/services/mobile-app-development" 
                       onClick={() => setMegaMenuOpen(false)}
-                      className="p-4 rounded-2xl bg-neutral-50/70 dark:bg-white/[0.03] hover:bg-neutral-100 dark:hover:bg-white/10 border border-neutral-200/60 dark:border-white/5 transition-all group"
+                      className="p-3.5 rounded-2xl bg-neutral-50/70 dark:bg-white/[0.03] hover:bg-neutral-100 dark:hover:bg-white/10 border border-neutral-200/60 dark:border-white/5 transition-all group"
                     >
-                      <div className="flex items-center gap-2.5 mb-1.5">
-                        <div className="p-1.5 rounded-lg bg-white dark:bg-black/60 border border-neutral-200 dark:border-white/10">
-                          <Smartphone className="w-4 h-4 text-neutral-900 dark:text-[#D4FF00]" />
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <div className="p-1.5 rounded-lg bg-white dark:bg-black/60 border border-neutral-200 dark:border-white/10 shrink-0">
+                          <Smartphone className="w-4 h-4 text-cyan-500 dark:text-[#D4FF00]" />
                         </div>
-                        <span className="text-sm font-bold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-[#D4FF00] transition-colors">
-                          Mobile App Development
+                        <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-[#D4FF00] transition-colors leading-tight">
+                          03 — Mobile Apps
                         </span>
                       </div>
-                      <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed pl-8">
-                        Fast, beautiful iOS and Android apps with Flutter and React Native.
+                      <p className="text-[11px] text-neutral-600 dark:text-gray-400 leading-relaxed pl-7">
+                        Cross-platform iOS and Android apps with Flutter.
                       </p>
                     </Link>
 
-                    {/* Pillar 3: Digital Growth & SEO */}
+                    {/* 4. Digital Growth & SEO */}
                     <Link 
                       href="/services/digital-growth-seo" 
                       onClick={() => setMegaMenuOpen(false)}
-                      className="p-4 rounded-2xl bg-neutral-50/70 dark:bg-white/[0.03] hover:bg-neutral-100 dark:hover:bg-white/10 border border-neutral-200/60 dark:border-white/5 transition-all group"
+                      className="p-3.5 rounded-2xl bg-neutral-50/70 dark:bg-white/[0.03] hover:bg-neutral-100 dark:hover:bg-white/10 border border-neutral-200/60 dark:border-white/5 transition-all group"
                     >
-                      <div className="flex items-center gap-2.5 mb-1.5">
-                        <div className="p-1.5 rounded-lg bg-white dark:bg-black/60 border border-neutral-200 dark:border-white/10">
-                          <TrendingUp className="w-4 h-4 text-neutral-900 dark:text-[#D4FF00]" />
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <div className="p-1.5 rounded-lg bg-white dark:bg-black/60 border border-neutral-200 dark:border-white/10 shrink-0">
+                          <TrendingUp className="w-4 h-4 text-emerald-500 dark:text-[#D4FF00]" />
                         </div>
-                        <span className="text-sm font-bold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-[#D4FF00] transition-colors">
-                          Digital Growth &amp; SEO
+                        <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-[#D4FF00] transition-colors leading-tight">
+                          04 — Digital Growth &amp; SEO
                         </span>
                       </div>
-                      <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed pl-8">
-                        Rank higher on Google, dominate local search, and automate marketing.
+                      <p className="text-[11px] text-neutral-600 dark:text-gray-400 leading-relaxed pl-7">
+                        Technical SEO, local Google search &amp; CRO.
                       </p>
                     </Link>
 
-                    {/* Pillar 4: Cloud & Ongoing Support */}
+                    {/* 5. Cloud & Technical Support */}
                     <Link 
                       href="/services/cloud-ongoing-support" 
                       onClick={() => setMegaMenuOpen(false)}
-                      className="p-4 rounded-2xl bg-neutral-50/70 dark:bg-white/[0.03] hover:bg-neutral-100 dark:hover:bg-white/10 border border-neutral-200/60 dark:border-white/5 transition-all group"
+                      className="p-3.5 rounded-2xl bg-neutral-50/70 dark:bg-white/[0.03] hover:bg-neutral-100 dark:hover:bg-white/10 border border-neutral-200/60 dark:border-white/5 transition-all group col-span-2 sm:col-span-2"
                     >
-                      <div className="flex items-center gap-2.5 mb-1.5">
-                        <div className="p-1.5 rounded-lg bg-white dark:bg-black/60 border border-neutral-200 dark:border-white/10">
-                          <ShieldCheck className="w-4 h-4 text-neutral-900 dark:text-[#D4FF00]" />
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <div className="p-1.5 rounded-lg bg-white dark:bg-black/60 border border-neutral-200 dark:border-white/10 shrink-0">
+                          <ShieldCheck className="w-4 h-4 text-amber-500 dark:text-[#D4FF00]" />
                         </div>
-                        <span className="text-sm font-bold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-[#D4FF00] transition-colors">
-                          Cloud &amp; Ongoing Support
+                        <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-[#D4FF00] transition-colors leading-tight">
+                          05 — Cloud &amp; Technical Support
                         </span>
                       </div>
-                      <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed pl-8">
-                        AWS/Vercel hosting, security patches, and guaranteed 99.9% uptime.
+                      <p className="text-[11px] text-neutral-600 dark:text-gray-400 leading-relaxed pl-7">
+                        AWS cloud hosting, domain/DNS, server setup &amp; maintenance.
                       </p>
                     </Link>
 
@@ -227,32 +247,39 @@ export function Navbar() {
               {mobileServicesOpen && (
                 <div className="pl-3 pr-2 py-2 space-y-2 border-l border-neutral-200 dark:border-white/10 mt-1">
                   <Link 
-                    href="/services/saas-web-development" 
+                    href="/services/websites-web-apps" 
                     onClick={() => setMobileMenuOpen(false)}
                     className="block text-xs font-semibold text-neutral-800 dark:text-gray-200 hover:text-black dark:hover:text-[#D4FF00] py-1"
                   >
-                    1. SaaS &amp; Web Development
+                    01 — Websites &amp; Web Apps
+                  </Link>
+                  <Link 
+                    href="/services/business-software-saas" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-xs font-semibold text-neutral-800 dark:text-gray-200 hover:text-black dark:hover:text-[#D4FF00] py-1"
+                  >
+                    02 — Business Software
                   </Link>
                   <Link 
                     href="/services/mobile-app-development" 
                     onClick={() => setMobileMenuOpen(false)}
                     className="block text-xs font-semibold text-neutral-800 dark:text-gray-200 hover:text-black dark:hover:text-[#D4FF00] py-1"
                   >
-                    2. Mobile App Development
+                    03 — Mobile Apps
                   </Link>
                   <Link 
                     href="/services/digital-growth-seo" 
                     onClick={() => setMobileMenuOpen(false)}
                     className="block text-xs font-semibold text-neutral-800 dark:text-gray-200 hover:text-black dark:hover:text-[#D4FF00] py-1"
                   >
-                    3. Digital Growth &amp; SEO
+                    04 — Digital Growth &amp; SEO
                   </Link>
                   <Link 
                     href="/services/cloud-ongoing-support" 
                     onClick={() => setMobileMenuOpen(false)}
                     className="block text-xs font-semibold text-neutral-800 dark:text-gray-200 hover:text-black dark:hover:text-[#D4FF00] py-1"
                   >
-                    4. Cloud &amp; Ongoing Support
+                    05 — Cloud &amp; Technical Support
                   </Link>
                   <Link 
                     href="/services" 
