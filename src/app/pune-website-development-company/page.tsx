@@ -257,7 +257,7 @@ export default function PuneWebsiteDevelopmentPage() {
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-xl bg-[#E8623C] text-white font-bold text-sm hover:bg-[#F0744E] transition-all"
             >
-              Chat on WhatsApp: +91 91751 52244
+              Chat on WhatsApp
             </a>
             <Link
               href="/"

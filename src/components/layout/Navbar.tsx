@@ -219,11 +219,17 @@ export function Navbar() {
               )}
             </div>
 
-            <a href="#why-us" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
+            <Link href="/solutions" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
+              Solutions
+            </Link>
+            <Link href="/why-us" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
               Why Us
-            </a>
+            </Link>
             <Link href="/case-studies" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
               Work
+            </Link>
+            <Link href="/pune-website-development-company" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
+              Pune Web Studio
             </Link>
             <Link href="/about" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
               About
@@ -327,19 +333,33 @@ export function Navbar() {
               )}
             </div>
 
-            <a 
-              href="#why-us" 
+            <Link 
+              href="/solutions" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+            >
+              Solutions
+            </Link>
+            <Link 
+              href="/why-us" 
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
             >
               Why Us
-            </a>
+            </Link>
             <Link 
               href="/case-studies" 
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
             >
               Work &amp; Case Studies
+            </Link>
+            <Link 
+              href="/pune-website-development-company" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+            >
+              Pune Web Studio
             </Link>
             <Link 
               href="/about" 

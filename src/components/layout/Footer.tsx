@@ -65,7 +65,7 @@ export function Footer() {
               <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-neutral-400">
                 <MessageSquare className="w-4 h-4 text-emerald-500 shrink-0" />
                 <a href="https://wa.me/919175152244" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 transition-colors">
-                  Direct WhatsApp Engineering Line (+91 91751 52244)
+                  Direct WhatsApp Engineering Line
                 </a>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-neutral-400">
@@ -122,6 +122,16 @@ export function Footer() {
               Company
             </h3>
             <ul className="space-y-2.5 text-sm">
+              <li>
+                <Link href="/solutions" className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors">
+                  Solutions
+                </Link>
+              </li>
+              <li>
+                <Link href="/why-us" className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors">
+                  Why Us
+                </Link>
+              </li>
               <li>
                 <Link href="/about" className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors">
                   About Us

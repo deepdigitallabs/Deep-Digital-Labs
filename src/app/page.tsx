@@ -26,8 +26,6 @@ import {
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
 import { Marquee } from '@/registry/magicui/marquee';
-import { Globe as InteractiveGlobe } from '@/registry/magicui/globe';
-import { IconCloud } from '@/registry/magicui/icon-cloud';
 import { BlinkingSquares } from '@/components/ui/blinking-squares';
 import { CursorWave } from '@/components/ui/cursor-wave';
 import { cn } from '@/lib/utils';
@@ -88,11 +86,11 @@ const PUNE_REVIEWS = [
     body: "They built our inventory tracking and billing portal from scratch. What used to take our team 3 days of manual paperwork is now handled in real time on our phones. It made daily work effortless.",
   },
   {
-    name: "Pradeep Shinde",
-    role: "Founder",
+    name: "Kishor Gunjal",
+    role: "Dairy Flow Pro User",
     company: "Dairy Flow Pro",
     location: "Pune",
-    initials: "PS",
+    initials: "KG",
     body: "The speed and reliability are unbelievable. 100/100 Core Web Vitals, zero monthly builder fees, and direct WhatsApp access to the developer who actually built it. Best tech partner in Pune.",
   },
 ];
@@ -101,7 +99,6 @@ const TECH_SLUGS = [
   "typescript",
   "javascript",
   "dart",
-  "java",
   "react",
   "flutter",
   "android",
@@ -121,203 +118,77 @@ const TECH_SLUGS = [
   "cypress",
   "docker",
   "git",
-  "jira",
   "github",
   "gitlab",
   "visualstudiocode",
   "androidstudio",
-  "sonarqube",
   "figma",
 ];
 
-const TECH_CATEGORIES = [
+const TECH_ICON_OVERRIDES: Record<string, string> = {
+  css3: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  amazonaws: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+  visualstudiocode: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+};
+
+const TECH_DISPLAY_NAMES: Record<string, string> = {
+  typescript: "TypeScript",
+  javascript: "JavaScript",
+  dart: "Dart",
+  react: "React",
+  flutter: "Flutter",
+  android: "Android",
+  html5: "HTML5",
+  css3: "CSS3",
+  nodedotjs: "Node.js",
+  express: "Express",
+  nextdotjs: "Next.js",
+  prisma: "Prisma",
+  amazonaws: "AWS",
+  postgresql: "PostgreSQL",
+  firebase: "Firebase",
+  nginx: "Nginx",
+  vercel: "Vercel",
+  testinglibrary: "Testing Library",
+  jest: "Jest",
+  cypress: "Cypress",
+  docker: "Docker",
+  git: "Git",
+  github: "GitHub",
+  gitlab: "GitLab",
+  visualstudiocode: "VS Code",
+  androidstudio: "Android Studio",
+  figma: "Figma",
+};
+
+const TECH_FEATURES = [
   {
-    id: "all",
-    name: "All Tools",
-    count: 30,
-    title: "Complete Modern Engineering Stack",
-    description: "Every tool we choose has a single purpose: making your software fast, reliable, and maintainable without legacy dependencies.",
-    slugs: TECH_SLUGS,
-    features: [
-      {
-        title: "Sub-Second Load Times",
-        desc: "SSR & Static generation ensuring instant first paints under 0.8 seconds on 4G mobile networks.",
-        tag: "Speed",
-      },
-      {
-        title: "Zero Builder Lock-In",
-        desc: "You own 100% of your source code, domain, database, and infrastructure with no recurring platform fees.",
-        tag: "Ownership",
-      },
-      {
-        title: "99.99% Availability",
-        desc: "Cloud deployment across AWS & Vercel edge networks with automated DDoS mitigation and SSL certificates.",
-        tag: "Uptime",
-      },
-      {
-        title: "Enterprise Grade Security",
-        desc: "ACID database compliance, encrypted data in transit & at rest, and strict OWASP security standards.",
-        tag: "Security",
-      },
-    ],
+    title: "Sub-Second Load Times",
+    desc: "SSR & Static generation ensuring instant first paints under 0.8 seconds on 4G mobile networks.",
+    tag: "Speed",
   },
   {
-    id: "frontend",
-    name: "Web & Frontend",
-    count: 6,
-    title: "Next.js 15, React 19 & TypeScript",
-    description: "Ultra-fast, mobile-first web applications built with Google's Core Web Vitals in mind from day one.",
-    slugs: ["typescript", "javascript", "react", "nextdotjs", "html5", "css3"],
-    features: [
-      {
-        title: "Next.js 15 Server Components",
-        desc: "Zero-bundle overhead for static content, instant navigation, and maximum search engine discoverability.",
-        tag: "Next.js",
-      },
-      {
-        title: "Strict TypeScript Safety",
-        desc: "100% statically typed interfaces eliminating runtime crashes before code ever touches production.",
-        tag: "TypeScript",
-      },
-      {
-        title: "Local Pune SEO Optimization",
-        desc: "Embedded JSON-LD schemas, localized breadcrumbs, and OpenGraph social preview tags built-in.",
-        tag: "SEO",
-      },
-      {
-        title: "Mobile-First 60fps UX",
-        desc: "Fluid gesture-based interfaces tailored for one-handed smartphone browsing with zero input lag.",
-        tag: "Mobile UI",
-      },
-    ],
+    title: "Zero Builder Lock-In",
+    desc: "You own 100% of your source code, domain, database, and infrastructure with no recurring platform fees.",
+    tag: "Ownership",
   },
   {
-    id: "mobile",
-    name: "Mobile Apps",
-    count: 4,
-    title: "Flutter, Dart & Native Toolchains",
-    description: "Build once and launch high-performance apps on both Google Play Store and Apple App Store.",
-    slugs: ["flutter", "dart", "android", "androidstudio"],
-    features: [
-      {
-        title: "Single Codebase Architecture",
-        desc: "Cut development time and maintenance cost in half without sacrificing native device performance.",
-        tag: "Cross-Platform",
-      },
-      {
-        title: "Offline-First Data Caching",
-        desc: "Local SQLite storage ensures your staff or customers can work uninterrupted during connectivity drops.",
-        tag: "Offline",
-      },
-      {
-        title: "Firebase Push Notifications",
-        desc: "Instant targeted messages for order dispatch, transaction alerts, and promotional announcements.",
-        tag: "FCM",
-      },
-      {
-        title: "Turnkey App Store Publishing",
-        desc: "We manage certificates, keystores, store guidelines compliance, and live production releases.",
-        tag: "Store Deploy",
-      },
-    ],
+    title: "99.99% Availability",
+    desc: "Cloud deployment across AWS & Vercel edge networks with automated DDoS mitigation and SSL certificates.",
+    tag: "Uptime",
   },
   {
-    id: "backend",
-    name: "Backend & Databases",
-    count: 5,
-    title: "Node.js, PostgreSQL & Prisma",
-    description: "Scalable APIs and relational transactional engines designed for high concurrency and zero data loss.",
-    slugs: ["nodedotjs", "express", "postgresql", "prisma", "firebase"],
-    features: [
-      {
-        title: "Sub-50ms API Latency",
-        desc: "Lightweight Express & Node.js microservices engineered for rapid responses and low memory footprints.",
-        tag: "REST API",
-      },
-      {
-        title: "ACID Compliant PostgreSQL",
-        desc: "Enterprise relational database with foreign key constraints, indexing, and transactional integrity.",
-        tag: "Postgres",
-      },
-      {
-        title: "Type-Safe Prisma ORM",
-        desc: "Automated schema migrations and database type checks preventing invalid database writes.",
-        tag: "Prisma",
-      },
-      {
-        title: "Automated Backup Snapshots",
-        desc: "Daily automated database backups with point-in-time restore capability for complete peace of mind.",
-        tag: "Backups",
-      },
-    ],
-  },
-  {
-    id: "cloud",
-    name: "Cloud & DevOps",
-    count: 8,
-    title: "AWS, Docker, Vercel & CI/CD",
-    description: "Automated build, test, and release pipelines deployed across secure, isolated server infrastructure.",
-    slugs: ["amazonaws", "docker", "vercel", "nginx", "git", "github", "gitlab", "sonarqube"],
-    features: [
-      {
-        title: "Global Edge CDN Caching",
-        desc: "Static assets cached at 300+ edge locations worldwide for under 20ms response time anywhere in India.",
-        tag: "CDN",
-      },
-      {
-        title: "Docker Isolation",
-        desc: "Containerized application runtimes guaranteeing that staging exactly matches production.",
-        tag: "Containers",
-      },
-      {
-        title: "Automated CI/CD Workflows",
-        desc: "Git commit hooks that automatically run test suites and deploy staging environments in minutes.",
-        tag: "CI/CD",
-      },
-      {
-        title: "DDoS Mitigation & SSL",
-        desc: "Nginx reverse proxy, automated Let's Encrypt SSL certificates, and IP rate limiting for security.",
-        tag: "Protection",
-      },
-    ],
-  },
-  {
-    id: "qa",
-    name: "QA & UI/UX",
-    count: 5,
-    title: "Figma, Cypress, Jest & Jira",
-    description: "From pixel-perfect interactive wireframes to automated test suites catching bugs before real users do.",
-    slugs: ["figma", "jest", "cypress", "testinglibrary", "jira"],
-    features: [
-      {
-        title: "Clickable Figma Prototypes",
-        desc: "Experience every screen and flow on your mobile phone before a single line of code is written.",
-        tag: "UI/UX",
-      },
-      {
-        title: "Automated End-to-End Tests",
-        desc: "Cypress test bots that simulate real customer logins, form submissions, and checkouts 24/7.",
-        tag: "Cypress",
-      },
-      {
-        title: "Component Unit Testing",
-        desc: "Jest & Testing Library validating core business calculations, tax logic, and form validations.",
-        tag: "Jest",
-      },
-      {
-        title: "Transparent Agile Delivery",
-        desc: "Weekly sprint demos, real-time Jira progress tracking, and direct developer communication.",
-        tag: "Milestones",
-      },
-    ],
+    title: "Enterprise Grade Security",
+    desc: "ACID database compliance, encrypted data in transit & at rest, and strict OWASP security standards.",
+    tag: "Security",
   },
 ];
+
 
 export default function HomePage() {
   const [callModalOpen, setCallModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-  const [activeTechCategory, setActiveTechCategory] = useState<string>("all");
 
   const handleInstagramMessage = (message: string) => {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
@@ -357,10 +228,6 @@ export default function HomePage() {
 
         {/* Floating Top Proof Pill */}
         <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-white/[0.08] bg-white/70 dark:bg-[#12151D]/80 text-neutral-700 dark:text-neutral-300 text-xs sm:text-sm font-medium mb-6 shadow-sm backdrop-blur-md">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E8623C] opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E8623C]"></span>
-          </span>
           <span className="font-bold text-neutral-900 dark:text-white tracking-tight">Pune&apos;s Trusted Web &amp; App Studio</span>
           <span className="text-neutral-300 dark:text-neutral-600">•</span>
           <span>Pune, Maharashtra</span>
@@ -382,12 +249,8 @@ export default function HomePage() {
             href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20or%20app%20project%20for%20my%20business."
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-3 bg-[#E8623C] hover:bg-[#F0744E] text-white px-7 py-3.5 rounded-xl font-semibold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25 hover:shadow-xl hover:shadow-[#E8623C]/35 active:scale-98 cursor-pointer"
+            className="group relative inline-flex items-center gap-2.5 bg-[#E8623C] hover:bg-[#F0744E] text-white px-7 py-3.5 rounded-xl font-semibold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25 hover:shadow-xl hover:shadow-[#E8623C]/35 active:scale-98 cursor-pointer"
           >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-            </span>
             <span>Chat With Us on WhatsApp</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
@@ -819,7 +682,7 @@ export default function HomePage() {
                     {review.name}
                   </h3>
                   <p className="text-xs text-neutral-500 dark:text-neutral-400 truncate">
-                    {review.role} · {review.company}
+                    {review.role === "Dairy Flow Pro User" ? review.role : `${review.role} · ${review.company}`}
                   </p>
                 </div>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-neutral-100 dark:bg-white/[0.06] text-neutral-500 dark:text-neutral-400 shrink-0">
@@ -866,138 +729,86 @@ export default function HomePage() {
             Engineered with modern, battle-tested tools.
           </h2>
           <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed">
-            From high-performance frontend frameworks to cloud-native microservices, mobile apps, and scalable relational databases — click any category to see our working features in action.
+            From high-performance frontend frameworks to cloud-native microservices, mobile apps, and scalable relational databases — engineered for maximum performance, security, and uptime.
           </p>
         </div>
 
-        {/* Interactive Category Filter Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-          {TECH_CATEGORIES.map((cat) => {
-            const isActive = activeTechCategory === cat.id;
-            return (
-              <button
-                key={cat.id}
-                onClick={() => setActiveTechCategory(cat.id)}
-                className={cn(
-                  "px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center gap-2",
-                  isActive
-                    ? "bg-[#E8623C] text-white shadow-md shadow-[#E8623C]/25 scale-105"
-                    : "bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] text-neutral-700 dark:text-neutral-300 hover:border-[#E8623C]/40 hover:text-neutral-900 dark:hover:text-white"
-                )}
-              >
-                <span>{cat.name}</span>
-                <span
-                  className={cn(
-                    "text-[10px] font-mono px-1.5 py-0.5 rounded-md",
-                    isActive
-                      ? "bg-black/20 text-white"
-                      : "bg-neutral-100 dark:bg-white/[0.06] text-neutral-500 dark:text-neutral-400"
-                  )}
-                >
-                  {cat.count}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Main Grid: Features on Left, Interactive 3D Sphere on Right */}
-        {(() => {
-          const currentCat =
-            TECH_CATEGORIES.find((c) => c.id === activeTechCategory) ||
-            TECH_CATEGORIES[0];
-          const currentImages = currentCat.slugs.map(
-            (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
-          );
-
-          return (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              
-              {/* Left Column: Category Info, Working Feature Cards, & Tech Badges */}
-              <div className="lg:col-span-7 space-y-6">
-                
-                {/* Active Category Header */}
-                <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm space-y-3">
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#E8623C]">
-                      {currentCat.name} Architecture
-                    </span>
-                    <span className="text-xs font-mono text-emerald-500 flex items-center gap-1.5 font-semibold">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                      Production Ready
-                    </span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white font-display">
-                    {currentCat.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                    {currentCat.description}
-                  </p>
-
-                  {/* Tech Slugs Badge Row */}
-                  <div className="pt-2 border-t border-neutral-100 dark:border-white/[0.06] flex flex-wrap gap-2">
-                    {currentCat.slugs.map((slug) => (
-                      <span
-                        key={slug}
-                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-white/[0.04] border border-neutral-200/60 dark:border-white/[0.06] text-[11px] font-mono font-medium text-neutral-800 dark:text-neutral-200 capitalize"
-                      >
-                        <img
-                          src={`https://cdn.simpleicons.org/${slug}/${slug}`}
-                          alt={slug}
-                          className="w-3.5 h-3.5 object-contain"
-                          loading="lazy"
-                        />
-                        <span>{slug.replace('dotjs', '.js')}</span>
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* 4 Working Feature Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                  {currentCat.features.map((feat, idx) => (
-                    <div
-                      key={feat.title}
-                      className="p-4 rounded-xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-2 group"
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#E8623C]/10 text-[#E8623C] font-bold">
-                          {feat.tag}
-                        </span>
-                        <span className="text-[10px] font-mono text-neutral-400">
-                          0{idx + 1}
-                        </span>
-                      </div>
-                      <h4 className="text-sm font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors">
-                        {feat.title}
-                      </h4>
-                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                        {feat.desc}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between pt-1 text-xs font-mono text-neutral-500">
-                  <span className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span>Showing {currentCat.slugs.length} technologies in 3D sphere</span>
-                  </span>
-                  <span className="hidden sm:inline">Drag or swipe right sphere to inspect</span>
-                </div>
-
-              </div>
-
-              {/* Right Column: Interactive 3D IconCloud */}
-              <div className="lg:col-span-5 flex items-center justify-center relative">
-                <div className="relative w-full max-w-[480px] aspect-square flex items-center justify-center rounded-3xl bg-neutral-100/70 dark:bg-white/[0.02] border border-neutral-200/80 dark:border-white/[0.08] p-4 shadow-xl">
-                  <IconCloud key={activeTechCategory} images={currentImages} />
-                </div>
-              </div>
-
+        {/* Main Content Area: Tech Badges & Working Features */}
+        <div className="space-y-6 max-w-5xl mx-auto">
+          
+          {/* Complete Engineering Stack Header Card with Tech Badges */}
+          <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#E8623C]">
+                Full Stack Architecture
+              </span>
+              <span className="text-xs font-mono text-emerald-500 flex items-center gap-1.5 font-semibold">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                Production Ready
+              </span>
             </div>
-          );
-        })()}
+            
+            <div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display">
+                Complete Modern Engineering Stack
+              </h3>
+              <p className="mt-1 text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-3xl">
+                Every tool we choose has a single purpose: making your software fast, reliable, and maintainable without legacy dependencies.
+              </p>
+            </div>
+
+            {/* Tech Slugs Badge Row */}
+            <div className="pt-4 border-t border-neutral-100 dark:border-white/[0.06] flex flex-wrap gap-2.5">
+              {TECH_SLUGS.map((slug) => {
+                const iconUrl = TECH_ICON_OVERRIDES[slug] || `https://cdn.simpleicons.org/${slug}/${slug}`;
+                const displayName = TECH_DISPLAY_NAMES[slug] || slug.replace('dotjs', '.js');
+
+                return (
+                  <span
+                    key={slug}
+                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-neutral-100/80 dark:bg-white/[0.04] border border-neutral-200/70 dark:border-white/[0.06] text-xs font-mono font-medium text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C]/50 transition-colors shadow-2xs"
+                  >
+                    <img
+                      src={iconUrl}
+                      alt={displayName}
+                      className="w-4 h-4 object-contain shrink-0"
+                      loading="lazy"
+                    />
+                    <span>{displayName}</span>
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* 4 Working Feature Cards in a balanced 4-column grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {TECH_FEATURES.map((feat, idx) => (
+              <div
+                key={feat.title}
+                className="p-5 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-3 group hover:shadow-md hover:shadow-[#E8623C]/5"
+              >
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#E8623C]/10 text-[#E8623C] font-bold">
+                      {feat.tag}
+                    </span>
+                    <span className="text-[10px] font-mono text-neutral-400">
+                      0{idx + 1}
+                    </span>
+                  </div>
+                  <h4 className="text-sm sm:text-base font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors leading-snug">
+                    {feat.title}
+                  </h4>
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  {feat.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+        </div>
 
       </section>
 
@@ -1195,37 +1006,29 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 9: BOTTOM HIGH-IMPACT CTA BANNER (MAGIC UI GLOBE)                 */}
+      {/* SECTION 9: BOTTOM HIGH-IMPACT CTA BANNER                                  */}
       {/* ========================================================================= */}
-      <section className="py-24 px-4 sm:px-6 max-w-6xl mx-auto relative overflow-hidden text-center">
+      <section className="py-12 px-4 sm:px-6 max-w-5xl mx-auto relative overflow-hidden text-center">
         
         {/* Glow backdrop */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#E8623C]/30 via-amber-500/15 to-transparent rounded-full blur-[140px] pointer-events-none -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[250px] bg-gradient-to-tr from-[#E8623C]/25 via-amber-500/10 to-transparent rounded-full blur-[100px] pointer-events-none -z-10" />
 
-        <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-3xl bg-neutral-950 dark:bg-[#0E1118] border border-neutral-800 dark:border-white/[0.08] text-white shadow-2xl px-6 sm:px-12 pt-16 pb-48 sm:pb-64">
+        <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-3xl bg-neutral-950 dark:bg-[#0E1118] border border-neutral-800 dark:border-white/[0.08] text-white shadow-2xl px-6 sm:px-12 py-12 sm:py-14">
           
-          {/* Magic UI Backdrop Header Typography */}
-          <span className="pointer-events-none absolute top-8 sm:top-10 select-none bg-gradient-to-b from-white/15 via-white/5 to-transparent bg-clip-text text-center text-7xl sm:text-9xl md:text-[140px] font-extrabold font-display leading-none whitespace-pre-wrap text-transparent tracking-tighter">
-            WORLDWIDE
-          </span>
-
-          {/* Interactive 3D WebGL Globe */}
-          <InteractiveGlobe className="top-44 sm:top-40 md:top-36 max-w-[560px]" />
-
-          {/* Radial gradient mask over the globe */}
-          <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+          {/* Subtle Background Radial Glow */}
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(232,98,60,0.12),transparent_70%)]" />
 
           {/* Foreground Content */}
-          <div className="relative z-20 max-w-2xl mx-auto space-y-5">
+          <div className="relative z-10 max-w-2xl mx-auto space-y-4">
             <span className="inline-block px-3 py-1 rounded-full bg-[#E8623C]/10 border border-[#E8623C]/20 text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
               Get Started Today
             </span>
             
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight font-display leading-tight text-white">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight font-display leading-tight text-white">
               Ready to get more customers online?
             </h2>
 
-            <p className="text-sm sm:text-base text-neutral-300 dark:text-neutral-400 max-w-lg mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-neutral-300 dark:text-neutral-400 max-w-lg mx-auto leading-relaxed">
               Let&apos;s build a simple, fast, professional website or app for your business. Chat directly with your developer today.
             </p>
 
@@ -1234,7 +1037,7 @@ export default function HomePage() {
                 href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20or%20app%20project%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#E8623C] hover:bg-[#F0744E] text-white font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/30 hover:shadow-[#E8623C]/50 hover:scale-[1.02] active:scale-98 flex items-center justify-center gap-2.5"
+                className="w-full sm:w-auto px-7 py-3 rounded-xl bg-[#E8623C] hover:bg-[#F0744E] text-white font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/30 hover:shadow-[#E8623C]/50 hover:scale-[1.02] active:scale-98 flex items-center justify-center gap-2.5"
               >
                 <MessageSquare className="w-4 h-4 text-white" />
                 <span>Chat on WhatsApp</span>
@@ -1242,8 +1045,7 @@ export default function HomePage() {
               </a>
             </div>
 
-            <div className="pt-4 text-xs font-mono text-neutral-400 flex items-center justify-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E8623C] animate-pulse" />
+            <div className="pt-2 text-xs font-mono text-neutral-400 flex items-center justify-center gap-2">
               <span>Pune, Maharashtra HQ · Serving businesses worldwide</span>
             </div>
           </div>

@@ -51,7 +51,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
             
             {/* Eyebrow Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#141416] border border-[#27272A] text-xs font-semibold text-[#00FFA3] shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#00FFA3] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#00FFA3]" />
               <span>🚀 SaaS | Web | Mobile App Development</span>
             </div>
 
@@ -158,7 +158,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
                       <div className="text-base font-bold text-white">Dairy Flow Pro Multi-Tenant System</div>
                     </div>
                     <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono bg-emerald-950/80 border border-emerald-800 text-emerald-400">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                       Live Stream
                     </span>
                   </div>

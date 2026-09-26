@@ -345,7 +345,7 @@ export function ProcessTimeline({ onOpenConsultation }: ProcessTimelineProps) {
                 }}
                 className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-[#E8623C] shadow-[0_0_14px_#E8623C] flex items-center justify-center pointer-events-none z-30"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
+                <span className="w-1.5 h-1.5 rounded-full bg-white" />
               </motion.div>
             </div>
           </motion.div>

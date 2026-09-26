@@ -198,7 +198,7 @@ export default function ServicesPage() {
                 rel="noopener noreferrer"
                 className="text-xs text-neutral-300 hover:text-white font-mono hover:underline inline-flex items-center justify-center gap-1.5"
               >
-                <span>Chat on WhatsApp (+91 91751 52244)</span>
+                <span>Chat on WhatsApp</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
