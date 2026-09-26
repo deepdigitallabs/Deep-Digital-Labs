@@ -13,7 +13,8 @@ import {
   Sparkles,
   Layers,
   Server,
-  Zap
+  Zap,
+  Bot
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 
@@ -159,26 +160,26 @@ export function Navbar() {
                       </p>
                     </Link>
 
-                    {/* 5. Cloud & Support */}
+                    {/* 5. Chat Bot Development */}
                     <Link 
-                      href="/services/cloud-ongoing-support" 
+                      href="/services/chat-bot-development" 
                       onClick={() => setMegaMenuOpen(false)}
                       className="p-3.5 rounded-xl bg-neutral-50/70 dark:bg-white/[0.02] hover:bg-neutral-100 dark:hover:bg-white/[0.06] border border-neutral-200/60 dark:border-white/[0.04] transition-all group"
                     >
                       <div className="flex items-center gap-2 mb-1.5">
                         <div className="p-1.5 rounded-lg bg-white dark:bg-black/60 border border-neutral-200 dark:border-white/10 shrink-0">
-                          <Server className="w-4 h-4 text-[#E8623C]" />
+                          <Bot className="w-4 h-4 text-[#E8623C]" />
                         </div>
                         <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors leading-tight">
-                          05 — Cloud &amp; DevSecOps
+                          05 — Chat Bot Development
                         </span>
                       </div>
                       <p className="text-[11px] text-neutral-600 dark:text-neutral-400 leading-relaxed pl-7">
-                        AWS architecture, Docker, CI/CD, and 99.98% uptime SLA.
+                        Automated WhatsApp and website customer support bots.
                       </p>
                     </Link>
 
-                    {/* 6. AI Agent Engineering */}
+                    {/* 6. All Capabilities */}
                     <Link 
                       href="/services" 
                       onClick={() => setMegaMenuOpen(false)}
@@ -186,14 +187,14 @@ export function Navbar() {
                     >
                       <div className="flex items-center gap-2 mb-1.5">
                         <div className="p-1.5 rounded-lg bg-[#E8623C]/20 shrink-0">
-                          <Zap className="w-4 h-4 text-[#E8623C]" />
+                          <Sparkles className="w-4 h-4 text-[#E8623C]" />
                         </div>
                         <span className="text-xs sm:text-sm font-bold text-[#E8623C] group-hover:underline transition-colors leading-tight">
-                          06 — AI Agents &amp; RAG
+                          All Services &amp; Packages
                         </span>
                       </div>
                       <p className="text-[11px] text-neutral-600 dark:text-neutral-400 leading-relaxed pl-7">
-                        Autonomous LLM workflows, Claude 3.7 &amp; vector databases.
+                        Explore all deliverables, pricing scopes &amp; sprint timelines.
                       </p>
                     </Link>
 
@@ -305,11 +306,18 @@ export function Navbar() {
                     04 — Digital Growth &amp; SEO
                   </Link>
                   <Link 
-                    href="/services/cloud-ongoing-support" 
+                    href="/services/chat-bot-development" 
                     onClick={() => setMobileMenuOpen(false)}
                     className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-1"
                   >
-                    05 — Cloud &amp; DevSecOps
+                    05 — Chat Bot Development
+                  </Link>
+                  <Link 
+                    href="/services" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-xs font-semibold text-[#E8623C] hover:underline py-1"
+                  >
+                    All Services &amp; Packages →
                   </Link>
                 </div>
               )}

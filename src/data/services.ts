@@ -358,98 +358,109 @@ export const CORE_SERVICES: ServiceDetail[] = [
   },
   {
     number: '05',
-    shortTitle: 'Cloud & Technical Support',
-    displayHeading: '05 — Cloud & Technical Support',
-    slug: 'cloud-ongoing-support',
-    title: 'Cloud, Hosting & Technical Support',
-    headline: 'Managed AWS cloud hosting, server setup, and dedicated maintenance.',
-    shortDescription: 'AWS cloud hosting, server setup, domain/DNS management, database management, server monitoring, website maintenance, and security.',
-    fullDescription: 'Stop worrying about servers, crashes, or security vulnerabilities. We manage your cloud infrastructure on AWS, configure domains and DNS, monitor server health 24/7, perform automated backups, and handle ongoing technical maintenance.',
-    icon: 'ShieldCheck',
+    shortTitle: 'Chat Bot Development',
+    displayHeading: '05 — Chat Bot Development',
+    slug: 'chat-bot-development',
+    title: 'Chat Bot Development & Automation',
+    headline: 'Smart WhatsApp & website chat bots that answer customers and capture leads 24/7.',
+    shortDescription: 'Custom AI and rule-based chat bots for WhatsApp, websites, and apps that answer inquiries instantly, book appointments, and capture qualified leads.',
+    fullDescription: 'Never lose another customer inquiry to slow response times. We build smart, custom chat bots for WhatsApp Business, websites, and social channels. Your bots handle customer questions 24/7, qualify inquiries, book appointments directly into your calendar, and instantly notify your team on WhatsApp or CRM.',
+    icon: 'Bot',
     keyBenefits: [
-      'Guaranteed 99.9% server uptime with 24/7 automated monitoring',
-      'Zero-downtime deployments with instant rollbacks if issues arise',
-      'Regular security audits, access management, and automated daily backups',
-      'Direct Slack/WhatsApp access to dedicated engineers in Pune'
+      '24/7 instant customer replies on WhatsApp & website — zero wait times',
+      'Automated lead qualification and instant routing to your phone or CRM',
+      'Appointment, consultation, and demo bookings directly inside the chat flow',
+      'Customized for your business FAQs, services, pricing, and catalog'
     ],
     capabilities: [
       {
-        title: 'AWS Cloud Hosting & Deployment',
-        description: 'Hardened cloud servers, auto-scaling, SSL certificates, and zero-downtime CI/CD deployment pipelines.'
+        title: 'WhatsApp Business API Bots',
+        description: 'Automated catalog browsing, order updates, customer inquiries, and notifications on the official WhatsApp Business API.'
       },
       {
-        title: 'Domain, DNS & Server Setup',
-        description: 'Domain transfers, custom nameservers, DNS record routing, and complete Linux server configuration.'
+        title: 'Website Chat Assistants',
+        description: 'Smart floating chat widgets on your website that guide visitors, answer FAQs, and book consultations 24/7.'
       },
       {
-        title: 'Database Management & Backups',
-        description: 'Automated daily database backups, point-in-time recovery, query optimization, and Redis caching.'
+        title: 'Lead Capture & CRM Sync',
+        description: 'Automatically collects names, phone numbers, and requirements, syncing directly into Google Sheets, Zoho, or your CRM.'
       },
       {
-        title: 'Server Monitoring & Website Maintenance',
-        description: '24/7 uptime monitoring, security patches, library updates, and dedicated monthly technical support.'
+        title: 'Appointment & Booking Bots',
+        description: 'Lets customers pick dates, view available time slots, and confirm appointments without any human intervention.'
       }
     ],
     deliverables: [
-      'Configured AWS Cloud Architecture & Linux Servers',
-      'Automated Daily Backups & Disaster Recovery System',
-      'Domain & DNS SSL Configuration',
-      'Monthly Security, Uptime & Performance Monitoring Report'
+      'Custom-engineered WhatsApp & Website Chat Bot',
+      'Official Meta WhatsApp Business API Setup & Verification',
+      'Automated Lead Notification System (Email / WhatsApp / CRM)',
+      'Admin Dashboard for Chat Logs & Live Human Handover',
+      '30 Days of Post-Launch Tuning and Optimization'
     ],
     techStack: [
-      'AWS Cloud',
-      'Website Hosting',
-      'Server Setup',
-      'Domain & DNS Setup',
-      'Cloud Deployment',
-      'Database Management',
-      'Server Monitoring',
-      'Website Maintenance',
-      'Security & Access Management',
-      'Backup & Recovery',
-      'Docker',
-      'Linux',
-      'CI/CD'
+      'WhatsApp Business API',
+      'OpenAI',
+      'Claude',
+      'Node.js',
+      'Next.js',
+      'Webhooks',
+      'PostgreSQL',
+      'Tailwind CSS'
     ],
     techSpecializations: [
       {
-        category: 'Cloud & Hosting',
+        category: 'Channels',
         skills: [
-          'AWS Cloud',
-          'Website Hosting',
-          'Server Setup',
-          'Domain & DNS Setup',
-          'Cloud Deployment'
+          'WhatsApp Business',
+          'Website Live Chat',
+          'Instagram DM',
+          'Telegram',
+          'Google Business Chat'
         ]
       },
       {
-        category: 'Support & Reliability',
+        category: 'Bot Capabilities',
         skills: [
-          'Database Management',
-          'Server Monitoring',
-          'Website Maintenance',
-          'Security & Access Management',
-          'Backup & Recovery'
+          '24/7 Instant Replies',
+          'Lead Qualification',
+          'Appointment Booking',
+          'Catalog Browsing',
+          'Human Handover'
         ]
       },
       {
-        category: 'DevOps & Infrastructure',
-        skills: ['Docker', 'Linux', 'CI/CD']
+        category: 'Integrations',
+        skills: [
+          'Google Sheets',
+          'Zoho CRM',
+          'HubSpot',
+          'Razorpay Payments',
+          'Custom Webhooks'
+        ]
       }
     ],
     processTimeline: [
-      { step: '01', title: 'Infrastructure Audit', description: 'Reviewing current servers, security risks, domain DNS, and bottlenecks.', duration: 'Week 1' },
-      { step: '02', title: 'Setup & Migration', description: 'Configuring hardened cloud servers, DNS routing, and automated backups.', duration: 'Weeks 2-3' },
-      { step: '03', title: '24/7 Monitoring Handover', description: 'Zero-downtime cutover and activating real-time alarms.', duration: 'Week 4' }
+      { step: '01', title: 'Conversation Flow & FAQs', description: 'Mapping your customer journeys, objection handling, FAQs, and lead qualification questions.', duration: 'Week 1' },
+      { step: '02', title: 'Bot Engineering & API Setup', description: 'Configuring Meta WhatsApp API, website chat widget, and automated message routing.', duration: 'Week 2' },
+      { step: '03', title: 'CRM & Payment Integration', description: 'Connecting Google Sheets, CRM sync, appointment calendars, and automated alerts.', duration: 'Week 3' },
+      { step: '04', title: 'Testing & Launch', description: 'End-to-end conversation testing, staff handover training, and live public launch.', duration: 'Week 4' }
     ],
     faqs: [
       {
-        question: 'What is included in technical support & maintenance?',
-        answer: 'Monthly support includes 24/7 server monitoring, security patches, library updates, daily backups, DNS/domain management, and dedicated developer hours.'
+        question: 'Can the bot operate on our official WhatsApp number?',
+        answer: 'Yes! We configure the official Meta WhatsApp Business API so your bot operates seamlessly on your verified business phone number without risking account bans.'
+      },
+      {
+        question: 'Can a human team member take over conversations?',
+        answer: 'Yes. Whenever a customer asks for human support or has a complex request, the bot immediately alerts your team via WhatsApp or email, allowing you to take over the conversation instantly.'
+      },
+      {
+        question: 'How long does it take to launch a chat bot?',
+        answer: 'Most website and WhatsApp chat bots are fully designed, tested, and live within 1 to 2 weeks.'
       }
     ],
-    metaTitle: 'Cloud, Hosting & Technical Support | Deep Digital Labs',
-    metaDescription: 'Managed AWS cloud hosting, server setup, website maintenance, and 24/7 technical support by Deep Digital Labs.'
+    metaTitle: 'Chat Bot Development & WhatsApp Automation | Deep Digital Labs Pune',
+    metaDescription: 'Custom chat bots for WhatsApp, websites, and apps. Automate 24/7 customer support, appointment bookings, and lead capture with Deep Digital Labs in Pune.'
   }
 ];
 
@@ -462,15 +473,18 @@ export const ALIAS_SLUGS: Record<string, string> = {
   'saas-development': 'business-software-saas',
   'mobile-app-development': 'mobile-app-development',
   'digital-growth-seo': 'digital-growth-seo',
-  'cloud-ongoing-support': 'cloud-ongoing-support',
+  'cloud-ongoing-support': 'chat-bot-development',
+  'chat-bot-development': 'chat-bot-development',
+  'chatbots': 'chat-bot-development',
+  'chat-bots': 'chat-bot-development',
   'political-civic-tech': 'websites-web-apps',
   'technical-seo-growth': 'digital-growth-seo',
-  'managed-cloud-infrastructure': 'cloud-ongoing-support',
+  'managed-cloud-infrastructure': 'chat-bot-development',
   'lifecycle-retention-automation': 'digital-growth-seo',
-  'dedicated-sla-retainers': 'cloud-ongoing-support',
+  'dedicated-sla-retainers': 'chat-bot-development',
   'headless-commerce': 'websites-web-apps',
   'enterprise-dashboards': 'business-software-saas',
-  'ui-ux-modernization': 'cloud-ongoing-support',
+  'ui-ux-modernization': 'chat-bot-development',
   'local-seo-presence': 'digital-growth-seo',
   'brand-trust-reputation': 'digital-growth-seo',
   'headless-cms-architecture': 'websites-web-apps'

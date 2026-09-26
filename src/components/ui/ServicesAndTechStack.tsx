@@ -82,19 +82,19 @@ export const CONSOLIDATED_SERVICES: ServiceItem[] = [
   },
   {
     id: '05',
-    title: 'Cloud & Technical Support',
-    slug: 'cloud-ongoing-support',
+    title: 'Chat Bot Development',
+    slug: 'chat-bot-development',
     description:
-      'AWS cloud hosting, Linux server setup, domain & DNS routing, database management, and 24/7 server monitoring.',
+      'Smart WhatsApp Business & website chat bots that answer customer inquiries 24/7, book appointments, and capture high-intent leads.',
     solutions: [
-      'Cloud Migration',
-      '24/7 Server Monitoring',
-      'Database Management',
-      'CI/CD Pipeline Setup',
-      'Domain & DNS Setup',
-      'Backup & Disaster Recovery'
+      'WhatsApp Business API Bots',
+      'Website Live Chat Assistants',
+      '24/7 Lead Capture & Routing',
+      'Automated Appointment Booking',
+      'CRM & Google Sheets Sync',
+      'Live Human Team Handover'
     ],
-    tech: ['AWS (EC2, S3, RDS)', 'Linux', 'Docker', 'GitHub Actions', 'Cloudflare']
+    tech: ['WhatsApp Cloud API', 'OpenAI', 'Claude', 'Node.js', 'Next.js', 'Webhooks']
   }
 ];
 

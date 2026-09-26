@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { TechBadge } from './TechBadge';
-import { Code2, Smartphone, TrendingUp, ShieldCheck, Layers, Server } from 'lucide-react';
+import { Code2, Smartphone, TrendingUp, ShieldCheck, Layers, Server, Bot } from 'lucide-react';
 import { CORE_SERVICES } from '@/data/services';
 
 export function SkillsSection() {
@@ -15,6 +15,7 @@ export function SkillsSection() {
     'business-software-saas': <Layers className="w-5 h-5 text-indigo-500" />,
     'mobile-app-development': <Smartphone className="w-5 h-5 text-cyan-500" />,
     'digital-growth-seo': <TrendingUp className="w-5 h-5 text-emerald-500" />,
+    'chat-bot-development': <Bot className="w-5 h-5 text-[#E8623C]" />,
     'cloud-ongoing-support': <Server className="w-5 h-5 text-amber-500" />
   };
 

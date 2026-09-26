@@ -104,8 +104,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/cloud-ongoing-support" className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors">
-                  05 — AWS DevSecOps &amp; Support
+                <Link href="/services/chat-bot-development" className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors">
+                  05 — Chat Bot Development
                 </Link>
               </li>
               <li className="pt-2">

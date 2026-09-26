@@ -207,19 +207,6 @@ export default function CaseStudiesPage() {
                     <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed line-clamp-2">
                       {cs.summary}
                     </p>
-
-                    {cs.techStack && cs.techStack.length > 0 && (
-                      <div className="flex flex-wrap gap-1 pt-1">
-                        {cs.techStack.map((tech) => (
-                          <span
-                            key={tech}
-                            className="text-[10px] font-mono px-2 py-0.5 rounded bg-neutral-100 dark:bg-white/10 text-neutral-700 dark:text-gray-300"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    )}
                   </div>
                 </div>
 

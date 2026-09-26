@@ -11,14 +11,15 @@ import {
   Sparkles,
   Zap,
   Code2,
-  Clock
+  Clock,
+  Bot
 } from 'lucide-react';
 import { CORE_SERVICES } from '@/data/services';
 import { TechBadge } from '@/components/ui/TechBadge';
 
 export const metadata: Metadata = {
-  title: 'Services | Websites, Business Software, Mobile & Cloud | Deep Digital Labs',
-  description: 'Explore our services: Websites & Web Apps, Business Software & SaaS, Mobile App Development, Digital Growth & SEO, and Cloud, Hosting & Technical Support.',
+  title: 'Services | Websites, Business Software, Mobile & Chat Bots | Deep Digital Labs',
+  description: 'Explore our services: Websites & Web Apps, Business Software & SaaS, Mobile App Development, Digital Growth & SEO, and Chat Bot Development & Automation.',
 };
 
 export default function ServicesPage() {
@@ -28,6 +29,7 @@ export default function ServicesPage() {
     Smartphone: <Smartphone className="w-6 h-6 text-cyan-500 dark:text-[#D4FF00]" />,
     TrendingUp: <TrendingUp className="w-6 h-6 text-emerald-500 dark:text-[#D4FF00]" />,
     ShieldCheck: <ShieldCheck className="w-6 h-6 text-amber-500 dark:text-[#D4FF00]" />,
+    Bot: <Bot className="w-6 h-6 text-[#E8623C] dark:text-[#D4FF00]" />,
   };
 
   return (
