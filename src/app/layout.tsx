@@ -4,7 +4,6 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -21,8 +20,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Custom Software & SaaS Development Company in Pune | Deep Digital Labs",
-  description: "Deep Digital Labs builds high-performance custom software, mobile apps, and SaaS platforms for Indian businesses. 100% code ownership, direct developer access, and Pune-based engineering.",
+  title: "Deep Digital Labs | Technology Builds Tomorrow — AI-Native Software & SaaS Engineering Studio",
+  description: "Deep Digital Labs designs and engineers standout web applications, mobile apps, and SaaS platforms. 100% code ownership, direct developer access, and Pune-based engineering.",
   keywords: [
     "SaaS development company India",
     "custom web app developers",
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Deep Digital Labs" }],
   openGraph: {
-    title: "Deep Digital Labs | Engineering Scalable SaaS & Digital Products",
+    title: "Deep Digital Labs | Scalable SaaS & Digital Products",
     description: "Built in Pune, Deployed Worldwide. High-performance SaaS, Web, and Mobile engineering for global startups.",
     url: "https://deepdigitallabs.com",
     siteName: "Deep Digital Labs",
@@ -56,38 +55,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${plusJakartaSans.variable} ${spaceGrotesk.variable} antialiased`} suppressHydrationWarning>
+    <html lang="en" className={`light ${plusJakartaSans.variable} ${spaceGrotesk.variable} antialiased`} data-theme="light">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var saved = localStorage.getItem('ddl_theme_choice');
-                  // Primary colour is LIGHT by default for all users
-                  var theme = (saved === 'dark') ? 'dark' : 'light';
-                  if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                    document.documentElement.classList.remove('light');
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                  } else {
-                    document.documentElement.classList.add('light');
-                    document.documentElement.classList.remove('dark');
-                    document.documentElement.setAttribute('data-theme', 'light');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
         <JsonLd />
       </head>
-      <body className="min-h-screen bg-[var(--bg-main)] text-[var(--text-main)] flex flex-col selection:bg-[#D4FF00] selection:text-black transition-colors duration-200">
-        <ThemeProvider>
-          <Navbar />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </ThemeProvider>
+      <body className="min-h-screen bg-[var(--bg-main)] text-[var(--text-main)] flex flex-col selection:bg-[#E8623C] selection:text-white transition-colors duration-200">
+        <Navbar />
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   );

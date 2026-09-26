@@ -3,47 +3,61 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Clean Light Theme Defaults (Corporate, Minimalist, Stripe/Apple style) */
-  --bg-main: #FFFFFF;
-  --bg-surface: #F8FAFC;
+  /* Kombai-Inspired Premium Light Palette */
+  --bg-main: #FAFAFA;
+  --bg-surface: #FFFFFF;
   --bg-card: #FFFFFF;
-  --bg-subtle: #F8FAFC;
-  --border-subtle: #E2E8F0;
-  --border-strong: #CBD5E1;
-  --text-main: #0F172A;
-  --text-muted: #475569;
-  --text-subtle: #64748B;
-  --accent: #0F172A;
+  --bg-subtle: #F3F4F6;
+  --border-subtle: #E5E7EB;
+  --border-strong: #D1D5DB;
+  --text-main: #111827;
+  --text-muted: #4B5563;
+  --text-subtle: #6B7280;
+  
+  /* Brand Accent: Kombai Sunset Coral */
+  --brand: #E8623C;
+  --brand-hover: #D7532F;
+  --brand-light: #FFF2ED;
+  --brand-subtle: rgba(232, 98, 60, 0.08);
+  --accent: #E8623C;
   --accent-foreground: #FFFFFF;
-  --accent-highlight: #0F172A;
-  --pill-bg: #F1F5F9;
-  --pill-border: #E2E8F0;
-  --pill-text: #0F172A;
-  --nav-bg: rgba(255, 255, 255, 0.85);
-  --nav-border: #E2E8F0;
-  --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+  --accent-highlight: #E8623C;
+  
+  --pill-bg: #F3F4F6;
+  --pill-border: #E5E7EB;
+  --pill-text: #1F2937;
+  --nav-bg: rgba(255, 255, 255, 0.90);
+  --nav-border: rgba(229, 231, 235, 0.85);
+  --card-shadow: 0 4px 24px -2px rgba(15, 23, 42, 0.06);
 }
 
 .dark {
-  /* Dark Theme (Sleek Bento Grid Dark Mode - Creatix style) */
-  --bg-main: #050505;
-  --bg-surface: #0A0A0C;
-  --bg-card: #0F0F11;
-  --bg-subtle: #141416;
-  --border-subtle: rgba(255, 255, 255, 0.1);
-  --border-strong: rgba(255, 255, 255, 0.2);
-  --text-main: #FAFAFA;
-  --text-muted: #A1A1AA;
-  --text-subtle: #71717A;
-  --accent: #D4FF00;
-  --accent-foreground: #000000;
-  --accent-highlight: #D4FF00;
-  --pill-bg: #141416;
-  --pill-border: rgba(255, 255, 255, 0.1);
-  --pill-text: #D4FF00;
-  --nav-bg: rgba(0, 0, 0, 0.75);
-  --nav-border: rgba(255, 255, 255, 0.1);
-  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  /* Kombai-Inspired Signature Dark Palette */
+  --bg-main: #08090C;
+  --bg-surface: #0E1015;
+  --bg-card: #12151D;
+  --bg-subtle: #171B24;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text-main: #F4F5F7;
+  --text-muted: #9CA3AF;
+  --text-subtle: #6B7280;
+  
+  /* Brand Accent: Kombai Sunset Coral */
+  --brand: #E8623C;
+  --brand-hover: #F0744E;
+  --brand-light: rgba(232, 98, 60, 0.18);
+  --brand-subtle: rgba(232, 98, 60, 0.12);
+  --accent: #E8623C;
+  --accent-foreground: #FFFFFF;
+  --accent-highlight: #E8623C;
+  
+  --pill-bg: #141720;
+  --pill-border: rgba(255, 255, 255, 0.08);
+  --pill-text: #E8623C;
+  --nav-bg: rgba(10, 12, 16, 0.82);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.65);
 }
 
 body {
@@ -57,7 +71,60 @@ body {
 
 .font-display {
   font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
+}
+
+/* Kombai-style background glows */
+.kombai-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(232, 98, 60, 0.15) 0%, rgba(232, 98, 60, 0.03) 45%, transparent 70%);
+}
+
+.kombai-grid {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.kombai-grid-light {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Kombai Button Styling */
+.kombai-btn {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #E8623C;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  padding: 4px 18px 4px 6px;
+  box-shadow: 0 4px 20px -2px rgba(232, 98, 60, 0.35);
+}
+
+.kombai-btn:hover {
+  background-color: #F0744E;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px -2px rgba(232, 98, 60, 0.45);
+}
+
+.kombai-btn-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.kombai-btn:hover .kombai-btn-icon {
+  transform: scale(1.05);
 }
 
 @keyframes marquee {
