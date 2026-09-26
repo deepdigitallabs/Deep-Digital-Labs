@@ -90,41 +90,20 @@ export default function ServicesPage() {
                   ))}
                 </div>
 
-                {/* Tech Specializations */}
-                <div className="pt-2 space-y-3">
+                {/* Tech Stack */}
+                <div className="pt-2 space-y-2">
                   <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-gray-500 font-semibold block">
-                    Specializations &amp; Stack
+                    Core Technologies &amp; Tools
                   </span>
-                  {service.techSpecializations && service.techSpecializations.length > 0 ? (
-                    <div className="space-y-2.5">
-                      {service.techSpecializations.map((spec) => (
-                        <div key={spec.category} className="space-y-1">
-                          <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 dark:text-gray-500 font-medium">
-                            {spec.category}
-                          </span>
-                          <div className="flex flex-wrap gap-1.5">
-                            {spec.skills.map((skill) => (
-                              <TechBadge
-                                key={skill}
-                                name={skill}
-                                size="sm"
-                              />
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="flex flex-wrap gap-2">
-                      {service.techStack.map((tech) => (
-                        <TechBadge
-                          key={tech}
-                          name={tech}
-                          size="sm"
-                        />
-                      ))}
-                    </div>
-                  )}
+                  <div className="flex flex-wrap gap-1.5">
+                    {service.techStack.map((tech) => (
+                      <TechBadge
+                        key={tech}
+                        name={tech}
+                        size="sm"
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -142,6 +121,88 @@ export default function ServicesPage() {
               </div>
             </div>
           ))}
+
+          {/* Card 06: Custom Systems & Tailored Architecture */}
+          <div className="p-8 sm:p-10 rounded-3xl bg-neutral-900 text-white dark:bg-[#11141D] border-2 border-[#E8623C]/50 hover:border-[#E8623C] transition-all duration-300 flex flex-col justify-between shadow-xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-72 h-72 bg-[#E8623C]/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="space-y-6 relative z-10">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-2xl bg-[#E8623C]/20 border border-[#E8623C]/40 flex items-center justify-center text-[#E8623C] shadow-sm">
+                  <Sparkles className="w-6 h-6" />
+                </div>
+                <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#E8623C] text-white">
+                  06 · Custom Scope
+                </span>
+              </div>
+
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white group-hover:text-[#E8623C] transition-colors">
+                  Custom Systems &amp; Solutions
+                </h2>
+                <p className="text-sm font-semibold text-[#E8623C] mt-2">
+                  Tailored business software, complex integrations &amp; complete website rebuilds.
+                </p>
+                <p className="text-sm text-neutral-300 mt-2 leading-relaxed">
+                  Have unique business processes, multi-branch operations, or existing database systems? We engineer custom digital platforms tailored 100% to your exact operational requirements.
+                </p>
+              </div>
+
+              <div className="space-y-2.5 pt-2 border-t border-white/10">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 font-semibold block">
+                  What You Get
+                </span>
+                <div className="flex items-start gap-2.5 text-xs text-neutral-200">
+                  <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                  <span>Direct architecture consultation with senior Pune engineers</span>
+                </div>
+                <div className="flex items-start gap-2.5 text-xs text-neutral-200">
+                  <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                  <span>Fixed milestone estimates with zero unexpected billings</span>
+                </div>
+                <div className="flex items-start gap-2.5 text-xs text-neutral-200">
+                  <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                  <span>100% intellectual property &amp; source code transfer</span>
+                </div>
+                <div className="flex items-start gap-2.5 text-xs text-neutral-200">
+                  <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                  <span>Weekly delivery sprints with live test environments</span>
+                </div>
+              </div>
+
+              {/* Technologies */}
+              <div className="pt-2 space-y-2">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 font-semibold block">
+                  Custom Capabilities
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {['Custom Dashboards', 'Multi-tenant DB', 'Payment Gateways', 'REST APIs', 'Cloud Architecture', 'WhatsApp API'].map((tag) => (
+                    <span key={tag} className="px-2.5 py-1 rounded-md text-xs font-mono bg-white/10 text-neutral-200 border border-white/10">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-8 mt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#E8623C] hover:bg-[#F0744E] text-white text-xs font-bold transition-all shadow-md shadow-[#E8623C]/30 active:scale-98"
+              >
+                <span>Discuss Your Project →</span>
+              </Link>
+              <a
+                href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20a%20custom%20project%20I'd%20like%20to%20discuss."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-neutral-300 hover:text-white font-mono hover:underline inline-flex items-center justify-center gap-1.5"
+              >
+                <span>Chat on WhatsApp (+91 91751 52244)</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Why 4 Pillars? The Strategic Advantage */}
@@ -204,14 +265,22 @@ export default function ServicesPage() {
           <p className="text-base text-slate-300 max-w-xl mx-auto font-normal leading-relaxed">
             Talk directly with our developer team in Pune. Tell us what you need, and we’ll give you a clear timeline, fair pricing, and clean code.
           </p>
-          <div className="pt-2">
+          <div className="pt-4 flex flex-col sm:flex-row gap-3.5 justify-center items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm bg-white text-slate-900 hover:bg-slate-100 transition-all shadow-md active:scale-95"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm bg-white text-slate-900 hover:bg-slate-100 transition-all shadow-md active:scale-95"
             >
-              <span>Talk to Our Team</span>
+              <span>Book a Free Consultation</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
+            <a
+              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm border border-white/20 text-white hover:bg-white/10 transition-all"
+            >
+              <span>Chat on WhatsApp</span>
+            </a>
           </div>
         </div>
 

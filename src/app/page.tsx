@@ -684,14 +684,6 @@ export default function HomePage() {
                   <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
                     {study.summary}
                   </p>
-
-                  {/* Key Result Pill */}
-                  {study.keyResult && (
-                    <div className="p-2.5 rounded-xl bg-neutral-50 dark:bg-white/[0.02] border border-neutral-200/60 dark:border-white/[0.06] text-xs font-mono text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-                      <span className="truncate">{study.keyResult}</span>
-                    </div>
-                  )}
                 </div>
               </div>
 
