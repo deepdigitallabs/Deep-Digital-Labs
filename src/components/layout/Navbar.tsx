@@ -234,24 +234,28 @@ export function Navbar() {
           </div>
 
           {/* Desktop Right Actions */}
-          <div className="hidden sm:flex items-center gap-3">
-            <button
-              onClick={() => setDiscoveryModalOpen(true)}
+          <div className="hidden sm:flex items-center gap-2.5">
+            <a
+              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20contact%20you%20regarding%20a%20website%20or%20app%20project."
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-2 bg-[#E8623C] hover:bg-[#F0744E] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-md shadow-[#E8623C]/20 hover:shadow-lg hover:shadow-[#E8623C]/30 active:scale-98 cursor-pointer"
             >
-              <span>Free Consultation</span>
+              <span>Contact Us</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-            </button>
+            </a>
           </div>
 
           {/* Mobile Actions: Contact + Hamburger */}
           <div className="flex lg:hidden items-center gap-2">
-            <button
-              onClick={() => setDiscoveryModalOpen(true)}
-              className="bg-[#E8623C] text-white px-3 py-1.5 rounded-lg text-xs font-semibold"
+            <a
+              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20contact%20you%20regarding%20a%20website%20or%20app%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#E8623C] text-white px-3 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1"
             >
-              Consultation
-            </button>
+              Contact Us
+            </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-1.5 rounded-lg text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors"

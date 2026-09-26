@@ -27,6 +27,9 @@ import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
 import { Marquee } from '@/registry/magicui/marquee';
 import { Globe as InteractiveGlobe } from '@/registry/magicui/globe';
+import { IconCloud } from '@/registry/magicui/icon-cloud';
+import { BlinkingSquares } from '@/components/ui/blinking-squares';
+import { CursorWave } from '@/components/ui/cursor-wave';
 import { cn } from '@/lib/utils';
 import { CASE_STUDIES } from '@/data/caseStudies';
 
@@ -70,39 +73,243 @@ function WhatsAppIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
 const PUNE_REVIEWS = [
   {
     name: "Rahul B. Kavale",
-    username: "@rahulkavale · CA Partner",
-    body: "Deep Digital Labs gave our CA firm an exceptional digital presence. The website loads instantly, looks world-class, and our inbound client inquiries grew by 35% in 90 days.",
-    img: "https://avatar.vercel.sh/rahul-kavale",
+    role: "Founder & CA Partner",
+    company: "Rahul B. Kavale & Co.",
+    location: "Pune",
+    initials: "RK",
+    body: "Deep Digital Labs gave our CA firm an exceptional digital presence. The website loads in under a second, looks world-class, and our inbound client inquiries grew by 35% in the first 90 days.",
   },
   {
     name: "Operations Director",
-    username: "@yashodeep · Agro Tech",
-    body: "Moving our agricultural operations and inventory tracking to the web with Deep Digital Labs reduced billing cycle overhead from 3 days to real-time. DDL also built our billing and operational tools that made running day-to-day operations effortless.",
-    img: "https://avatar.vercel.sh/yashodeep-agro",
-  },
-  {
-    name: "Logistics Director",
-    username: "@trustcarry · Supply Chain",
-    body: "Our logistics clients now track their consignments online in real time rather than calling dispatch desks. The website works quickly on any phone.",
-    img: "https://avatar.vercel.sh/trust-carry",
-  },
-  {
-    name: "Vikram Deshmukh",
-    username: "@vdeshmukh · Retail Tech",
-    body: "Clean code on our own infrastructure with zero monthly builder fees. We got a full custom dashboard built in 3 weeks that saves our store team hours every day.",
-    img: "https://avatar.vercel.sh/vikram-deshmukh",
+    role: "Head of Operations",
+    company: "Yashodeep Agro",
+    location: "Pune & Solapur",
+    initials: "YA",
+    body: "They built our inventory tracking and billing portal from scratch. What used to take our team 3 days of manual paperwork is now handled in real time on our phones. It made daily work effortless.",
   },
   {
     name: "Pradeep Shinde",
-    username: "@dairyflow · Dairy SaaS",
-    body: "The speed and reliability are unbelievable. 100/100 Core Web Vitals and direct WhatsApp access to the developer who actually built it. Best tech partner in Pune.",
-    img: "https://avatar.vercel.sh/pradeep-shinde",
+    role: "Founder",
+    company: "Dairy Flow Pro",
+    location: "Pune",
+    initials: "PS",
+    body: "The speed and reliability are unbelievable. 100/100 Core Web Vitals, zero monthly builder fees, and direct WhatsApp access to the developer who actually built it. Best tech partner in Pune.",
+  },
+];
+
+const TECH_SLUGS = [
+  "typescript",
+  "javascript",
+  "dart",
+  "java",
+  "react",
+  "flutter",
+  "android",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "amazonaws",
+  "postgresql",
+  "firebase",
+  "nginx",
+  "vercel",
+  "testinglibrary",
+  "jest",
+  "cypress",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "androidstudio",
+  "sonarqube",
+  "figma",
+];
+
+const TECH_CATEGORIES = [
+  {
+    id: "all",
+    name: "All Tools",
+    count: 30,
+    title: "Complete Modern Engineering Stack",
+    description: "Every tool we choose has a single purpose: making your software fast, reliable, and maintainable without legacy dependencies.",
+    slugs: TECH_SLUGS,
+    features: [
+      {
+        title: "Sub-Second Load Times",
+        desc: "SSR & Static generation ensuring instant first paints under 0.8 seconds on 4G mobile networks.",
+        tag: "Speed",
+      },
+      {
+        title: "Zero Builder Lock-In",
+        desc: "You own 100% of your source code, domain, database, and infrastructure with no recurring platform fees.",
+        tag: "Ownership",
+      },
+      {
+        title: "99.99% Availability",
+        desc: "Cloud deployment across AWS & Vercel edge networks with automated DDoS mitigation and SSL certificates.",
+        tag: "Uptime",
+      },
+      {
+        title: "Enterprise Grade Security",
+        desc: "ACID database compliance, encrypted data in transit & at rest, and strict OWASP security standards.",
+        tag: "Security",
+      },
+    ],
   },
   {
-    name: "Anand Kulkarni",
-    username: "@anandk · Corporate Law",
-    body: "We were skeptical about web agencies because of past bad experiences with WordPress delays. Deep Digital Labs delivered our corporate site ahead of schedule with zero headaches.",
-    img: "https://avatar.vercel.sh/anand-kulkarni",
+    id: "frontend",
+    name: "Web & Frontend",
+    count: 6,
+    title: "Next.js 15, React 19 & TypeScript",
+    description: "Ultra-fast, mobile-first web applications built with Google's Core Web Vitals in mind from day one.",
+    slugs: ["typescript", "javascript", "react", "nextdotjs", "html5", "css3"],
+    features: [
+      {
+        title: "Next.js 15 Server Components",
+        desc: "Zero-bundle overhead for static content, instant navigation, and maximum search engine discoverability.",
+        tag: "Next.js",
+      },
+      {
+        title: "Strict TypeScript Safety",
+        desc: "100% statically typed interfaces eliminating runtime crashes before code ever touches production.",
+        tag: "TypeScript",
+      },
+      {
+        title: "Local Pune SEO Optimization",
+        desc: "Embedded JSON-LD schemas, localized breadcrumbs, and OpenGraph social preview tags built-in.",
+        tag: "SEO",
+      },
+      {
+        title: "Mobile-First 60fps UX",
+        desc: "Fluid gesture-based interfaces tailored for one-handed smartphone browsing with zero input lag.",
+        tag: "Mobile UI",
+      },
+    ],
+  },
+  {
+    id: "mobile",
+    name: "Mobile Apps",
+    count: 4,
+    title: "Flutter, Dart & Native Toolchains",
+    description: "Build once and launch high-performance apps on both Google Play Store and Apple App Store.",
+    slugs: ["flutter", "dart", "android", "androidstudio"],
+    features: [
+      {
+        title: "Single Codebase Architecture",
+        desc: "Cut development time and maintenance cost in half without sacrificing native device performance.",
+        tag: "Cross-Platform",
+      },
+      {
+        title: "Offline-First Data Caching",
+        desc: "Local SQLite storage ensures your staff or customers can work uninterrupted during connectivity drops.",
+        tag: "Offline",
+      },
+      {
+        title: "Firebase Push Notifications",
+        desc: "Instant targeted messages for order dispatch, transaction alerts, and promotional announcements.",
+        tag: "FCM",
+      },
+      {
+        title: "Turnkey App Store Publishing",
+        desc: "We manage certificates, keystores, store guidelines compliance, and live production releases.",
+        tag: "Store Deploy",
+      },
+    ],
+  },
+  {
+    id: "backend",
+    name: "Backend & Databases",
+    count: 5,
+    title: "Node.js, PostgreSQL & Prisma",
+    description: "Scalable APIs and relational transactional engines designed for high concurrency and zero data loss.",
+    slugs: ["nodedotjs", "express", "postgresql", "prisma", "firebase"],
+    features: [
+      {
+        title: "Sub-50ms API Latency",
+        desc: "Lightweight Express & Node.js microservices engineered for rapid responses and low memory footprints.",
+        tag: "REST API",
+      },
+      {
+        title: "ACID Compliant PostgreSQL",
+        desc: "Enterprise relational database with foreign key constraints, indexing, and transactional integrity.",
+        tag: "Postgres",
+      },
+      {
+        title: "Type-Safe Prisma ORM",
+        desc: "Automated schema migrations and database type checks preventing invalid database writes.",
+        tag: "Prisma",
+      },
+      {
+        title: "Automated Backup Snapshots",
+        desc: "Daily automated database backups with point-in-time restore capability for complete peace of mind.",
+        tag: "Backups",
+      },
+    ],
+  },
+  {
+    id: "cloud",
+    name: "Cloud & DevOps",
+    count: 8,
+    title: "AWS, Docker, Vercel & CI/CD",
+    description: "Automated build, test, and release pipelines deployed across secure, isolated server infrastructure.",
+    slugs: ["amazonaws", "docker", "vercel", "nginx", "git", "github", "gitlab", "sonarqube"],
+    features: [
+      {
+        title: "Global Edge CDN Caching",
+        desc: "Static assets cached at 300+ edge locations worldwide for under 20ms response time anywhere in India.",
+        tag: "CDN",
+      },
+      {
+        title: "Docker Isolation",
+        desc: "Containerized application runtimes guaranteeing that staging exactly matches production.",
+        tag: "Containers",
+      },
+      {
+        title: "Automated CI/CD Workflows",
+        desc: "Git commit hooks that automatically run test suites and deploy staging environments in minutes.",
+        tag: "CI/CD",
+      },
+      {
+        title: "DDoS Mitigation & SSL",
+        desc: "Nginx reverse proxy, automated Let's Encrypt SSL certificates, and IP rate limiting for security.",
+        tag: "Protection",
+      },
+    ],
+  },
+  {
+    id: "qa",
+    name: "QA & UI/UX",
+    count: 5,
+    title: "Figma, Cypress, Jest & Jira",
+    description: "From pixel-perfect interactive wireframes to automated test suites catching bugs before real users do.",
+    slugs: ["figma", "jest", "cypress", "testinglibrary", "jira"],
+    features: [
+      {
+        title: "Clickable Figma Prototypes",
+        desc: "Experience every screen and flow on your mobile phone before a single line of code is written.",
+        tag: "UI/UX",
+      },
+      {
+        title: "Automated End-to-End Tests",
+        desc: "Cypress test bots that simulate real customer logins, form submissions, and checkouts 24/7.",
+        tag: "Cypress",
+      },
+      {
+        title: "Component Unit Testing",
+        desc: "Jest & Testing Library validating core business calculations, tax logic, and form validations.",
+        tag: "Jest",
+      },
+      {
+        title: "Transparent Agile Delivery",
+        desc: "Weekly sprint demos, real-time Jira progress tracking, and direct developer communication.",
+        tag: "Milestones",
+      },
+    ],
   },
 ];
 
@@ -110,6 +317,7 @@ export default function HomePage() {
   const [callModalOpen, setCallModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [activeTechCategory, setActiveTechCategory] = useState<string>("all");
 
   const handleInstagramMessage = (message: string) => {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
@@ -128,6 +336,22 @@ export default function HomePage() {
       {/* ========================================================================= */}
       <section className="relative pt-32 sm:pt-36 pb-20 px-4 sm:px-6 max-w-7xl mx-auto text-center overflow-hidden">
         
+        {/* Interactive Cursor Wave Background (React Bits Pro) */}
+        <CursorWave
+          cellSize={38}
+          influenceRadiusVmin={26}
+          attackTime={0.4}
+          releaseTime={0.65}
+          idleScale={0.08}
+          minPeakScale={0.9}
+          maxPeakScale={2.5}
+          burstSpeed={1200}
+          burstThickness={160}
+          shapeColor="#E8623C"
+          shapes={["circle", "triangle", "square"]}
+          className="absolute inset-0 size-full opacity-35 dark:opacity-25 -z-10 [mask-image:radial-gradient(ellipse_85%_70%_at_50%_45%,#000_50%,transparent_100%)] pointer-events-auto"
+        />
+
         {/* Ambient Cosmic Radial Glow */}
         <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-gradient-to-b from-[#E8623C]/20 via-[#E8623C]/5 to-transparent blur-[140px] pointer-events-none -z-10" />
 
@@ -152,33 +376,21 @@ export default function HomePage() {
           We build simple, fast, professional websites and apps for small and growing businesses — so you look credible online and get more customers, with zero tech jargon.
         </p>
 
-        {/* Primary & WhatsApp Action Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-3.5 justify-center items-center">
-          
-          <button
-            onClick={() => setCallModalOpen(true)}
-            className="group relative inline-flex items-center gap-3 bg-[#E8623C] hover:bg-[#F0744E] text-white px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25 hover:shadow-xl hover:shadow-[#E8623C]/35 active:scale-98 cursor-pointer"
-          >
-            <span className="w-7 h-7 rounded-lg bg-black/20 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-              <Calendar className="w-4 h-4 text-white" />
-            </span>
-            <span>Get a Free Website Consultation</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
-          
+        {/* Primary Action Button */}
+        <div className="mt-8 flex justify-center items-center">
           <a
             href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20or%20app%20project%20for%20my%20business."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl border border-neutral-200 dark:border-white/[0.08] bg-white/70 dark:bg-white/[0.03] text-neutral-800 dark:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.06] font-semibold text-sm sm:text-base transition-all active:scale-98 text-center"
+            className="group relative inline-flex items-center gap-3 bg-[#E8623C] hover:bg-[#F0744E] text-white px-7 py-3.5 rounded-xl font-semibold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25 hover:shadow-xl hover:shadow-[#E8623C]/35 active:scale-98 cursor-pointer"
           >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
             </span>
             <span>Chat With Us on WhatsApp</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
-
         </div>
 
         {/* Kombai Proof Badge with Laurel Leaves */}
@@ -561,95 +773,232 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 6: CLIENT TESTIMONIALS (MAGIC UI MARQUEE)                         */}
+      {/* SECTION 6: CLIENT FEEDBACK (SIMPLE & HIGH CREDIBILITY)                    */}
       {/* ========================================================================= */}
-      <section className="py-20 bg-neutral-50/50 dark:bg-[#0A0B0E] border-y border-neutral-200/80 dark:border-white/[0.06] overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 mb-12 text-center space-y-3">
+      <section className="py-24 px-6 max-w-6xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
           <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
             Client Feedback
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white font-display">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
             What Pune business owners say about us.
           </h2>
-          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto leading-relaxed">
             Real feedback from founders, CAs, and operations directors who run their businesses on our software.
           </p>
         </div>
 
-        {/* Magic UI Double Marquee Track */}
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden gap-4">
-          <Marquee pauseOnHover className="[--duration:30s]">
-            {PUNE_REVIEWS.slice(0, 3).map((review) => (
-              <figure
-                key={review.name}
-                className={cn(
-                  "relative h-full w-80 sm:w-96 cursor-pointer overflow-hidden rounded-2xl border p-5 transition-all duration-300",
-                  // light styles
-                  "border-neutral-200/80 bg-white hover:border-[#E8623C]/50 hover:shadow-lg hover:shadow-[#E8623C]/5",
-                  // dark styles
-                  "dark:border-white/[0.08] dark:bg-[#12151D] dark:hover:border-[#E8623C]/50 dark:hover:shadow-lg dark:hover:shadow-[#E8623C]/10"
-                )}
-              >
-                <div className="flex flex-row items-center gap-3">
-                  <img
-                    className="rounded-full ring-2 ring-[#E8623C]/20 shrink-0"
-                    width={38}
-                    height={38}
-                    alt={review.name}
-                    src={review.img}
-                  />
-                  <div className="flex flex-col">
-                    <figcaption className="text-sm font-bold text-neutral-900 dark:text-white leading-tight">
-                      {review.name}
-                    </figcaption>
-                    <p className="text-xs font-mono text-[#E8623C]">{review.username}</p>
-                  </div>
+        {/* Clean, Simple 3-Column Reviews Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {PUNE_REVIEWS.map((review) => (
+            <div
+              key={review.name}
+              className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-sm hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-6"
+            >
+              <div className="space-y-4">
+                {/* 5 Star Rating */}
+                <div className="flex items-center gap-1 text-[#E8623C]">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-current" />
+                  ))}
                 </div>
-                <blockquote className="mt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed italic">
-                  &ldquo;{review.body}&rdquo;
-                </blockquote>
-              </figure>
-            ))}
-          </Marquee>
 
-          <Marquee reverse pauseOnHover className="[--duration:30s]">
-            {PUNE_REVIEWS.slice(3, 6).map((review) => (
-              <figure
-                key={review.name}
-                className={cn(
-                  "relative h-full w-80 sm:w-96 cursor-pointer overflow-hidden rounded-2xl border p-5 transition-all duration-300",
-                  // light styles
-                  "border-neutral-200/80 bg-white hover:border-[#E8623C]/50 hover:shadow-lg hover:shadow-[#E8623C]/5",
-                  // dark styles
-                  "dark:border-white/[0.08] dark:bg-[#12151D] dark:hover:border-[#E8623C]/50 dark:hover:shadow-lg dark:hover:shadow-[#E8623C]/10"
-                )}
-              >
-                <div className="flex flex-row items-center gap-3">
-                  <img
-                    className="rounded-full ring-2 ring-[#E8623C]/20 shrink-0"
-                    width={38}
-                    height={38}
-                    alt={review.name}
-                    src={review.img}
-                  />
-                  <div className="flex flex-col">
-                    <figcaption className="text-sm font-bold text-neutral-900 dark:text-white leading-tight">
-                      {review.name}
-                    </figcaption>
-                    <p className="text-xs font-mono text-[#E8623C]">{review.username}</p>
-                  </div>
+                {/* Testimonial Quote */}
+                <p className="text-sm sm:text-base text-neutral-700 dark:text-neutral-200 leading-relaxed font-normal">
+                  &ldquo;{review.body}&rdquo;
+                </p>
+              </div>
+
+              {/* Author Details */}
+              <div className="pt-4 border-t border-neutral-100 dark:border-white/[0.06] flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#E8623C]/10 border border-[#E8623C]/20 text-[#E8623C] font-bold text-xs flex items-center justify-center shrink-0 font-mono">
+                  {review.initials}
                 </div>
-                <blockquote className="mt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed italic">
-                  &ldquo;{review.body}&rdquo;
-                </blockquote>
-              </figure>
-            ))}
-          </Marquee>
-
-          {/* Left and right gradient fade masks */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-48 bg-gradient-to-r from-neutral-50 dark:from-[#0A0B0E] to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-48 bg-gradient-to-l from-neutral-50 dark:from-[#0A0B0E] to-transparent z-10" />
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-sm font-bold text-neutral-900 dark:text-white truncate">
+                    {review.name}
+                  </h3>
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 truncate">
+                    {review.role} · {review.company}
+                  </p>
+                </div>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-neutral-100 dark:bg-white/[0.06] text-neutral-500 dark:text-neutral-400 shrink-0">
+                  {review.location}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
+
+        {/* Simple Trust Banner */}
+        <div className="mt-12 p-4 rounded-xl bg-neutral-50 dark:bg-white/[0.02] border border-neutral-200/80 dark:border-white/[0.06] flex flex-wrap items-center justify-center gap-6 text-xs text-neutral-600 dark:text-neutral-400 font-medium text-center">
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+            <span>100% Real Pune Business Reviews</span>
+          </span>
+          <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">•</span>
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+            <span>5-Star Average Satisfaction</span>
+          </span>
+          <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">•</span>
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+            <span>Ongoing Direct WhatsApp Support</span>
+          </span>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* SECTION 6.5: OUR MODERN TECHNOLOGY STACK (INTERACTIVE & FEATURE-PACKED)   */}
+      {/* ========================================================================= */}
+      <section id="technologies" className="py-24 px-4 sm:px-6 max-w-7xl mx-auto relative overflow-hidden">
+        
+        {/* Ambient Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#E8623C]/5 dark:bg-[#E8623C]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
+          <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
+            Technologies We Work On
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white font-display leading-tight">
+            Engineered with modern, battle-tested tools.
+          </h2>
+          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            From high-performance frontend frameworks to cloud-native microservices, mobile apps, and scalable relational databases — click any category to see our working features in action.
+          </p>
+        </div>
+
+        {/* Interactive Category Filter Pills */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+          {TECH_CATEGORIES.map((cat) => {
+            const isActive = activeTechCategory === cat.id;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => setActiveTechCategory(cat.id)}
+                className={cn(
+                  "px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center gap-2",
+                  isActive
+                    ? "bg-[#E8623C] text-white shadow-md shadow-[#E8623C]/25 scale-105"
+                    : "bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] text-neutral-700 dark:text-neutral-300 hover:border-[#E8623C]/40 hover:text-neutral-900 dark:hover:text-white"
+                )}
+              >
+                <span>{cat.name}</span>
+                <span
+                  className={cn(
+                    "text-[10px] font-mono px-1.5 py-0.5 rounded-md",
+                    isActive
+                      ? "bg-black/20 text-white"
+                      : "bg-neutral-100 dark:bg-white/[0.06] text-neutral-500 dark:text-neutral-400"
+                  )}
+                >
+                  {cat.count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Main Grid: Features on Left, Interactive 3D Sphere on Right */}
+        {(() => {
+          const currentCat =
+            TECH_CATEGORIES.find((c) => c.id === activeTechCategory) ||
+            TECH_CATEGORIES[0];
+          const currentImages = currentCat.slugs.map(
+            (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+          );
+
+          return (
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              
+              {/* Left Column: Category Info, Working Feature Cards, & Tech Badges */}
+              <div className="lg:col-span-7 space-y-6">
+                
+                {/* Active Category Header */}
+                <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm space-y-3">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#E8623C]">
+                      {currentCat.name} Architecture
+                    </span>
+                    <span className="text-xs font-mono text-emerald-500 flex items-center gap-1.5 font-semibold">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      Production Ready
+                    </span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white font-display">
+                    {currentCat.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                    {currentCat.description}
+                  </p>
+
+                  {/* Tech Slugs Badge Row */}
+                  <div className="pt-2 border-t border-neutral-100 dark:border-white/[0.06] flex flex-wrap gap-2">
+                    {currentCat.slugs.map((slug) => (
+                      <span
+                        key={slug}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-white/[0.04] border border-neutral-200/60 dark:border-white/[0.06] text-[11px] font-mono font-medium text-neutral-800 dark:text-neutral-200 capitalize"
+                      >
+                        <img
+                          src={`https://cdn.simpleicons.org/${slug}/${slug}`}
+                          alt={slug}
+                          className="w-3.5 h-3.5 object-contain"
+                          loading="lazy"
+                        />
+                        <span>{slug.replace('dotjs', '.js')}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 4 Working Feature Cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  {currentCat.features.map((feat, idx) => (
+                    <div
+                      key={feat.title}
+                      className="p-4 rounded-xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-2 group"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#E8623C]/10 text-[#E8623C] font-bold">
+                          {feat.tag}
+                        </span>
+                        <span className="text-[10px] font-mono text-neutral-400">
+                          0{idx + 1}
+                        </span>
+                      </div>
+                      <h4 className="text-sm font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors">
+                        {feat.title}
+                      </h4>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        {feat.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between pt-1 text-xs font-mono text-neutral-500">
+                  <span className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>Showing {currentCat.slugs.length} technologies in 3D sphere</span>
+                  </span>
+                  <span className="hidden sm:inline">Drag or swipe right sphere to inspect</span>
+                </div>
+
+              </div>
+
+              {/* Right Column: Interactive 3D IconCloud */}
+              <div className="lg:col-span-5 flex items-center justify-center relative">
+                <div className="relative w-full max-w-[480px] aspect-square flex items-center justify-center rounded-3xl bg-neutral-100/70 dark:bg-white/[0.02] border border-neutral-200/80 dark:border-white/[0.08] p-4 shadow-xl">
+                  <IconCloud key={activeTechCategory} images={currentImages} />
+                </div>
+              </div>
+
+            </div>
+          );
+        })()}
+
       </section>
 
       {/* ========================================================================= */}
@@ -846,49 +1195,59 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 9: BOTTOM HIGH-IMPACT CTA BANNER                                  */}
+      {/* SECTION 9: BOTTOM HIGH-IMPACT CTA BANNER (MAGIC UI GLOBE)                 */}
       {/* ========================================================================= */}
-      <section className="py-24 px-6 max-w-6xl mx-auto relative overflow-hidden text-center">
+      <section className="py-24 px-4 sm:px-6 max-w-6xl mx-auto relative overflow-hidden text-center">
         
         {/* Glow backdrop */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gradient-to-tr from-[#E8623C]/25 to-amber-500/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-[#E8623C]/30 via-amber-500/15 to-transparent rounded-full blur-[140px] pointer-events-none -z-10" />
 
-        <div className="p-10 sm:p-16 rounded-3xl bg-neutral-950 dark:bg-[#0E1118] border border-neutral-800 dark:border-white/[0.08] text-white shadow-2xl space-y-6">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-            Get Started Today
-          </span>
+        <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-3xl bg-neutral-950 dark:bg-[#0E1118] border border-neutral-800 dark:border-white/[0.08] text-white shadow-2xl px-6 sm:px-12 pt-16 pb-48 sm:pb-64">
           
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight font-display max-w-2xl mx-auto leading-tight">
-            Ready to get more customers online?
-          </h2>
+          {/* Magic UI Backdrop Header Typography */}
+          <span className="pointer-events-none absolute top-8 sm:top-10 select-none bg-gradient-to-b from-white/15 via-white/5 to-transparent bg-clip-text text-center text-7xl sm:text-9xl md:text-[140px] font-extrabold font-display leading-none whitespace-pre-wrap text-transparent tracking-tighter">
+            WORLDWIDE
+          </span>
 
-          <p className="text-sm sm:text-base text-neutral-400 max-w-xl mx-auto leading-relaxed">
-            Let&apos;s build a simple, fast, professional website or app for your business. Chat directly with your developer today.
-          </p>
+          {/* Interactive 3D WebGL Globe */}
+          <InteractiveGlobe className="top-44 sm:top-40 md:top-36 max-w-[560px]" />
 
-          <div className="pt-4 flex flex-col sm:flex-row gap-3.5 justify-center items-center">
-            <button
-              onClick={() => setCallModalOpen(true)}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#E8623C] hover:bg-[#F0744E] text-white font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/30 active:scale-98 cursor-pointer flex items-center justify-center gap-2"
-            >
-              <span>Get a Free Website Consultation</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+          {/* Radial gradient mask over the globe */}
+          <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
 
-            <a
-              href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20or%20app%20project%20for%20my%20business."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-neutral-700 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm transition-all active:scale-98 flex items-center justify-center gap-2"
-            >
-              <MessageSquare className="w-4 h-4 text-emerald-400" />
-              <span>Chat on WhatsApp</span>
-            </a>
+          {/* Foreground Content */}
+          <div className="relative z-20 max-w-2xl mx-auto space-y-5">
+            <span className="inline-block px-3 py-1 rounded-full bg-[#E8623C]/10 border border-[#E8623C]/20 text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
+              Get Started Today
+            </span>
+            
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight font-display leading-tight text-white">
+              Ready to get more customers online?
+            </h2>
+
+            <p className="text-sm sm:text-base text-neutral-300 dark:text-neutral-400 max-w-lg mx-auto leading-relaxed">
+              Let&apos;s build a simple, fast, professional website or app for your business. Chat directly with your developer today.
+            </p>
+
+            <div className="pt-2 flex justify-center items-center">
+              <a
+                href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20or%20app%20project%20for%20my%20business."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#E8623C] hover:bg-[#F0744E] text-white font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/30 hover:shadow-[#E8623C]/50 hover:scale-[1.02] active:scale-98 flex items-center justify-center gap-2.5"
+              >
+                <MessageSquare className="w-4 h-4 text-white" />
+                <span>Chat on WhatsApp</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            <div className="pt-4 text-xs font-mono text-neutral-400 flex items-center justify-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E8623C] animate-pulse" />
+              <span>Pune, Maharashtra HQ · Serving businesses worldwide</span>
+            </div>
           </div>
 
-          <div className="pt-6 text-xs font-mono text-neutral-500">
-            Pune, Maharashtra · direct developer access · 100% code &amp; domain ownership
-          </div>
         </div>
 
       </section>

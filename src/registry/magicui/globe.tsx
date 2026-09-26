@@ -69,7 +69,7 @@ export function Globe({ className, config = {} }: GlobeProps) {
       devicePixelRatio: Math.min(window.devicePixelRatio || 2, 2),
       phi: 0,
       theta: 0.3,
-      onRender: (state) => {
+      onRender: (state: Record<string, any>) => {
         if (!pointerInteracting.current) {
           phi += 0.004;
         }
