@@ -335,9 +335,6 @@ export default function SolutionsPage() {
                 <Calculator className="w-full h-full stroke-[1.2]" />
               </div>
               <div className="relative z-10 space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center">
-                  <Calculator className="w-5 h-5" />
-                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
                   CA Firms &amp; Corporate Advisors
                 </h3>
@@ -365,9 +362,6 @@ export default function SolutionsPage() {
                 <Factory className="w-full h-full stroke-[1.2]" />
               </div>
               <div className="relative z-10 space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center">
-                  <Factory className="w-5 h-5" />
-                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
                   Manufacturing &amp; Industrial Units
                 </h3>
@@ -395,9 +389,6 @@ export default function SolutionsPage() {
                 <Tractor className="w-full h-full stroke-[1.2]" />
               </div>
               <div className="relative z-10 space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
-                  <Tractor className="w-5 h-5" />
-                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
                   Agri-Commerce &amp; Dairy Operations
                 </h3>
@@ -425,9 +416,6 @@ export default function SolutionsPage() {
                 <Truck className="w-full h-full stroke-[1.2]" />
               </div>
               <div className="relative z-10 space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center">
-                  <Truck className="w-5 h-5" />
-                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
                   Logistics &amp; Transport Fleets
                 </h3>
@@ -455,9 +443,6 @@ export default function SolutionsPage() {
                 <Stethoscope className="w-full h-full stroke-[1.2]" />
               </div>
               <div className="relative z-10 space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center">
-                  <Stethoscope className="w-5 h-5" />
-                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
                   Clinics, Hospitals &amp; Doctors
                 </h3>
@@ -485,9 +470,6 @@ export default function SolutionsPage() {
                 <Building2 className="w-full h-full stroke-[1.2]" />
               </div>
               <div className="relative z-10 space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-500 flex items-center justify-center">
-                  <Building2 className="w-5 h-5" />
-                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
                   Retail Showrooms &amp; Local Brands
                 </h3>
