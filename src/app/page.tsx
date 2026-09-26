@@ -240,7 +240,7 @@ export default function HomePage() {
 
         {/* Plain-Language Subheadline */}
         <p className="mt-6 text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 font-normal max-w-3xl mx-auto leading-relaxed">
-          We build simple, fast, professional websites and apps for small and growing businesses — so you look credible online and get more customers, with zero tech jargon.
+          We build fast, professional websites and apps that get you more customers. No confusing tech jargon. Just clear results and direct access to your developer.
         </p>
 
         {/* Primary Action Button */}
@@ -251,7 +251,8 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2.5 bg-[#E8623C] hover:bg-[#F0744E] text-white px-7 py-3.5 rounded-xl font-semibold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25 hover:shadow-xl hover:shadow-[#E8623C]/35 active:scale-98 cursor-pointer"
           >
-            <span>Chat With Us on WhatsApp</span>
+            <MessageSquare className="w-4 h-4" />
+            <span>Chat on WhatsApp</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
@@ -578,7 +579,7 @@ export default function HomePage() {
                     </span>
                     {study.liveUrl && (
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/90 text-white flex items-center gap-1 font-semibold backdrop-blur-md">
-                        <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-white" />
                         Live Site
                       </span>
                     )}
@@ -743,7 +744,7 @@ export default function HomePage() {
                 Full Stack Architecture
               </span>
               <span className="text-xs font-mono text-emerald-500 flex items-center gap-1.5 font-semibold">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                 Production Ready
               </span>
             </div>

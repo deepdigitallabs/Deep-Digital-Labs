@@ -64,7 +64,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2.5 text-xs text-neutral-600 dark:text-neutral-400">
                 <MessageSquare className="w-4 h-4 text-emerald-500 shrink-0" />
-                <a href="https://wa.me/919175152244" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 transition-colors">
+                <a href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20project%20with%20Deep%20Digital%20Labs." target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 transition-colors">
                   Direct WhatsApp Engineering Line
                 </a>
               </div>
@@ -199,7 +199,7 @@ export function Footer() {
             © 2026 Deep Digital Labs. All rights reserved.
           </div>
           <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] text-neutral-700 dark:text-neutral-300 shadow-sm">
-            <span>Crafted with precision in Pune 🇮🇳 • Deployed Worldwide 🌍</span>
+            <span>Crafted with precision in Pune • Deployed Worldwide</span>
           </div>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-neutral-900 dark:hover:text-white transition-colors">

@@ -7,7 +7,8 @@ import {
   CheckCircle2, 
   Code2, 
   GitBranch, 
-  Cpu
+  Cpu,
+  MessageSquare
 } from 'lucide-react';
 
 
@@ -47,7 +48,8 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-sm bg-emerald-600 text-white hover:bg-emerald-500 transition-all shadow-xl active:scale-95"
             >
-              <span>💬 Chat on WhatsApp</span>
+              <MessageSquare className="w-4 h-4" />
+              <span>Chat on WhatsApp</span>
             </a>
           </div>
         </div>

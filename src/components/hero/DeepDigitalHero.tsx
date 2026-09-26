@@ -52,7 +52,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
             {/* Eyebrow Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#141416] border border-[#27272A] text-xs font-semibold text-[#00FFA3] shadow-sm">
               <span className="w-2 h-2 rounded-full bg-[#00FFA3]" />
-              <span>🚀 SaaS | Web | Mobile App Development</span>
+              <span>SaaS | Web | Mobile App Development</span>
             </div>
 
             {/* H1 Headline */}
@@ -98,7 +98,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
               </div>
               <div className="flex items-center gap-2 text-slate-400">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00FFA3]" />
-                <span>Engineered in Pune 🇮🇳 • Deployed Globally 🌍</span>
+                <span>Engineered in Pune • Deployed Globally</span>
               </div>
             </div>
 
@@ -249,7 +249,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
                     <span className="text-cyan-400">mobileEngine</span>: <span className="text-emerald-300">&apos;Flutter / React Native 60fps&apos;</span>,
                   </div>
                   <div className="pl-4">
-                    <span className="text-cyan-400">location</span>: <span className="text-emerald-300">&apos;Pune 🇮🇳 &rarr; Global 🌍&apos;</span>,
+                    <span className="text-cyan-400">location</span>: <span className="text-emerald-300">&apos;Pune &rarr; Global&apos;</span>,
                   </div>
                   <div>&#125;;</div>
                   <div className="pt-2 text-[11px] text-[#00FFA3]">

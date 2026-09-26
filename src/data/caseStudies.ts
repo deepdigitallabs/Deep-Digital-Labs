@@ -42,7 +42,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     industry: 'Corporate',
     service: 'Web',
     liveUrl: 'https://rahulbkavaleandco.com/',
-    summary: 'Architected a 100% Lighthouse-scoring corporate website for a premier professional services firm, generating a 35% increase in verified inbound client inquiries.',
+    summary: 'Built a fast, professional website and secure client portal for a top Pune CA firm. Result: A 35% increase in new, high-value client inquiries within the first 90 days, with a site that loads instantly on any mobile device.',
     heroImage: '/images/case-studies/rahul-b-kavale.jpg',
     accentColor: '#06b6d4',
     tags: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
@@ -50,15 +50,15 @@ export const CASE_STUDIES: CaseStudy[] = [
     keyResult: '35% surge in verified inbound corporate inquiries',
     metrics: [
       { label: 'Inbound Inquiries', value: '+35%', change: 'First 3 months' },
-      { label: 'Edge Availability', value: '99.99%', change: 'Global CDN' }
+      { label: 'Uptime & Reliability', value: '99.99%', change: 'Fast cloud hosting' }
     ],
     challenge: 'A prominent professional services firm needed a modern, trustworthy digital presence that reflected their expertise, loaded instantly, and provided a seamless way for clients to initiate contact securely.',
-    solution: 'We architected a blazing-fast, SEO-optimized corporate website. We implemented a clean, professional UI with intuitive navigation, secure inquiry forms, and a mobile-first responsive design to ensure accessibility across all devices.',
+    solution: 'We built a fast, SEO-optimized corporate website with a clean, professional design, intuitive navigation, secure inquiry forms, and mobile-first responsiveness to ensure effortless accessibility on any device.',
     architectureHighlights: [
-      'Edge-rendered cloud architecture deployed across global content delivery networks',
-      '100% Lighthouse Performance, Accessibility, and Core Web Vitals rating',
-      'Encrypted client inquiry pipeline with zero-latency spam protection',
-      'Responsive design system tailored for high-net-worth client trust'
+      'High-performance cloud setup ensuring lightning-fast load times on all screens',
+      'Scores 100% on Google speed and mobile performance benchmarks',
+      'Secure client inquiry pipeline with built-in spam protection',
+      'Professional design system tailored to build immediate corporate client trust'
     ],
     testimonial: {
       quote: 'Deep Digital Labs gave our firm an exceptional digital presence. The website loads instantaneously and our prospective corporate clients immediately comment on how professional and seamless the experience is.',
@@ -218,24 +218,24 @@ export const CASE_STUDIES: CaseStudy[] = [
     industry: 'Political Tech',
     service: 'Web',
     liveUrl: 'https://shivsena-sangola.vercel.app/',
-    summary: 'Architected a mobile-first SSG campaign portal with a local Development Tracker, sub-1.5s 3G speeds, and zero server degradation during viral traffic spikes.',
+    summary: 'Built a mobile-first public portal with an interactive Development Tracker that loads instantly, even on slow mobile networks, and stays 100% stable during heavy traffic spikes.',
     heroImage: '/images/case-studies/shivsena-sangola.jpg',
     accentColor: '#ea580c',
     tags: ['Next.js SSG', 'Edge Caching', 'Tailwind CSS'],
     techStack: ['Next.js SSG', 'Edge Caching', 'Tailwind CSS'],
-    keyResult: '100% peak uptime & sub-1.5s load speeds on rural 3G',
+    keyResult: '100% uptime & instant loading even on slow mobile networks',
     metrics: [
-      { label: 'Peak Uptime', value: '100%', change: 'Zero server degradation' },
-      { label: '3G Load Speed', value: '<1.5s', change: 'Edge cached for rural voters' },
-      { label: 'Digital Credibility', value: 'Modernized', change: 'Elevated regional wing' }
+      { label: 'Uptime', value: '100%', change: 'Zero downtime during peaks' },
+      { label: 'Mobile Speed', value: 'Instant', change: 'Optimized for slow networks' },
+      { label: 'Digital Credibility', value: 'Modernized', change: 'Elevated regional presence' }
     ],
-    challenge: 'The Shivsena Sangola wing required a high-performance, mobile-first campaign website to showcase local developmental work ("Vikas"), rally regional support, and provide a trusted source of information for the constituency during critical political cycles.',
-    solution: 'We architected a Static Site Generation (SSG) powered portal optimized for extreme speed and low-bandwidth environments. Key features include a "Development Tracker" (showcasing local projects), Candidate Appeal video sections, localized news feeds, and a constituent feedback/grievance form.',
+    challenge: 'A prominent civic organization required a fast, mobile-friendly website to showcase regional development work, share updates, and provide a trusted platform for constituents during high-traffic cycles.',
+    solution: 'We built a lightweight, mobile-first web portal optimized to load instantly across all devices and network conditions. Features include a visual Development Tracker for public projects, candidate appeals, localized news updates, and an easy feedback form.',
     architectureHighlights: [
-      'Edge caching architecture handling massive, unpredictable traffic spikes',
-      'Interactive "Development Tracker" showcasing localized infrastructure and public work progress',
-      'Sub-1.5-second load times on 3G mobile networks for universal constituent accessibility',
-      'Direct constituent feedback and grievance intake module connecting voters to campaign leaders'
+      'High-capacity caching setup handling high visitor surges with zero slowdowns',
+      'Interactive visual tracker showcasing completed and ongoing community projects',
+      'Loads in under 1.5 seconds even on weak mobile connections for universal access',
+      'Simple, direct feedback and grievance intake connecting constituents directly to leaders'
     ],
     testimonial: {
       quote: 'During high-stakes campaign days when tens of thousands checked our candidate manifesto at once, the website never stuttered for a single millisecond. Flawless execution.',

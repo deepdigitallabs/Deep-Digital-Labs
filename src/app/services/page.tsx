@@ -12,7 +12,9 @@ import {
   Zap,
   Code2,
   Clock,
-  Bot
+  Bot,
+  Target,
+  Rocket
 } from 'lucide-react';
 import { CORE_SERVICES } from '@/data/services';
 import { TechBadge } from '@/components/ui/TechBadge';
@@ -221,7 +223,9 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-5 rounded-2xl bg-white dark:bg-black/40 border border-neutral-200 dark:border-white/5">
-              <div className="text-2xl mb-3">⚡</div>
+              <div className="w-9 h-9 rounded-lg bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center mb-3">
+                <Zap className="w-5 h-5" />
+              </div>
               <h4 className="text-base font-bold text-neutral-900 dark:text-white mb-1">Zero Confusion</h4>
               <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">
                 Founders and executives understand exactly how we solve their problem in under 5 seconds.
@@ -229,7 +233,9 @@ export default function ServicesPage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-white dark:bg-black/40 border border-neutral-200 dark:border-white/5">
-              <div className="text-2xl mb-3">🎯</div>
+              <div className="w-9 h-9 rounded-lg bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center mb-3">
+                <Target className="w-5 h-5" />
+              </div>
               <h4 className="text-base font-bold text-neutral-900 dark:text-white mb-1">Strategic Partnership</h4>
               <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">
                 We don’t act like one-off freelancers doing cheap tasks. We are your dedicated digital co-pilots.
@@ -237,7 +243,9 @@ export default function ServicesPage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-white dark:bg-black/40 border border-neutral-200 dark:border-white/5">
-              <div className="text-2xl mb-3">🚀</div>
+              <div className="w-9 h-9 rounded-lg bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center mb-3">
+                <Rocket className="w-5 h-5" />
+              </div>
               <h4 className="text-base font-bold text-neutral-900 dark:text-white mb-1">Fast Time-to-Market</h4>
               <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">
                 Production MVPs delivered in 4-8 weeks with complete intellectual property transfer.
@@ -245,7 +253,9 @@ export default function ServicesPage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-white dark:bg-black/40 border border-neutral-200 dark:border-white/5">
-              <div className="text-2xl mb-3">🛡️</div>
+              <div className="w-9 h-9 rounded-lg bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center mb-3">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
               <h4 className="text-base font-bold text-neutral-900 dark:text-white mb-1">Ongoing Reliability</h4>
               <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">
                 Guaranteed 99.9% uptime, monthly updates, and dedicated engineering retainers.

@@ -325,7 +325,7 @@ export default function ContactPage() {
               </div>
               <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Deep Digital Labs<br />
-                Pune, Maharashtra 411001, India 🇮🇳<br />
+                Pune, Maharashtra 411001, India<br />
                 Serving businesses across Pune, Maharashtra, and worldwide.
               </p>
               <div className="pt-1">

@@ -28,7 +28,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: 'Rahul B. Kavale',
     role: 'Managing Partner',
     company: 'Rahul B. Kavale & Co.',
-    location: 'Maharashtra, India 🇮🇳',
+    location: 'Maharashtra, India',
     rating: 5
   },
   {
@@ -37,7 +37,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: 'Santosh Phadtare Campaign Office',
     role: 'Chief Digital Strategist',
     company: 'Santosh Phadtare Campaign',
-    location: 'Maharashtra, India 🇮🇳',
+    location: 'Maharashtra, India',
     rating: 5
   },
   {
@@ -46,7 +46,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: 'Chief Executive Officer',
     role: 'Founder & Managing Director',
     company: 'Dairy Flow Pro (In-House SaaS)',
-    location: 'Pune, India 🇮🇳',
+    location: 'Pune, India',
     rating: 5
   }
 ];

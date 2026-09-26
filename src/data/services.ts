@@ -52,7 +52,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     fullDescription: 'We design and code fast, accessible, and high-converting websites and web applications. Clean semantic HTML5, modern CSS3, responsive React and Next.js interfaces that rank at the top of Google and deliver sub-second load times.',
     icon: 'Code2',
     keyBenefits: [
-      '100/100 Google Lighthouse speed and Core Web Vitals performance',
+      'Perfect Google speed and Core Web Vitals mobile performance',
       'Pixel-perfect responsive design tailored for mobile, tablet, and desktop',
       'SEO-optimized architecture with automated schema and metadata',
       'Zero monthly builder fees — clean code on your own infrastructure'
@@ -104,7 +104,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
       { step: '01', title: 'Wireframes & UI Design', description: 'Crafting responsive layouts, content architecture, and design tokens.', duration: 'Week 1' },
       { step: '02', title: 'Frontend Engineering', description: 'Coding Next.js components, micro-animations, and responsive screens.', duration: 'Weeks 2-3' },
       { step: '03', title: 'Content & Integrations', description: 'Connecting forms, CMS, third-party APIs, and analytics.', duration: 'Week 4' },
-      { step: '04', title: 'Testing & Launch', description: 'Cross-browser testing, Lighthouse 100 audits, and live launch.', duration: 'Week 5' }
+      { step: '04', title: 'Testing & Launch', description: 'Cross-browser testing, speed optimizations, and live launch.', duration: 'Week 5' }
     ],
     faqs: [
       {
