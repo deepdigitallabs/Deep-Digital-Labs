@@ -232,13 +232,13 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Desktop Right Actions: Kombai-style CTA */}
+          {/* Desktop Right Actions */}
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={() => setDiscoveryModalOpen(true)}
               className="group relative inline-flex items-center gap-2 bg-[#E8623C] hover:bg-[#F0744E] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-md shadow-[#E8623C]/20 hover:shadow-lg hover:shadow-[#E8623C]/30 active:scale-98 cursor-pointer"
             >
-              <span>Book Scoping Call</span>
+              <span>Free Consultation</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </button>
           </div>
@@ -249,7 +249,7 @@ export function Navbar() {
               onClick={() => setDiscoveryModalOpen(true)}
               className="bg-[#E8623C] text-white px-3 py-1.5 rounded-lg text-xs font-semibold"
             >
-              Book Call
+              Consultation
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

@@ -138,8 +138,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/pune-website-development-company" className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors">
+                  Pune Web Studio
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors">
-                  Book Technical Call
+                  Get Consultation
                 </Link>
               </li>
             </ul>
