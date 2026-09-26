@@ -48,7 +48,7 @@ export function Footer() {
             </Link>
 
             <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-md leading-relaxed">
-              Your AI-native engineering studio. We architect, design, and code standout web applications, custom SaaS platforms, and mobile apps with strict TypeScript and sub-80ms performance.
+              We build simple, fast, professional websites and apps for small and growing businesses in Pune and beyond — so you look credible online and get more customers, with zero tech jargon.
             </p>
 
             <div className="pt-2 space-y-3">
