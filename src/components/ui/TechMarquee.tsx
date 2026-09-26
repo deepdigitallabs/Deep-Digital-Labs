@@ -42,7 +42,7 @@ export function TechMarquee({ headline }: TechMarqueeProps) {
       )}
 
       {/* Infinite scrolling track */}
-      <div className="flex animate-marquee gap-6">
+      <div className="flex animate-tech-marquee gap-6">
         {marqueeItems.map((tech, index) => (
           <div
             key={`${tech.name}-${index}`}
@@ -86,7 +86,7 @@ export function ClientTrustMarquee() {
         </p>
       </div>
 
-      <div className="flex animate-marquee gap-8 items-center">
+      <div className="flex animate-tech-marquee gap-8 items-center">
         {duplicated.map((client, idx) => (
           <div 
             key={`${client.name}-${idx}`} 

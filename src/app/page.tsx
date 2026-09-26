@@ -16,15 +16,18 @@ import {
   Check,
   Globe,
   ShoppingBag,
+  Headphones,
   Search,
   Users,
-  Headphones,
   Laptop,
   HelpCircle,
   PhoneCall
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
+import { Marquee } from '@/registry/magicui/marquee';
+import { Globe as InteractiveGlobe } from '@/registry/magicui/globe';
+import { cn } from '@/lib/utils';
 import { CASE_STUDIES } from '@/data/caseStudies';
 
 // Kombai Laurel Leaf SVGs
@@ -63,6 +66,45 @@ function WhatsAppIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
     </svg>
   );
 }
+
+const PUNE_REVIEWS = [
+  {
+    name: "Rahul B. Kavale",
+    username: "@rahulkavale · CA Partner",
+    body: "Deep Digital Labs gave our CA firm an exceptional digital presence. The website loads instantly, looks world-class, and our inbound client inquiries grew by 35% in 90 days.",
+    img: "https://avatar.vercel.sh/rahul-kavale",
+  },
+  {
+    name: "Operations Director",
+    username: "@yashodeep · Agro Tech",
+    body: "Moving our agricultural operations and inventory tracking to the web with Deep Digital Labs reduced billing cycle overhead from 3 days to real-time. DDL also built our billing and operational tools that made running day-to-day operations effortless.",
+    img: "https://avatar.vercel.sh/yashodeep-agro",
+  },
+  {
+    name: "Logistics Director",
+    username: "@trustcarry · Supply Chain",
+    body: "Our logistics clients now track their consignments online in real time rather than calling dispatch desks. The website works quickly on any phone.",
+    img: "https://avatar.vercel.sh/trust-carry",
+  },
+  {
+    name: "Vikram Deshmukh",
+    username: "@vdeshmukh · Retail Tech",
+    body: "Clean code on our own infrastructure with zero monthly builder fees. We got a full custom dashboard built in 3 weeks that saves our store team hours every day.",
+    img: "https://avatar.vercel.sh/vikram-deshmukh",
+  },
+  {
+    name: "Pradeep Shinde",
+    username: "@dairyflow · Dairy SaaS",
+    body: "The speed and reliability are unbelievable. 100/100 Core Web Vitals and direct WhatsApp access to the developer who actually built it. Best tech partner in Pune.",
+    img: "https://avatar.vercel.sh/pradeep-shinde",
+  },
+  {
+    name: "Anand Kulkarni",
+    username: "@anandk · Corporate Law",
+    body: "We were skeptical about web agencies because of past bad experiences with WordPress delays. Deep Digital Labs delivered our corporate site ahead of schedule with zero headaches.",
+    img: "https://avatar.vercel.sh/anand-kulkarni",
+  },
+];
 
 export default function HomePage() {
   const [callModalOpen, setCallModalOpen] = useState(false);
@@ -207,86 +249,96 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           {/* Service 1: Business Websites */}
-          <div className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-[#E8623C]/10 border border-[#E8623C]/20 flex items-center justify-center text-[#E8623C]">
-              <Globe className="w-6 h-6" />
+          <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
+            <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+              <Globe className="w-full h-full stroke-[1.2]" />
             </div>
-            <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
-              Business Websites
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-              A clean, professional website that tells people who you are and what you offer — fast-loading and great on mobile.
-            </p>
-            <div className="pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
-              <Check className="w-3.5 h-3.5" />
+            <div className="relative z-10 space-y-2">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
+                Business Websites
+              </h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                A clean, professional website that tells people who you are and what you offer — fast-loading and great on mobile.
+              </p>
+            </div>
+            <div className="relative z-10 pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E8623C] shrink-0" />
               <span>Mobile-first &amp; fast-loading</span>
             </div>
           </div>
 
           {/* Service 2: Online Stores & Booking Tools */}
-          <div className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-[#E8623C]/10 border border-[#E8623C]/20 flex items-center justify-center text-[#E8623C]">
-              <ShoppingBag className="w-6 h-6" />
+          <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
+            <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+              <ShoppingBag className="w-full h-full stroke-[1.2]" />
             </div>
-            <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
-              Online Stores &amp; Booking Tools
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-              Take orders, manage bookings, or track customers online with a simple tool built for how you work.
-            </p>
-            <div className="pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
-              <Check className="w-3.5 h-3.5" />
+            <div className="relative z-10 space-y-2">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
+                Online Stores &amp; Booking Tools
+              </h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                Take orders, manage bookings, or track customers online with a simple tool built for how you work.
+              </p>
+            </div>
+            <div className="relative z-10 pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E8623C] shrink-0" />
               <span>UPI, cards &amp; easy tracking</span>
             </div>
           </div>
 
           {/* Service 3: Mobile Apps */}
-          <div className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-[#E8623C]/10 border border-[#E8623C]/20 flex items-center justify-center text-[#E8623C]">
-              <Smartphone className="w-6 h-6" />
+          <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
+            <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+              <Smartphone className="w-full h-full stroke-[1.2]" />
             </div>
-            <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
-              Mobile Apps
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-              Your own app on Android and iPhone, designed and built end-to-end for your customers or team.
-            </p>
-            <div className="pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
-              <Check className="w-3.5 h-3.5" />
+            <div className="relative z-10 space-y-2">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
+                Mobile Apps
+              </h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                Your own app on Android and iPhone, designed and built end-to-end for your customers or team.
+              </p>
+            </div>
+            <div className="relative z-10 pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E8623C] shrink-0" />
               <span>Android &amp; iOS compatible</span>
             </div>
           </div>
 
           {/* Service 4: Getting Found on Google (SEO) */}
-          <div className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-[#E8623C]/10 border border-[#E8623C]/20 flex items-center justify-center text-[#E8623C]">
-              <Search className="w-6 h-6" />
+          <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
+            <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+              <Search className="w-full h-full stroke-[1.2]" />
             </div>
-            <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
-              Getting Found on Google (SEO)
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-              We help your website show up when people in Pune (and beyond) search for what you do.
-            </p>
-            <div className="pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
-              <Check className="w-3.5 h-3.5" />
+            <div className="relative z-10 space-y-2">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
+                Getting Found on Google (SEO)
+              </h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                We help your website show up when people in Pune (and beyond) search for what you do.
+              </p>
+            </div>
+            <div className="relative z-10 pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#E8623C] shrink-0" />
               <span>Local Pune search rankings</span>
             </div>
           </div>
 
           {/* Service 5: Ongoing Support */}
-          <div className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all space-y-4 md:col-span-2 lg:col-span-2">
-            <div className="w-12 h-12 rounded-xl bg-[#E8623C]/10 border border-[#E8623C]/20 flex items-center justify-center text-[#E8623C]">
-              <Headphones className="w-6 h-6" />
+          <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4 md:col-span-2 lg:col-span-2">
+            <div className="absolute -right-4 -bottom-4 w-36 h-36 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-emerald-500/[0.10] dark:group-hover:text-emerald-500/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+              <Headphones className="w-full h-full stroke-[1.2]" />
             </div>
-            <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
-              Ongoing Support
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-              After launch, we stay on — fixing issues, adding pages, keeping things running, and ensuring your digital presence stays fast and secure.
-            </p>
-            <div className="pt-2 flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
-              <Check className="w-3.5 h-3.5" />
+            <div className="relative z-10 space-y-2">
+              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
+                Ongoing Support
+              </h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                After launch, we stay on — fixing issues, adding pages, keeping things running, and ensuring your digital presence stays fast and secure.
+              </p>
+            </div>
+            <div className="relative z-10 pt-2 flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
               <span>Direct WhatsApp developer access · Fast response</span>
             </div>
           </div>
@@ -315,68 +367,78 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
             {/* 1. More customers finding you online */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-bold">
-                <Users className="w-5 h-5" />
+            <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md hover:border-[#E8623C]/40 transition-all flex flex-col justify-between">
+              <div className="absolute -right-4 -bottom-4 w-28 h-28 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+                <Users className="w-full h-full stroke-[1.2]" />
               </div>
-              <h3 className="text-base font-bold text-neutral-900 dark:text-white">
-                More customers finding you online
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Rank higher on local Pune searches and convert online visitors into direct calls and paying customers.
-              </p>
+              <div className="relative z-10 space-y-2.5">
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+                  More customers finding you online
+                </h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  Rank higher on local Pune searches and convert online visitors into direct calls and paying customers.
+                </p>
+              </div>
             </div>
 
             {/* 2. Works properly on phones */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-bold">
-                <Smartphone className="w-5 h-5" />
+            <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md hover:border-[#E8623C]/40 transition-all flex flex-col justify-between">
+              <div className="absolute -right-4 -bottom-4 w-28 h-28 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+                <Smartphone className="w-full h-full stroke-[1.2]" />
               </div>
-              <h3 className="text-base font-bold text-neutral-900 dark:text-white">
-                A website that works properly on phones
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Over 70% of your visitors are on mobile. Your website looks flawless and loads instantly on every screen.
-              </p>
+              <div className="relative z-10 space-y-2.5">
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+                  A website that works properly on phones
+                </h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  Over 70% of your visitors are on mobile. Your website looks flawless and loads instantly on every screen.
+                </p>
+              </div>
             </div>
 
             {/* 3. No confusing tech talk */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-bold">
-                <MessageSquare className="w-5 h-5" />
+            <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md hover:border-[#E8623C]/40 transition-all flex flex-col justify-between">
+              <div className="absolute -right-4 -bottom-4 w-28 h-28 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+                <MessageSquare className="w-full h-full stroke-[1.2]" />
               </div>
-              <h3 className="text-base font-bold text-neutral-900 dark:text-white">
-                No confusing tech talk
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                We explain everything in plain language. No buzzwords, no complicated jargon — just clear explanations and honest advice.
-              </p>
+              <div className="relative z-10 space-y-2.5">
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+                  No confusing tech talk
+                </h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  We explain everything in plain language. No buzzwords, no complicated jargon — just clear explanations and honest advice.
+                </p>
+              </div>
             </div>
 
             {/* 4. Fast, reliable sites */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md space-y-3">
-              <div className="w-10 h-10 rounded-lg bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-bold">
-                <Zap className="w-5 h-5" />
+            <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md hover:border-[#E8623C]/40 transition-all flex flex-col justify-between">
+              <div className="absolute -right-4 -bottom-4 w-28 h-28 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+                <Zap className="w-full h-full stroke-[1.2]" />
               </div>
-              <h3 className="text-base font-bold text-neutral-900 dark:text-white">
-                Fast, reliable sites that don&apos;t crash or lag
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                No slow-loading WordPress plugins or broken themes. Modern, lightweight engineering that keeps your site online 24/7.
-              </p>
+              <div className="relative z-10 space-y-2.5">
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+                  Fast, reliable sites that don&apos;t crash or lag
+                </h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  No slow-loading WordPress plugins or broken themes. Modern, lightweight engineering that keeps your site online 24/7.
+                </p>
+              </div>
             </div>
 
             {/* 5. Direct WhatsApp access */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md space-y-3 lg:col-span-2">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-bold">
-                <PhoneCall className="w-5 h-5" />
+            <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md hover:border-emerald-500/40 transition-all flex flex-col justify-between lg:col-span-2">
+              <div className="absolute -right-3 -bottom-5 w-32 h-32 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-emerald-500/[0.10] dark:group-hover:text-emerald-500/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+                <PhoneCall className="w-full h-full stroke-[1.2]" />
               </div>
-              <h3 className="text-base font-bold text-neutral-900 dark:text-white">
-                Direct WhatsApp access to your actual developer
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                No call centers, no ticketing portals, and no waiting on hold. You chat directly with the developer building and maintaining your site.
-              </p>
+              <div className="relative z-10 space-y-2.5">
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+                  Direct WhatsApp access to your actual developer
+                </h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-xl">
+                  No call centers, no ticketing portals, and no waiting on hold. You chat directly with the developer building and maintaining your site.
+                </p>
+              </div>
             </div>
 
           </div>
@@ -499,87 +561,94 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 6: CLIENT TESTIMONIALS                                            */}
+      {/* SECTION 6: CLIENT TESTIMONIALS (MAGIC UI MARQUEE)                         */}
       {/* ========================================================================= */}
-      <section className="py-20 px-6 bg-neutral-50/50 dark:bg-[#0A0B0E] border-y border-neutral-200/80 dark:border-white/[0.06]">
-        <div className="max-w-6xl mx-auto">
-          
-          <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-              Client Feedback
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white font-display">
-              What Pune business owners say about us.
-            </h2>
-          </div>
+      <section className="py-20 bg-neutral-50/50 dark:bg-[#0A0B0E] border-y border-neutral-200/80 dark:border-white/[0.06] overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 mb-12 text-center space-y-3">
+          <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
+            Client Feedback
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white font-display">
+            What Pune business owners say about us.
+          </h2>
+          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto">
+            Real feedback from founders, CAs, and operations directors who run their businesses on our software.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            {/* Testimonial 1 */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="flex items-center gap-1 text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400" />
-                  ))}
+        {/* Magic UI Double Marquee Track */}
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden gap-4">
+          <Marquee pauseOnHover className="[--duration:30s]">
+            {PUNE_REVIEWS.slice(0, 3).map((review) => (
+              <figure
+                key={review.name}
+                className={cn(
+                  "relative h-full w-80 sm:w-96 cursor-pointer overflow-hidden rounded-2xl border p-5 transition-all duration-300",
+                  // light styles
+                  "border-neutral-200/80 bg-white hover:border-[#E8623C]/50 hover:shadow-lg hover:shadow-[#E8623C]/5",
+                  // dark styles
+                  "dark:border-white/[0.08] dark:bg-[#12151D] dark:hover:border-[#E8623C]/50 dark:hover:shadow-lg dark:hover:shadow-[#E8623C]/10"
+                )}
+              >
+                <div className="flex flex-row items-center gap-3">
+                  <img
+                    className="rounded-full ring-2 ring-[#E8623C]/20 shrink-0"
+                    width={38}
+                    height={38}
+                    alt={review.name}
+                    src={review.img}
+                  />
+                  <div className="flex flex-col">
+                    <figcaption className="text-sm font-bold text-neutral-900 dark:text-white leading-tight">
+                      {review.name}
+                    </figcaption>
+                    <p className="text-xs font-mono text-[#E8623C]">{review.username}</p>
+                  </div>
                 </div>
-                <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
-                  &ldquo;Deep Digital Labs gave our CA firm an exceptional digital presence. The website loads instantly, looks world-class, and our inbound client inquiries grew by 35% in 90 days.&rdquo;
-                </p>
-              </div>
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
-                <div>
-                  <div className="text-xs font-bold text-neutral-900 dark:text-white">Rahul B. Kavale</div>
-                  <div className="text-[11px] text-neutral-500">Managing Partner, CA Firm</div>
-                </div>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500">Verified Client</span>
-              </div>
-            </div>
+                <blockquote className="mt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed italic">
+                  &ldquo;{review.body}&rdquo;
+                </blockquote>
+              </figure>
+            ))}
+          </Marquee>
 
-            {/* Testimonial 2 */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="flex items-center gap-1 text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400" />
-                  ))}
+          <Marquee reverse pauseOnHover className="[--duration:30s]">
+            {PUNE_REVIEWS.slice(3, 6).map((review) => (
+              <figure
+                key={review.name}
+                className={cn(
+                  "relative h-full w-80 sm:w-96 cursor-pointer overflow-hidden rounded-2xl border p-5 transition-all duration-300",
+                  // light styles
+                  "border-neutral-200/80 bg-white hover:border-[#E8623C]/50 hover:shadow-lg hover:shadow-[#E8623C]/5",
+                  // dark styles
+                  "dark:border-white/[0.08] dark:bg-[#12151D] dark:hover:border-[#E8623C]/50 dark:hover:shadow-lg dark:hover:shadow-[#E8623C]/10"
+                )}
+              >
+                <div className="flex flex-row items-center gap-3">
+                  <img
+                    className="rounded-full ring-2 ring-[#E8623C]/20 shrink-0"
+                    width={38}
+                    height={38}
+                    alt={review.name}
+                    src={review.img}
+                  />
+                  <div className="flex flex-col">
+                    <figcaption className="text-sm font-bold text-neutral-900 dark:text-white leading-tight">
+                      {review.name}
+                    </figcaption>
+                    <p className="text-xs font-mono text-[#E8623C]">{review.username}</p>
+                  </div>
                 </div>
-                <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
-                  &ldquo;Moving our agricultural operations and inventory tracking to the web with Deep Digital Labs reduced billing cycle overhead from 3 days to real-time. DDL also built our billing and operational tools that made running day-to-day operations effortless. No fluff, just working tools.&rdquo;
-                </p>
-              </div>
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
-                <div>
-                  <div className="text-xs font-bold text-neutral-900 dark:text-white">Operations Director</div>
-                  <div className="text-[11px] text-neutral-500">Yashodeep Agro Tech</div>
-                </div>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500">Verified Client</span>
-              </div>
-            </div>
+                <blockquote className="mt-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed italic">
+                  &ldquo;{review.body}&rdquo;
+                </blockquote>
+              </figure>
+            ))}
+          </Marquee>
 
-            {/* Testimonial 3 */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-md flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="flex items-center gap-1 text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400" />
-                  ))}
-                </div>
-                <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
-                  &ldquo;Our logistics clients now track their consignments online in real time rather than calling dispatch desks. The website works quickly on any phone.&rdquo;
-                </p>
-              </div>
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
-                <div>
-                  <div className="text-xs font-bold text-neutral-900 dark:text-white">Logistics Director</div>
-                  <div className="text-[11px] text-neutral-500">Trust Carry Logistics</div>
-                </div>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-500">Verified Client</span>
-              </div>
-            </div>
-
-          </div>
-
+          {/* Left and right gradient fade masks */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-48 bg-gradient-to-r from-neutral-50 dark:from-[#0A0B0E] to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-48 bg-gradient-to-l from-neutral-50 dark:from-[#0A0B0E] to-transparent z-10" />
         </div>
       </section>
 

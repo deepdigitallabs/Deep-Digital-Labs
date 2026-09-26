@@ -127,17 +127,45 @@ body {
   transform: scale(1.05);
 }
 
+/* Magic UI Marquee Keyframes */
 @keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration, 40s) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration, 40s) linear infinite;
+}
+
+/* Tech Marquee Keyframes */
+@keyframes tech-marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
 }
 
-.animate-marquee {
+.animate-tech-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 25s linear infinite;
+  animation: tech-marquee 25s linear infinite;
 }
 
-.animate-marquee:hover {
+.animate-tech-marquee:hover {
   animation-play-state: paused;
 }
