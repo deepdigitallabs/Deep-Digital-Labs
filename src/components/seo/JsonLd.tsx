@@ -10,7 +10,7 @@ export function JsonLd() {
         name: 'Deep Digital Labs',
         url: 'https://deepdigitallabs.com',
         logo: 'https://deepdigitallabs.com/logo.png',
-        description: 'Engineering scalable SaaS, web platforms, and mobile apps for global brands. Built in Pune, India, deployed worldwide.',
+        description: 'Deep Digital Labs is a website and app development company in Pune, building fast, modern websites, online stores, and mobile apps for growing businesses.',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Pune',
@@ -34,15 +34,15 @@ export function JsonLd() {
       {
         '@type': 'LocalBusiness',
         '@id': 'https://deepdigitallabs.com/#localbusiness',
-        name: 'Deep Digital Labs Pune HQ',
+        name: 'Deep Digital Labs - Website Development Company in Pune',
         image: 'https://deepdigitallabs.com/office.jpg',
         telephone: '+91-091751-52244',
-        priceRange: '$$$',
+        priceRange: '₹₹',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Pune',
           addressLocality: 'Pune',
-          addressRegion: 'MH',
+          addressRegion: 'Maharashtra',
           postalCode: '411001',
           addressCountry: 'IN'
         },

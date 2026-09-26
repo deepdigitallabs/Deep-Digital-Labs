@@ -20,30 +20,33 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Deep Digital Labs | Technology Builds Tomorrow — AI-Native Software & SaaS Engineering Studio",
-  description: "Deep Digital Labs designs and engineers standout web applications, mobile apps, and SaaS platforms. 100% code ownership, direct developer access, and Pune-based engineering.",
+  title: "Deep Digital Labs | Website Development Company in Pune",
+  description: "Deep Digital Labs builds websites, apps and online stores for businesses in Pune. Simple process, fast delivery, direct developer access. Get a free consultation.",
   keywords: [
-    "SaaS development company India",
-    "custom web app developers",
-    "mobile app development agency",
+    "Website Development Company in Pune",
+    "web development company Pune",
+    "web design company Pune",
+    "app development company Pune",
+    "small business website Pune",
+    "e-commerce website development Pune",
     "Next.js developers Pune",
-    "Flutter app development India",
-    "startup MVP engineering",
-    "multi-tenant SaaS architecture"
+    "Flutter mobile apps Pune",
+    "custom software development Pune",
+    "SEO services Pune"
   ],
   authors: [{ name: "Deep Digital Labs" }],
   openGraph: {
-    title: "Deep Digital Labs | Scalable SaaS & Digital Products",
-    description: "Built in Pune, Deployed Worldwide. High-performance SaaS, Web, and Mobile engineering for global startups.",
+    title: "Deep Digital Labs | Website Development Company in Pune",
+    description: "Deep Digital Labs builds websites, apps and online stores for businesses in Pune. Simple process, fast delivery, direct developer access. Get a free consultation.",
     url: "https://deepdigitallabs.com",
     siteName: "Deep Digital Labs",
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deep Digital Labs | Scalable SaaS & Digital Products",
-    description: "Built in Pune, Deployed Worldwide. High-performance SaaS, Web, and Mobile engineering.",
+    title: "Deep Digital Labs | Website Development Company in Pune",
+    description: "Deep Digital Labs builds websites, apps and online stores for businesses in Pune. Simple process, fast delivery, direct developer access.",
     creator: "@deepdigitallabs",
   },
   metadataBase: new URL("https://deepdigitallabs.com"),

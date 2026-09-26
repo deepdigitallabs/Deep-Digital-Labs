@@ -38,8 +38,8 @@ export function DiscoveryCallModal({ isOpen, onClose }: DiscoveryCallModalProps)
               <Calendar className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="text-base font-bold text-neutral-900 dark:text-white">Book a Technical Call</h3>
-              <p className="text-xs text-neutral-500 dark:text-neutral-400">Directly with our senior engineering team in Pune, India</p>
+              <h3 className="text-base font-bold text-neutral-900 dark:text-white">Free Website &amp; App Consultation</h3>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400">Speak directly with our Pune team — no tech jargon, just honest advice.</p>
             </div>
           </div>
           <button
