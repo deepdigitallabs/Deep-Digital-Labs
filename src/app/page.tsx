@@ -24,6 +24,7 @@ import {
   PhoneCall
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
+import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
 import { CASE_STUDIES } from '@/data/caseStudies';
 
 // Kombai Laurel Leaf SVGs
@@ -65,8 +66,6 @@ function WhatsAppIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
 
 export default function HomePage() {
   const [callModalOpen, setCallModalOpen] = useState(false);
-  const [activeStep, setActiveStep] = useState<number>(0);
-  const [caseFilter, setCaseFilter] = useState<'All' | 'Business' | 'Agri' | 'Civic'>('All');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
@@ -78,14 +77,6 @@ export default function HomePage() {
     }
     window.open('https://ig.me/m/deepdigitallabs', '_blank', 'noopener,noreferrer');
   };
-
-  const filteredCaseStudies = caseFilter === 'All' 
-    ? CASE_STUDIES 
-    : caseFilter === 'Business'
-    ? CASE_STUDIES.filter(c => c.industry === 'Corporate' || c.industry === 'Logistics')
-    : caseFilter === 'Agri'
-    ? CASE_STUDIES.filter(c => c.industry === 'Agri-Tech')
-    : CASE_STUDIES.filter(c => c.industry === 'Civic Tech' || c.industry === 'Personal Branding');
 
   return (
     <div className="flex flex-col min-h-screen bg-[var(--bg-main)] text-[var(--text-main)] selection:bg-[#E8623C] selection:text-white transition-colors duration-200">
@@ -394,206 +385,9 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION 4: OUR PROCESS (PLAIN-ENGLISH VERSION)                             */}
+      {/* SECTION 4: OUR PROCESS — STORY-DRIVEN JOURNEY TIMELINE                    */}
       {/* ========================================================================= */}
-      <section className="py-20 px-6 max-w-6xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-            Our Process
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white font-display">
-            From idea to launch in 4 simple steps.
-          </h2>
-          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400">
-            A transparent, collaborative workflow where you are in control at every stage.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          {/* Left Column: 4 Numbered Steps */}
-          <div className="lg:col-span-5 space-y-3">
-            {[
-              {
-                id: 0,
-                num: '01',
-                title: 'Tell us about your business',
-                desc: 'A quick call or WhatsApp chat about what you need, your business goals, and what you want your website or app to achieve.'
-              },
-              {
-                id: 1,
-                num: '02',
-                title: 'We design it',
-                desc: 'You see and approve a visual preview before we write a single line of code, so you are 100% happy with how it looks.'
-              },
-              {
-                id: 2,
-                num: '03',
-                title: 'We build it',
-                desc: 'Typically ready in 2–4 weeks. Built with modern, reliable technology that loads fast and works smoothly on all devices.'
-              },
-              {
-                id: 3,
-                num: '04',
-                title: 'We launch & support you',
-                desc: 'Your site goes live, and we are on call afterward to keep things running smoothly, fix any issues, and add updates.'
-              }
-            ].map((step) => (
-              <div
-                key={step.id}
-                onClick={() => setActiveStep(step.id)}
-                className={`p-5 rounded-2xl border transition-all cursor-pointer ${
-                  activeStep === step.id
-                    ? 'bg-white dark:bg-[#12151D] border-[#E8623C] shadow-lg shadow-[#E8623C]/10 scale-[1.02]'
-                    : 'bg-white/40 dark:bg-white/[0.02] border-neutral-200 dark:border-white/[0.06] hover:border-neutral-400 dark:hover:border-white/20'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <span className={`font-mono text-sm font-bold ${activeStep === step.id ? 'text-[#E8623C]' : 'text-neutral-400'}`}>
-                    {step.num}
-                  </span>
-                  <h3 className="text-base font-bold text-neutral-900 dark:text-white">
-                    {step.title}
-                  </h3>
-                </div>
-                {activeStep === step.id && (
-                  <p className="mt-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed pl-7">
-                    {step.desc}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Right Column: Visual Preview Box */}
-          <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-xl text-neutral-900 dark:text-white space-y-5">
-              
-              {/* Dynamic Step View 0 */}
-              {activeStep === 0 && (
-                <div className="space-y-4 animate-in fade-in duration-200">
-                  <div className="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-800 pb-3">
-                    <span className="text-xs font-mono text-[#E8623C] font-semibold">STEP 01 · INITIAL CONSULTATION</span>
-                    <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400">Free · 20 mins</span>
-                  </div>
-                  <div className="space-y-3 text-xs sm:text-sm">
-                    <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-1">
-                      <div className="font-bold text-neutral-900 dark:text-white">1. Understanding Your Customers</div>
-                      <p className="text-neutral-500 dark:text-neutral-400">Who visits your website, and what action should they take?</p>
-                    </div>
-                    <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-1">
-                      <div className="font-bold text-neutral-900 dark:text-white">2. Scope &amp; Budget Clarity</div>
-                      <p className="text-neutral-500 dark:text-neutral-400">A clear, fixed quote with zero hidden surprise charges.</p>
-                    </div>
-                    <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-1">
-                      <div className="font-bold text-neutral-900 dark:text-white">3. Direct Developer Discussion</div>
-                      <p className="text-neutral-500 dark:text-neutral-400">Talk directly on phone or WhatsApp with the engineer who will build it.</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Dynamic Step View 1 */}
-              {activeStep === 1 && (
-                <div className="space-y-4 animate-in fade-in duration-200">
-                  <div className="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-800 pb-3">
-                    <span className="text-xs font-mono text-[#E8623C] font-semibold">STEP 02 · DESIGN &amp; VISUAL APPROVAL</span>
-                    <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400">Week 1</span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-3 text-xs">
-                    <div className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-1">
-                      <div className="font-bold text-neutral-900 dark:text-white">Visual Preview</div>
-                      <p className="text-neutral-500 dark:text-neutral-400">Interactive preview of how your website will look.</p>
-                    </div>
-                    <div className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-1">
-                      <div className="font-bold text-neutral-900 dark:text-white">Mobile-First Layout</div>
-                      <p className="text-neutral-500 dark:text-neutral-400">Tailored specifically for smartphone screens.</p>
-                    </div>
-                    <div className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-1">
-                      <div className="font-bold text-emerald-600 dark:text-emerald-400">Your Feedback First</div>
-                      <p className="text-neutral-500 dark:text-neutral-400">We adjust colors and layouts until you love it.</p>
-                    </div>
-                    <div className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-1">
-                      <div className="font-bold text-[#E8623C]">No Templates</div>
-                      <p className="text-neutral-500 dark:text-neutral-400">Designed uniquely for your specific business.</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Dynamic Step View 2 */}
-              {activeStep === 2 && (
-                <div className="space-y-4 animate-in fade-in duration-200">
-                  <div className="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-800 pb-3">
-                    <span className="text-xs font-mono text-[#E8623C] font-semibold">STEP 03 · DEVELOPMENT &amp; TESTING</span>
-                    <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400">Weeks 2–3</span>
-                  </div>
-                  <div className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-2.5 text-xs">
-                    <div className="flex items-center justify-between text-neutral-700 dark:text-neutral-300">
-                      <span>Lightning Load Speed:</span>
-                      <span className="text-emerald-600 dark:text-emerald-400 font-semibold font-mono">Under 1 second</span>
-                    </div>
-                    <div className="flex items-center justify-between text-neutral-700 dark:text-neutral-300">
-                      <span>Google Search SEO Setup:</span>
-                      <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Ready for Pune Search</span>
-                    </div>
-                    <div className="flex items-center justify-between text-neutral-700 dark:text-neutral-300">
-                      <span>Forms &amp; WhatsApp Integration:</span>
-                      <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Instant Inquiries</span>
-                    </div>
-                    <div className="flex items-center justify-between text-neutral-700 dark:text-neutral-300">
-                      <span>Live Demo Link:</span>
-                      <span className="text-[#E8623C] font-semibold">Test on your own phone</span>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Dynamic Step View 3 */}
-              {activeStep === 3 && (
-                <div className="space-y-4 animate-in fade-in duration-200">
-                  <div className="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-800 pb-3">
-                    <span className="text-xs font-mono text-[#E8623C] font-semibold">STEP 04 · LAUNCH &amp; ONGOING SUPPORT</span>
-                    <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400">Live &amp; Monitored</span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-3 text-xs">
-                    <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-1">
-                      <div className="font-bold text-neutral-900 dark:text-white">Domain &amp; SSL Connected</div>
-                      <p className="text-[11px] text-neutral-500 dark:text-neutral-400">Your site goes live with secure green padlock.</p>
-                    </div>
-                    <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-1">
-                      <div className="font-bold text-neutral-900 dark:text-white">100% Ownership</div>
-                      <p className="text-[11px] text-neutral-500 dark:text-neutral-400">All code, domain, and assets belong to you.</p>
-                    </div>
-                    <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-1">
-                      <div className="font-bold text-emerald-600 dark:text-emerald-400">Dedicated Support</div>
-                      <p className="text-[11px] text-neutral-500 dark:text-neutral-400">Quick fixes and assistance whenever you need.</p>
-                    </div>
-                    <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 space-y-1">
-                      <div className="font-bold text-[#E8623C]">Growth Ready</div>
-                      <p className="text-[11px] text-neutral-500 dark:text-neutral-400">Add new pages and features easily as you expand.</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Bottom Card Action */}
-              <div className="pt-2 flex items-center justify-between border-t border-neutral-200 dark:border-neutral-800">
-                <span className="text-xs text-neutral-500 dark:text-neutral-400">Have a project in mind?</span>
-                <button
-                  onClick={() => setCallModalOpen(true)}
-                  className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1 cursor-pointer"
-                >
-                  <span>Get Free Consultation</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </section>
+      <ProcessTimeline onOpenConsultation={() => setCallModalOpen(true)} />
 
       {/* ========================================================================= */}
       {/* SECTION 5: REAL WORK & CASE STUDIES                                       */}
@@ -613,32 +407,18 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Filter Tabs */}
-          <div className="flex items-center gap-1.5 p-1 rounded-xl bg-neutral-100 dark:bg-white/[0.04] border border-neutral-200 dark:border-white/[0.06] self-start sm:self-auto">
-            {[
-              { id: 'All', label: 'All Projects' },
-              { id: 'Business', label: 'Business & CA' },
-              { id: 'Agri', label: 'Agri & Software' },
-              { id: 'Civic', label: 'Civic Tech' }
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setCaseFilter(tab.id as any)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                  caseFilter === tab.id
-                    ? 'bg-[#E8623C] text-white shadow-sm'
-                    : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
+          <Link
+            href="/case-studies"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#E8623C] hover:underline self-start sm:self-auto group"
+          >
+            <span>View All Case Studies</span>
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
 
         {/* Case Studies Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCaseStudies.map((study) => (
+          {CASE_STUDIES.map((study) => (
             <div
               key={study.slug}
               className="rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between group overflow-hidden"
@@ -765,7 +545,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
-                  &ldquo;Moving our agricultural operations and inventory tracking to the web with Deep Digital Labs reduced billing cycle overhead from 3 days to real-time. No fluff, just working tools.&rdquo;
+                  &ldquo;Moving our agricultural operations and inventory tracking to the web with Deep Digital Labs reduced billing cycle overhead from 3 days to real-time. DDL also built our billing and operational tools that made running day-to-day operations effortless. No fluff, just working tools.&rdquo;
                 </p>
               </div>
               <div className="pt-4 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">

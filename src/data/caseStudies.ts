@@ -96,7 +96,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Lightweight bundle footprint enabling sub-2-second loads even on spotty connections'
     ],
     testimonial: {
-      quote: 'Moving our agricultural operations to the web with Deep Digital Labs reduced our paperwork by 40%. Farmers and partners can easily access our offerings directly from their phones.',
+      quote: 'Moving our agricultural operations and inventory tracking to the web with Deep Digital Labs reduced billing cycle overhead from 3 days to real-time. DDL also built our billing and operational tools that made running day-to-day operations effortless. No fluff, just working tools.',
       author: 'Operations Director',
       role: 'Head of Supply Chain',
       company: 'Yashodeep Agro'
