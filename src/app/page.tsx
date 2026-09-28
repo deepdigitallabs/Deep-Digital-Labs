@@ -19,12 +19,8 @@ import {
   Headphones,
   Search,
   Users,
-  Laptop,
   HelpCircle,
-  PhoneCall,
-  Code2,
-  BarChart3,
-  Cloud
+  PhoneCall
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
@@ -253,51 +249,8 @@ export default function HomePage() {
           We help businesses grow with modern websites, web applications and digital solutions.
         </p>
 
-        {/* The 4 Core Feature Cards (Exact replica from Brand Poster) */}
-        <div className="mt-10 max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 px-2">
-          {/* Card 1: Modern Designs */}
-          <div className="group p-4 sm:p-5 rounded-2xl bg-white/85 dark:bg-[#12151D]/85 backdrop-blur-md border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all text-center flex flex-col items-center">
-            <div className="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 text-[#E8623C] flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-              <Laptop className="w-5 h-5 stroke-[1.8]" />
-            </div>
-            <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white tracking-tight">
-              Modern Designs
-            </span>
-          </div>
-
-          {/* Card 2: Clean Development */}
-          <div className="group p-4 sm:p-5 rounded-2xl bg-white/85 dark:bg-[#12151D]/85 backdrop-blur-md border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all text-center flex flex-col items-center">
-            <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-              <Code2 className="w-5 h-5 stroke-[1.8]" />
-            </div>
-            <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white tracking-tight">
-              Clean Development
-            </span>
-          </div>
-
-          {/* Card 3: Business Growth */}
-          <div className="group p-4 sm:p-5 rounded-2xl bg-white/85 dark:bg-[#12151D]/85 backdrop-blur-md border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all text-center flex flex-col items-center">
-            <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-              <BarChart3 className="w-5 h-5 stroke-[1.8]" />
-            </div>
-            <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white tracking-tight">
-              Business Growth
-            </span>
-          </div>
-
-          {/* Card 4: Reliable Support */}
-          <div className="group p-4 sm:p-5 rounded-2xl bg-white/85 dark:bg-[#12151D]/85 backdrop-blur-md border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all text-center flex flex-col items-center">
-            <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-              <Cloud className="w-5 h-5 stroke-[1.8]" />
-            </div>
-            <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white tracking-tight">
-              Reliable Support
-            </span>
-          </div>
-        </div>
-
         {/* Action Row: Official URL Pill from Poster + WhatsApp CTA */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
           {/* Official URL Pill from Brand Poster */}
           <a
             href="https://deepdigitallabs.vercel.app"
