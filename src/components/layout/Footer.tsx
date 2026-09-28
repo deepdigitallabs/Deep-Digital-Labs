@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Terminal, 
   MapPin, 
@@ -21,8 +22,12 @@ function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
 export function Footer() {
   return (
     <footer className="bg-neutral-50 dark:bg-[#08090C] border-t border-neutral-200 dark:border-white/[0.08] pt-20 pb-12 relative overflow-hidden text-neutral-800 dark:text-white transition-colors duration-200">
-      {/* Background ambient glow in dark mode */}
-      <div className="hidden dark:block absolute top-0 left-1/3 w-[500px] h-[300px] bg-[#E8623C]/5 rounded-full blur-[120px] pointer-events-none" />
+      {/* Spectrum Accent Top Border */}
+      <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#00D2FF] via-[#7C3AED] via-[#EC4899] via-[#E8623C] to-transparent opacity-80" />
+
+      {/* Multi-Spectrum Ambient Glows */}
+      <div className="absolute top-0 right-1/4 w-[500px] h-[300px] bg-gradient-to-br from-[#7C3AED]/12 via-[#EC4899]/10 to-transparent rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute -bottom-10 left-1/4 w-[450px] h-[260px] bg-gradient-to-tr from-[#00D2FF]/10 via-[#E8623C]/10 to-transparent rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -31,20 +36,21 @@ export function Footer() {
           
           {/* Column 1: Brand & Pune Positioning */}
           <div className="lg:col-span-5 space-y-6">
-            <Link href="/" className="inline-flex items-center gap-2.5 group">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#E8623C] to-[#F59E0B] p-[1.5px] shadow-sm shadow-[#E8623C]/20">
-                <div className="w-full h-full bg-white dark:bg-[#0E1015] rounded-[6px] flex items-center justify-center">
-                  <span className="font-extrabold text-sm text-[#E8623C] tracking-tighter">D</span>
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-tight text-neutral-900 dark:text-white flex items-center leading-none">
-                  Deep Digital Labs
-                </span>
-                <span className="text-[10px] font-mono text-[#E8623C] uppercase tracking-wider mt-1 font-semibold">
-                  Technology Builds Tomorrow
-                </span>
-              </div>
+            <Link href="/" className="inline-flex items-center group" aria-label="Deep Digital Labs Home">
+              <Image 
+                src="/images/logo-light.png" 
+                alt="Deep Digital Labs - Technology Builds Tomorrow" 
+                width={190} 
+                height={65} 
+                className="h-10 sm:h-11 w-auto object-contain dark:hidden transition-transform duration-200 group-hover:scale-105"
+              />
+              <Image 
+                src="/images/logo-dark.png" 
+                alt="Deep Digital Labs - Technology Builds Tomorrow" 
+                width={190} 
+                height={65} 
+                className="h-10 sm:h-11 w-auto object-contain hidden dark:block transition-transform duration-200 group-hover:scale-105"
+              />
             </Link>
 
             <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-md leading-relaxed">

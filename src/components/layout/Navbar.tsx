@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Menu, 
   X, 
@@ -17,6 +18,7 @@ import {
   Bot
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
+import { ThemeToggle } from '@/components/theme/ThemeToggle';
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -39,22 +41,27 @@ export function Navbar() {
   return (
     <>
       <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-6xl">
-        <div className="flex items-center justify-between px-5 sm:px-6 py-2.5 sm:py-3 bg-white/85 dark:bg-[#0B0D12]/85 backdrop-blur-xl border border-neutral-200/80 dark:border-white/[0.08] rounded-2xl shadow-xl transition-all duration-200">
+        <div className="flex items-center justify-between px-5 sm:px-6 py-2 sm:py-2.5 bg-white/85 dark:bg-[#0B0D12]/85 backdrop-blur-xl border border-neutral-200/80 dark:border-white/[0.08] rounded-2xl shadow-xl transition-all duration-200">
           
           {/* Brand Logo */}
-          <Link href="/" className="group flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#E8623C] to-[#F59E0B] p-[1.5px] shadow-sm shadow-[#E8623C]/20">
-              <div className="w-full h-full bg-white dark:bg-[#0E1015] rounded-[6px] flex items-center justify-center">
-                <span className="font-extrabold text-sm text-[#E8623C] tracking-tighter">D</span>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-base sm:text-lg text-neutral-900 dark:text-white tracking-tight flex items-center gap-1.5 leading-none">
-                Deep Digital Labs
-              </span>
-              <span className="text-[10px] font-mono text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mt-0.5">
-                Technology Builds Tomorrow
-              </span>
+          <Link href="/" className="group flex items-center gap-2" aria-label="Deep Digital Labs Home">
+            <div className="relative h-8 sm:h-9 flex items-center">
+              <Image
+                src="/images/logo-light.png"
+                alt="Deep Digital Labs - Technology Builds Tomorrow"
+                width={130}
+                height={44}
+                priority
+                className="h-7 sm:h-8 w-auto object-contain dark:hidden transition-transform duration-200 group-hover:scale-105"
+              />
+              <Image
+                src="/images/logo-dark.png"
+                alt="Deep Digital Labs - Technology Builds Tomorrow"
+                width={130}
+                height={44}
+                priority
+                className="h-7 sm:h-8 w-auto object-contain hidden dark:block transition-transform duration-200 group-hover:scale-105"
+              />
             </div>
           </Link>
 
@@ -241,26 +248,28 @@ export function Navbar() {
 
           {/* Desktop Right Actions */}
           <div className="hidden sm:flex items-center gap-2.5">
+            <ThemeToggle />
             <a
               href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20contact%20you%20regarding%20a%20website%20or%20app%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-2 bg-[#E8623C] hover:bg-[#F0744E] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-md shadow-[#E8623C]/20 hover:shadow-lg hover:shadow-[#E8623C]/30 active:scale-98 cursor-pointer"
+              className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#E8623C] to-[#F59E0B] hover:from-[#F0744E] hover:to-[#FBBF24] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-md shadow-[#E8623C]/20 hover:shadow-lg hover:shadow-[#E8623C]/30 active:scale-98 cursor-pointer"
             >
               <span>Contact Us</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </a>
           </div>
 
-          {/* Mobile Actions: Contact + Hamburger */}
-          <div className="flex lg:hidden items-center gap-2">
+          {/* Mobile Actions: Contact + ThemeToggle + Hamburger */}
+          <div className="flex lg:hidden items-center gap-1.5">
+            <ThemeToggle className="scale-90" />
             <a
               href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20contact%20you%20regarding%20a%20website%20or%20app%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#E8623C] text-white px-3 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1"
+              className="bg-gradient-to-r from-[#E8623C] to-[#F59E0B] text-white px-2.5 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1"
             >
-              Contact Us
+              Contact
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

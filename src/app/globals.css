@@ -22,6 +22,14 @@
   --accent: #E8623C;
   --accent-foreground: #FFFFFF;
   --accent-highlight: #E8623C;
+
+  /* Official Brand Spectrum Palette (from Logo) */
+  --spectrum-cyan: #00D2FF;
+  --spectrum-blue: #2563EB;
+  --spectrum-violet: #7C3AED;
+  --spectrum-magenta: #EC4899;
+  --spectrum-coral: #E8623C;
+  --spectrum-gold: #FBBF24;
   
   --pill-bg: #F3F4F6;
   --pill-border: #E5E7EB;
@@ -51,6 +59,14 @@
   --accent: #E8623C;
   --accent-foreground: #FFFFFF;
   --accent-highlight: #E8623C;
+
+  /* Official Brand Spectrum Palette (from Logo) */
+  --spectrum-cyan: #38BDF8;
+  --spectrum-blue: #3B82F6;
+  --spectrum-violet: #8B5CF6;
+  --spectrum-magenta: #F43F5E;
+  --spectrum-coral: #F97316;
+  --spectrum-gold: #FCD34D;
   
   --pill-bg: #141720;
   --pill-border: rgba(255, 255, 255, 0.08);
@@ -169,3 +185,25 @@ body {
 .animate-tech-marquee:hover {
   animation-play-state: paused;
 }
+
+/* Deep Digital Labs Official Spectrum Styles */
+.text-gradient-spectrum {
+  background: linear-gradient(135deg, #0284C7 0%, #4F46E5 22%, #9333EA 45%, #E11D48 68%, #EA580C 88%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .text-gradient-spectrum {
+  background: linear-gradient(135deg, #38BDF8 0%, #6366F1 22%, #A855F7 45%, #F43F5E 68%, #FB923C 88%, #FBBF24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gradient-spectrum {
+  border-image: linear-gradient(135deg, #00D2FF, #7C3AED, #EC4899, #F97316) 1;
+}
+
+.bg-spectrum-aurora {
+  background: radial-gradient(circle at 75% 20%, rgba(124, 58, 237, 0.18) 0%, rgba(236, 72, 153, 0.14) 25%, rgba(249, 115, 22, 0.12) 50%, rgba(0, 210, 255, 0.08) 75%, transparent 100%);
+}
+

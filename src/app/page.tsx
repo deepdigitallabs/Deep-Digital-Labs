@@ -21,13 +21,17 @@ import {
   Users,
   Laptop,
   HelpCircle,
-  PhoneCall
+  PhoneCall,
+  Code2,
+  BarChart3,
+  Cloud
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
 import { Marquee } from '@/registry/magicui/marquee';
 import { BlinkingSquares } from '@/components/ui/blinking-squares';
 import { CursorWave } from '@/components/ui/cursor-wave';
+import { HeroWaveArt } from '@/components/hero/HeroWaveArt';
 import { cn } from '@/lib/utils';
 import { CASE_STUDIES } from '@/data/caseStudies';
 
@@ -203,11 +207,14 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen bg-[var(--bg-main)] text-[var(--text-main)] selection:bg-[#E8623C] selection:text-white transition-colors duration-200">
       
       {/* ========================================================================= */}
-      {/* SECTION 1: HERO SECTION                                                   */}
+      {/* SECTION 1: HERO SECTION (Faithfully Inspired by Brand Poster)               */}
       {/* ========================================================================= */}
       <section className="relative pt-32 sm:pt-36 pb-20 px-4 sm:px-6 max-w-7xl mx-auto text-center overflow-hidden">
         
-        {/* Interactive Cursor Wave Background (React Bits Pro) */}
+        {/* Organic 3D Fluid Spectrum Waves (Recreating Poster Ribbons) */}
+        <HeroWaveArt />
+
+        {/* Interactive Cursor Wave Background */}
         <CursorWave
           cellSize={38}
           influenceRadiusVmin={26}
@@ -220,36 +227,99 @@ export default function HomePage() {
           burstThickness={160}
           shapeColor="#E8623C"
           shapes={["circle", "triangle", "square"]}
-          className="absolute inset-0 size-full opacity-35 dark:opacity-25 -z-10 [mask-image:radial-gradient(ellipse_85%_70%_at_50%_45%,#000_50%,transparent_100%)] pointer-events-auto"
+          className="absolute inset-0 size-full opacity-25 dark:opacity-20 -z-10 [mask-image:radial-gradient(ellipse_85%_70%_at_50%_45%,#000_50%,transparent_100%)] pointer-events-auto"
         />
 
-        {/* Ambient Cosmic Radial Glow */}
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-gradient-to-b from-[#E8623C]/20 via-[#E8623C]/5 to-transparent blur-[140px] pointer-events-none -z-10" />
+        {/* Poster Top Accent Dash */}
+        <div className="w-14 h-1.5 bg-gradient-to-r from-[#E8623C] to-[#F59E0B] rounded-full mx-auto mb-6 shadow-sm shadow-[#E8623C]/30" />
 
-        {/* Floating Top Proof Pill */}
-        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-white/[0.08] bg-white/70 dark:bg-[#12151D]/80 text-neutral-700 dark:text-neutral-300 text-xs sm:text-sm font-medium mb-6 shadow-sm backdrop-blur-md">
+        {/* Floating Top Location Pill */}
+        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-neutral-200/80 dark:border-white/[0.08] bg-white/80 dark:bg-[#12151D]/80 text-neutral-700 dark:text-neutral-300 text-xs sm:text-sm font-medium mb-6 shadow-xs backdrop-blur-md">
           <span className="font-bold text-neutral-900 dark:text-white tracking-tight">Pune&apos;s Trusted Web &amp; App Studio</span>
           <span className="text-neutral-300 dark:text-neutral-600">•</span>
-          <span>Pune, Maharashtra</span>
+          <span>Technology Builds Tomorrow</span>
         </div>
 
-        {/* H1 Headline */}
-        <h1 className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.14] max-w-4xl mx-auto font-display">
-          Pune&apos;s Website &amp; App Development Company
+        {/* H1 Headline directly from Brand Poster */}
+        <h1 className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.12] max-w-4xl mx-auto font-display">
+          Website Design <span className="text-[#E8623C]">•</span><br className="hidden sm:inline" /> Development <span className="text-[#E8623C]">•</span><br />
+          <span className="text-gradient-spectrum">
+            Digital Solutions
+          </span>
         </h1>
 
-        {/* Plain-Language Subheadline */}
-        <p className="mt-6 text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 font-normal max-w-3xl mx-auto leading-relaxed">
-          We build fast, professional websites and apps that get you more customers. No confusing tech jargon. Just clear results and direct access to your developer.
+        {/* Subheadline directly from Brand Poster */}
+        <p className="mt-6 text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 font-normal max-w-2xl mx-auto leading-relaxed">
+          We help businesses grow with modern websites, web applications and digital solutions.
         </p>
 
-        {/* Primary Action Button */}
-        <div className="mt-8 flex justify-center items-center">
+        {/* The 4 Core Feature Cards (Exact replica from Brand Poster) */}
+        <div className="mt-10 max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 px-2">
+          {/* Card 1: Modern Designs */}
+          <div className="group p-4 sm:p-5 rounded-2xl bg-white/85 dark:bg-[#12151D]/85 backdrop-blur-md border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all text-center flex flex-col items-center">
+            <div className="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 text-[#E8623C] flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+              <Laptop className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white tracking-tight">
+              Modern Designs
+            </span>
+          </div>
+
+          {/* Card 2: Clean Development */}
+          <div className="group p-4 sm:p-5 rounded-2xl bg-white/85 dark:bg-[#12151D]/85 backdrop-blur-md border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all text-center flex flex-col items-center">
+            <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+              <Code2 className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white tracking-tight">
+              Clean Development
+            </span>
+          </div>
+
+          {/* Card 3: Business Growth */}
+          <div className="group p-4 sm:p-5 rounded-2xl bg-white/85 dark:bg-[#12151D]/85 backdrop-blur-md border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all text-center flex flex-col items-center">
+            <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+              <BarChart3 className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white tracking-tight">
+              Business Growth
+            </span>
+          </div>
+
+          {/* Card 4: Reliable Support */}
+          <div className="group p-4 sm:p-5 rounded-2xl bg-white/85 dark:bg-[#12151D]/85 backdrop-blur-md border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:shadow-lg hover:-translate-y-1 transition-all text-center flex flex-col items-center">
+            <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+              <Cloud className="w-5 h-5 stroke-[1.8]" />
+            </div>
+            <span className="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white tracking-tight">
+              Reliable Support
+            </span>
+          </div>
+        </div>
+
+        {/* Action Row: Official URL Pill from Poster + WhatsApp CTA */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* Official URL Pill from Brand Poster */}
+          <a
+            href="https://deepdigitallabs.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 px-6 py-3 rounded-full border-2 border-[#E8623C] bg-white/95 dark:bg-[#12151D]/95 hover:bg-[#E8623C]/5 text-neutral-800 dark:text-neutral-200 text-sm font-semibold shadow-md shadow-[#E8623C]/10 hover:shadow-lg hover:shadow-[#E8623C]/20 transition-all active:scale-98"
+          >
+            <div className="w-6 h-6 rounded-full bg-[#E8623C]/15 flex items-center justify-center text-[#E8623C] group-hover:scale-110 transition-transform">
+              <Globe className="w-3.5 h-3.5" />
+            </div>
+            <span className="font-mono text-xs sm:text-sm tracking-tight text-neutral-900 dark:text-white font-medium">
+              deepdigitallabs.vercel.app
+            </span>
+            <ArrowRight className="w-4 h-4 text-[#E8623C] group-hover:translate-x-1 transition-transform" />
+          </a>
+
+          {/* Primary Action Button with Spectrum Gradient */}
           <a
             href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20or%20app%20project%20for%20my%20business."
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-2.5 bg-[#E8623C] hover:bg-[#F0744E] text-white px-7 py-3.5 rounded-xl font-semibold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25 hover:shadow-xl hover:shadow-[#E8623C]/35 active:scale-98 cursor-pointer"
+            className="group relative inline-flex items-center gap-2.5 bg-gradient-to-r from-[#2563EB] via-[#7C3AED] via-[#EC4899] to-[#E8623C] hover:opacity-95 text-white px-7 py-3 rounded-full font-semibold text-sm sm:text-base transition-all shadow-lg shadow-[#7C3AED]/25 hover:shadow-xl hover:shadow-[#EC4899]/30 active:scale-98 cursor-pointer"
           >
             <MessageSquare className="w-4 h-4" />
             <span>Chat on WhatsApp</span>
@@ -257,8 +327,15 @@ export default function HomePage() {
           </a>
         </div>
 
-        {/* Kombai Proof Badge with Laurel Leaves */}
-        <div className="mt-8 flex items-center justify-center gap-3">
+        {/* Poster Studio Tagline with Divider Lines */}
+        <div className="mt-10 flex items-center justify-center gap-4 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 font-medium">
+          <span className="hidden sm:inline-block w-12 sm:w-24 h-px bg-neutral-200 dark:bg-white/10" />
+          <span>Pune&apos;s Trusted Web &amp; App Studio</span>
+          <span className="hidden sm:inline-block w-12 sm:w-24 h-px bg-neutral-200 dark:bg-white/10" />
+        </div>
+
+        {/* Proof Badge with Laurel Leaves */}
+        <div className="mt-6 flex items-center justify-center gap-3">
           <LaurelLeft />
           <div className="flex flex-col sm:flex-row items-center gap-2 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-medium">
             <span><strong className="text-neutral-900 dark:text-white">10+ Systems</strong> Shipped in Production</span>
@@ -1011,17 +1088,17 @@ export default function HomePage() {
       {/* ========================================================================= */}
       <section className="py-12 px-4 sm:px-6 max-w-5xl mx-auto relative overflow-hidden text-center">
         
-        {/* Glow backdrop */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[250px] bg-gradient-to-tr from-[#E8623C]/25 via-amber-500/10 to-transparent rounded-full blur-[100px] pointer-events-none -z-10" />
+        {/* Glow backdrop with multi-color spectrum */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[280px] bg-gradient-to-r from-[#2563EB]/20 via-[#7C3AED]/25 via-[#EC4899]/20 to-[#E8623C]/25 rounded-full blur-[120px] pointer-events-none -z-10" />
 
         <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-3xl bg-neutral-950 dark:bg-[#0E1118] border border-neutral-800 dark:border-white/[0.08] text-white shadow-2xl px-6 sm:px-12 py-12 sm:py-14">
           
           {/* Subtle Background Radial Glow */}
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(232,98,60,0.12),transparent_70%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(124,58,237,0.18),rgba(236,72,153,0.1),transparent_70%)]" />
 
           {/* Foreground Content */}
           <div className="relative z-10 max-w-2xl mx-auto space-y-4">
-            <span className="inline-block px-3 py-1 rounded-full bg-[#E8623C]/10 border border-[#E8623C]/20 text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
+            <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-[#7C3AED]/15 via-[#EC4899]/15 to-[#E8623C]/15 border border-[#EC4899]/30 text-xs font-mono uppercase tracking-widest text-[#F97316] font-bold">
               Get Started Today
             </span>
             
@@ -1038,7 +1115,7 @@ export default function HomePage() {
                 href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20or%20app%20project%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3 rounded-xl bg-[#E8623C] hover:bg-[#F0744E] text-white font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/30 hover:shadow-[#E8623C]/50 hover:scale-[1.02] active:scale-98 flex items-center justify-center gap-2.5"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-[#2563EB] via-[#7C3AED] via-[#EC4899] to-[#E8623C] hover:opacity-95 text-white font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#7C3AED]/30 hover:shadow-[#EC4899]/40 hover:scale-[1.02] active:scale-98 flex items-center justify-center gap-2.5"
               >
                 <MessageSquare className="w-4 h-4 text-white" />
                 <span>Chat on WhatsApp</span>
