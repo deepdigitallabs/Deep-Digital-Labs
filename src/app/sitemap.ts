@@ -20,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/ecommerce-website-design-pune`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/why-us`,
       lastModified: new Date(),
       changeFrequency: 'weekly',

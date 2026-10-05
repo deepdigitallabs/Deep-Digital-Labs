@@ -464,6 +464,8 @@ export const CORE_SERVICES: ServiceDetail[] = [
   }
 ];
 
+import { INDUSTRY_SERVICES } from './industryServices';
+
 // Compatibility aliases so existing detail pages resolve cleanly
 export const ALIAS_SLUGS: Record<string, string> = {
   'websites-web-apps': 'websites-web-apps',
@@ -487,15 +489,19 @@ export const ALIAS_SLUGS: Record<string, string> = {
   'ui-ux-modernization': 'chat-bot-development',
   'local-seo-presence': 'digital-growth-seo',
   'brand-trust-reputation': 'digital-growth-seo',
-  'headless-cms-architecture': 'websites-web-apps'
+  'headless-cms-architecture': 'websites-web-apps',
+  // Shortened title compatibility aliases
+  'software-development-company-website-development': 'software-company-website-development',
+  'app-development-company-website-development': 'app-company-website-development',
 };
 
-export const SERVICES = CORE_SERVICES;
+export const SERVICES: ServiceDetail[] = [...CORE_SERVICES, ...INDUSTRY_SERVICES];
 
 export function getServiceBySlug(slug: string): ServiceDetail | undefined {
-  const directMatch = CORE_SERVICES.find((s) => s.slug === slug);
+  const directMatch = SERVICES.find((s) => s.slug === slug);
   if (directMatch) return directMatch;
   const alias = ALIAS_SLUGS[slug];
-  if (alias) return CORE_SERVICES.find((s) => s.slug === alias);
+  if (alias) return SERVICES.find((s) => s.slug === alias);
   return undefined;
 }
+

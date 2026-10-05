@@ -45,29 +45,25 @@ export function Navbar() {
           
           {/* Brand Logo */}
           <Link href="/" className="group flex items-center gap-2" aria-label="Deep Digital Labs Home">
-            <div className="relative h-8 sm:h-9 flex items-center">
+            <div className="relative h-9 sm:h-11 flex items-center">
               <Image
-                src="/images/logo-light.png"
+                src="/images/logo-gradient.png"
                 alt="Deep Digital Labs - Technology Builds Tomorrow"
-                width={130}
-                height={44}
+                width={2154}
+                height={730}
                 priority
-                className="h-7 sm:h-8 w-auto object-contain dark:hidden transition-transform duration-200 group-hover:scale-105"
-              />
-              <Image
-                src="/images/logo-dark.png"
-                alt="Deep Digital Labs - Technology Builds Tomorrow"
-                width={130}
-                height={44}
-                priority
-                className="h-7 sm:h-8 w-auto object-contain hidden dark:block transition-transform duration-200 group-hover:scale-105"
+                unoptimized
+                className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
             </div>
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-7 text-sm font-medium text-neutral-600 dark:text-neutral-300">
-            
+          <div className="hidden lg:flex items-center gap-5 xl:gap-6 text-sm font-medium text-neutral-600 dark:text-neutral-300">
+            <Link href="/" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
+              Home
+            </Link>
+
             {/* Services with Mega Menu Dropdown */}
             <div 
               className="relative"
@@ -208,10 +204,24 @@ export function Navbar() {
                   </div>
 
                   {/* Mega Menu Footer */}
-                  <div className="pt-3 flex items-center justify-between text-xs">
-                    <div className="flex items-center gap-1.5 text-neutral-500 dark:text-neutral-400">
-                      <Sparkles className="w-3.5 h-3.5 text-[#E8623C]" />
-                      <span>Standout Engineering · Zero AI Slop</span>
+                  <div className="pt-3 flex flex-wrap items-center justify-between gap-3 text-xs">
+                    <div className="flex items-center gap-3 text-neutral-500 dark:text-neutral-400">
+                      <Link
+                        href="/services#industry-catalog"
+                        onClick={() => setMegaMenuOpen(false)}
+                        className="text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] font-semibold transition-colors flex items-center gap-1.5"
+                      >
+                        <Sparkles className="w-3.5 h-3.5 text-[#E8623C]" />
+                        <span>49+ Industry Website Niches</span>
+                      </Link>
+                      <span className="text-neutral-300 dark:text-neutral-700">•</span>
+                      <Link
+                        href="/ecommerce-website-design-pune"
+                        onClick={() => setMegaMenuOpen(false)}
+                        className="text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] font-semibold transition-colors flex items-center gap-1.5"
+                      >
+                        <span>Pune E-Commerce</span>
+                      </Link>
                     </div>
                     <Link
                       href="/services"
@@ -226,22 +236,22 @@ export function Navbar() {
               )}
             </div>
 
-            <Link href="/solutions" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
+            <Link href="/solutions" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               Solutions
             </Link>
-            <Link href="/why-us" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
-              Why Us
-            </Link>
-            <Link href="/case-studies" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
+            <Link href="/case-studies" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               Work
             </Link>
-            <Link href="/pune-website-development-company" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
+            <Link href="/why-us" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
+              Why Us
+            </Link>
+            <Link href="/pune-website-development-company" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1 whitespace-nowrap">
               Pune Web Studio
             </Link>
-            <Link href="/about" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
+            <Link href="/about" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               About
             </Link>
-            <Link href="/blog" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors">
+            <Link href="/blog" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               Blog
             </Link>
           </div>
@@ -284,14 +294,22 @@ export function Navbar() {
 
         {/* Mobile Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-2 p-5 rounded-2xl bg-white/95 dark:bg-[#12151D]/98 backdrop-blur-2xl border border-neutral-200 dark:border-white/[0.08] shadow-2xl text-left space-y-3 animate-in fade-in slide-in-from-top-2 duration-200">
+          <div className="lg:hidden mt-2 p-5 rounded-2xl bg-white/95 dark:bg-[#12151D]/98 backdrop-blur-2xl border border-neutral-200 dark:border-white/[0.08] shadow-2xl text-left space-y-2.5 animate-in fade-in slide-in-from-top-2 duration-200">
+            <Link 
+              href="/" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
+            >
+              Home
+            </Link>
+
             <div>
               <button 
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                className="w-full flex items-center justify-between py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+                className="w-full flex items-center justify-between py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
               >
-                <span>Services &amp; Architecture</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileServicesOpen ? 'rotate-180 text-[#E8623C]' : ''}`} />
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180 text-[#E8623C]' : ''}`} />
               </button>
 
               {mobileServicesOpen && (
@@ -299,42 +317,49 @@ export function Navbar() {
                   <Link 
                     href="/services/websites-web-apps" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-1"
+                    className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-1 transition-colors"
                   >
                     01 — Web Apps &amp; SaaS
                   </Link>
                   <Link 
                     href="/services/business-software-saas" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-1"
+                    className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-1 transition-colors"
                   >
                     02 — Custom ERP &amp; SaaS
                   </Link>
                   <Link 
                     href="/services/mobile-app-development" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-1"
+                    className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-1 transition-colors"
                   >
                     03 — Mobile Native
                   </Link>
                   <Link 
                     href="/services/digital-growth-seo" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-1"
+                    className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-1 transition-colors"
                   >
                     04 — Digital Growth &amp; SEO
                   </Link>
                   <Link 
                     href="/services/chat-bot-development" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-1"
+                    className="block text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-1 transition-colors"
                   >
                     05 — Chat Bot Development
                   </Link>
                   <Link 
-                    href="/services" 
+                    href="/services#industry-catalog" 
                     onClick={() => setMobileMenuOpen(false)}
                     className="block text-xs font-semibold text-[#E8623C] hover:underline py-1"
+                  >
+                    49+ Industry Website Niches →
+                  </Link>
+                  <Link 
+                    href="/services" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block text-xs font-semibold text-neutral-800 dark:text-neutral-200 hover:underline py-1"
                   >
                     All Services &amp; Packages →
                   </Link>
@@ -345,42 +370,49 @@ export function Navbar() {
             <Link 
               href="/solutions" 
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
             >
               Solutions
             </Link>
             <Link 
+              href="/case-studies" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
+            >
+              Work
+            </Link>
+            <Link 
               href="/why-us" 
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
             >
               Why Us
             </Link>
             <Link 
-              href="/case-studies" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
-            >
-              Work &amp; Case Studies
-            </Link>
-            <Link 
               href="/pune-website-development-company" 
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
             >
               Pune Web Studio
             </Link>
             <Link 
               href="/about" 
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
             >
-              About Us
+              About
+            </Link>
+            <Link 
+              href="/blog" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
+            >
+              Blog
             </Link>
             <Link 
               href="/contact" 
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
             >
               Contact
             </Link>

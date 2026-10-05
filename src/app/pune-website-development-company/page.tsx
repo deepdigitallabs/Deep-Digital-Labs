@@ -57,7 +57,7 @@ export default function PuneWebsiteDevelopmentPage() {
     { title: 'Logistics & Supply Chain', desc: 'Consignment tracking platforms, client portals, and fleet operations.' },
     { title: 'Healthcare & Clinics', desc: 'Doctor appointment booking, clinic locations, and patient communication portals.' },
     { title: 'Real Estate & Construction', desc: 'High-speed property showcases, lead capture forms, and project brochures.' },
-    { title: 'Retail & Local E-Commerce', desc: 'Direct online ordering with UPI payments, WhatsApp alerts, and zero marketplace commission.' }
+    { title: 'Retail & Local E-Commerce', desc: 'Direct online ordering with UPI payments, WhatsApp alerts, and zero marketplace commission.', href: '/ecommerce-website-design-pune' }
   ];
 
   return (
@@ -185,20 +185,34 @@ export default function PuneWebsiteDevelopmentPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {industriesServed.map((item) => (
-              <div
-                key={item.title}
-                className="p-5 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] space-y-2"
-              >
-                <div className="flex items-center gap-2 font-bold text-neutral-900 dark:text-white text-base">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span>{item.title}</span>
+            {industriesServed.map((item) => {
+              const content = (
+                <div
+                  className={`p-5 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] space-y-2 h-full transition-all ${
+                    item.href ? 'hover:border-[#E8623C] group cursor-pointer' : ''
+                  }`}
+                >
+                  <div className="flex items-center justify-between font-bold text-neutral-900 dark:text-white text-base">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                      <span className={item.href ? 'group-hover:text-[#E8623C] transition-colors' : ''}>{item.title}</span>
+                    </div>
+                    {item.href && <ArrowRight className="w-3.5 h-3.5 text-[#E8623C] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />}
+                  </div>
+                  <p className="text-xs text-neutral-600 dark:text-neutral-400 pl-6 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
-                <p className="text-xs text-neutral-600 dark:text-neutral-400 pl-6 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+              );
+
+              return item.href ? (
+                <Link key={item.title} href={item.href} className="block">
+                  {content}
+                </Link>
+              ) : (
+                <div key={item.title}>{content}</div>
+              );
+            })}
           </div>
         </div>
       </section>

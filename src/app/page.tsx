@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   ArrowRight, 
   ExternalLink, 
@@ -28,6 +29,7 @@ import { Marquee } from '@/registry/magicui/marquee';
 import { BlinkingSquares } from '@/components/ui/blinking-squares';
 import { CursorWave } from '@/components/ui/cursor-wave';
 import { HeroWaveArt } from '@/components/hero/HeroWaveArt';
+import { HeroIndustryShowcase } from '@/components/hero/HeroIndustryShowcase';
 import { cn } from '@/lib/utils';
 import { CASE_STUDIES } from '@/data/caseStudies';
 
@@ -226,47 +228,39 @@ export default function HomePage() {
           className="absolute inset-0 size-full opacity-25 dark:opacity-20 -z-10 [mask-image:radial-gradient(ellipse_85%_70%_at_50%_45%,#000_50%,transparent_100%)] pointer-events-auto"
         />
 
-        {/* Poster Top Accent Dash */}
-        <div className="w-14 h-1.5 bg-gradient-to-r from-[#E8623C] to-[#F59E0B] rounded-full mx-auto mb-6 shadow-sm shadow-[#E8623C]/30" />
-
-        {/* Floating Top Location Pill */}
-        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-neutral-200/80 dark:border-white/[0.08] bg-white/80 dark:bg-[#12151D]/80 text-neutral-700 dark:text-neutral-300 text-xs sm:text-sm font-medium mb-6 shadow-xs backdrop-blur-md">
-          <span className="font-bold text-neutral-900 dark:text-white tracking-tight">Pune&apos;s Trusted Web &amp; App Studio</span>
-          <span className="text-neutral-300 dark:text-neutral-600">•</span>
-          <span>Technology Builds Tomorrow</span>
+        {/* Featured Big Brand 3D Single Logo */}
+        <div className="mb-6 sm:mb-8 flex justify-center">
+          <div className="relative group">
+            {/* Ambient Multi-Spectrum Glow */}
+            <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-r from-[#2563EB]/25 via-[#7C3AED]/25 via-[#EC4899]/25 to-[#E8623C]/25 rounded-full blur-2xl sm:blur-3xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 animate-pulse pointer-events-none" />
+            
+            <Image
+              src="/images/logo-single.png"
+              alt="Deep Digital Labs Logo"
+              width={1536}
+              height={1024}
+              priority
+              unoptimized
+              className="relative w-36 sm:w-48 md:w-56 lg:w-64 h-auto object-contain drop-shadow-[0_20px_40px_rgba(232,98,60,0.22)] hover:scale-105 transition-transform duration-300 pointer-events-auto"
+            />
+          </div>
         </div>
 
-        {/* H1 Headline directly from Brand Poster */}
+        {/* H1 Headline */}
         <h1 className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.12] max-w-4xl mx-auto font-display">
-          Website Design <span className="text-[#E8623C]">•</span><br className="hidden sm:inline" /> Development <span className="text-[#E8623C]">•</span><br />
+          Build <span className="text-[#E8623C]">.</span> Grow <span className="text-[#E8623C]">.</span><br />
           <span className="text-gradient-spectrum">
-            Digital Solutions
+            Go Digital.
           </span>
         </h1>
 
-        {/* Subheadline directly from Brand Poster */}
-        <p className="mt-6 text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 font-normal max-w-2xl mx-auto leading-relaxed">
-          We help businesses grow with modern websites, web applications and digital solutions.
+        {/* Subheadline */}
+        <p className="mt-6 text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 font-normal max-w-4xl mx-auto leading-relaxed text-balance">
+          Modern websites, apps &amp; online stores designed to help Pune businesses grow online.
         </p>
 
-        {/* Action Row: Official URL Pill from Poster + WhatsApp CTA */}
+        {/* Action Row: WhatsApp CTA & View Our Work */}
         <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
-          {/* Official URL Pill from Brand Poster */}
-          <a
-            href="https://deepdigitallabs.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-6 py-3 rounded-full border-2 border-[#E8623C] bg-white/95 dark:bg-[#12151D]/95 hover:bg-[#E8623C]/5 text-neutral-800 dark:text-neutral-200 text-sm font-semibold shadow-md shadow-[#E8623C]/10 hover:shadow-lg hover:shadow-[#E8623C]/20 transition-all active:scale-98"
-          >
-            <div className="w-6 h-6 rounded-full bg-[#E8623C]/15 flex items-center justify-center text-[#E8623C] group-hover:scale-110 transition-transform">
-              <Globe className="w-3.5 h-3.5" />
-            </div>
-            <span className="font-mono text-xs sm:text-sm tracking-tight text-neutral-900 dark:text-white font-medium">
-              deepdigitallabs.vercel.app
-            </span>
-            <ArrowRight className="w-4 h-4 text-[#E8623C] group-hover:translate-x-1 transition-transform" />
-          </a>
-
           {/* Primary Action Button with Spectrum Gradient */}
           <a
             href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20or%20app%20project%20for%20my%20business."
@@ -278,6 +272,15 @@ export default function HomePage() {
             <span>Chat on WhatsApp</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
+
+          {/* Secondary Action: View Our Work */}
+          <Link
+            href="/case-studies"
+            className="group inline-flex items-center gap-2 px-7 py-3 rounded-full border border-neutral-300 dark:border-white/15 bg-white/90 dark:bg-[#12151D]/90 hover:bg-neutral-50 dark:hover:bg-white/10 text-neutral-800 dark:text-neutral-200 font-semibold text-sm sm:text-base transition-all shadow-xs hover:border-[#E8623C]/50 active:scale-98"
+          >
+            <span>View Our Work</span>
+            <ArrowRight className="w-4 h-4 text-neutral-400 dark:text-neutral-500 group-hover:text-[#E8623C] group-hover:translate-x-1 transition-all" />
+          </Link>
         </div>
 
         {/* Poster Studio Tagline with Divider Lines */}
@@ -299,6 +302,9 @@ export default function HomePage() {
           </div>
           <LaurelRight />
         </div>
+
+        {/* New Hero Section: Dedicated Industry Websites Explorer */}
+        <HeroIndustryShowcase />
 
       </section>
 

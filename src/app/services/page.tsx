@@ -18,10 +18,11 @@ import {
 } from 'lucide-react';
 import { CORE_SERVICES } from '@/data/services';
 import { TechBadge } from '@/components/ui/TechBadge';
+import { IndustryServicesDirectory } from '@/components/services/IndustryServicesDirectory';
 
 export const metadata: Metadata = {
   title: 'Services | Websites, Business Software, Mobile & Chat Bots | Deep Digital Labs',
-  description: 'Explore our services: Websites & Web Apps, Business Software & SaaS, Mobile App Development, Digital Growth & SEO, and Chat Bot Development & Automation.',
+  description: 'Explore our services: Websites & Web Apps, Business Software & SaaS, Mobile App Development, Digital Growth & SEO, and 49+ specialized industry website solutions.',
 };
 
 export default function ServicesPage() {
@@ -206,6 +207,11 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
+
+        {/* ========================================================================= */}
+        {/* SPECIALIZED INDUSTRY WEBSITE SOLUTIONS (49 Niches)                        */}
+        {/* ========================================================================= */}
+        <IndustryServicesDirectory />
 
         {/* Why 4 Pillars? The Strategic Advantage */}
         <div className="mb-24 p-8 sm:p-12 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-sm dark:shadow-2xl">

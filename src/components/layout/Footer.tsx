@@ -38,18 +38,12 @@ export function Footer() {
           <div className="lg:col-span-5 space-y-6">
             <Link href="/" className="inline-flex items-center group" aria-label="Deep Digital Labs Home">
               <Image 
-                src="/images/logo-light.png" 
+                src="/images/logo-gradient.png" 
                 alt="Deep Digital Labs - Technology Builds Tomorrow" 
-                width={190} 
-                height={65} 
-                className="h-10 sm:h-11 w-auto object-contain dark:hidden transition-transform duration-200 group-hover:scale-105"
-              />
-              <Image 
-                src="/images/logo-dark.png" 
-                alt="Deep Digital Labs - Technology Builds Tomorrow" 
-                width={190} 
-                height={65} 
-                className="h-10 sm:h-11 w-auto object-contain hidden dark:block transition-transform duration-200 group-hover:scale-105"
+                width={2154} 
+                height={730} 
+                unoptimized
+                className="h-11 sm:h-13 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
             </Link>
 
@@ -114,10 +108,15 @@ export function Footer() {
                   05 — Chat Bot Development
                 </Link>
               </li>
-              <li className="pt-2">
-                <Link href="/services" className="text-[#E8623C] font-semibold hover:underline inline-flex items-center gap-1">
-                  All Capabilities Overview <ArrowUpRight className="w-3.5 h-3.5" />
+              <li className="pt-2 space-y-2">
+                <Link href="/services#industry-catalog" className="text-neutral-700 dark:text-neutral-300 font-semibold hover:text-[#E8623C] dark:hover:text-[#E8623C] inline-flex items-center gap-1 transition-colors">
+                  49+ Industry Website Solutions <ArrowUpRight className="w-3.5 h-3.5 text-[#E8623C]" />
                 </Link>
+                <div>
+                  <Link href="/services" className="text-[#E8623C] font-semibold hover:underline inline-flex items-center gap-1">
+                    All Capabilities Overview <ArrowUpRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </li>
             </ul>
           </div>
@@ -128,6 +127,11 @@ export function Footer() {
               Company
             </h3>
             <ul className="space-y-2.5 text-sm">
+              <li>
+                <Link href="/" className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors">
+                  Home
+                </Link>
+              </li>
               <li>
                 <Link href="/solutions" className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors">
                   Solutions
@@ -156,6 +160,11 @@ export function Footer() {
               <li>
                 <Link href="/pune-website-development-company" className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors">
                   Pune Web Studio
+                </Link>
+              </li>
+              <li>
+                <Link href="/ecommerce-website-design-pune" className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors">
+                  Pune E-Commerce Stores
                 </Link>
               </li>
               <li>
