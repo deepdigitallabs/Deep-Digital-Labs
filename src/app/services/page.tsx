@@ -26,15 +26,15 @@ import { CORE_SERVICES } from '@/data/services';
 import { TechBadge } from '@/components/ui/TechBadge';
 
 export const metadata: Metadata = {
-  title: 'Services & Transparent Starting Pricing | Deep Digital Labs Pune',
-  description: 'Explore our services and starting prices: Business Websites starting at ₹25,000, E-commerce at ₹45,000, Custom Business Software at ₹65,000, and Mobile Apps at ₹75,000. 100% code ownership.',
+  title: 'Services & Project Deliverables | Deep Digital Labs Pune',
+  description: 'Explore our services: Business Websites, E-commerce Stores, Custom Business Software, Mobile Apps, and WhatsApp Automation. 100% source code ownership.',
   keywords: [
-    'website development price Pune',
-    'custom software cost Pune',
-    'mobile app development cost Pune',
-    'ecommerce website pricing Pune',
+    'website development company Pune',
+    'custom software development Pune',
+    'mobile app development Pune',
+    'ecommerce website development Pune',
     'business website developer Pune',
-    'transparent software pricing Pune'
+    'software engineering studio Pune'
   ]
 };
 
@@ -56,12 +56,10 @@ export default function ServicesPage() {
     Bot: <Bot className="w-6 h-6 text-[#E8623C] dark:text-[#D4FF00]" />,
   };
 
-  // Structured Starting Pricing Data (requested by user)
-  const STARTING_PRICES = [
+  // Structured Project Packages & Deliverables
+  const SERVICE_PACKAGES = [
     {
       title: 'Business Website',
-      startingPrice: '₹25,000',
-      period: 'one-time starting baseline',
       turnaround: '1–2 Weeks',
       bestFor: 'Companies, CA firms, clinics, consultants, manufacturers wanting authority & local Google inquiries.',
       icon: <Building2 className="w-5 h-5 text-[#E8623C]" />,
@@ -78,8 +76,6 @@ export default function ServicesPage() {
     },
     {
       title: 'E-commerce Website',
-      startingPrice: '₹45,000',
-      period: 'one-time starting baseline',
       turnaround: '2–3 Weeks',
       bestFor: 'Brands, wholesalers, and retail showrooms selling physical products direct-to-consumer or B2B.',
       icon: <ShoppingCart className="w-5 h-5 text-blue-500" />,
@@ -95,8 +91,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Custom Business Software / ERP',
-      startingPrice: '₹65,000',
-      period: 'one-time starting baseline',
       turnaround: '2–4 Weeks',
       bestFor: 'Dairies, factories, logistics fleets, and distributors replacing messy Excel sheets & WhatsApp chaos.',
       icon: <Database className="w-5 h-5 text-indigo-500" />,
@@ -113,8 +107,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Mobile App (Android + iOS)',
-      startingPrice: '₹75,000',
-      period: 'one-time starting baseline',
       turnaround: '3–5 Weeks',
       bestFor: 'Field technicians, delivery drivers, offline data collection, and customer mobile portals.',
       icon: <Smartphone className="w-5 h-5 text-emerald-500" />,
@@ -130,8 +122,6 @@ export default function ServicesPage() {
     },
     {
       title: 'WhatsApp Business Automation',
-      startingPrice: '₹18,000',
-      period: 'one-time starting baseline',
       turnaround: '3–5 Days',
       bestFor: 'Businesses receiving frequent inquiries, catalog requests, or order status calls.',
       icon: <Bot className="w-5 h-5 text-purple-500" />,
@@ -157,26 +147,26 @@ export default function ServicesPage() {
         <div className="text-center max-w-4xl mx-auto mb-16 space-y-5">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-bold uppercase tracking-wider">
             <CheckCircle2 className="w-3.5 h-3.5" />
-            <span>Pricing Transparency · Zero Hidden Platform Fees</span>
+            <span>Milestone Scoping · Zero Hidden Platform Fees</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-tight font-display">
-            Services &amp; Transparent Starting Pricing
+            Services &amp; Project Deliverables
           </h1>
 
           <p className="text-base sm:text-lg text-neutral-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            We don’t hide behind &ldquo;Contact for quote&rdquo; walls. Below are our starting investment baselines for Pune and Indian businesses. You get fixed milestone estimates, clean code, and 100% intellectual property ownership.
+            From modern responsive websites to automated business software and cross-platform mobile apps. You get clear milestone delivery, clean maintainable code, and 100% intellectual property ownership.
           </p>
 
           <div className="pt-2 flex flex-wrap justify-center items-center gap-4">
             <a
-              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20get%20a%20project%20quote%20for%20my%20business."
+              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 bg-[#E8623C] hover:bg-[#F0744E] text-white px-7 py-3 rounded-full font-bold text-sm transition-all shadow-lg shadow-[#E8623C]/25 active:scale-98"
             >
               <WhatsAppIcon className="w-4 h-4" />
-              <span>Get a Clear Quote on WhatsApp</span>
+              <span>Discuss Your Project on WhatsApp</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 
@@ -191,23 +181,23 @@ export default function ServicesPage() {
         </div>
 
         {/* ========================================================================= */}
-        {/* STARTING PRICING CARDS (REQUESTED: BUSINESS WEBSITE, E-COMMERCE, ERP, APP) */}
+        {/* SERVICE PACKAGES & DELIVERABLES                                           */}
         {/* ========================================================================= */}
         <div className="mb-24 space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-              Investment Baselines
+              Project Deliverables
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
-              Starting Prices By Project Type
+              Solutions By Project Type
             </h2>
             <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
-              Clear baselines that filter out ambiguity. Final pricing depends on your exact feature scope.
+              Clear project scopes, estimated turnaround, and verified deliverables. Tailored to your exact business requirements.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-            {STARTING_PRICES.map((pkg, idx) => (
+            {SERVICE_PACKAGES.map((pkg, idx) => (
               <div 
                 key={idx}
                 className={`p-7 sm:p-8 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border ${
@@ -236,15 +226,6 @@ export default function ServicesPage() {
                     <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
                       {pkg.title}
                     </h3>
-                    <div className="mt-2 flex items-baseline gap-1.5">
-                      <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400">Starting at</span>
-                      <span className="text-3xl font-extrabold text-neutral-900 dark:text-white font-display">
-                        {pkg.startingPrice}
-                      </span>
-                    </div>
-                    <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-                      {pkg.period}
-                    </p>
                   </div>
 
                   <p className="text-xs text-neutral-600 dark:text-neutral-300 leading-relaxed border-t border-neutral-200/80 dark:border-white/5 pt-3">
@@ -292,15 +273,6 @@ export default function ServicesPage() {
                   <h3 className="text-xl font-bold text-white font-display">
                     Tailored Enterprise Solutions
                   </h3>
-                  <div className="mt-2 flex items-baseline gap-1.5">
-                    <span className="text-xs font-semibold text-neutral-400">Scope:</span>
-                    <span className="text-3xl font-extrabold text-[#E8623C] font-display">
-                      Custom Quote
-                    </span>
-                  </div>
-                  <p className="text-xs text-neutral-400 mt-1">
-                    Based on detailed sprint roadmap
-                  </p>
                 </div>
 
                 <p className="text-xs text-neutral-300 leading-relaxed border-t border-white/10 pt-3">
@@ -342,17 +314,17 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* CRITICAL NOTE AS REQUESTED BY USER */}
-          <div className="p-6 rounded-2xl bg-amber-500/10 border border-amber-500/25 max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 text-amber-900 dark:text-amber-200 text-xs sm:text-sm">
-            <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center shrink-0 text-amber-600 dark:text-amber-400 font-bold">
-              !
+          {/* SPRINT SCOPING GUARANTEE */}
+          <div className="p-6 rounded-2xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 text-xs sm:text-sm">
+            <div className="w-8 h-8 rounded-full bg-[#E8623C]/10 flex items-center justify-center shrink-0 text-[#E8623C] font-bold">
+              <CheckCircle2 className="w-4 h-4" />
             </div>
             <div className="space-y-1">
-              <strong className="font-bold text-amber-950 dark:text-amber-100 block">
-                Final pricing depends on scope.
+              <strong className="font-bold text-neutral-900 dark:text-white block">
+                Itemized milestone scoping for every project.
               </strong>
-              <p className="leading-relaxed text-neutral-700 dark:text-neutral-300">
-                We believe in total pricing transparency to filter low-quality leads and build genuine trust. Complex custom logic, external API integrations, or multi-branch data synchronization will adjust the final quotation. Every project begins with a transparent, itemized milestone agreement with fixed pricing before any code is written.
+              <p className="leading-relaxed text-neutral-600 dark:text-neutral-300">
+                Every project begins with a clear, itemized milestone agreement and fixed sprint scope before any code is written. We tailor deliverables to your exact business workflows, and you retain 100% intellectual property ownership with zero monthly lock-in.
               </p>
             </div>
           </div>
@@ -381,21 +353,14 @@ export default function ServicesPage() {
                 className="p-8 sm:p-10 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 hover:border-neutral-900 dark:hover:border-[#E8623C]/50 transition-all duration-300 flex flex-col justify-between shadow-xs dark:shadow-2xl group"
               >
                 <div className="space-y-6">
-                  {/* Header with Icon, Pillar Number, and Starting Price Badge */}
+                  {/* Header with Icon and Pillar Number */}
                   <div className="flex items-center justify-between">
                     <div className="w-12 h-12 rounded-2xl bg-white dark:bg-black/60 border border-neutral-200 dark:border-white/10 flex items-center justify-center group-hover:border-neutral-900 dark:group-hover:border-[#E8623C] transition-all shadow-sm">
                       {iconMap[service.icon] || <Layers className="w-6 h-6 text-neutral-900 dark:text-[#E8623C]" />}
                     </div>
-                    <div className="flex items-center gap-2">
-                      {service.startingPrice && (
-                        <span className="text-[11px] font-mono font-bold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                          {service.startingPrice}
-                        </span>
-                      )}
-                      <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-neutral-200 dark:bg-white/10 text-neutral-800 dark:text-[#E8623C]">
-                        0{index + 1}
-                      </span>
-                    </div>
+                    <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-neutral-200 dark:bg-white/10 text-neutral-800 dark:text-[#E8623C]">
+                      0{index + 1}
+                    </span>
                   </div>
 
                   {/* Title & Headline */}
@@ -447,7 +412,7 @@ export default function ServicesPage() {
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors"
                   >
-                    <span>View Deliverables &amp; Pricing →</span>
+                    <span>View Deliverables &amp; Architecture →</span>
                   </Link>
                   <span className="text-xs text-neutral-500 dark:text-neutral-400 font-mono flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5 text-neutral-400" />
