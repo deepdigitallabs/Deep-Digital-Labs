@@ -343,7 +343,7 @@ export default function HomePage() {
               What We Do
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
-              3 Primary Offers. Zero Fluff.
+              What We Do3 Primary Offers. Zero Fluff.
             </h2>
             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
               We position Deep Digital Labs around 3 core solutions. Simple to understand, enterprise-grade in code quality, and built to grow your business.
