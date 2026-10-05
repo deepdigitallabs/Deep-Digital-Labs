@@ -514,7 +514,7 @@ export default function SolutionsPage() {
                         <span>Store Submission Support</span>
                       </div>
                       <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                        We prepare, submit and support your app through the Google Play Store and Apple App Store review process.
+                        App Store &amp; Google Play submission support included throughout the review process.
                       </p>
                     </div>
                   </div>

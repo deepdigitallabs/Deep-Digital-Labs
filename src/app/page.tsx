@@ -517,7 +517,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
-                    <span><strong>Store Review &amp; Submission:</strong> We prepare, submit and support your app through the App Store and Play Store review process.</span>
+                    <span><strong>Store Submission Support:</strong> App Store &amp; Google Play submission support included.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />

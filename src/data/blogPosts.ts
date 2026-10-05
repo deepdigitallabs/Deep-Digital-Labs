@@ -273,7 +273,7 @@ Don't use generic stock photos of sparks flying. Showcase real parts manufacture
 ### 5. Direct WhatsApp Link to the Plant Sales Lead
 When an urgent line stoppage occurs or an engineer needs immediate sample pricing, they need to talk to a human now. A direct WhatsApp button connecting to your business development lead closes deals faster than an info@ email inbox.
 
-### 6. Sub-Second Mobile Loading Speed
+### 6. Core Web Vitals & Fast Mobile Speed
 Corporate executives and plant managers frequently browse your site on smartphones while walking the factory floor or attending trade expos. If the site takes 5 seconds to load, they will move to the next supplier.`
   },
 
