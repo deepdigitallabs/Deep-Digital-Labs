@@ -101,7 +101,7 @@ export default function WhyUsPage() {
             <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">•</span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-              <span>Fast Mobile Performance</span>
+              <span>Performance-Optimized Websites</span>
             </span>
           </div>
         </div>
@@ -286,10 +286,10 @@ export default function WhyUsPage() {
                 03
               </div>
               <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
-                High-Speed Mobile Performance
+                Performance-Optimized Websites
               </h3>
               <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Built with Next.js 15 Server Components and edge CDN caching. Your site loads fast and reliably on Indian 4G mobile networks, maximizing conversion rates.
+                Fast-loading websites optimized for Core Web Vitals and real-world mobile performance on Indian 4G/5G networks.
               </p>
             </div>
 

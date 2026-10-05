@@ -36,7 +36,7 @@ export default function IndustriesPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed">
-            Generic website builders fail because each business sector has distinct customer journeys, compliance norms, and conversion triggers. Explore our 50 specialized website architectures built with sub-second speeds, direct WhatsApp inquiry engines, and 100% code ownership.
+            Generic website builders fail because each business sector has distinct customer journeys, compliance norms, and conversion triggers. Explore our 50 specialized website architectures built for fast real-world mobile performance, direct WhatsApp inquiry engines, and 100% code ownership.
           </p>
 
           {/* Value Badges */}
@@ -47,7 +47,7 @@ export default function IndustriesPage() {
             </div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10">
               <Zap className="w-4 h-4 text-amber-500" />
-              <span>Sub-Second Mobile Speeds</span>
+              <span>Performance-Optimized Mobile Experience</span>
             </div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10">
               <MessageSquare className="w-4 h-4 text-[#E8623C]" />

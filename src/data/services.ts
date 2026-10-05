@@ -52,7 +52,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     fullDescription: 'We design and code fast, accessible, and high-converting websites and web applications. Clean semantic HTML5, modern CSS3, responsive React and Next.js interfaces that rank at the top of Google and deliver sub-second load times.',
     icon: 'Code2',
     keyBenefits: [
-      'Perfect Google speed and Core Web Vitals mobile performance',
+      'Core Web Vitals optimized for fast real-world mobile performance',
       'Pixel-perfect responsive design tailored for mobile, tablet, and desktop',
       'SEO-optimized architecture with automated schema and metadata',
       'Zero monthly builder fees — clean code on your own infrastructure'
@@ -218,7 +218,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
       'One codebase reaching both iOS & Android without extra cost',
       'Push notification infrastructure for high user engagement',
       'Native camera, biometrics, GPS, and in-app payment integration',
-      'We prepare, submit and support your app through the App Store and Play Store review process.'
+      'App Store & Google Play submission support throughout the review process.'
     ],
     capabilities: [
       {
@@ -242,7 +242,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
       'Production iOS (.ipa) and Android (.aab) app binaries',
       'Clean Dart/Flutter or React Native source code',
       'Configured push notification & Firebase backend',
-      'Complete App Store submission & publishing support'
+      'App Store & Google Play submission support'
     ],
     techStack: ['Flutter', 'React Native', 'Kotlin', 'Swift', 'Firebase'],
     techSpecializations: [

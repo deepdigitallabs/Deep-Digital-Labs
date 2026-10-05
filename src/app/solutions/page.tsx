@@ -334,10 +334,10 @@ export default function SolutionsPage() {
                     <div className="space-y-1.5">
                       <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
                         <Zap className="w-4 h-4 text-[#E8623C]" />
-                        <span>Instant Mobile Loading</span>
+                        <span>Performance-Optimized Websites</span>
                       </div>
                       <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                        Under 1.2s page speed so impatient mobile visitors don’t leave before seeing your work.
+                        Fast-loading websites optimized for Core Web Vitals and real-world mobile performance.
                       </p>
                     </div>
 
@@ -1055,10 +1055,10 @@ export default function SolutionsPage() {
             <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-3">
               <Zap className="w-8 h-8 text-[#E8623C]" />
               <h3 className="text-base font-bold text-neutral-900 dark:text-white">
-                Sub-Second Speed On Mobile
+                Performance-Optimized Websites
               </h3>
               <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Pages load cleanly and quickly on 4G/5G mobile connections across Pune and India, ensuring visitors stay and convert.
+                Fast-loading websites optimized for Core Web Vitals and real-world mobile performance across Pune and India.
               </p>
             </div>
 

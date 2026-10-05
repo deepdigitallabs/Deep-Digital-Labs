@@ -534,7 +534,7 @@ export const INDUSTRY_SERVICES: (ServiceDetail & { category: string; categoryNam
       },
       {
         question: 'Will the website work fast on mobile networks for drivers and dispatchers?',
-        answer: 'Yes, our Next.js static architecture loads in under 0.8 seconds even on 3G and 4G mobile connections.'
+        answer: 'Yes, our Next.js architecture is performance-optimized for Core Web Vitals and fast real-world mobile performance on mobile networks.'
       }
     ],
     metaTitle: 'Logistics & Transport Website Development | Freight & Fleet Web Portals',
@@ -782,7 +782,7 @@ export const INDUSTRY_SERVICES: (ServiceDetail & { category: string; categoryNam
       'Next.js coaching institute portal with course catalogs',
       'Lead capture brochure download system',
       'Demo class booking workflow with WhatsApp notifications',
-      'Core Web Vitals 95+ score for instant mobile loading'
+      'Core Web Vitals optimized for instant mobile loading'
     ],
     techStack: ['Next.js', 'React', 'TailwindCSS', 'TypeScript', 'Node.js'],
     techSpecializations: [
@@ -2976,7 +2976,7 @@ export const INDUSTRY_SERVICES: (ServiceDetail & { category: string; categoryNam
       'Developer-grade Next.js software house website',
       'Interactive tech stack components with official dev icons',
       'Sprint estimator and discovery call booking system',
-      '100/100 Core Web Vitals performance across all pages'
+      'Core Web Vitals optimized performance across all pages'
     ],
     techStack: ['Next.js', 'React', 'TailwindCSS', 'TypeScript', 'Node.js', 'Python', 'PostgreSQL'],
     techSpecializations: [
@@ -3240,7 +3240,7 @@ export const INDUSTRY_SERVICES: (ServiceDetail & { category: string; categoryNam
       'Bold, modern Next.js digital agency website',
       'Interactive case studies with verified ROI metric highlights',
       'Free audit request funnel and calendar booking integration',
-      '100/100 Core Web Vitals proving your technical execution'
+      'Core Web Vitals optimized architecture proving your technical execution'
     ],
     techStack: ['Next.js', 'React', 'TailwindCSS', 'TypeScript', 'Node.js', 'Framer Motion'],
     techSpecializations: [

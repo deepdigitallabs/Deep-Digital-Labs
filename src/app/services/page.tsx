@@ -65,7 +65,7 @@ export default function ServicesPage() {
       icon: <Building2 className="w-5 h-5 text-[#E8623C]" />,
       highlights: [
         '5–7 custom responsive pages (Home, About, Services, Case Studies, Contact)',
-        'Sub-second mobile loading speed (<1.2s)',
+        'Fast-loading pages optimized for Core Web Vitals and real-world mobile performance',
         'Local Pune SEO architecture & Google Business schemas',
         'Direct 1-tap WhatsApp lead button & contact forms',
         '100% source code ownership & zero monthly builder taxes'
@@ -115,7 +115,7 @@ export default function ServicesPage() {
         'Offline-first data entry that syncs automatically when reconnected',
         'Phone camera barcode scanning & delivery proof photo uploads',
         'Instant push notifications & biometric login (Fingerprint / Face ID)',
-        'Full App Store and Play Store review submission support included'
+        'App Store & Google Play submission support'
       ],
       ctaText: 'Start Mobile App',
       href: '/services/mobile-app-development'

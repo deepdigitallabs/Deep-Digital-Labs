@@ -168,8 +168,8 @@ const TECH_DISPLAY_NAMES: Record<string, string> = {
 
 const TECH_FEATURES = [
   {
-    title: "Fast Mobile Performance",
-    desc: "SSR & Static generation ensuring rapid responsive rendering and smooth navigation on mobile networks.",
+    title: "Performance-Optimized Websites",
+    desc: "Fast-loading websites optimized for Core Web Vitals and real-world mobile performance.",
     tag: "Speed",
   },
   {
@@ -397,7 +397,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
-                    <span><strong>Fast Mobile Performance:</strong> Core Web Vitals optimized with sub-second responsive layout rendering.</span>
+                    <span><strong>Performance-Optimized:</strong> Fast-loading websites optimized for Core Web Vitals and real-world mobile performance.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
@@ -649,10 +649,10 @@ export default function HomePage() {
               </div>
               <div className="relative z-10 space-y-2.5">
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
-                  Fast, reliable sites that don&apos;t crash or lag
+                  Performance-Optimized Websites
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  Modern, maintainable technology engineered for high reliability, fast mobile speeds, and zero platform lock-in.
+                  Fast-loading websites optimized for Core Web Vitals and real-world mobile performance.
                 </p>
               </div>
             </div>

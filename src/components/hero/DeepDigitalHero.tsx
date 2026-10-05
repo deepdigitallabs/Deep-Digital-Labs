@@ -170,7 +170,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
                         <Activity className="w-3 h-3 text-[#00FFA3]" /> Throughput
                       </div>
                       <div className="text-xl font-bold font-mono text-white mt-1">2,840 req/s</div>
-                      <div className="text-[10px] text-emerald-400 font-mono mt-0.5">Sub-second SSR</div>
+                      <div className="text-[10px] text-emerald-400 font-mono mt-0.5">Performance-Optimized</div>
                     </div>
                     <div className="p-3 rounded-lg bg-[#0D0D0F] border border-[#27272A]">
                       <div className="text-[10px] font-mono text-slate-400 flex items-center gap-1">
@@ -227,7 +227,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
 
                   <div className="p-3 rounded-lg bg-[#0D0D0F] border border-[#27272A] text-xs font-mono text-slate-300 space-y-1">
                     <div className="text-[11px] text-[#00FFA3]">&gt; Vercel Edge Cache: HIT (98.4% edge hit-rate)</div>
-                    <div className="text-[10px] text-slate-400">&gt; Sub-1.5s load times for rural 3G mobile networks</div>
+                    <div className="text-[10px] text-slate-400">&gt; Optimized for Core Web Vitals &amp; mobile networks</div>
                   </div>
                 </div>
               )}
