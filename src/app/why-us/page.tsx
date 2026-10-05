@@ -177,7 +177,7 @@ export default function WhyUsPage() {
                   </td>
                   <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
                     <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>Sub-0.8s Next.js 15 SSR</span>
+                    <span>Fast Next.js 15 SSR</span>
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
                     Average (3s–5s on mobile)
@@ -286,10 +286,10 @@ export default function WhyUsPage() {
                 03
               </div>
               <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
-                Sub-Second Speed Guarantee
+                High-Speed Mobile Performance
               </h3>
               <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Built with Next.js 15 Server Components and edge CDN caching. Your site loads in under 0.8 seconds on Indian 4G mobile networks, maximizing conversion rates.
+                Built with Next.js 15 Server Components and edge CDN caching. Your site loads fast and reliably on Indian 4G mobile networks, maximizing conversion rates.
               </p>
             </div>
 

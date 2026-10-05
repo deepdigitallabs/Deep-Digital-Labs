@@ -239,32 +239,40 @@ export default function HomePage() {
         </h1>
 
         {/* Subheadline */}
-        <p className="mt-6 text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 font-normal max-w-4xl mx-auto leading-relaxed text-balance">
-          Modern websites, apps &amp; online stores designed to help Pune businesses grow online.
+        <p className="mt-6 text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 font-normal max-w-3xl mx-auto leading-relaxed text-balance">
+          High-performance <strong>Business Websites</strong>, custom <strong>Business Software &amp; Automation</strong>, and native <strong>Mobile Apps</strong> engineered to help Pune businesses grow online.
         </p>
 
-        {/* Action Row: WhatsApp CTA & View Our Work */}
-        <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
-          {/* Primary Action Button with Spectrum Gradient */}
-          <a
-            href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20or%20app%20project%20for%20my%20business."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-2.5 bg-gradient-to-r from-[#2563EB] via-[#7C3AED] via-[#EC4899] to-[#E8623C] hover:opacity-95 text-white px-7 py-3 rounded-full font-semibold text-sm sm:text-base transition-all shadow-lg shadow-[#7C3AED]/25 hover:shadow-xl hover:shadow-[#EC4899]/30 active:scale-98 cursor-pointer"
+        {/* Action Row: Start a Project, View Our Work, WhatsApp Us */}
+        <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
+          {/* Primary Action Button: Start a Project */}
+          <button
+            onClick={() => setCallModalOpen(true)}
+            className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#E8623C] via-[#F0744E] to-[#F59E0B] hover:opacity-95 text-white px-7 py-3.5 rounded-full font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25 hover:shadow-xl hover:shadow-[#E8623C]/35 active:scale-98 cursor-pointer"
           >
-            <MessageSquare className="w-4 h-4" />
-            <span>Chat on WhatsApp</span>
+            <span>Start a Project</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </button>
 
           {/* Secondary Action: View Our Work */}
           <Link
             href="/case-studies"
-            className="group inline-flex items-center gap-2 px-7 py-3 rounded-full border border-neutral-300 dark:border-white/15 bg-white/90 dark:bg-[#12151D]/90 hover:bg-neutral-50 dark:hover:bg-white/10 text-neutral-800 dark:text-neutral-200 font-semibold text-sm sm:text-base transition-all shadow-xs hover:border-[#E8623C]/50 active:scale-98"
+            className="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-neutral-300 dark:border-white/15 bg-white/90 dark:bg-[#12151D]/90 hover:bg-neutral-50 dark:hover:bg-white/10 text-neutral-800 dark:text-neutral-200 font-semibold text-sm sm:text-base transition-all shadow-xs hover:border-[#E8623C]/50 active:scale-98"
           >
             <span>View Our Work</span>
             <ArrowRight className="w-4 h-4 text-neutral-400 dark:text-neutral-500 group-hover:text-[#E8623C] group-hover:translate-x-1 transition-all" />
           </Link>
+
+          {/* Third Action: WhatsApp Us */}
+          <a
+            href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 font-semibold text-sm sm:text-base transition-all active:scale-98"
+          >
+            <WhatsAppIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+            <span>WhatsApp Us</span>
+          </a>
         </div>
 
         {/* Poster Studio Tagline with Divider Lines */}
@@ -280,7 +288,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center gap-2 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-medium">
             <span><strong className="text-neutral-900 dark:text-white">10+ Systems</strong> Shipped in Production</span>
             <span className="hidden sm:inline text-neutral-400">•</span>
-            <span>Fast &amp; Reliable Sites</span>
+            <span>Fast, Responsive Mobile Performance</span>
             <span className="hidden sm:inline text-neutral-400">•</span>
             <span>Direct WhatsApp Support</span>
           </div>
@@ -324,19 +332,19 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION: CORE ARCHITECTURE & CAPABILITIES (6 Pillars)                     */}
+      {/* SECTION: 3 PRIMARY OFFERS (Positioned to understand in 5 seconds)          */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-20 px-6 max-w-7xl mx-auto border-t border-neutral-200/80 dark:border-white/[0.06]">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div className="space-y-2.5 max-w-2xl">
+      <section id="services" className="py-20 sm:py-24 px-6 max-w-7xl mx-auto border-t border-neutral-200/80 dark:border-white/[0.06]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <div className="space-y-3 max-w-2xl">
             <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-              Engineering Capabilities
+              What We Do
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
-              Built on Modern Architecture &amp; Scalable Stacks
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
+              3 Primary Offers. Zero Fluff.
             </h2>
             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              Explore our core technical services engineered for high performance, sub-second latency, and zero platform lock-in.
+              We position Deep Digital Labs around 3 core solutions. Simple to understand, enterprise-grade in code quality, and built to grow your business.
             </p>
           </div>
 
@@ -344,289 +352,226 @@ export default function HomePage() {
             href="/services"
             className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#E8623C] hover:underline shrink-0"
           >
-            <span>Explore all services &amp; sprint timelines</span>
+            <span>Explore all deliverables &amp; sprint pricing</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {/* Card 1: Web Apps & SaaS */}
-          <Link
-            href="/services/websites-web-apps"
-            className="group p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
-          >
-            <div className="space-y-3.5">
-              <div className="flex items-center justify-between">
-                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 group-hover:border-[#E8623C]/30 text-[#E8623C] transition-colors">
-                  <Code2 className="w-5 h-5" />
-                </div>
-                <span className="text-xs font-mono font-bold text-neutral-400 group-hover:text-[#E8623C] transition-colors">
-                  01
-                </span>
-              </div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors font-display">
-                Web Apps &amp; SaaS
-              </h3>
-              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Next.js 15, high-speed portals &amp; modern e-commerce.
-              </p>
-            </div>
-            <div className="pt-4 mt-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between text-xs font-semibold text-neutral-800 dark:text-neutral-200 group-hover:text-[#E8623C] transition-colors">
-              <span>Explore Deliverables</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
-
-          {/* Card 2: Custom ERP & SaaS */}
-          <Link
-            href="/services/business-software-saas"
-            className="group p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
-          >
-            <div className="space-y-3.5">
-              <div className="flex items-center justify-between">
-                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 group-hover:border-[#E8623C]/30 text-[#E8623C] transition-colors">
-                  <Layers className="w-5 h-5" />
-                </div>
-                <span className="text-xs font-mono font-bold text-neutral-400 group-hover:text-[#E8623C] transition-colors">
-                  02
-                </span>
-              </div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors font-display">
-                Custom ERP &amp; SaaS
-              </h3>
-              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Multi-tenant software, custom billing &amp; workflow engines.
-              </p>
-            </div>
-            <div className="pt-4 mt-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between text-xs font-semibold text-neutral-800 dark:text-neutral-200 group-hover:text-[#E8623C] transition-colors">
-              <span>Explore Deliverables</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
-
-          {/* Card 3: Mobile Native */}
-          <Link
-            href="/services/mobile-app-development"
-            className="group p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
-          >
-            <div className="space-y-3.5">
-              <div className="flex items-center justify-between">
-                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 group-hover:border-[#E8623C]/30 text-[#E8623C] transition-colors">
-                  <Smartphone className="w-5 h-5" />
-                </div>
-                <span className="text-xs font-mono font-bold text-neutral-400 group-hover:text-[#E8623C] transition-colors">
-                  03
-                </span>
-              </div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors font-display">
-                Mobile Native
-              </h3>
-              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                iOS &amp; Android with Flutter, offline sync &amp; biometrics.
-              </p>
-            </div>
-            <div className="pt-4 mt-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between text-xs font-semibold text-neutral-800 dark:text-neutral-200 group-hover:text-[#E8623C] transition-colors">
-              <span>Explore Deliverables</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
-
-          {/* Card 4: Growth & SEO */}
-          <Link
-            href="/services/digital-growth-seo"
-            className="group p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
-          >
-            <div className="space-y-3.5">
-              <div className="flex items-center justify-between">
-                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 group-hover:border-[#E8623C]/30 text-[#E8623C] transition-colors">
-                  <TrendingUp className="w-5 h-5" />
-                </div>
-                <span className="text-xs font-mono font-bold text-neutral-400 group-hover:text-[#E8623C] transition-colors">
-                  04
-                </span>
-              </div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors font-display">
-                Growth &amp; SEO
-              </h3>
-              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Core Web Vitals, programmatic SEO &amp; conversion funnels.
-              </p>
-            </div>
-            <div className="pt-4 mt-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between text-xs font-semibold text-neutral-800 dark:text-neutral-200 group-hover:text-[#E8623C] transition-colors">
-              <span>Explore Deliverables</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
-
-          {/* Card 5: Chat Bot Development */}
-          <Link
-            href="/services/chat-bot-development"
-            className="group p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
-          >
-            <div className="space-y-3.5">
-              <div className="flex items-center justify-between">
-                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 group-hover:border-[#E8623C]/30 text-[#E8623C] transition-colors">
-                  <Bot className="w-5 h-5" />
-                </div>
-                <span className="text-xs font-mono font-bold text-neutral-400 group-hover:text-[#E8623C] transition-colors">
-                  05
-                </span>
-              </div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors font-display">
-                Chat Bot Development
-              </h3>
-              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Automated WhatsApp and website customer support bots.
-              </p>
-            </div>
-            <div className="pt-4 mt-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between text-xs font-semibold text-neutral-800 dark:text-neutral-200 group-hover:text-[#E8623C] transition-colors">
-              <span>Explore Deliverables</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
-
-          {/* Card 6: All Services & Packages */}
-          <Link
-            href="/services"
-            className="group p-6 rounded-2xl bg-gradient-to-br from-[#E8623C]/10 via-[#F59E0B]/5 to-transparent border border-[#E8623C]/30 hover:border-[#E8623C] transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
-          >
-            <div className="space-y-3.5">
-              <div className="flex items-center justify-between">
-                <div className="p-2.5 rounded-xl bg-[#E8623C]/20 border border-[#E8623C]/30 text-[#E8623C] transition-colors">
-                  <Sparkles className="w-5 h-5" />
-                </div>
-                <span className="text-xs font-mono font-bold text-[#E8623C]">
-                  All
-                </span>
-              </div>
-              <h3 className="text-lg font-bold text-[#E8623C] group-hover:underline transition-colors font-display">
-                All Services &amp; Packages
-              </h3>
-              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Explore all deliverables, pricing scopes &amp; sprint timelines.
-              </p>
-            </div>
-            <div className="pt-4 mt-4 border-t border-[#E8623C]/20 flex items-center justify-between text-xs font-bold text-[#E8623C]">
-              <span>Explore Full Catalog</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* SECTION 2: WHAT WE DO (IN PLAIN WORDS)                                    */}
-      {/* ========================================================================= */}
-      <section id="services" className="py-24 px-6 max-w-6xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-            What We Do
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
-            Simple, high-quality digital solutions for your business.
-          </h2>
-          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            Everything you need to look credible online, get more customers, and streamline your operations — without any technical headache.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 3 Primary Offers Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           
-          {/* Service 1: Business Websites */}
-          <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
-            <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-              <Globe className="w-full h-full stroke-[1.2]" />
+          {/* OFFER 1: Business Websites */}
+          <div className="group relative rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1.5 flex flex-col justify-between p-7 sm:p-8 overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#E8623C]/5 rounded-bl-full pointer-events-none group-hover:scale-125 transition-transform" />
+            
+            <div className="space-y-6">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-2xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 flex items-center justify-center text-[#E8623C] group-hover:bg-[#E8623C] group-hover:text-white transition-all shadow-xs">
+                  <Globe className="w-6 h-6" />
+                </div>
+                <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-neutral-500 group-hover:text-[#E8623C] group-hover:border-[#E8623C]/30 transition-colors">
+                  01 — Offer
+                </span>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-neutral-900 dark:text-white font-display group-hover:text-[#E8623C] transition-colors">
+                  Business Websites
+                </h3>
+                <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  Clean, modern, high-speed websites engineered to turn visitors into inquiries, calls, and paying clients.
+                </p>
+              </div>
+
+              {/* Sub-services breakdown */}
+              <div className="space-y-3 pt-4 border-t border-neutral-100 dark:border-white/5">
+                <p className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 dark:text-neutral-500 font-semibold">
+                  Sub-Services &amp; Capabilities Included:
+                </p>
+                <ul className="space-y-2.5 text-xs text-neutral-700 dark:text-neutral-300">
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>Local SEO &amp; Google Visibility:</strong> Build stronger local search visibility on Google Maps &amp; search.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>Fast Mobile Performance:</strong> Core Web Vitals optimized with sub-second responsive layout rendering.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>50+ Industry Architectures:</strong> Purpose-built workflows for CAs, Doctors, Real Estate, Tours &amp; more.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>Zero Monthly Platform Fees:</strong> 100% source code ownership deployed on your own infrastructure.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="relative z-10 space-y-2">
-              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
-                Business Websites
-              </h3>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                A clean, professional website that tells people who you are and what you offer — fast-loading and great on mobile.
-              </p>
-            </div>
-            <div className="relative z-10 pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E8623C] shrink-0" />
-              <span>Mobile-first &amp; fast-loading</span>
+
+            <div className="pt-6 mt-6 border-t border-neutral-100 dark:border-white/5">
+              <Link
+                href="/services/websites-web-apps"
+                className="w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-100 dark:bg-white/5 hover:bg-[#E8623C] hover:text-white text-neutral-900 dark:text-white font-bold text-xs transition-all group-hover:border-[#E8623C]/30"
+              >
+                <span>Explore Business Websites</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
 
-          {/* Service 2: Online Stores & Booking Tools */}
-          <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
-            <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-              <ShoppingBag className="w-full h-full stroke-[1.2]" />
+          {/* OFFER 2: Business Software & Automation */}
+          <div className="group relative rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1.5 flex flex-col justify-between p-7 sm:p-8 overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#E8623C]/5 rounded-bl-full pointer-events-none group-hover:scale-125 transition-transform" />
+
+            <div className="space-y-6">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-2xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 flex items-center justify-center text-[#E8623C] group-hover:bg-[#E8623C] group-hover:text-white transition-all shadow-xs">
+                  <Layers className="w-6 h-6" />
+                </div>
+                <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-neutral-500 group-hover:text-[#E8623C] group-hover:border-[#E8623C]/30 transition-colors">
+                  02 — Offer
+                </span>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-neutral-900 dark:text-white font-display group-hover:text-[#E8623C] transition-colors">
+                  Business Software &amp; Automation
+                </h3>
+                <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  Tailored software, billing engines, and automated workflows that eliminate manual paperwork and operational bottlenecks.
+                </p>
+              </div>
+
+              {/* Sub-services breakdown */}
+              <div className="space-y-3 pt-4 border-t border-neutral-100 dark:border-white/5">
+                <p className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 dark:text-neutral-500 font-semibold">
+                  Sub-Services &amp; Capabilities Included:
+                </p>
+                <ul className="space-y-2.5 text-xs text-neutral-700 dark:text-neutral-300">
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>WhatsApp Business Automation:</strong> Instant lead capture, inquiry routing &amp; automated customer updates.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>AI Chatbots &amp; Customer Support:</strong> 24/7 intelligent answering bots deployed directly on your website.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>Custom ERP &amp; Invoicing:</strong> Client portals, inventory trackers, and team dashboards.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>Payment &amp; API Integrations:</strong> Razorpay, UPI, accounting engines, and third-party tools.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="relative z-10 space-y-2">
-              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
-                Online Stores &amp; Booking Tools
-              </h3>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                Take orders, manage bookings, or track customers online with a simple tool built for how you work.
-              </p>
-            </div>
-            <div className="relative z-10 pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E8623C] shrink-0" />
-              <span>UPI, cards &amp; easy tracking</span>
+
+            <div className="pt-6 mt-6 border-t border-neutral-100 dark:border-white/5">
+              <Link
+                href="/services/business-software-saas"
+                className="w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-100 dark:bg-white/5 hover:bg-[#E8623C] hover:text-white text-neutral-900 dark:text-white font-bold text-xs transition-all group-hover:border-[#E8623C]/30"
+              >
+                <span>Explore Business Software</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
 
-          {/* Service 3: Mobile Apps */}
-          <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
-            <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-              <Smartphone className="w-full h-full stroke-[1.2]" />
+          {/* OFFER 3: Mobile Apps */}
+          <div className="group relative rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-md hover:shadow-2xl hover:-translate-y-1.5 flex flex-col justify-between p-7 sm:p-8 overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#E8623C]/5 rounded-bl-full pointer-events-none group-hover:scale-125 transition-transform" />
+
+            <div className="space-y-6">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-2xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 flex items-center justify-center text-[#E8623C] group-hover:bg-[#E8623C] group-hover:text-white transition-all shadow-xs">
+                  <Smartphone className="w-6 h-6" />
+                </div>
+                <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-neutral-500 group-hover:text-[#E8623C] group-hover:border-[#E8623C]/30 transition-colors">
+                  03 — Offer
+                </span>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-neutral-900 dark:text-white font-display group-hover:text-[#E8623C] transition-colors">
+                  Mobile Apps
+                </h3>
+                <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  Turnkey cross-platform mobile apps for iOS and Android with smooth animations and native hardware integration.
+                </p>
+              </div>
+
+              {/* Sub-services breakdown */}
+              <div className="space-y-3 pt-4 border-t border-neutral-100 dark:border-white/5">
+                <p className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 dark:text-neutral-500 font-semibold">
+                  Sub-Services &amp; Capabilities Included:
+                </p>
+                <ul className="space-y-2.5 text-xs text-neutral-700 dark:text-neutral-300">
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>iOS &amp; Android Cross-Platform:</strong> Flutter &amp; native modern stacks with smooth 60fps UX.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>Store Review &amp; Submission:</strong> We prepare, submit and support your app through the App Store and Play Store review process.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>Offline Sync &amp; Biometrics:</strong> Fingerprint/FaceID login with resilient local database sync.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" />
+                    <span><strong>Push Notifications &amp; In-App Payments:</strong> Direct alerts, order updates, and secure checkout.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="relative z-10 space-y-2">
-              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
-                Mobile Apps
-              </h3>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                Your own app on Android and iPhone, designed and built end-to-end for your customers or team.
-              </p>
-            </div>
-            <div className="relative z-10 pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E8623C] shrink-0" />
-              <span>Android &amp; iOS compatible</span>
+
+            <div className="pt-6 mt-6 border-t border-neutral-100 dark:border-white/5">
+              <Link
+                href="/services/mobile-app-development"
+                className="w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-neutral-100 dark:bg-white/5 hover:bg-[#E8623C] hover:text-white text-neutral-900 dark:text-white font-bold text-xs transition-all group-hover:border-[#E8623C]/30"
+              >
+                <span>Explore Mobile Apps</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
 
-          {/* Service 4: Getting Found on Google (SEO) */}
-          <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
-            <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-[#E8623C]/[0.10] dark:group-hover:text-[#E8623C]/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-              <Search className="w-full h-full stroke-[1.2]" />
+        </div>
+
+        {/* Dedicated Gateway to 50+ Industry Solutions Directory */}
+        <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 text-white border border-neutral-700/80 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+          <div className="space-y-1.5 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-[#E8623C]/20 border border-[#E8623C]/40 text-[#E8623C] text-[11px] font-mono font-bold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>50+ Industry Architectures Ready</span>
             </div>
-            <div className="relative z-10 space-y-2">
-              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
-                Getting Found on Google (SEO)
-              </h3>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                We help your website show up when people in Pune (and beyond) search for what you do.
-              </p>
-            </div>
-            <div className="relative z-10 pt-2 flex items-center gap-2 text-xs font-mono text-[#E8623C] font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E8623C] shrink-0" />
-              <span>Local Pune search rankings</span>
-            </div>
+            <h4 className="text-lg sm:text-xl font-bold font-display text-white">
+              Need an industry-specialized website with tailored inquiry funnels?
+            </h4>
+            <p className="text-xs sm:text-sm text-neutral-300 max-w-2xl leading-relaxed">
+              From CA firms, Real Estate builders, and Clinic portals to Tour &amp; Travels agencies with direct WhatsApp booking — explore our complete directory of 50+ purpose-built niche solutions.
+            </p>
           </div>
 
-          {/* Service 5: Ongoing Support */}
-          <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4 md:col-span-2 lg:col-span-2">
-            <div className="absolute -right-4 -bottom-4 w-36 h-36 text-neutral-900/[0.04] dark:text-white/[0.04] group-hover:text-emerald-500/[0.10] dark:group-hover:text-emerald-500/[0.10] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-              <Headphones className="w-full h-full stroke-[1.2]" />
-            </div>
-            <div className="relative z-10 space-y-2">
-              <h3 className="text-xl font-bold text-neutral-900 dark:text-white font-display">
-                Ongoing Support
-              </h3>
-              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                After launch, we stay on — fixing issues, adding pages, keeping things running, and ensuring your digital presence stays fast and secure.
-              </p>
-            </div>
-            <div className="relative z-10 pt-2 flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-              <span>Direct WhatsApp developer access · Fast response</span>
-            </div>
+          <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full md:w-auto">
+            <Link
+              href="/industries"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#E8623C] hover:bg-[#F0744E] text-white font-bold text-xs sm:text-sm transition-all shadow-md active:scale-98"
+            >
+              <span>Browse 50+ Industry Solutions</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/services"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-neutral-200 font-semibold text-xs sm:text-sm transition-all border border-white/10"
+            >
+              <span>View All Services</span>
+            </Link>
           </div>
-
         </div>
       </section>
 

@@ -218,7 +218,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
       'One codebase reaching both iOS & Android without extra cost',
       'Push notification infrastructure for high user engagement',
       'Native camera, biometrics, GPS, and in-app payment integration',
-      'Guaranteed Apple App Store & Google Play Store approval'
+      'We prepare, submit and support your app through the App Store and Play Store review process.'
     ],
     capabilities: [
       {
@@ -282,10 +282,10 @@ export const CORE_SERVICES: ServiceDetail[] = [
     title: 'Digital Growth & SEO',
     headline: 'Developer-led SEO, Google Business ranking, and conversion growth.',
     shortDescription: 'Technical SEO, Local SEO, Google Business Profile ranking, keyword research, analytics tracking, and conversion optimization.',
-    fullDescription: 'Great code needs real customers. We optimize your website code for top Google rankings, set up automated customer onboarding emails, and build review systems that turn visitors into paying clients.',
+    fullDescription: 'Great code needs real customers. We optimize your website code to build stronger local search visibility, set up automated customer onboarding emails, and build review systems that turn visitors into paying clients.',
     icon: 'TrendingUp',
     keyBenefits: [
-      'Top Google search rankings with sub-second Core Web Vitals',
+      'Build stronger local search visibility with clean, fast Core Web Vitals',
       'Local SEO dominance on Google Maps & Google Business Profile',
       'Actionable Google Analytics 4 and Search Console insights',
       'Code-level performance tweaks that maximize conversion rates'

@@ -83,7 +83,7 @@ export default function AboutPage() {
             
             <div className="grid grid-cols-2 gap-4">
               <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 shadow-sm">
-                <div className="text-neutral-900 dark:text-[#D4FF00] font-mono text-3xl font-extrabold mb-1">7+</div>
+                <div className="text-neutral-900 dark:text-[#D4FF00] font-mono text-3xl font-extrabold mb-1">10+</div>
                 <div className="font-semibold text-neutral-900 dark:text-white text-sm">Live Products</div>
                 <div className="text-xs text-neutral-500 dark:text-gray-500 mt-1">SaaS, Civic &amp; Logistics</div>
               </div>

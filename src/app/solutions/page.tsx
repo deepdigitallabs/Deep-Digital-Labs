@@ -104,8 +104,8 @@ export default function SolutionsPage() {
               <div className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Live Production Systems</div>
             </div>
             <div className="p-4 rounded-xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] text-center">
-              <div className="text-2xl font-bold text-neutral-900 dark:text-white font-display">&lt;0.8s</div>
-              <div className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Avg Mobile Load Time</div>
+              <div className="text-2xl font-bold text-neutral-900 dark:text-white font-display">95+</div>
+              <div className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Mobile Speed Score</div>
             </div>
             <div className="p-4 rounded-xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] text-center">
               <div className="text-2xl font-bold text-neutral-900 dark:text-white font-display">100%</div>
@@ -524,10 +524,10 @@ export default function SolutionsPage() {
             <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-3">
               <Zap className="w-8 h-8 text-[#E8623C]" />
               <h3 className="text-base font-bold text-neutral-900 dark:text-white">
-                Sub-Second Edge Latency
+                Fast Edge Performance
               </h3>
               <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Server-rendered on Next.js 15 and cached on Indian edge CDN nodes so pages paint in &lt;0.8s even on congested mobile connections.
+                Server-rendered on Next.js 15 and cached on Indian edge CDN nodes so pages paint quickly and smoothly on mobile connections.
               </p>
             </div>
 
