@@ -5,12 +5,9 @@ import {
   ArrowRight, 
   Check, 
   CheckCircle2, 
-  Code2, 
   Layers, 
   Smartphone, 
   Bot, 
-  Database, 
-  Server, 
   ShieldCheck, 
   Zap, 
   Building2, 
@@ -19,28 +16,37 @@ import {
   Truck, 
   Stethoscope, 
   Calculator, 
-  Globe, 
   Clock, 
-  Sparkles,
-  ArrowUpRight
+  Users,
+  BarChart3,
+  Package,
+  FileText,
+  RefreshCw,
+  Lock,
+  AlertCircle,
+  HelpCircle,
+  TrendingUp,
+  MessageCircle,
+  Database
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Tailored Software & Digital Solutions | Deep Digital Labs Pune",
-  description: "End-to-end digital solutions for growing businesses in Pune and India. Custom ERPs, high-converting websites, cross-platform mobile apps, and automated workflows.",
+  title: "Business Problem Solutions | Deep Digital Labs Pune",
+  description: "We build custom business software, high-converting websites, and mobile apps around your real operational problems. Centralize orders, inventory, billing, and leads.",
   keywords: [
     "custom software solutions Pune",
-    "business ERP software Pune",
-    "mobile app solutions Pune",
-    "manufacturing ERP Pune",
+    "business inventory software Pune",
+    "replace excel business software Pune",
+    "WhatsApp business automation Pune",
     "CA firm website solutions Pune",
-    "dairy software Pune",
+    "manufacturing ERP Pune",
+    "dairy collection software Pune",
     "logistics software development Pune",
-    "enterprise web applications"
+    "local business website Pune"
   ],
   openGraph: {
-    title: "Tailored Software & Digital Solutions | Deep Digital Labs",
-    description: "Purpose-built engineering solutions for Pune enterprises, CAs, manufacturers, and growing startups. 100% code ownership & direct WhatsApp developer support.",
+    title: "Business Problem Solutions | Deep Digital Labs Pune",
+    description: "Technology should solve real business headaches. We replace Excel & WhatsApp chaos with custom portals, websites, and mobile apps built for Pune businesses.",
     url: "https://deepdigitallabs.com/solutions",
   }
 };
@@ -59,32 +65,32 @@ export default function SolutionsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* ========================================================================= */}
-        {/* HERO SECTION                                                              */}
+        {/* HERO SECTION: BUYER-FIRST PROBLEM POSITIONING                            */}
         {/* ========================================================================= */}
-        <div className="text-center max-w-4xl mx-auto mb-20 space-y-6">
+        <div className="text-center max-w-4xl mx-auto mb-16 space-y-6">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-[#12151D] text-xs font-medium text-neutral-700 dark:text-neutral-300 shadow-xs">
-            <span className="font-bold text-neutral-900 dark:text-white">Enterprise &amp; Growth Solutions</span>
+            <span className="font-bold text-[#E8623C]">Business-First Approach</span>
             <span className="text-neutral-300 dark:text-neutral-600">•</span>
-            <span>Pune, Maharashtra</span>
+            <span>Software Built For Real Operations</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-900 dark:text-white font-display leading-[1.12]">
-            End-to-End Digital Solutions For Growing Businesses
+            Software Built Around Your Real Business Problems
           </h1>
 
           <p className="text-base sm:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-3xl mx-auto">
-            From custom operational ERPs to ultra-fast modern websites, mobile apps, and automated WhatsApp workflows. Purpose-built to eliminate manual paperwork and drive measurable revenue.
+            You don’t need technical jargon like Prisma, Redis, or frameworks. You care about managing your inventory, letting customers order on WhatsApp, tracking staff, seeing sales, and getting more local inquiries.
           </p>
 
           <div className="pt-2 flex flex-wrap justify-center items-center gap-4">
             <a
-              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20solution%20for%20my%20business."
+              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20an%20operational%20problem%20in%20my%20business%20I%20want%20to%20solve."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 bg-[#E8623C] hover:bg-[#F0744E] text-white px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25 hover:shadow-xl active:scale-98"
             >
               <WhatsAppIcon className="w-4 h-4" />
-              <span>Chat on WhatsApp</span>
+              <span>Discuss Your Business Need</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 
@@ -92,219 +98,675 @@ export default function SolutionsPage() {
               href="/contact"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] hover:border-[#E8623C]/40 text-neutral-800 dark:text-neutral-200 font-semibold text-sm transition-all shadow-xs"
             >
-              <span>Request Scoping Call</span>
+              <span>Schedule Scoping Call</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          {/* Quick Metrics Bar */}
-          <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="p-4 rounded-xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] text-center">
-              <div className="text-2xl font-bold text-neutral-900 dark:text-white font-display">10+</div>
-              <div className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Live Production Systems</div>
+          {/* Real Buyer Questions Bar */}
+          <div className="pt-6">
+            <div className="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-3">
+              What business owners ask us:
             </div>
-            <div className="p-4 rounded-xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] text-center">
-              <div className="text-2xl font-bold text-neutral-900 dark:text-white font-display">95+</div>
-              <div className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Mobile Speed Score</div>
-            </div>
-            <div className="p-4 rounded-xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] text-center">
-              <div className="text-2xl font-bold text-neutral-900 dark:text-white font-display">100%</div>
-              <div className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Code &amp; DB Ownership</div>
-            </div>
-            <div className="p-4 rounded-xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] text-center">
-              <div className="text-2xl font-bold text-neutral-900 dark:text-white font-display">2–3 Wks</div>
-              <div className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Sprint Turnaround</div>
+            <div className="flex flex-wrap justify-center gap-2.5 max-w-3xl mx-auto text-xs">
+              <span className="px-3 py-1.5 rounded-lg bg-neutral-100 dark:bg-white/[0.05] border border-neutral-200 dark:border-white/[0.08] text-neutral-800 dark:text-neutral-200 font-medium flex items-center gap-1.5">
+                <Check className="w-3.5 h-3.5 text-emerald-500" />
+                &ldquo;Can I manage my inventory?&rdquo;
+              </span>
+              <span className="px-3 py-1.5 rounded-lg bg-neutral-100 dark:bg-white/[0.05] border border-neutral-200 dark:border-white/[0.08] text-neutral-800 dark:text-neutral-200 font-medium flex items-center gap-1.5">
+                <Check className="w-3.5 h-3.5 text-emerald-500" />
+                &ldquo;Can customers order on WhatsApp?&rdquo;
+              </span>
+              <span className="px-3 py-1.5 rounded-lg bg-neutral-100 dark:bg-white/[0.05] border border-neutral-200 dark:border-white/[0.08] text-neutral-800 dark:text-neutral-200 font-medium flex items-center gap-1.5">
+                <Check className="w-3.5 h-3.5 text-emerald-500" />
+                &ldquo;Can my staff use it easily?&rdquo;
+              </span>
+              <span className="px-3 py-1.5 rounded-lg bg-neutral-100 dark:bg-white/[0.05] border border-neutral-200 dark:border-white/[0.08] text-neutral-800 dark:text-neutral-200 font-medium flex items-center gap-1.5">
+                <Check className="w-3.5 h-3.5 text-emerald-500" />
+                &ldquo;Can I see daily sales &amp; profit?&rdquo;
+              </span>
+              <span className="px-3 py-1.5 rounded-lg bg-neutral-100 dark:bg-white/[0.05] border border-neutral-200 dark:border-white/[0.08] text-neutral-800 dark:text-neutral-200 font-medium flex items-center gap-1.5">
+                <Check className="w-3.5 h-3.5 text-emerald-500" />
+                &ldquo;Can I get qualified leads?&rdquo;
+              </span>
             </div>
           </div>
         </div>
 
         {/* ========================================================================= */}
-        {/* 5 MAIN CORE SOLUTION VERTICALS                                            */}
+        {/* CORE SOLUTIONS STRUCTURE: PROBLEM -> SOLUTION -> RESULT -> TECH           */}
         {/* ========================================================================= */}
-        <div className="mb-28 space-y-16">
+        <div className="mb-24 space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-              Core Capabilities
+              Structured By Business Impact
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
-              The 5 Flagship Solution Verticals
+              How We Solve Common Business Headaches
             </h2>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Each solution is custom-engineered using modern, battle-tested technology.
+              Every system is engineered from your business problem first. Technology remains the reliable engine under the hood.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <div className="space-y-8">
             
-            {/* Solution 1: Custom Business Software & ERPs */}
-            <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#E8623C]/10 text-[#E8623C] font-mono font-bold text-xs">
-                  <Layers className="w-3.5 h-3.5" />
-                  <span>Vertical 01 · Operations</span>
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display">
-                  Custom ERP &amp; Internal Business Portals
-                </h3>
-                <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Replace messy WhatsApp chats, disorganized Excel sheets, and paper invoices with a centralized, multi-user web software built specifically around your exact company workflows.
-                </p>
+            {/* --------------------------------------------------------------------- */}
+            {/* SOLUTION 1: REPLACE EXCEL & WHATSAPP CHAOS                            */}
+            {/* --------------------------------------------------------------------- */}
+            <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm hover:border-[#E8623C]/40 transition-all">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                {/* Left: Problem & Solution */}
+                <div className="lg:col-span-5 space-y-5">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-xs">
+                    <AlertCircle className="w-3.5 h-3.5" />
+                    <span>Business Problem 01 · Operations</span>
+                  </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                  <div className="flex items-start gap-2.5 text-xs text-neutral-700 dark:text-neutral-300">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span>Automated GST Invoicing &amp; E-Way Bills</span>
+                  <div>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display">
+                      Replace Excel &amp; WhatsApp Chaos
+                    </h3>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-rose-500 dark:text-rose-400 mt-2">
+                      The Problem:
+                    </p>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mt-1">
+                      Customer orders are scattered across personal WhatsApp chats, inventory is manually tracked on conflicting Excel sheets, and billing takes hours of re-typing. Orders get delayed or lost.
+                    </p>
                   </div>
-                  <div className="flex items-start gap-2.5 text-xs text-neutral-700 dark:text-neutral-300">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span>Real-time Warehouse &amp; Stock Sync</span>
+
+                  <div className="p-4 rounded-2xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-200/80 dark:border-white/[0.06] space-y-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#E8623C]">
+                      The Solution:
+                    </span>
+                    <p className="text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed">
+                      Centralize your orders, inventory, billing, and staff operations in one simple custom business portal. Everyone works from the same live data.
+                    </p>
                   </div>
-                  <div className="flex items-start gap-2.5 text-xs text-neutral-700 dark:text-neutral-300">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span>Multi-Role Access (Admin, Staff, Billing)</span>
-                  </div>
-                  <div className="flex items-start gap-2.5 text-xs text-neutral-700 dark:text-neutral-300">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span>Offline-tolerant Smartphone Access</span>
+
+                  {/* Secondary Tech Baseline */}
+                  <div className="pt-2 text-xs font-mono text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
+                    <Database className="w-3.5 h-3.5 text-neutral-400" />
+                    <span>Built with: Next.js + PostgreSQL · 100% Owned by You</span>
                   </div>
                 </div>
-              </div>
 
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between text-xs font-mono">
-                <span className="text-neutral-500">Tech: PostgreSQL · Node.js · Next.js · Prisma</span>
-                <Link href="/services/business-software-saas" className="text-[#E8623C] font-bold hover:underline flex items-center gap-1">
-                  <span>Explore ERP details</span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
+                {/* Right: What You'll Get (The Results & Deliverables) */}
+                <div className="lg:col-span-7 bg-neutral-50/70 dark:bg-white/[0.02] p-6 sm:p-8 rounded-2xl border border-neutral-200/80 dark:border-white/[0.06] space-y-5">
+                  <div className="flex items-center justify-between border-b border-neutral-200/80 dark:border-white/[0.06] pb-3">
+                    <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 font-bold">
+                      What You’ll Get In Your System:
+                    </h4>
+                    <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Ready in 2–3 Weeks</span>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <BarChart3 className="w-4 h-4 text-[#E8623C]" />
+                        <span>Sales Dashboard</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        See today’s orders, pending dispatches, and total cash collected at a single glance.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Users className="w-4 h-4 text-[#E8623C]" />
+                        <span>Staff Login &amp; Roles</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Separate logins for Admin, Sales, Warehouse, and Billing so staff only see what they need.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Package className="w-4 h-4 text-[#E8623C]" />
+                        <span>Real-Time Inventory</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Stock deducts automatically upon dispatch. Automatic alert notifications when stock is low.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <FileText className="w-4 h-4 text-[#E8623C]" />
+                        <span>1-Click GST Invoicing</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Generate clean GST bills, delivery challans, and PDF receipts in seconds.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <TrendingUp className="w-4 h-4 text-[#E8623C]" />
+                        <span>Daily Business Reports</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Download customer outstanding ledgers, sales summaries, and profit statements to Excel.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <MessageCircle className="w-4 h-4 text-[#E8623C]" />
+                        <span>WhatsApp Updates</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Send automatic order confirmations and dispatch tracking links straight to customer phones.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-neutral-200/80 dark:border-white/[0.06] flex items-center justify-between">
+                    <span className="text-xs text-neutral-500">Live example: Dairy Flow Pro &amp; Yashodeep Agro</span>
+                    <a
+                      href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20replace%20Excel%20and%20WhatsApp%20in%20my%20business."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1"
+                    >
+                      <span>Discuss Your Operations</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            {/* Solution 2: High-Performance Web Apps */}
-            <div className="lg:col-span-5 p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#E8623C]/10 text-[#E8623C] font-mono font-bold text-xs">
-                  <Code2 className="w-3.5 h-3.5" />
-                  <span>Vertical 02 · Web &amp; E-Commerce</span>
+            {/* --------------------------------------------------------------------- */}
+            {/* SOLUTION 2: GET QUALIFIED LOCAL INQUIRIES, NOT JUST A BROCHURE        */}
+            {/* --------------------------------------------------------------------- */}
+            <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm hover:border-[#E8623C]/40 transition-all">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                {/* Left: Problem & Solution */}
+                <div className="lg:col-span-5 space-y-5">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 font-mono font-bold text-xs">
+                    <AlertCircle className="w-3.5 h-3.5" />
+                    <span>Business Problem 02 · Sales &amp; Growth</span>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display">
+                      Turn Website Visitors Into Qualified Inquiries
+                    </h3>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-rose-500 dark:text-rose-400 mt-2">
+                      The Problem:
+                    </p>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mt-1">
+                      Your current website looks outdated, takes 5+ seconds to open on phones, and generates zero phone calls or WhatsApp messages. Prospective clients assume you are inactive.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-200/80 dark:border-white/[0.06] space-y-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#E8623C]">
+                      The Solution:
+                    </span>
+                    <p className="text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed">
+                      A fast, conversion-engineered business website designed to establish instant authority and funnel local Pune and Indian buyers directly to your phone or WhatsApp.
+                    </p>
+                  </div>
+
+                  {/* Secondary Tech Baseline */}
+                  <div className="pt-2 text-xs font-mono text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
+                    <Zap className="w-3.5 h-3.5 text-neutral-400" />
+                    <span>Built with: Next.js 15 Web Architecture · Zero Monthly Builder Fees</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-neutral-900 dark:text-white font-display">
-                  Sub-Second Next.js 15 Web Applications
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Fast, responsive, mobile-first websites that look premium, rank top on Google, and convert casual visitors into high-paying client inquiries.
-                </p>
 
-                <ul className="space-y-2 text-xs text-neutral-700 dark:text-neutral-300">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                    <span>100/100 Google Core Web Vitals speed</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                    <span>Embedded Local Pune SEO Schemas</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                    <span>Razorpay &amp; WhatsApp payment links</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                    <span>Zero monthly plugin maintenance headaches</span>
-                  </li>
-                </ul>
-              </div>
+                {/* Right: What You'll Get */}
+                <div className="lg:col-span-7 bg-neutral-50/70 dark:bg-white/[0.02] p-6 sm:p-8 rounded-2xl border border-neutral-200/80 dark:border-white/[0.06] space-y-5">
+                  <div className="flex items-center justify-between border-b border-neutral-200/80 dark:border-white/[0.06] pb-3">
+                    <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 font-bold">
+                      What You’ll Get On Your Website:
+                    </h4>
+                    <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Mobile Speed 95+</span>
+                  </div>
 
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between text-xs font-mono">
-                <span className="text-neutral-500">Tech: Next.js 15 · React 19 · TypeScript</span>
-                <Link href="/services/websites-web-apps" className="text-[#E8623C] font-bold hover:underline flex items-center gap-1">
-                  <span>View Details</span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Zap className="w-4 h-4 text-[#E8623C]" />
+                        <span>Instant Mobile Loading</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Under 1.2s page speed so impatient mobile visitors don’t leave before seeing your work.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Building2 className="w-4 h-4 text-[#E8623C]" />
+                        <span>Local Google Ranking</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Engineered with local search schemas so Pune buyers searching for your services find you first.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <MessageCircle className="w-4 h-4 text-[#E8623C]" />
+                        <span>1-Tap WhatsApp Button</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Floating WhatsApp CTA that lets potential clients start a direct conversation with you in 1 tap.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <ShieldCheck className="w-4 h-4 text-[#E8623C]" />
+                        <span>Client Proof &amp; Portfolio</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Highlight past work, client testimonials, GST verification, and industry certifications.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <FileText className="w-4 h-4 text-[#E8623C]" />
+                        <span>Inquiry Lead Form</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Custom quotation forms with instant SMS or email notifications directly to your phone.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Lock className="w-4 h-4 text-[#E8623C]" />
+                        <span>No Monthly Platform Taxes</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        No recurring monthly fees for website builders. You own your code and domain 100%.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-neutral-200/80 dark:border-white/[0.06] flex items-center justify-between">
+                    <span className="text-xs text-neutral-500">Live example: Rahul B. Kavale &amp; Co.</span>
+                    <Link
+                      href="/services/websites-web-apps"
+                      className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1"
+                    >
+                      <span>Explore Website Packages</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            {/* Solution 3: Native & Cross-Platform Mobile Apps */}
-            <div className="lg:col-span-5 p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#E8623C]/10 text-[#E8623C] font-mono font-bold text-xs">
-                  <Smartphone className="w-3.5 h-3.5" />
-                  <span>Vertical 03 · Mobile</span>
+            {/* --------------------------------------------------------------------- */}
+            {/* SOLUTION 3: FIELD STAFF & CUSTOMER MOBILE APP                         */}
+            {/* --------------------------------------------------------------------- */}
+            <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm hover:border-[#E8623C]/40 transition-all">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                {/* Left: Problem & Solution */}
+                <div className="lg:col-span-5 space-y-5">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono font-bold text-xs">
+                    <AlertCircle className="w-3.5 h-3.5" />
+                    <span>Business Problem 03 · Mobile &amp; Field</span>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display">
+                      Empower Field Staff With A Simple Mobile App
+                    </h3>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-rose-500 dark:text-rose-400 mt-2">
+                      The Problem:
+                    </p>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mt-1">
+                      Your field agents, delivery drivers, or service technicians cannot carry laptops. Paper registers get torn, offline areas cause delays, and dispatchers have no idea where jobs stand.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-200/80 dark:border-white/[0.06] space-y-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#E8623C]">
+                      The Solution:
+                    </span>
+                    <p className="text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed">
+                      A fast, lightweight cross-platform mobile app that staff can use on any Android or iPhone smartphone—even without active cellular signal.
+                    </p>
+                  </div>
+
+                  {/* Secondary Tech Baseline */}
+                  <div className="pt-2 text-xs font-mono text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
+                    <Smartphone className="w-3.5 h-3.5 text-neutral-400" />
+                    <span>Built with: Flutter + Secure Cloud Sync · Android &amp; iOS</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-neutral-900 dark:text-white font-display">
-                  Cross-Platform Flutter Mobile Apps
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Single codebase deployable to both Google Play Store and Apple App Store. Smooth 60fps performance with native hardware access.
-                </p>
 
-                <ul className="space-y-2 text-xs text-neutral-700 dark:text-neutral-300">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                    <span>Offline-first SQLite local caching</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                    <span>Instant Firebase push notifications</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                    <span>Biometric login &amp; camera barcode scan</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                    <span>Turnkey App Store &amp; Play Store launch</span>
-                  </li>
-                </ul>
-              </div>
+                {/* Right: What You'll Get */}
+                <div className="lg:col-span-7 bg-neutral-50/70 dark:bg-white/[0.02] p-6 sm:p-8 rounded-2xl border border-neutral-200/80 dark:border-white/[0.06] space-y-5">
+                  <div className="flex items-center justify-between border-b border-neutral-200/80 dark:border-white/[0.06] pb-3">
+                    <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 font-bold">
+                      What You’ll Get In Your Mobile App:
+                    </h4>
+                    <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Play Store &amp; App Store</span>
+                  </div>
 
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between text-xs font-mono">
-                <span className="text-neutral-500">Tech: Flutter · Dart · Firebase</span>
-                <Link href="/services/mobile-app-development" className="text-[#E8623C] font-bold hover:underline flex items-center gap-1">
-                  <span>View Details</span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Smartphone className="w-4 h-4 text-[#E8623C]" />
+                        <span>One App, Both Platforms</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Single high-speed app works smoothly on both low-cost Android phones and iPhones.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <RefreshCw className="w-4 h-4 text-[#E8623C]" />
+                        <span>Works Offline</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Staff can log collections, milk weights, or job notes without internet; it syncs once back online.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Package className="w-4 h-4 text-[#E8623C]" />
+                        <span>Camera &amp; Barcode Scanning</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Scan package barcodes and take photo proof-of-delivery (POD) directly from the phone camera.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <MessageCircle className="w-4 h-4 text-[#E8623C]" />
+                        <span>Push Notifications</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Send instant alerts to drivers or customers when an order is assigned, dispatched, or completed.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Lock className="w-4 h-4 text-[#E8623C]" />
+                        <span>Fingerprint Login</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Quick, secure biometric login so employees don’t have to remember complex passwords every day.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <CheckCircle2 className="w-4 h-4 text-[#E8623C]" />
+                        <span>Store Submission Support</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        We prepare, submit and support your app through the Google Play Store and Apple App Store review process.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-neutral-200/80 dark:border-white/[0.06] flex items-center justify-between">
+                    <span className="text-xs text-neutral-500">Live example: Trust Carry Logistics Fleet App</span>
+                    <Link
+                      href="/services/mobile-app-development"
+                      className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1"
+                    >
+                      <span>Explore Mobile App Details</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            {/* Solution 4: Automated WhatsApp Bots & Workflows */}
-            <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#E8623C]/10 text-[#E8623C] font-mono font-bold text-xs">
-                  <Bot className="w-3.5 h-3.5" />
-                  <span>Vertical 04 · Automation</span>
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display">
-                  WhatsApp Business Bots &amp; Automated Workflows
-                </h3>
-                <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                  Engage Indian customers where they already are. We integrate the official WhatsApp Cloud API with your database so inquiries, invoices, and tracking links send automatically 24/7.
-                </p>
+            {/* --------------------------------------------------------------------- */}
+            {/* SOLUTION 4: AUTOMATE 24/7 WHATSAPP INQUIRIES & WORKFLOWS              */}
+            {/* --------------------------------------------------------------------- */}
+            <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm hover:border-[#E8623C]/40 transition-all">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                {/* Left: Problem & Solution */}
+                <div className="lg:col-span-5 space-y-5">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 font-mono font-bold text-xs">
+                    <AlertCircle className="w-3.5 h-3.5" />
+                    <span>Business Problem 04 · Customer Support</span>
+                  </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                  <div className="flex items-start gap-2.5 text-xs text-neutral-700 dark:text-neutral-300">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span>Instant Lead Qualification &amp; Routing</span>
+                  <div>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display">
+                      Automate Repetitive WhatsApp Inquiries 24/7
+                    </h3>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-rose-500 dark:text-rose-400 mt-2">
+                      The Problem:
+                    </p>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mt-1">
+                      Your staff wastes hours answering the same questions: &ldquo;What is your price?&rdquo;, &ldquo;Send catalog&rdquo;, &ldquo;Where is my order?&rdquo;. Inquiries that arrive in the evening go unanswered until the next morning, losing customers to competitors.
+                    </p>
                   </div>
-                  <div className="flex items-start gap-2.5 text-xs text-neutral-700 dark:text-neutral-300">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span>Automated Payment &amp; Invoice Receipts</span>
+
+                  <div className="p-4 rounded-2xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-200/80 dark:border-white/[0.06] space-y-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#E8623C]">
+                      The Solution:
+                    </span>
+                    <p className="text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed">
+                      An official automated WhatsApp Business bot that answers questions, sends catalogs, takes orders, and qualifies leads 24 hours a day on your verified number.
+                    </p>
                   </div>
-                  <div className="flex items-start gap-2.5 text-xs text-neutral-700 dark:text-neutral-300">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span>Zero Human Delay Outside Office Hours</span>
-                  </div>
-                  <div className="flex items-start gap-2.5 text-xs text-neutral-700 dark:text-neutral-300">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                    <span>CRM &amp; Database Webhook Sync</span>
+
+                  {/* Secondary Tech Baseline */}
+                  <div className="pt-2 text-xs font-mono text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
+                    <Bot className="w-3.5 h-3.5 text-neutral-400" />
+                    <span>Built with: Official Meta WhatsApp Cloud API · Secure Webhooks</span>
                   </div>
                 </div>
+
+                {/* Right: What You'll Get */}
+                <div className="lg:col-span-7 bg-neutral-50/70 dark:bg-white/[0.02] p-6 sm:p-8 rounded-2xl border border-neutral-200/80 dark:border-white/[0.06] space-y-5">
+                  <div className="flex items-center justify-between border-b border-neutral-200/80 dark:border-white/[0.06] pb-3">
+                    <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 font-bold">
+                      What You’ll Get On WhatsApp:
+                    </h4>
+                    <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Zero Delay 24/7</span>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Clock className="w-4 h-4 text-[#E8623C]" />
+                        <span>Instant 24/7 Replies</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Customers receive immediate answers in under 3 seconds, even on Sundays and late nights.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Package className="w-4 h-4 text-[#E8623C]" />
+                        <span>Digital Product Catalog</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Customers can browse pictures, specs, and price lists directly inside their WhatsApp chat.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Users className="w-4 h-4 text-[#E8623C]" />
+                        <span>Lead Qualification</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Collects customer requirement, quantity, and budget before notifying your sales executive.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <FileText className="w-4 h-4 text-[#E8623C]" />
+                        <span>Automated Invoices &amp; Receipts</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Sends payment confirmation links, GST invoice PDFs, and dispatch tracking numbers automatically.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <MessageCircle className="w-4 h-4 text-[#E8623C]" />
+                        <span>Multi-Agent Inbox</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Multiple staff members can reply to customers from one single official business number.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Database className="w-4 h-4 text-[#E8623C]" />
+                        <span>CRM &amp; Excel Sync</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        All contact phone numbers and inquiries automatically save to your database or Google Sheets.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-neutral-200/80 dark:border-white/[0.06] flex items-center justify-between">
+                    <span className="text-xs text-neutral-500">Official WhatsApp Cloud API Partner</span>
+                    <Link
+                      href="/services/chat-bot-development"
+                      className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1"
+                    >
+                      <span>Explore WhatsApp Bots</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+
               </div>
+            </div>
 
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between text-xs font-mono">
-                <span className="text-neutral-500">Tech: WhatsApp Cloud API · Node.js · Webhooks</span>
-                <Link href="/services/chat-bot-development" className="text-[#E8623C] font-bold hover:underline flex items-center gap-1">
-                  <span>Explore Bot Details</span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
+            {/* --------------------------------------------------------------------- */}
+            {/* SOLUTION 5: CONNECT ISOLATED SYSTEMS & PAYMENT FLOWS                   */}
+            {/* --------------------------------------------------------------------- */}
+            <div className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm hover:border-[#E8623C]/40 transition-all">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                {/* Left: Problem & Solution */}
+                <div className="lg:col-span-5 space-y-5">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-teal-500/10 text-teal-600 dark:text-teal-400 font-mono font-bold text-xs">
+                    <AlertCircle className="w-3.5 h-3.5" />
+                    <span>Business Problem 05 · Integrations</span>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display">
+                      Connect Disconnected Systems &amp; Payment Flows
+                    </h3>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-rose-500 dark:text-rose-400 mt-2">
+                      The Problem:
+                    </p>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mt-1">
+                      Staff spend hours manually copying payment receipts, updating Tally, creating shipping waybills, and re-typing addresses across 3 different portals, resulting in avoidable human errors.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-200/80 dark:border-white/[0.06] space-y-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#E8623C]">
+                      The Solution:
+                    </span>
+                    <p className="text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed">
+                      Custom software integrations that connect your payments, accounting, courier partners, and CRM into one seamless automated data pipeline.
+                    </p>
+                  </div>
+
+                  {/* Secondary Tech Baseline */}
+                  <div className="pt-2 text-xs font-mono text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
+                    <RefreshCw className="w-3.5 h-3.5 text-neutral-400" />
+                    <span>Built with: Secure REST APIs · Automated Webhooks</span>
+                  </div>
+                </div>
+
+                {/* Right: What You'll Get */}
+                <div className="lg:col-span-7 bg-neutral-50/70 dark:bg-white/[0.02] p-6 sm:p-8 rounded-2xl border border-neutral-200/80 dark:border-white/[0.06] space-y-5">
+                  <div className="flex items-center justify-between border-b border-neutral-200/80 dark:border-white/[0.06] pb-3">
+                    <h4 className="text-xs font-mono uppercase tracking-wider text-neutral-700 dark:text-neutral-300 font-bold">
+                      What You’ll Get In Integrations:
+                    </h4>
+                    <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Zero Manual Re-typing</span>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <CheckCircle2 className="w-4 h-4 text-[#E8623C]" />
+                        <span>Instant UPI &amp; QR Payments</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Automatic payment verification with instant invoice generation and WhatsApp receipt delivery.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Truck className="w-4 h-4 text-[#E8623C]" />
+                        <span>Automated Courier AWBs</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Generate shipping labels, consignment tracking numbers, and pickup requests automatically.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <Calculator className="w-4 h-4 text-[#E8623C]" />
+                        <span>Tally &amp; Accounting Sync</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Export formatted sales vouchers, customer ledgers, and tax summaries ready for your accountant.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                        <ShieldCheck className="w-4 h-4 text-[#E8623C]" />
+                        <span>Automated Daily Backups</span>
+                      </div>
+                      <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                        Encrypted cloud backups of all orders, client lists, and accounts saved automatically every night.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-neutral-200/80 dark:border-white/[0.06] flex items-center justify-between">
+                    <span className="text-xs text-neutral-500">Fast 2-week turnaround per integration</span>
+                    <a
+                      href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20integrate%20my%20software%20and%20payments."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1"
+                    >
+                      <span>Connect Your Systems</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+
               </div>
             </div>
 
@@ -312,9 +774,9 @@ export default function SolutionsPage() {
         </div>
 
         {/* ========================================================================= */}
-        {/* SOLUTIONS BY INDUSTRY (TAILORED FOR PUNE & REGIONAL BUSINESSES)           */}
+        {/* SOLUTIONS BY INDUSTRY: FOCUS ON ACTUAL OPERATIONAL PROBLEMS SOLVED         */}
         {/* ========================================================================= */}
-        <div className="mb-28">
+        <div className="mb-24">
           <div className="text-center max-w-2xl mx-auto space-y-2 mb-12">
             <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
               Domain Expertise
@@ -323,179 +785,248 @@ export default function SolutionsPage() {
               Solutions By Industry
             </h2>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Tailored software patterns adapted to specific commercial operational models.
+              Tailored software patterns adapted to specific operational workflows across Pune and Maharashtra.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            {/* 1. CA & Corporate Advisors */}
+            {/* 1. CA & Tax Advisory */}
             <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
-              <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.03] dark:text-white/[0.03] group-hover:text-blue-500/[0.12] dark:group-hover:text-blue-500/[0.12] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-                <Calculator className="w-full h-full stroke-[1.2]" />
-              </div>
-              <div className="relative z-10 space-y-3">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-xs font-mono text-[#E8623C] font-bold">
+                  <Calculator className="w-4 h-4" />
+                  <span>CA &amp; Tax Advisors</span>
+                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
-                  CA Firms &amp; Corporate Advisors
+                  Client Document &amp; GST Filing Portals
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  Secure client document portals, GST return filing status trackers, digital appointment booking, and authoritative corporate websites.
-                </p>
-                <div className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
-                  Live Proof: Rahul B. Kavale &amp; Co.
+                <div className="space-y-1.5 text-xs text-neutral-600 dark:text-neutral-400">
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Problem:</strong> Clients constantly call asking for past tax receipts and filing status.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Solution:</strong> Self-service client document vault + automated WhatsApp filing updates.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">You Get:</strong> Client login, tax document storage, digital appointment booking, authoritative web presence.</p>
                 </div>
               </div>
-              <a
-                href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20or%20software%20solution%20for%20a%20CA%20or%20Legal%20firm."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative z-10 text-xs font-bold text-[#E8623C] hover:underline inline-flex items-center gap-1 pt-2 border-t border-neutral-100 dark:border-white/[0.06]"
-              >
-                <span>Discuss CA Solutions</span>
-                <ArrowRight className="w-3 h-3" />
-              </a>
+              <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
+                <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Live: Rahul B. Kavale &amp; Co.</span>
+                <Link href="/industries/ca-firms" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>View Details</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
             </div>
 
             {/* 2. Manufacturing & MIDC Units */}
             <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
-              <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.03] dark:text-white/[0.03] group-hover:text-amber-500/[0.12] dark:group-hover:text-amber-500/[0.12] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-                <Factory className="w-full h-full stroke-[1.2]" />
-              </div>
-              <div className="relative z-10 space-y-3">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-xs font-mono text-amber-500 font-bold">
+                  <Factory className="w-4 h-4" />
+                  <span>MIDC Manufacturing Units</span>
+                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
-                  Manufacturing &amp; Industrial Units
+                  Batch Production &amp; Material Portals
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  Bhosari &amp; Chakan manufacturing ERPs, production batch tracking, inventory dispatch, vendor PO approvals, and machine breakdown logs.
-                </p>
-                <div className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
-                  Built for Pune MIDC Runtimes
+                <div className="space-y-1.5 text-xs text-neutral-600 dark:text-neutral-400">
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Problem:</strong> Material shortages, dispatch delays, and paper job cards lost on the shop floor.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Solution:</strong> Real-time production batch tracker and raw material stock ledger.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">You Get:</strong> Job card logs, low-stock warnings, gate pass generation, vendor PO approvals.</p>
                 </div>
               </div>
-              <a
-                href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20manufacturing%20software%20solution%20for%20our%20industrial%20unit."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative z-10 text-xs font-bold text-[#E8623C] hover:underline inline-flex items-center gap-1 pt-2 border-t border-neutral-100 dark:border-white/[0.06]"
-              >
-                <span>Discuss Manufacturing ERP</span>
-                <ArrowRight className="w-3 h-3" />
-              </a>
+              <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
+                <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Bhosari &amp; Chakan Ready</span>
+                <Link href="/industries/manufacturing" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>View Details</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
             </div>
 
-            {/* 3. Dairy & AgriTech */}
+            {/* 3. Dairy & Agri-Commerce */}
             <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
-              <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.03] dark:text-white/[0.03] group-hover:text-emerald-500/[0.12] dark:group-hover:text-emerald-500/[0.12] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-                <Tractor className="w-full h-full stroke-[1.2]" />
-              </div>
-              <div className="relative z-10 space-y-3">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-xs font-mono text-emerald-500 font-bold">
+                  <Tractor className="w-4 h-4" />
+                  <span>Dairy &amp; Agri-Commerce</span>
+                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
-                  Agri-Commerce &amp; Dairy Operations
+                  Milk Collection &amp; Farmer Passbooks
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  Daily milk fat/SNF logging, farmer payout ledgers, distributor dispatch tracking, and fertilizer inventory systems.
-                </p>
-                <div className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
-                  Live Proof: Yashodeep Agro &amp; Dairy Flow Pro
+                <div className="space-y-1.5 text-xs text-neutral-600 dark:text-neutral-400">
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Problem:</strong> Disputed milk fat/SNF registers and delayed calculation of weekly farmer payouts.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Solution:</strong> Fast digital collection entry with instant SMS/WhatsApp slip to the farmer.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">You Get:</strong> Daily collection records, automated rate chart calculation, farmer passbook ledger, dispatch sync.</p>
                 </div>
               </div>
-              <a
-                href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20an%20AgriTech%20or%20Dairy%20software%20solution."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative z-10 text-xs font-bold text-[#E8623C] hover:underline inline-flex items-center gap-1 pt-2 border-t border-neutral-100 dark:border-white/[0.06]"
-              >
-                <span>Discuss AgriTech Solutions</span>
-                <ArrowRight className="w-3 h-3" />
-              </a>
+              <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
+                <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Live: Dairy Flow Pro</span>
+                <Link href="/industries/dairy-farming" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>View Details</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
             </div>
 
             {/* 4. Logistics & Fleet */}
             <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
-              <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.03] dark:text-white/[0.03] group-hover:text-purple-500/[0.12] dark:group-hover:text-purple-500/[0.12] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-                <Truck className="w-full h-full stroke-[1.2]" />
-              </div>
-              <div className="relative z-10 space-y-3">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-xs font-mono text-purple-500 font-bold">
+                  <Truck className="w-4 h-4" />
+                  <span>Logistics &amp; Transport Fleets</span>
+                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
-                  Logistics &amp; Transport Fleets
+                  Consignment Tracking &amp; Mobile POD
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  Consignment tracking numbers, driver phone proof-of-delivery (POD) camera uploads, freight billing, and multi-branch ledger sync.
-                </p>
-                <div className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
-                  Live Proof: Trust Carry Logistics
+                <div className="space-y-1.5 text-xs text-neutral-600 dark:text-neutral-400">
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Problem:</strong> Clients calling repeatedly asking &ldquo;Where is my consignment?&rdquo;; lost paper PODs.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Solution:</strong> Live public tracking URL + driver smartphone photo delivery proof.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">You Get:</strong> Online consignment tracking page, camera photo POD upload, multi-branch freight billing.</p>
                 </div>
               </div>
-              <a
-                href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20Logistics%20or%20Fleet%20software%20solution."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative z-10 text-xs font-bold text-[#E8623C] hover:underline inline-flex items-center gap-1 pt-2 border-t border-neutral-100 dark:border-white/[0.06]"
-              >
-                <span>Discuss Fleet Solutions</span>
-                <ArrowRight className="w-3 h-3" />
-              </a>
+              <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
+                <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Live: Trust Carry Logistics</span>
+                <Link href="/industries/logistics" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>View Details</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
             </div>
 
             {/* 5. Healthcare & Specialty Clinics */}
             <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
-              <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.03] dark:text-white/[0.03] group-hover:text-rose-500/[0.12] dark:group-hover:text-rose-500/[0.12] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-                <Stethoscope className="w-full h-full stroke-[1.2]" />
-              </div>
-              <div className="relative z-10 space-y-3">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-xs font-mono text-rose-500 font-bold">
+                  <Stethoscope className="w-4 h-4" />
+                  <span>Clinics &amp; Healthcare</span>
+                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
-                  Clinics, Hospitals &amp; Doctors
+                  Patient Booking &amp; WhatsApp Reminders
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  Patient appointment booking calendars, automated WhatsApp appointment reminders, digital prescription records, and local clinic SEO.
-                </p>
-                <div className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
-                  HIPAA &amp; Indian Medical Data Privacy
+                <div className="space-y-1.5 text-xs text-neutral-600 dark:text-neutral-400">
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Problem:</strong> High patient no-show rates and overcrowded waiting rooms due to phone booking delays.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Solution:</strong> Automated calendar booking with automated WhatsApp appointment reminders.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">You Get:</strong> Self-service appointment calendar, WhatsApp reminders, digital prescription vault, clinic local SEO.</p>
                 </div>
               </div>
-              <a
-                href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20Clinic%20or%20Healthcare%20website%20solution."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative z-10 text-xs font-bold text-[#E8623C] hover:underline inline-flex items-center gap-1 pt-2 border-t border-neutral-100 dark:border-white/[0.06]"
-              >
-                <span>Discuss Healthcare Solutions</span>
-                <ArrowRight className="w-3 h-3" />
-              </a>
+              <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
+                <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Reduces No-Shows</span>
+                <Link href="/industries/healthcare" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>View Details</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
             </div>
 
-            {/* 6. Retail & Local Brands */}
+            {/* 6. Retail & Local Showrooms */}
             <div className="relative overflow-hidden group p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all flex flex-col justify-between space-y-4">
-              <div className="absolute -right-4 -bottom-4 w-32 h-32 text-neutral-900/[0.03] dark:text-white/[0.03] group-hover:text-teal-500/[0.12] dark:group-hover:text-teal-500/[0.12] pointer-events-none transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-                <Building2 className="w-full h-full stroke-[1.2]" />
-              </div>
-              <div className="relative z-10 space-y-3">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-xs font-mono text-teal-500 font-bold">
+                  <Building2 className="w-4 h-4" />
+                  <span>Retail &amp; Showrooms</span>
+                </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
-                  Retail Showrooms &amp; Local Brands
+                  Digital Catalog &amp; Click-to-WhatsApp Orders
                 </h3>
-                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  Interactive digital product catalogs, click-to-WhatsApp orders, Google Maps local Pune discoverability, and customer reviews showcase.
-                </p>
-                <div className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
-                  High Local Conversion Rate
+                <div className="space-y-1.5 text-xs text-neutral-600 dark:text-neutral-400">
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Problem:</strong> Customers leave without buying because they didn’t know your full catalog range.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">Solution:</strong> Visual mobile product catalog with 1-click WhatsApp order dispatch.</p>
+                  <p><strong className="text-neutral-800 dark:text-neutral-200">You Get:</strong> Interactive catalog, WhatsApp cart checkout, local Google Maps optimization, zero platform commissions.</p>
                 </div>
               </div>
-              <a
-                href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20Retail%20or%20Local%20Brand%20website%20solution."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative z-10 text-xs font-bold text-[#E8623C] hover:underline inline-flex items-center gap-1 pt-2 border-t border-neutral-100 dark:border-white/[0.06]"
-              >
-                <span>Discuss Retail Solutions</span>
-                <ArrowRight className="w-3 h-3" />
-              </a>
+              <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
+                <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">High Local Conversion</span>
+                <Link href="/industries/retail" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>View Details</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
             </div>
 
           </div>
         </div>
 
         {/* ========================================================================= */}
-        {/* WHY OUR ARCHITECTURE STANDS APART                                         */}
+        {/* BUYER FAQ: ANSWERING EXACT QUESTIONS BUSINESS OWNERS CARE ABOUT           */}
+        {/* ========================================================================= */}
+        <div className="mb-24 p-8 sm:p-12 rounded-3xl bg-neutral-50/80 dark:bg-white/[0.02] border border-neutral-200/80 dark:border-white/[0.06]">
+          <div className="max-w-3xl mx-auto text-center space-y-3 mb-12">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
+              Clear Answers
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
+              Questions Business Owners Ask Us Before Starting
+            </h2>
+            <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
+              Direct, honest answers without technical obfuscation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            
+            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-2.5 shadow-xs">
+              <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                <HelpCircle className="w-4 h-4 text-[#E8623C] shrink-0" />
+                <span>&ldquo;Can I manage my inventory and see real-time stock?&rdquo;</span>
+              </div>
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                Yes. Every item, batch, and SKU is tracked. When an order is placed or dispatched, stock updates instantly across all user screens. You can also configure automatic alerts when stock drops below minimum thresholds.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-2.5 shadow-xs">
+              <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                <HelpCircle className="w-4 h-4 text-[#E8623C] shrink-0" />
+                <span>&ldquo;Can customers order or inquire directly on WhatsApp?&rdquo;</span>
+              </div>
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                Yes. We integrate click-to-WhatsApp buttons and official WhatsApp Cloud API automation so customers can view your catalog and send orders directly with product details pre-filled.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-2.5 shadow-xs">
+              <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                <HelpCircle className="w-4 h-4 text-[#E8623C] shrink-0" />
+                <span>&ldquo;Can non-technical staff use this system easily?&rdquo;</span>
+              </div>
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                Yes. We design interfaces specifically for shop-floor operators, warehouse staff, and billing clerks. If your staff knows how to use WhatsApp or a smartphone, they can learn our system in under 15 minutes.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-2.5 shadow-xs">
+              <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                <HelpCircle className="w-4 h-4 text-[#E8623C] shrink-0" />
+                <span>&ldquo;Can I see daily sales, profits, and pending dues?&rdquo;</span>
+              </div>
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                Yes. You get an executive dashboard on your phone or laptop. At a glance, you see today’s collections, outstanding receivables from clients, pending dispatches, and monthly profit margins.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-2.5 shadow-xs">
+              <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                <HelpCircle className="w-4 h-4 text-[#E8623C] shrink-0" />
+                <span>&ldquo;How will this help me get more qualified client leads?&rdquo;</span>
+              </div>
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                We build fast, conversion-optimized websites tailored with local Pune search optimization. Clear trust credentials and direct WhatsApp actions make it easy for local buyers searching on Google to contact you immediately.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-2.5 shadow-xs">
+              <div className="flex items-center gap-2 text-sm font-bold text-neutral-900 dark:text-white">
+                <HelpCircle className="w-4 h-4 text-[#E8623C] shrink-0" />
+                <span>&ldquo;Do I own the software, or is there a monthly subscription?&rdquo;</span>
+              </div>
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                You own 100% of your source code, database, and system. We do not charge recurring monthly builder taxes or rental fees. The system is deployed on your own infrastructure with complete ownership.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        {/* ========================================================================= */}
+        {/* OUR PRACTICAL APPROACH: WHY TECH REMAINS SECONDARY                        */}
         {/* ========================================================================= */}
         <div className="mb-24 p-8 sm:p-12 rounded-3xl bg-neutral-50/70 dark:bg-white/[0.02] border border-neutral-200/80 dark:border-white/[0.06]">
           <div className="max-w-3xl mx-auto text-center space-y-3 mb-10">
@@ -506,7 +1037,7 @@ export default function SolutionsPage() {
               Why Our Solutions Never Need Rebuilding After 1 Year
             </h2>
             <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
-              Most agencies build quick WordPress hacks that break when plugins update. We build enterprise-grade software from first principles.
+              We engineer with modern, maintainable technology from first principles — delivering robust code that scales reliably without fragile dependencies.
             </p>
           </div>
 
@@ -514,30 +1045,30 @@ export default function SolutionsPage() {
             <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-3">
               <ShieldCheck className="w-8 h-8 text-emerald-500" />
               <h3 className="text-base font-bold text-neutral-900 dark:text-white">
-                Zero Builder Lock-In
+                100% Code &amp; Data Ownership
               </h3>
               <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                You get the complete GitHub source code, database access keys, and server infrastructure. You are never tied to us or a recurring platform tax.
+                You receive the complete source code, database access keys, and cloud infrastructure. You are never locked into proprietary platforms.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-3">
               <Zap className="w-8 h-8 text-[#E8623C]" />
               <h3 className="text-base font-bold text-neutral-900 dark:text-white">
-                Fast Edge Performance
+                Sub-Second Speed On Mobile
               </h3>
               <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Server-rendered on Next.js 15 and cached on Indian edge CDN nodes so pages paint quickly and smoothly on mobile connections.
+                Pages load cleanly and quickly on 4G/5G mobile connections across Pune and India, ensuring visitors stay and convert.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-3">
               <Clock className="w-8 h-8 text-blue-500" />
               <h3 className="text-base font-bold text-neutral-900 dark:text-white">
-                2–3 Week Turnaround
+                Focused 2–3 Week Sprints
               </h3>
               <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                We work in dedicated weekly sprint milestones with live review URLs. You see working code from day 4, not after 3 months of waiting.
+                We work in focused weekly sprint milestones with live review URLs. You see working screens and test real workflows from week one.
               </p>
             </div>
           </div>
@@ -551,15 +1082,15 @@ export default function SolutionsPage() {
           
           <div className="relative z-10 space-y-3">
             <span className="inline-block px-3 py-1 rounded-full bg-[#E8623C]/10 border border-[#E8623C]/20 text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-              Custom Scoping
+              Direct Developer Scoping
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold font-display tracking-tight text-white">
-              Have a specific problem in your business?
+              Have an operational problem in your business?
             </h2>
             <p className="text-xs sm:text-sm text-neutral-300 max-w-lg mx-auto leading-relaxed">
-              Tell us what you want to automate or launch. Our Pune developer will review your workflow and reply directly on WhatsApp with honest advice and a clear estimate.
+              Tell us what is slowing down your team or costing you sales. Our Pune developer will review your workflow and reply directly on WhatsApp with honest advice and a clear estimate.
             </p>
-            <div className="pt-3 flex justify-center">
+            <div className="pt-3 flex flex-wrap justify-center gap-4">
               <a
                 href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20solution%20for%20my%20business."
                 target="_blank"
@@ -570,9 +1101,17 @@ export default function SolutionsPage() {
                 <span>Chat on WhatsApp</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
+
+              <Link
+                href="/contact"
+                className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white font-semibold text-xs sm:text-sm transition-all border border-white/15 flex items-center gap-2"
+              >
+                <span>Book Scoping Call</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
             <div className="pt-2 text-xs font-mono text-neutral-400">
-              Pune, Maharashtra HQ · Serving businesses worldwide
+              Pune, Maharashtra HQ · Serving businesses across Pune &amp; India
             </div>
           </div>
         </div>

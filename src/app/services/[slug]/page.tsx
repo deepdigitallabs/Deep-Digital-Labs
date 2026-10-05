@@ -83,6 +83,20 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             {service.fullDescription}
           </p>
 
+          {service.startingPrice && (
+            <div className="pt-2">
+              <div className="inline-flex flex-wrap items-center gap-2.5 px-4 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono">
+                <span className="font-bold text-emerald-600 dark:text-emerald-400">
+                  {service.startingPrice}
+                </span>
+                <span className="text-neutral-400">•</span>
+                <span className="text-neutral-600 dark:text-gray-400">
+                  Final pricing depends on scope · Fixed milestone quotes
+                </span>
+              </div>
+            </div>
+          )}
+
           <div className="pt-4 flex flex-wrap gap-4">
             <Link
               href="/contact"

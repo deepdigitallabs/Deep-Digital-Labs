@@ -81,6 +81,9 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="flex flex-wrap items-center gap-3">
               <span className="px-3.5 py-1 rounded-full text-xs font-mono uppercase font-bold bg-[#E8623C]/10 text-[#E8623C] border border-[#E8623C]/20">
+                {cs.projectType === 'Business' ? '🏢 Commercial Business' : '🏛️ Civic & Public'}
+              </span>
+              <span className="px-3.5 py-1 rounded-full text-xs font-mono uppercase font-bold bg-neutral-100 dark:bg-white/5 text-neutral-800 dark:text-neutral-200 border border-neutral-200 dark:border-white/10">
                 {cs.industry}
               </span>
               <span className="px-3.5 py-1 rounded-full text-xs font-mono uppercase font-semibold bg-neutral-100 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-white/10">

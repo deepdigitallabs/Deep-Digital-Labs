@@ -236,17 +236,11 @@ export function Navbar() {
               )}
             </div>
 
-            <Link href="/solutions" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
-              Solutions
-            </Link>
             <Link href="/case-studies" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               Work
             </Link>
-            <Link href="/why-us" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
-              Why Us
-            </Link>
-            <Link href="/pune-website-development-company" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1 whitespace-nowrap">
-              Pune Web Studio
+            <Link href="/solutions" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
+              Solutions
             </Link>
             <Link href="/about" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               About
@@ -259,28 +253,24 @@ export function Navbar() {
           {/* Desktop Right Actions */}
           <div className="hidden sm:flex items-center gap-2.5">
             <ThemeToggle />
-            <a
-              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20contact%20you%20regarding%20a%20website%20or%20app%20project."
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setDiscoveryModalOpen(true)}
               className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#E8623C] to-[#F59E0B] hover:from-[#F0744E] hover:to-[#FBBF24] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-md shadow-[#E8623C]/20 hover:shadow-lg hover:shadow-[#E8623C]/30 active:scale-98 cursor-pointer"
             >
-              <span>Contact Us</span>
+              <span>Start a Project</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-            </a>
+            </button>
           </div>
 
-          {/* Mobile Actions: Contact + ThemeToggle + Hamburger */}
+          {/* Mobile Actions: Start a Project + ThemeToggle + Hamburger */}
           <div className="flex lg:hidden items-center gap-1.5">
             <ThemeToggle className="scale-90" />
-            <a
-              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20contact%20you%20regarding%20a%20website%20or%20app%20project."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-[#E8623C] to-[#F59E0B] text-white px-2.5 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1"
+            <button
+              onClick={() => setDiscoveryModalOpen(true)}
+              className="bg-gradient-to-r from-[#E8623C] to-[#F59E0B] text-white px-2.5 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1 cursor-pointer"
             >
-              Contact
-            </a>
+              Start a Project
+            </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-1.5 rounded-lg text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors"
@@ -368,13 +358,6 @@ export function Navbar() {
             </div>
 
             <Link 
-              href="/solutions" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
-            >
-              Solutions
-            </Link>
-            <Link 
               href="/case-studies" 
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
@@ -382,18 +365,11 @@ export function Navbar() {
               Work
             </Link>
             <Link 
-              href="/why-us" 
+              href="/solutions" 
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
             >
-              Why Us
-            </Link>
-            <Link 
-              href="/pune-website-development-company" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
-            >
-              Pune Web Studio
+              Solutions
             </Link>
             <Link 
               href="/about" 
@@ -408,13 +384,6 @@ export function Navbar() {
               className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
             >
               Blog
-            </Link>
-            <Link 
-              href="/contact" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
-            >
-              Contact
             </Link>
           </div>
         )}

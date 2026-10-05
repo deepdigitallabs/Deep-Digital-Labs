@@ -321,19 +321,19 @@ export default function ContactPage() {
             <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-sm space-y-3">
               <div className="flex items-center gap-2 text-xs font-mono font-bold text-neutral-900 dark:text-white">
                 <MapPin className="w-4 h-4 text-[#E8623C]" />
-                <span>Pune Web Studio · Headquarters</span>
+                <span>Pune Studio · Headquarters</span>
               </div>
               <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Deep Digital Labs<br />
                 Pune, Maharashtra 411001, India<br />
-                Serving businesses across Pune, Maharashtra, and worldwide.
+                Serving businesses across Pune, Maharashtra, and India.
               </p>
               <div className="pt-1">
                 <Link
                   href="/pune-website-development-company"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E8623C] hover:underline"
                 >
-                  <span>Explore Pune Web Studio page</span>
+                  <span>Explore Pune development services</span>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>

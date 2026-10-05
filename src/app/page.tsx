@@ -240,19 +240,22 @@ export default function HomePage() {
 
         {/* Subheadline */}
         <p className="mt-6 text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 font-normal max-w-3xl mx-auto leading-relaxed text-balance">
-          High-performance <strong>Business Websites</strong>, custom <strong>Business Software &amp; Automation</strong>, and native <strong>Mobile Apps</strong> engineered to help Pune businesses grow online.
+          Modern websites, apps &amp; online stores designed to help Pune businesses grow online.
         </p>
 
-        {/* Action Row: Start a Project, View Our Work, WhatsApp Us */}
+        {/* Action Row: Chat on WhatsApp, View Our Work */}
         <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4">
-          {/* Primary Action Button: Start a Project */}
-          <button
-            onClick={() => setCallModalOpen(true)}
-            className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#E8623C] via-[#F0744E] to-[#F59E0B] hover:opacity-95 text-white px-7 py-3.5 rounded-full font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25 hover:shadow-xl hover:shadow-[#E8623C]/35 active:scale-98 cursor-pointer"
+          {/* Primary Action Button: Chat on WhatsApp */}
+          <a
+            href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20or%20app%20project%20for%20my%20business."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-7 py-3.5 rounded-full font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/35 active:scale-98 cursor-pointer"
           >
-            <span>Start a Project</span>
+            <WhatsAppIcon className="w-4 h-4 fill-current" />
+            <span>Chat on WhatsApp</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
 
           {/* Secondary Action: View Our Work */}
           <Link
@@ -262,23 +265,12 @@ export default function HomePage() {
             <span>View Our Work</span>
             <ArrowRight className="w-4 h-4 text-neutral-400 dark:text-neutral-500 group-hover:text-[#E8623C] group-hover:translate-x-1 transition-all" />
           </Link>
-
-          {/* Third Action: WhatsApp Us */}
-          <a
-            href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 font-semibold text-sm sm:text-base transition-all active:scale-98"
-          >
-            <WhatsAppIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-            <span>WhatsApp Us</span>
-          </a>
         </div>
 
         {/* Poster Studio Tagline with Divider Lines */}
         <div className="mt-10 flex items-center justify-center gap-4 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 font-medium">
           <span className="hidden sm:inline-block w-12 sm:w-24 h-px bg-neutral-200 dark:bg-white/10" />
-          <span>Pune&apos;s Trusted Web &amp; App Studio</span>
+          <span>Websites, Business Software &amp; Automation</span>
           <span className="hidden sm:inline-block w-12 sm:w-24 h-px bg-neutral-200 dark:bg-white/10" />
         </div>
 
@@ -308,12 +300,11 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
             {[
               { name: 'Rahul B. Kavale & Co.', role: 'CA & Corporate Advisory' },
-              { name: 'Yashodeep Agro', role: 'Agri-Tech Commerce' },
               { name: 'Dairy Flow Pro', role: 'Dairy Business Software' },
+              { name: 'Yashodeep Agro', role: 'Agri-Tech Commerce' },
               { name: 'Trust Carry Logistics', role: 'Fleet & Supply Chain' },
-              { name: 'Santosh Phadtare', role: 'Public Initiative' },
-              { name: 'Sangola Vikas Sankalp', role: 'Civic Development' },
-              { name: 'Pasarnikar Payal Amit', role: 'Brand & Media Platform' }
+              { name: 'Apex Precision Works', role: 'Manufacturing & Industrial' },
+              { name: 'Sanjeevani Diagnostics', role: 'Clinic & Healthcare' }
             ].map((client) => (
               <div
                 key={client.name}
@@ -650,7 +641,7 @@ export default function HomePage() {
                   Fast, reliable sites that don&apos;t crash or lag
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  No slow-loading WordPress plugins or broken themes. Modern, lightweight engineering that keeps your site online 24/7.
+                  Modern, maintainable technology engineered for high reliability, fast mobile speeds, and zero platform lock-in.
                 </p>
               </div>
             </div>
@@ -707,9 +698,9 @@ export default function HomePage() {
           </Link>
         </div>
 
-        {/* Case Studies Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {CASE_STUDIES.map((study) => (
+        {/* Case Studies Grid — Commercial Business Focus */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {CASE_STUDIES.filter((s) => s.projectType === 'Business').map((study) => (
             <div
               key={study.slug}
               className="rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between group overflow-hidden"
@@ -753,17 +744,17 @@ export default function HomePage() {
 
                   {/* Structured Evidence: Problem, Solution, Result */}
                   <div className="space-y-2 text-xs pt-1">
-                    <div className="p-2 rounded-lg bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-0.5">
+                    <div className="p-2.5 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-0.5">
                       <span className="text-[10px] font-mono font-bold uppercase text-rose-600 dark:text-rose-400">Problem:</span>
-                      <p className="text-neutral-600 dark:text-neutral-300 line-clamp-1">{study.problem}</p>
+                      <p className="text-neutral-600 dark:text-neutral-300 line-clamp-2">{study.problem}</p>
                     </div>
-                    <div className="p-2 rounded-lg bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-0.5">
+                    <div className="p-2.5 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-0.5">
                       <span className="text-[10px] font-mono font-bold uppercase text-[#E8623C]">Built:</span>
-                      <p className="text-neutral-600 dark:text-neutral-300 line-clamp-1">{study.whatWeBuilt}</p>
+                      <p className="text-neutral-600 dark:text-neutral-300 line-clamp-2">{study.whatWeBuilt}</p>
                     </div>
-                    <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 space-y-0.5">
+                    <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 space-y-0.5">
                       <span className="text-[10px] font-mono font-bold uppercase text-emerald-700 dark:text-emerald-400">Result:</span>
-                      <p className="text-neutral-800 dark:text-neutral-200 font-medium line-clamp-1">{study.result}</p>
+                      <p className="text-neutral-800 dark:text-neutral-200 font-medium line-clamp-2">{study.result}</p>
                     </div>
                   </div>
                 </div>
@@ -776,7 +767,7 @@ export default function HomePage() {
                     href={`/case-studies/${study.slug}`}
                     className="text-xs font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] flex items-center gap-1"
                   >
-                    <span>View Project Details</span>
+                    <span>View Full Case Breakdown</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </Link>
 
@@ -796,6 +787,17 @@ export default function HomePage() {
 
             </div>
           ))}
+        </div>
+
+        {/* Civic Projects Gateway link */}
+        <div className="mt-10 text-center">
+          <Link
+            href="/case-studies"
+            className="inline-flex items-center gap-2 text-xs font-mono text-neutral-500 hover:text-[#E8623C] transition-colors"
+          >
+            <span>Looking for public outreach &amp; civic initiatives? View Civic &amp; Public Case Studies</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
 
       </section>

@@ -8,13 +8,17 @@ import {
   Code2, 
   GitBranch, 
   Cpu,
-  MessageSquare
+  MessageSquare,
+  Zap,
+  ShieldCheck,
+  Headphones,
+  Target
 } from 'lucide-react';
 
 
 export const metadata: Metadata = {
-  title: 'About Deep Digital Labs | Product Engineering Agency',
-  description: 'Meet the engineers and technical architects at Deep Digital Labs. We are a product-led tech agency in Pune, India, engineering scalable digital infrastructure globally.',
+  title: 'About Deep Digital Labs | Websites, Business Software & Automation',
+  description: 'Deep Digital Labs is a Pune-based digital development studio helping businesses build modern websites, custom software and automation.',
 };
 
 export default function AboutPage() {
@@ -26,12 +30,12 @@ export default function AboutPage() {
         <div className="max-w-4xl space-y-6 pb-16 border-b border-neutral-200 dark:border-white/10">
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-tight">
-            Engineered in Pune. <br />
-            <span className="text-neutral-900 dark:text-[#D4FF00] underline decoration-neutral-300 dark:decoration-transparent">Built for Indian Scale.</span>
+            Deep Digital Labs <br />
+            <span className="text-[#E8623C]">Websites, Business Software &amp; Automation</span>
           </h1>
 
-          <p className="text-base sm:text-xl text-neutral-600 dark:text-gray-400 leading-relaxed max-w-3xl">
-            We are a collective of product-focused engineers and systems architects building rock-solid software and mobile apps for ambitious Indian businesses, startups, and corporate leaders. Clean code, modern architecture, and measurable business growth.
+          <p className="text-base sm:text-xl text-neutral-600 dark:text-gray-300 leading-relaxed max-w-3xl">
+            A Pune-based digital development studio helping businesses build modern websites, custom software and automation. Clean code, direct developer communication, and 100% source code ownership.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -61,14 +65,14 @@ export default function AboutPage() {
               Our Mission
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
-              World-Class Tech Engineering For Indian Businesses
+              Modern Digital Development for Growing Businesses
             </h2>
             <div className="text-neutral-600 dark:text-gray-400 space-y-4 text-sm sm:text-base leading-relaxed">
               <p>
-                Deep Digital Labs was founded on a simple principle: Indian enterprises, startups, and local business leaders deserve high-performance software without bloated agency overheads, slow timelines, or frustrating vendor lock-in.
+                Deep Digital Labs is a Pune-based digital development studio helping businesses build modern websites, custom software and automation without bloated overheads, slow timelines, or frustrating vendor lock-in.
               </p>
               <p>
-                Based in Pune, Maharashtra, we build SaaS platforms, cross-platform Android/iOS mobile apps, and high-converting web portals tailored to the Indian market. Every product comes with 100% source code ownership, GST-compliant invoicing, and direct WhatsApp support with our developer team in Pune.
+                Based in Pune, Maharashtra, we build business websites, cross-platform Android/iOS mobile apps, and operational portals tailored to Indian businesses. Every project comes with 100% source code ownership, GST-compliant invoicing, and direct WhatsApp support with our developer team in Pune.
               </p>
             </div>
           </div>
@@ -161,42 +165,101 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Why Pune? Section */}
-        <div id="pune-advantage" className="py-20 border-b border-neutral-200 dark:border-white/10">
-          <div className="p-8 sm:p-12 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 space-y-8 shadow-sm dark:shadow-2xl">
+        {/* Why Businesses Work With Us Section */}
+        <div id="why-work-with-us" className="py-20 border-b border-neutral-200 dark:border-white/10">
+          <div className="space-y-10">
             <div className="max-w-3xl space-y-3">
-              <span className="text-xs font-mono uppercase tracking-widest text-neutral-500 dark:text-[#D4FF00] font-semibold">
-                Strategic Advantage
+              <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-semibold">
+                Why Choose Us
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
-                Why Pune, India?
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 dark:text-white tracking-tight font-display">
+                Why Businesses Work With Us
               </h2>
-              <p className="text-neutral-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
-                Known as the &quot;Oxford of the East&quot; and the SaaS engineering capital of India, Pune is home to top premier technical institutes, research hubs, and over 1,000 product-led startups.
+              <p className="text-neutral-600 dark:text-neutral-400 text-sm sm:text-base leading-relaxed">
+                We remove the layers, delays, and recurring platform taxes of traditional agencies. Here is why founders, CAs, and operations leaders partner with Deep Digital Labs.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
-              <div className="p-6 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/10 shadow-sm">
-                <div className="text-neutral-900 dark:text-[#D4FF00] font-bold text-base mb-2">Talent Density</div>
-                <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">
-                  Home to senior full-stack architects with deep experience shipping software for US and European venture-backed companies.
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+              {/* 1. Direct developer communication */}
+              <div className="p-7 rounded-2xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-xs">
+                  <MessageSquare className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+                  Direct Developer Communication
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  You collaborate directly with the engineers writing your code on WhatsApp and weekly video sprints. No middle managers, no customer service queues, and no telephone games.
                 </p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/10 shadow-sm">
-                <div className="text-neutral-900 dark:text-[#D4FF00] font-bold text-base mb-2">16-Hour Timezone Overlap</div>
-                <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">
-                  IST (UTC+5:30) allows seamless synchronous collaboration with European mornings and North American business hours.
+              {/* 2. Clear pricing */}
+              <div className="p-7 rounded-2xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-xs">
+                  <CheckCircle2 className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+                  Clear, Milestone Pricing
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  Fixed milestone scopes agreed upon upfront. No surprise hourly overages, no hidden builder subscription taxes, and no unexpected change-request fees.
                 </p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/10 shadow-sm">
-                <div className="text-neutral-900 dark:text-[#D4FF00] font-bold text-base mb-2">Capital Efficiency</div>
-                <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">
-                  Extend your cash runway 3x to 4x compared to US/UK in-house hiring, without sacrificing an ounce of technical excellence.
+              {/* 3. Fast delivery */}
+              <div className="p-7 rounded-2xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-xs">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+                  Fast Turnaround
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  We work in focused agile sprints. Your website or software is architected, developed, and deployed to production in 2 to 3 weeks — not months of corporate bureaucracy.
                 </p>
               </div>
+
+              {/* 4. Ownership of code */}
+              <div className="p-7 rounded-2xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-xs">
+                  <Code2 className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+                  100% Code &amp; Data Ownership
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  You own your complete GitHub repository, databases, domain, and cloud hosting infrastructure. You are never held hostage by proprietary vendor locks.
+                </p>
+              </div>
+
+              {/* 5. Post-launch support */}
+              <div className="p-7 rounded-2xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-xs">
+                  <Headphones className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+                  Post-Launch Support
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  We stay in your corner after launch day. Routine security updates, uptime telemetry, rapid bug fixes, and continuous feature additions via dedicated retainers.
+                </p>
+              </div>
+
+              {/* 6. Business-focused solutions */}
+              <div className="p-7 rounded-2xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-xs">
+                  <Target className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+                  Business-Focused Solutions
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  We don’t build tech for tech’s sake. Every feature is aligned to measurable business outcomes: more qualified client inquiries, automated operational tasks, and higher conversion.
+                </p>
+              </div>
+
             </div>
           </div>
         </div>

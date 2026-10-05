@@ -19,18 +19,18 @@ import {
 
 export const metadata: Metadata = {
   title: "Why Us | Deep Digital Labs — Pune's Trusted Web & App Studio",
-  description: "Why Pune business owners choose Deep Digital Labs over generic agencies, templates, and freelancers. 100% code ownership, sub-second speed, and direct WhatsApp access to your developer.",
+  description: "Why Pune business owners choose Deep Digital Labs for fast, custom web and app engineering. 100% code ownership, responsive mobile performance, and direct developer communication.",
   keywords: [
     "why choose deep digital labs",
     "website development agency Pune",
     "custom software development Pune",
     "best web design company Pune",
-    "freelancer vs agency Pune",
-    "WordPress alternative Pune"
+    "direct developer model Pune",
+    "modern web development Pune"
   ],
   openGraph: {
     title: "Why Deep Digital Labs | Web & App Development Company in Pune",
-    description: "Built for Pune businesses that value speed, direct communication, and 100% code ownership. No confusing tech jargon.",
+    description: "A direct, transparent development experience. Built for Pune businesses that value speed, direct collaboration, and 100% code ownership.",
     url: "https://deepdigitallabs.com/why-us",
   }
 };
@@ -63,7 +63,7 @@ export default function WhyUsPage() {
           </h1>
 
           <p className="text-base sm:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-3xl mx-auto">
-            No confusing tech talk. No disappearing freelancers. No recurring template fees. Just fast, modern websites and apps built by developers who talk to you directly on WhatsApp and care about your revenue.
+            A more direct development experience. We build fast, high-converting websites and business software using modern, maintainable technology — with 100% code ownership, milestone transparency, and direct WhatsApp collaboration with your developers.
           </p>
 
           <div className="pt-2 flex flex-wrap justify-center items-center gap-4">
@@ -101,7 +101,7 @@ export default function WhyUsPage() {
             <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">•</span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-              <span>Sub-Second Page Load Speed</span>
+              <span>Fast Mobile Performance</span>
             </span>
           </div>
         </div>
@@ -112,13 +112,13 @@ export default function WhyUsPage() {
         <div className="mb-24">
           <div className="text-center max-w-2xl mx-auto space-y-2 mb-10">
             <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-              The Real Comparison
+              Development Models
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
-              Deep Digital Labs vs. The Alternatives
+              Why Our Direct Model Works Better
             </h2>
             <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
-              Why business owners switch from slow WordPress agencies and unvetted freelancers to our modern stack.
+              How our direct engineering partnership compares with traditional agency layers and generic site builders.
             </p>
           </div>
 
@@ -126,15 +126,15 @@ export default function WhyUsPage() {
             <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[620px]">
               <thead>
                 <tr className="border-b border-neutral-200/80 dark:border-white/[0.08] bg-neutral-50/70 dark:bg-white/[0.02]">
-                  <th className="py-4 px-5 font-bold text-neutral-900 dark:text-white">Feature</th>
+                  <th className="py-4 px-5 font-bold text-neutral-900 dark:text-white">Capability &amp; Approach</th>
                   <th className="py-4 px-5 font-bold text-[#E8623C] bg-[#E8623C]/5 border-x border-[#E8623C]/20">
-                    Deep Digital Labs
+                    Deep Digital Labs (Direct Model)
                   </th>
                   <th className="py-4 px-5 font-medium text-neutral-500 dark:text-neutral-400">
-                    Traditional Agencies
+                    Traditional Agency Model
                   </th>
                   <th className="py-4 px-5 font-medium text-neutral-500 dark:text-neutral-400">
-                    Freelancers &amp; WordPress
+                    Templates &amp; Generic CMS
                   </th>
                 </tr>
               </thead>
@@ -148,10 +148,10 @@ export default function WhyUsPage() {
                     <span>Direct WhatsApp with developer</span>
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Account managers &amp; email tickets
+                    Layered account managers &amp; ticket queues
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Irregular replies, ghosting risks
+                    Variable response times &amp; community forums
                   </td>
                 </tr>
 
@@ -161,13 +161,13 @@ export default function WhyUsPage() {
                   </td>
                   <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
                     <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>100% You own Git code &amp; domain</span>
+                    <span>100% You own Git code, database &amp; domain</span>
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Proprietary lock-in &amp; annual fees
+                    Vendor hosting lock-in &amp; ongoing retainers
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Hard to transfer credentials
+                    Closed platform dependencies (Wix, Shopify)
                   </td>
                 </tr>
 
@@ -177,29 +177,29 @@ export default function WhyUsPage() {
                   </td>
                   <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
                     <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>Fast Next.js 15 SSR</span>
+                    <span>Modern, maintainable technology (Fast Next.js 15)</span>
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Average (3s–5s on mobile)
+                    Heavier CMS layers (3s–5s on mobile)
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Bloated plugins (4s–8s load)
+                    Plugin-heavy architectures (4s–8s load)
                   </td>
                 </tr>
 
                 <tr>
                   <td className="py-4 px-5 font-semibold text-neutral-800 dark:text-neutral-200">
-                    Delivery Timeline
+                    Delivery Experience
                   </td>
                   <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
                     <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>2–3 Weeks turnkey launch</span>
+                    <span>A more direct development experience (2–3 weeks)</span>
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    2–4 Months with long delays
+                    Multi-stage corporate review cycles (2–4 months)
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Unpredictable milestones
+                    Unpredictable milestones &amp; builder constraints
                   </td>
                 </tr>
 
@@ -209,13 +209,13 @@ export default function WhyUsPage() {
                   </td>
                   <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
                     <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>Next.js 15, React, Flutter, Node</span>
+                    <span>Next.js 15, React, Flutter, Node &amp; Edge CDN</span>
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Outdated PHP or rigid CMS
+                    Legacy PHP stacks or complex enterprise CMS
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Generic pre-made Elementor theme
+                    Pre-configured visual templates &amp; widgets
                   </td>
                 </tr>
 
@@ -225,13 +225,13 @@ export default function WhyUsPage() {
                   </td>
                   <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
                     <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>Fixed packages, 0 hidden costs</span>
+                    <span>Milestone-based pricing, transparent scope upfront</span>
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Hourly overages &amp; scope inflation
+                    Hourly billing models with potential scope expansion
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Low initial quote, surprise extras
+                    Subscription tiers &amp; recurring app fees
                   </td>
                 </tr>
               </tbody>
@@ -386,7 +386,7 @@ export default function WhyUsPage() {
                 ))}
               </div>
               <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                &ldquo;The speed and reliability are unbelievable. 100/100 Core Web Vitals, zero monthly builder fees, and direct WhatsApp access to the developer.&rdquo;
+                &ldquo;The speed and reliability are exceptional. High Google speed scores, zero recurring builder fees, and direct WhatsApp access to the developer who actually built it.&rdquo;
               </p>
               <div className="pt-2 border-t border-neutral-100 dark:border-white/[0.04]">
                 <div className="text-xs font-bold text-neutral-900 dark:text-white">Kishor Gunjal</div>

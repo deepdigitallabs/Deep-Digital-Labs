@@ -35,6 +35,7 @@ export interface ServiceDetail {
   techSpecializations: TechSpecialization[];
   processTimeline: ServiceProcessStep[];
   faqs: ServiceFAQ[];
+  startingPrice?: string;
   metaTitle: string;
   metaDescription: string;
 }
@@ -51,6 +52,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     shortDescription: 'Modern, blazing-fast web applications, e-commerce stores, and responsive corporate portals engineered for speed and conversion.',
     fullDescription: 'We design and code fast, accessible, and high-converting websites and web applications. Clean semantic HTML5, modern CSS3, responsive React and Next.js interfaces that rank at the top of Google and deliver sub-second load times.',
     icon: 'Code2',
+    startingPrice: 'Starting at ₹25,000',
     keyBenefits: [
       'Perfect Google speed and Core Web Vitals mobile performance',
       'Pixel-perfect responsive design tailored for mobile, tablet, and desktop',
@@ -129,6 +131,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     shortDescription: 'Custom business software, CRM systems, ERP solutions, management dashboards, subscription platforms, and automation tools.',
     fullDescription: 'We architect and build bespoke business software and SaaS platforms that automate workflows, streamline operations, and scale effortlessly. Role-based access control, real-time analytics dashboards, automated billing, and secure cloud databases.',
     icon: 'Layers',
+    startingPrice: 'Starting at ₹65,000',
     keyBenefits: [
       'Tailored 100% to your internal business processes and workflows',
       'Automated subscription billing, user authentication, and RBAC permissions',
@@ -214,6 +217,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     shortDescription: 'Cross-platform mobile apps, native performance, push notifications, payment integration, and offline-first solutions.',
     fullDescription: 'Launch your mobile app on both the Apple App Store and Google Play Store with a single high-performance codebase. Smooth animations, offline support, hardware camera/GPS integration, and secure in-app payments.',
     icon: 'Smartphone',
+    startingPrice: 'Starting at ₹75,000',
     keyBenefits: [
       'One codebase reaching both iOS & Android without extra cost',
       'Push notification infrastructure for high user engagement',
@@ -284,6 +288,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     shortDescription: 'Technical SEO, Local SEO, Google Business Profile ranking, keyword research, analytics tracking, and conversion optimization.',
     fullDescription: 'Great code needs real customers. We optimize your website code to build stronger local search visibility, set up automated customer onboarding emails, and build review systems that turn visitors into paying clients.',
     icon: 'TrendingUp',
+    startingPrice: 'Starting at ₹15,000 / mo',
     keyBenefits: [
       'Build stronger local search visibility with clean, fast Core Web Vitals',
       'Local SEO dominance on Google Maps & Google Business Profile',
@@ -366,6 +371,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     shortDescription: 'Custom AI and rule-based chat bots for WhatsApp, websites, and apps that answer inquiries instantly, book appointments, and capture qualified leads.',
     fullDescription: 'Never lose another customer inquiry to slow response times. We build smart, custom chat bots for WhatsApp Business, websites, and social channels. Your bots handle customer questions 24/7, qualify inquiries, book appointments directly into your calendar, and instantly notify your team on WhatsApp or CRM.',
     icon: 'Bot',
+    startingPrice: 'Starting at ₹18,000',
     keyBenefits: [
       '24/7 instant customer replies on WhatsApp & website — zero wait times',
       'Automated lead qualification and instant routing to your phone or CRM',

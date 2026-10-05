@@ -67,7 +67,7 @@ export default function PuneWebsiteDevelopmentPage() {
       <section className="relative pt-32 sm:pt-36 pb-20 px-4 sm:px-6 max-w-6xl mx-auto text-center overflow-hidden">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-white/[0.08] bg-white/70 dark:bg-[#12151D]/80 text-neutral-700 dark:text-neutral-300 text-xs sm:text-sm font-medium mb-6">
           <MapPin className="w-3.5 h-3.5 text-[#E8623C]" />
-          <span>Local Engineering Studio in Pune, Maharashtra</span>
+          <span>Pune-Based Digital Development Studio</span>
         </div>
 
         <h1 className="text-4xl xs:text-5xl md:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white font-display max-w-4xl mx-auto leading-tight">

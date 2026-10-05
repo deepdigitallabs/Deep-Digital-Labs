@@ -94,11 +94,11 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
                     <Star key={i} className="w-3.5 h-3.5 fill-[#00FFA3] text-[#00FFA3]" />
                   ))}
                 </div>
-                <span className="font-semibold text-white">7+ Live Products Deployed • 100% Verified Track Record</span>
+                <span className="font-semibold text-white">10+ Systems Shipped • 100% Verified Track Record</span>
               </div>
               <div className="flex items-center gap-2 text-slate-400">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00FFA3]" />
-                <span>Engineered in Pune • Deployed Globally</span>
+                <span>Engineered in Pune • Built for Indian Scale</span>
               </div>
             </div>
 
@@ -214,14 +214,14 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
 
                   <div className="grid grid-cols-2 gap-3">
                     <div className="p-3 rounded-lg bg-[#0D0D0F] border border-[#27272A]">
-                      <div className="text-[10px] font-mono text-slate-400">Peak Uptime</div>
-                      <div className="text-xl font-bold font-mono text-[#00FFA3] mt-1">100.0%</div>
-                      <div className="text-[10px] text-slate-400 font-mono mt-0.5">Zero crash spikes</div>
+                      <div className="text-[10px] font-mono text-slate-400">Cloud Uptime</div>
+                      <div className="text-xl font-bold font-mono text-[#00FFA3] mt-1">High Availability</div>
+                      <div className="text-[10px] text-slate-400 font-mono mt-0.5">Automated Edge CDN</div>
                     </div>
                     <div className="p-3 rounded-lg bg-[#0D0D0F] border border-[#27272A]">
-                      <div className="text-[10px] font-mono text-slate-400">Volunteers</div>
-                      <div className="text-xl font-bold font-mono text-white mt-1">1,000+</div>
-                      <div className="text-[10px] text-emerald-400 font-mono mt-0.5">Digitized mobile</div>
+                      <div className="text-[10px] font-mono text-slate-400">Lead Capture</div>
+                      <div className="text-xl font-bold font-mono text-white mt-1">Real-Time</div>
+                      <div className="text-[10px] text-emerald-400 font-mono mt-0.5">WhatsApp &amp; Web Inquiries</div>
                     </div>
                   </div>
 
