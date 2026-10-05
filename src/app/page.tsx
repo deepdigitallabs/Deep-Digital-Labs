@@ -24,7 +24,8 @@ import {
   Code2,
   Layers,
   Bot,
-  Sparkles
+  Sparkles,
+  MapPin
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
@@ -193,6 +194,16 @@ export default function HomePage() {
   const [callModalOpen, setCallModalOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [workFilter, setWorkFilter] = useState<'All' | 'Business' | 'Civic & Public'>('All');
+
+  const businessWorkCount = CASE_STUDIES.filter((c) => c.projectType === 'Business').length;
+  const civicWorkCount = CASE_STUDIES.filter((c) => c.projectType === 'Civic & Public').length;
+  const allWorkCount = CASE_STUDIES.length;
+
+  const displayedStudies = CASE_STUDIES.filter((s) => {
+    if (workFilter === 'All') return true;
+    return s.projectType === workFilter;
+  });
 
   const handleInstagramMessage = (message: string) => {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
@@ -698,16 +709,72 @@ export default function HomePage() {
           </Link>
         </div>
 
-        {/* Case Studies Grid — Commercial Business Focus */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {CASE_STUDIES.filter((s) => s.projectType === 'Business').map((study) => (
+        {/* Category Switcher Tabs */}
+        <div className="flex justify-center mb-10">
+          <div className="inline-flex flex-wrap items-center justify-center p-1.5 rounded-2xl bg-neutral-100 dark:bg-[#12141B] border border-neutral-200/90 dark:border-white/10 shadow-xs gap-1">
+            <button
+              type="button"
+              onClick={() => setWorkFilter('All')}
+              className={`flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                workFilter === 'All'
+                  ? 'bg-neutral-900 text-white dark:bg-[#E8623C] dark:text-white shadow-md'
+                  : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+              }`}
+            >
+              <span>All Projects</span>
+              <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
+                workFilter === 'All' ? 'bg-white/20 text-white' : 'bg-neutral-200 dark:bg-white/10 text-neutral-600 dark:text-neutral-400'
+              }`}>
+                {allWorkCount}
+              </span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setWorkFilter('Business')}
+              className={`flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                workFilter === 'Business'
+                  ? 'bg-neutral-900 text-white dark:bg-[#E8623C] dark:text-white shadow-md'
+                  : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+              }`}
+            >
+              <span>🏢 Business Projects</span>
+              <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
+                workFilter === 'Business' ? 'bg-white/20 text-white' : 'bg-neutral-200 dark:bg-white/10 text-neutral-600 dark:text-neutral-400'
+              }`}>
+                {businessWorkCount}
+              </span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setWorkFilter('Civic & Public')}
+              className={`flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                workFilter === 'Civic & Public'
+                  ? 'bg-neutral-900 text-white dark:bg-[#E8623C] dark:text-white shadow-md'
+                  : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+              }`}
+            >
+              <span>🏛️ Civic &amp; Public Portals</span>
+              <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
+                workFilter === 'Civic & Public' ? 'bg-white/20 text-white' : 'bg-neutral-200 dark:bg-white/10 text-neutral-600 dark:text-neutral-400'
+              }`}>
+                {civicWorkCount}
+              </span>
+            </button>
+          </div>
+        </div>
+
+        {/* Case Studies Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+          {displayedStudies.map((study) => (
             <div
               key={study.slug}
               className="rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg hover:border-[#E8623C]/50 transition-all flex flex-col justify-between group overflow-hidden"
             >
               <div>
                 {/* Hero Screenshot Header */}
-                <div className="h-48 sm:h-52 relative overflow-hidden bg-neutral-100 dark:bg-black/60 border-b border-neutral-200 dark:border-white/[0.08]">
+                <div className="h-48 sm:h-56 relative overflow-hidden bg-neutral-100 dark:bg-black/60 border-b border-neutral-200 dark:border-white/[0.08]">
                   <img
                     src={study.heroImage}
                     alt={`${study.client} website designed by Deep Digital Labs`}
@@ -722,53 +789,64 @@ export default function HomePage() {
                       {study.industry}
                     </span>
                     {study.liveUrl && (
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/90 text-white flex items-center gap-1 font-semibold backdrop-blur-md">
-                        <span className="w-1.5 h-1.5 rounded-full bg-white" />
-                        Live Site
-                      </span>
+                      <a
+                        href={study.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/90 hover:bg-emerald-500 text-white flex items-center gap-1 font-semibold backdrop-blur-md transition-colors shadow-xs"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                        <span>Live Site</span>
+                        <ExternalLink className="w-3 h-3 ml-0.5" />
+                      </a>
                     )}
                   </div>
                 </div>
 
-                <div className="p-6 space-y-3.5">
+                <div className="p-6 sm:p-7 space-y-4">
                   {/* Location & Category */}
-                  <div className="flex items-center justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
-                    <span>{study.location}</span>
-                    <span className="truncate max-w-[150px]">{study.category}</span>
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
+                    <span className="flex items-center gap-1">
+                      <MapPin className="w-3 h-3 text-[#E8623C]" />
+                      {study.location}
+                    </span>
+                    <span className="text-neutral-400 dark:text-neutral-500 text-[10px]">
+                      {study.category}
+                    </span>
                   </div>
 
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors leading-snug">
+                  {/* Title / Client */}
+                  <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors leading-snug font-display">
                     {study.client}
                   </h3>
 
-                  {/* Structured Evidence: Problem, Solution, Result */}
-                  <div className="space-y-2 text-xs pt-1">
-                    <div className="p-2.5 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-0.5">
-                      <span className="text-[10px] font-mono font-bold uppercase text-rose-600 dark:text-rose-400">Problem:</span>
-                      <p className="text-neutral-600 dark:text-neutral-300 line-clamp-2">{study.problem}</p>
+                  {/* Structured Evidence: Problem, Built, Result */}
+                  <div className="space-y-2.5 text-xs pt-1">
+                    <div className="p-3 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-1">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">Problem:</span>
+                      <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{study.problem}</p>
                     </div>
-                    <div className="p-2.5 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-0.5">
-                      <span className="text-[10px] font-mono font-bold uppercase text-[#E8623C]">Built:</span>
-                      <p className="text-neutral-600 dark:text-neutral-300 line-clamp-2">{study.whatWeBuilt}</p>
+                    <div className="p-3 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-1">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#E8623C]">Built:</span>
+                      <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{study.whatWeBuilt}</p>
                     </div>
-                    <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 space-y-0.5">
-                      <span className="text-[10px] font-mono font-bold uppercase text-emerald-700 dark:text-emerald-400">Result:</span>
-                      <p className="text-neutral-800 dark:text-neutral-200 font-medium line-clamp-2">{study.result}</p>
+                    <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 space-y-1">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Result:</span>
+                      <p className="text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed">{study.result}</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Bottom Card Action */}
-              <div className="p-6 pt-0">
+              <div className="p-6 sm:p-7 pt-0">
                 <div className="pt-4 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
                   <Link
                     href={`/case-studies/${study.slug}`}
-                    className="text-xs font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] flex items-center gap-1"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors"
                   >
-                    <span>View Full Case Breakdown</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    <span>View Project Details</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
 
                   {study.liveUrl && (
@@ -776,9 +854,9 @@ export default function HomePage() {
                       href={study.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-1.5 rounded-lg bg-neutral-100 dark:bg-white/[0.05] hover:bg-neutral-200 dark:hover:bg-white/10 text-neutral-700 dark:text-neutral-300 transition-colors"
-                      title="Visit Live Application"
+                      className="inline-flex items-center gap-1 text-xs font-mono text-neutral-500 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                     >
+                      <span>Live Site</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   )}

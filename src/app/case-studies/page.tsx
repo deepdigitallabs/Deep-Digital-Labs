@@ -50,6 +50,7 @@ export default function CaseStudiesPage() {
 
   const businessCount = CASE_STUDIES.filter((c) => c.projectType === 'Business').length;
   const civicCount = CASE_STUDIES.filter((c) => c.projectType === 'Civic & Public').length;
+  const allCount = CASE_STUDIES.length;
 
   return (
     <div className="pt-32 pb-24 bg-white text-neutral-900 dark:bg-[#050505] dark:text-white min-h-screen transition-colors duration-200">
@@ -70,15 +71,16 @@ export default function CaseStudiesPage() {
           </p>
         </div>
 
-        {/* Primary Category Switcher: Business Projects (Default) vs Civic & Public */}
+        {/* Primary Category Switcher: Business Projects (Default) vs Civic & Public vs All Projects */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex p-1.5 rounded-2xl bg-neutral-100 dark:bg-[#12141B] border border-neutral-200/90 dark:border-white/10 shadow-xs">
+          <div className="inline-flex flex-wrap items-center justify-center p-1.5 rounded-2xl bg-neutral-100 dark:bg-[#12141B] border border-neutral-200/90 dark:border-white/10 shadow-xs gap-1">
             <button
+              type="button"
               onClick={() => {
                 setSelectedProjectType('Business');
                 setSelectedSector('All');
               }}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+              className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                 selectedProjectType === 'Business'
                   ? 'bg-neutral-900 text-white dark:bg-[#E8623C] dark:text-white shadow-md'
                   : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
@@ -93,11 +95,12 @@ export default function CaseStudiesPage() {
             </button>
 
             <button
+              type="button"
               onClick={() => {
                 setSelectedProjectType('Civic & Public');
                 setSelectedSector('All');
               }}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+              className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                 selectedProjectType === 'Civic & Public'
                   ? 'bg-neutral-900 text-white dark:bg-[#E8623C] dark:text-white shadow-md'
                   : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
@@ -112,17 +115,23 @@ export default function CaseStudiesPage() {
             </button>
 
             <button
+              type="button"
               onClick={() => {
                 setSelectedProjectType('All');
                 setSelectedSector('All');
               }}
-              className={`hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+              className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                 selectedProjectType === 'All'
                   ? 'bg-neutral-900 text-white dark:bg-[#E8623C] dark:text-white shadow-md'
                   : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
               }`}
             >
               <span>All Projects</span>
+              <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
+                selectedProjectType === 'All' ? 'bg-white/20 text-white' : 'bg-neutral-200 dark:bg-white/10 text-neutral-600 dark:text-neutral-400'
+              }`}>
+                {allCount}
+              </span>
             </button>
           </div>
         </div>
@@ -340,7 +349,7 @@ export default function CaseStudiesPage() {
                     href={`/case-studies/${cs.slug}`}
                     className="inline-flex items-center gap-1.5 font-bold text-neutral-900 dark:text-white hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
                   >
-                    <span>Full Case Breakdown</span>
+                    <span>View Project Details</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </Link>
 
