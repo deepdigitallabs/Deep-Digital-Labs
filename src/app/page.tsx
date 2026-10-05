@@ -79,7 +79,7 @@ const PUNE_REVIEWS = [
     company: "Rahul B. Kavale & Co.",
     location: "Pune",
     initials: "RK",
-    body: "Deep Digital Labs gave our CA firm an exceptional digital presence. The website loads in under a second, looks world-class, and our inbound client inquiries grew by 35% in the first 90 days.",
+    body: "Deep Digital Labs gave our CA firm an exceptional digital presence. The website loads instantaneously, and prospective corporate clients now reach out with qualified inquiries directly through our structured practice forms.",
   },
   {
     name: "Operations Director",
@@ -95,7 +95,7 @@ const PUNE_REVIEWS = [
     company: "Dairy Flow Pro",
     location: "Pune",
     initials: "KG",
-    body: "The speed and reliability are unbelievable. 100/100 Core Web Vitals, zero monthly builder fees, and direct WhatsApp access to the developer who actually built it. Best tech partner in Pune.",
+    body: "The speed and reliability are unbelievable. High Google speed scores, zero monthly builder fees, and direct WhatsApp access to the developer who actually built it. Best tech partner in Pune.",
   },
 ];
 
@@ -167,8 +167,8 @@ const TECH_DISPLAY_NAMES: Record<string, string> = {
 
 const TECH_FEATURES = [
   {
-    title: "Sub-Second Load Times",
-    desc: "SSR & Static generation ensuring instant first paints under 0.8 seconds on 4G mobile networks.",
+    title: "Fast Mobile Performance",
+    desc: "SSR & Static generation ensuring rapid responsive rendering and smooth navigation on mobile networks.",
     tag: "Speed",
   },
   {
@@ -177,9 +177,9 @@ const TECH_FEATURES = [
     tag: "Ownership",
   },
   {
-    title: "99.99% Availability",
+    title: "Reliable Cloud Uptime",
     desc: "Cloud deployment across AWS & Vercel edge networks with automated DDoS mitigation and SSL certificates.",
-    tag: "Uptime",
+    tag: "Reliability",
   },
   {
     title: "Enterprise Grade Security",
@@ -739,7 +739,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="p-6 space-y-4">
+                <div className="p-6 space-y-3.5">
                   {/* Location & Category */}
                   <div className="flex items-center justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
                     <span>{study.location}</span>
@@ -751,10 +751,21 @@ export default function HomePage() {
                     {study.client}
                   </h3>
 
-                  {/* Summary */}
-                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                    {study.summary}
-                  </p>
+                  {/* Structured Evidence: Problem, Solution, Result */}
+                  <div className="space-y-2 text-xs pt-1">
+                    <div className="p-2 rounded-lg bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-0.5">
+                      <span className="text-[10px] font-mono font-bold uppercase text-rose-600 dark:text-rose-400">Problem:</span>
+                      <p className="text-neutral-600 dark:text-neutral-300 line-clamp-1">{study.problem}</p>
+                    </div>
+                    <div className="p-2 rounded-lg bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-0.5">
+                      <span className="text-[10px] font-mono font-bold uppercase text-[#E8623C]">Built:</span>
+                      <p className="text-neutral-600 dark:text-neutral-300 line-clamp-1">{study.whatWeBuilt}</p>
+                    </div>
+                    <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 space-y-0.5">
+                      <span className="text-[10px] font-mono font-bold uppercase text-emerald-700 dark:text-emerald-400">Result:</span>
+                      <p className="text-neutral-800 dark:text-neutral-200 font-medium line-clamp-1">{study.result}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 

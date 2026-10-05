@@ -356,7 +356,7 @@ export default function WhyUsPage() {
                 ))}
               </div>
               <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                &ldquo;Deep Digital Labs gave our CA firm an exceptional digital presence. The website loads in under a second and our inbound client inquiries grew by 35%.&rdquo;
+                &ldquo;Deep Digital Labs gave our CA firm an exceptional digital presence. The website loads instantaneously and our inbound corporate inquiries are now pre-qualified through structured practice forms.&rdquo;
               </p>
               <div className="pt-2 border-t border-neutral-100 dark:border-white/[0.04]">
                 <div className="text-xs font-bold text-neutral-900 dark:text-white">Rahul B. Kavale</div>

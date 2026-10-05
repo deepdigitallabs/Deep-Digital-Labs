@@ -14,91 +14,171 @@ import {
 import { CASE_STUDIES } from '@/data/caseStudies';
 
 export default function CaseStudiesPage() {
-  const [selectedIndustry, setSelectedIndustry] = useState<string>('All');
+  const [selectedProjectType, setSelectedProjectType] = useState<'Business' | 'Civic & Public' | 'All'>('Business');
+  const [selectedSector, setSelectedSector] = useState<string>('All');
   const [selectedService, setSelectedService] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const industries = ['All', 'Agri-Tech', 'Political Tech', 'Corporate', 'Logistics'];
+  const businessSectors = ['All', 'CA', 'Agriculture', 'Dairy', 'Logistics'];
   const services = ['All', 'SaaS', 'Web'];
 
   const filteredCases = useMemo(() => {
     return CASE_STUDIES.filter((cs) => {
-      const matchIndustry = selectedIndustry === 'All' || cs.industry.toLowerCase().includes(selectedIndustry.toLowerCase());
-      const matchService = selectedService === 'All' || cs.service.toLowerCase().includes(selectedService.toLowerCase());
+      // 1. Primary Category match (Business vs Civic & Public)
+      const matchProjectType = selectedProjectType === 'All' || cs.projectType === selectedProjectType;
+      
+      // 2. Sector match
+      const matchSector = selectedSector === 'All' || cs.sector === selectedSector;
+      
+      // 3. Architecture match
+      const matchService = selectedService === 'All' || cs.service === selectedService;
+      
+      // 4. Search query
       const matchSearch = 
         searchQuery.trim() === '' ||
         cs.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         cs.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
         cs.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (cs.category && cs.category.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        cs.problem.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        cs.whatWeBuilt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        cs.result.toLowerCase().includes(searchQuery.toLowerCase()) ||
         cs.techStack.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
 
-      return matchIndustry && matchService && matchSearch;
+      return matchProjectType && matchSector && matchService && matchSearch;
     });
-  }, [selectedIndustry, selectedService, searchQuery]);
+  }, [selectedProjectType, selectedSector, selectedService, searchQuery]);
+
+  const businessCount = CASE_STUDIES.filter((c) => c.projectType === 'Business').length;
+  const civicCount = CASE_STUDIES.filter((c) => c.projectType === 'Civic & Public').length;
 
   return (
     <div className="pt-32 pb-24 bg-white text-neutral-900 dark:bg-[#050505] dark:text-white min-h-screen transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-5">
-
-          
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-tight">
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
+          <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
+            Shipped Products &amp; Verified Case Studies
+          </span>
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-tight font-display">
             Client Case Studies &amp; <br />
-            <span className="text-neutral-900 dark:text-[#D4FF00] underline decoration-neutral-300 dark:decoration-transparent">Shipped Products</span>
+            <span className="text-gradient-spectrum">Shipped Systems</span>
           </h1>
           
-          <p className="text-base sm:text-lg text-neutral-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
-            Real products engineered for real businesses. Explore our portfolio of high-concurrency portals, SaaS platforms, and enterprise web solutions with verified live URLs.
+          <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-2xl mx-auto">
+            Real software and websites engineered for commercial businesses. Explore our portfolio of custom ERPs, high-converting business portals, and verified live applications.
           </p>
         </div>
 
+        {/* Primary Category Switcher: Business Projects (Default) vs Civic & Public */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex p-1.5 rounded-2xl bg-neutral-100 dark:bg-[#12141B] border border-neutral-200/90 dark:border-white/10 shadow-xs">
+            <button
+              onClick={() => {
+                setSelectedProjectType('Business');
+                setSelectedSector('All');
+              }}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                selectedProjectType === 'Business'
+                  ? 'bg-neutral-900 text-white dark:bg-[#E8623C] dark:text-white shadow-md'
+                  : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+              }`}
+            >
+              <span>🏢 Business Projects</span>
+              <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
+                selectedProjectType === 'Business' ? 'bg-white/20 text-white' : 'bg-neutral-200 dark:bg-white/10 text-neutral-600 dark:text-neutral-400'
+              }`}>
+                {businessCount}
+              </span>
+            </button>
+
+            <button
+              onClick={() => {
+                setSelectedProjectType('Civic & Public');
+                setSelectedSector('All');
+              }}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                selectedProjectType === 'Civic & Public'
+                  ? 'bg-neutral-900 text-white dark:bg-[#E8623C] dark:text-white shadow-md'
+                  : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+              }`}
+            >
+              <span>🏛️ Civic &amp; Public Portals</span>
+              <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
+                selectedProjectType === 'Civic & Public' ? 'bg-white/20 text-white' : 'bg-neutral-200 dark:bg-white/10 text-neutral-600 dark:text-neutral-400'
+              }`}>
+                {civicCount}
+              </span>
+            </button>
+
+            <button
+              onClick={() => {
+                setSelectedProjectType('All');
+                setSelectedSector('All');
+              }}
+              className={`hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                selectedProjectType === 'All'
+                  ? 'bg-neutral-900 text-white dark:bg-[#E8623C] dark:text-white shadow-md'
+                  : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+              }`}
+            >
+              <span>All Projects</span>
+            </button>
+          </div>
+        </div>
+
         {/* Filter Toolbar */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 mb-12 space-y-6 shadow-sm dark:shadow-2xl">
+        <div className="p-6 sm:p-7 rounded-3xl bg-neutral-50 dark:bg-[#0D0E12] border border-neutral-200 dark:border-white/10 mb-10 space-y-5 shadow-xs">
           
           {/* Top: Search Input */}
           <div className="relative">
-            <Search className="w-5 h-5 text-neutral-400 dark:text-gray-500 absolute left-4 top-1/2 -translate-y-1/2" />
+            <Search className="w-5 h-5 text-neutral-400 absolute left-4 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Search by product name, client, or technology (e.g. Next.js, Dairy Flow, Firebase, Sangola)..."
+              placeholder="Search by client, sector, problem, or technology (e.g. CA, Dairy Flow, Logistics, Next.js)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 rounded-2xl bg-white dark:bg-black/50 border border-neutral-300 dark:border-white/10 text-sm text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-gray-500 focus:outline-none focus:border-neutral-900 dark:focus:border-[#D4FF00] transition-all shadow-sm"
+              className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white dark:bg-[#12141B] border border-neutral-200 dark:border-white/10 text-sm text-neutral-900 dark:text-white placeholder-neutral-400 focus:outline-none focus:border-[#E8623C] transition-all shadow-2xs"
             />
           </div>
 
-          {/* Bottom: Filter Pills */}
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-5 pt-2 border-t border-neutral-200 dark:border-white/5">
+          {/* Bottom: Sector & Architecture Pills */}
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-3 border-t border-neutral-200/80 dark:border-white/5">
             
-            {/* Industry Filter Pills */}
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-xs font-mono text-neutral-500 dark:text-gray-500 mr-1 flex items-center gap-1.5 font-semibold">
-                <Filter className="w-3.5 h-3.5 text-neutral-700 dark:text-[#D4FF00]" /> Industry:
-              </span>
-              {industries.map((ind) => {
-                const active = selectedIndustry === ind;
-                return (
-                  <button
-                    key={ind}
-                    onClick={() => setSelectedIndustry(ind)}
-                    className={`px-4 py-2 rounded-full text-xs font-semibold transition-all active:scale-95 cursor-pointer ${
-                      active
-                        ? 'bg-neutral-900 text-white dark:bg-[#D4FF00] dark:text-black font-bold shadow-md'
-                        : 'bg-white dark:bg-white/5 text-neutral-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/10 border border-neutral-200 dark:border-white/10'
-                    }`}
-                  >
-                    {ind}
-                  </button>
-                );
-              })}
-            </div>
+            {/* Sector Filters (Only if Business is selected or All) */}
+            {selectedProjectType === 'Business' && (
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-mono text-neutral-500 dark:text-neutral-400 mr-1 flex items-center gap-1.5 font-semibold">
+                  <Filter className="w-3.5 h-3.5 text-[#E8623C]" /> Business Sector:
+                </span>
+                {businessSectors.map((sector) => {
+                  const active = selectedSector === sector;
+                  return (
+                    <button
+                      key={sector}
+                      onClick={() => setSelectedSector(sector)}
+                      className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all active:scale-95 cursor-pointer ${
+                        active
+                          ? 'bg-[#E8623C] text-white font-bold shadow-xs'
+                          : 'bg-white dark:bg-white/5 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-white/10'
+                      }`}
+                    >
+                      {sector}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
 
-            {/* Service Filter Pills */}
+            {selectedProjectType === 'Civic & Public' && (
+              <div className="text-xs font-mono text-neutral-500 dark:text-neutral-400">
+                Civic, public outreach, and community engagement infrastructure.
+              </div>
+            )}
+
+            {/* Architecture Filter Pills */}
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-xs font-mono text-neutral-500 dark:text-gray-500 mr-1 font-semibold">
+              <span className="text-xs font-mono text-neutral-500 dark:text-neutral-400 mr-1 font-semibold">
                 Architecture:
               </span>
               {services.map((srv) => {
@@ -107,10 +187,10 @@ export default function CaseStudiesPage() {
                   <button
                     key={srv}
                     onClick={() => setSelectedService(srv)}
-                    className={`px-4 py-2 rounded-full text-xs font-semibold transition-all active:scale-95 cursor-pointer ${
+                    className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all active:scale-95 cursor-pointer ${
                       active
-                        ? 'bg-neutral-900 text-white dark:bg-white dark:text-black font-bold shadow-md'
-                        : 'bg-white dark:bg-white/5 text-neutral-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/10 border border-neutral-200 dark:border-white/10'
+                        ? 'bg-neutral-900 text-white dark:bg-white dark:text-black font-bold shadow-xs'
+                        : 'bg-white dark:bg-white/5 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-white/10'
                     }`}
                   >
                     {srv}
@@ -123,100 +203,144 @@ export default function CaseStudiesPage() {
         </div>
 
         {/* Results Bar */}
-        <div className="flex items-center justify-between text-xs text-neutral-500 dark:text-gray-400 font-mono mb-8 px-2">
+        <div className="flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400 font-mono mb-8 px-2">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-[#D4FF00]" />
-            <span>Displaying {filteredCases.length} of {CASE_STUDIES.length} Projects</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            <span>Displaying {filteredCases.length} of {CASE_STUDIES.length} Verified Projects ({selectedProjectType === 'Business' ? 'Business Projects' : selectedProjectType === 'Civic & Public' ? 'Civic & Public' : 'All Categories'})</span>
           </div>
-          {(selectedIndustry !== 'All' || selectedService !== 'All' || searchQuery) && (
+          {(selectedSector !== 'All' || selectedService !== 'All' || searchQuery) && (
             <button
               onClick={() => {
-                setSelectedIndustry('All');
+                setSelectedSector('All');
                 setSelectedService('All');
                 setSearchQuery('');
               }}
-              className="text-neutral-900 dark:text-[#D4FF00] hover:underline font-semibold"
+              className="text-[#E8623C] hover:underline font-semibold"
             >
-              Reset All Filters ✕
+              Reset Filters ✕
             </button>
           )}
         </div>
 
         {/* Case Studies Bento Grid */}
         {filteredCases.length === 0 ? (
-          <div className="text-center py-20 p-8 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 space-y-4">
-            <p className="text-lg text-neutral-800 dark:text-gray-300 font-semibold">No case studies found matching &quot;{searchQuery}&quot;</p>
-            <p className="text-sm text-neutral-500 dark:text-gray-500 max-w-md mx-auto">Try broadening your search term or resetting the industry filters.</p>
+          <div className="text-center py-20 p-8 rounded-3xl bg-neutral-50 dark:bg-[#0D0E12] border border-neutral-200 dark:border-white/10 space-y-4">
+            <p className="text-lg text-neutral-800 dark:text-neutral-200 font-semibold font-display">No projects found matching &quot;{searchQuery}&quot;</p>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 max-w-md mx-auto">Try broadening your search term or resetting the sector filters.</p>
             <button
               onClick={() => {
-                setSelectedIndustry('All');
+                setSelectedProjectType('Business');
+                setSelectedSector('All');
                 setSelectedService('All');
                 setSearchQuery('');
               }}
-              className="px-6 py-3 rounded-full bg-neutral-900 text-white dark:bg-[#D4FF00] dark:text-black font-bold text-xs"
+              className="px-6 py-3 rounded-full bg-[#E8623C] text-white font-bold text-xs shadow-md"
             >
-              Reset Filters
+              Reset to Business Projects
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {filteredCases.map((cs) => (
               <div
                 key={cs.slug}
-                className="group flex flex-col justify-between rounded-2xl bg-white dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 hover:border-neutral-900 dark:hover:border-[#D4FF00]/60 transition-all duration-300 overflow-hidden shadow-xs hover:shadow-md"
+                className="group flex flex-col justify-between rounded-2xl bg-white dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1"
               >
                 <div>
                   {/* Visual Header with Image & Live Badges */}
-                  <div className="h-48 relative overflow-hidden bg-neutral-100 dark:bg-black border-b border-neutral-200 dark:border-white/10">
+                  <div className="h-52 relative overflow-hidden bg-neutral-100 dark:bg-black border-b border-neutral-200 dark:border-white/10">
                     <div 
                       className="absolute inset-0 bg-cover bg-top transition-transform duration-500 group-hover:scale-105 opacity-100"
                       style={{ backgroundImage: `url(${cs.heroImage})` }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
                     
                     {/* Top Badges */}
                     <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between">
-
+                      <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-white/90 dark:bg-black/80 text-neutral-800 dark:text-neutral-200 font-bold backdrop-blur-md border border-white/20">
+                        {cs.industry}
+                      </span>
 
                       {cs.liveUrl && (
-                        <span className="flex items-center gap-1.5 text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 backdrop-blur-md font-bold shadow-xs">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400" />
-                          Live
-                        </span>
+                        <a
+                          href={cs.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="flex items-center gap-1.5 text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/90 hover:bg-emerald-600 text-white font-bold shadow-xs transition-colors backdrop-blur-md"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                          <span>Live Site ↗</span>
+                        </a>
                       )}
                     </div>
 
                     {/* Location Tag */}
-                    <div className="absolute bottom-2.5 left-3.5 flex items-center gap-1 text-[11px] text-neutral-800 dark:text-gray-300 font-medium">
-                      <MapPin className="w-3 h-3 text-neutral-700 dark:text-[#D4FF00]" />
+                    <div className="absolute bottom-3 left-3.5 flex items-center gap-1 text-[11px] text-white/90 font-medium">
+                      <MapPin className="w-3 h-3 text-[#E8623C]" />
                       <span>{cs.location}</span>
                     </div>
                   </div>
 
                   {/* Body Content */}
-                  <div className="p-5 space-y-3">
+                  <div className="p-6 space-y-4">
                     <div>
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-500 dark:text-gray-400 font-bold">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#E8623C] font-bold">
                         {cs.client}
                       </span>
-                      <h2 className="text-base sm:text-lg font-bold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-[#D4FF00] transition-colors leading-snug mt-0.5 line-clamp-2">
+                      <h2 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors leading-snug mt-0.5">
                         {cs.title}
                       </h2>
                     </div>
 
-                    <p className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed line-clamp-2">
-                      {cs.summary}
-                    </p>
+                    {/* Problem / Solution / Result Structured Evidence */}
+                    <div className="space-y-2.5 text-xs">
+                      <div className="p-2.5 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-1">
+                        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">
+                          Problem
+                        </span>
+                        <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed line-clamp-2">
+                          {cs.problem}
+                        </p>
+                      </div>
+
+                      <div className="p-2.5 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-1">
+                        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#E8623C]">
+                          What We Built
+                        </span>
+                        <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed line-clamp-2">
+                          {cs.whatWeBuilt}
+                        </p>
+                      </div>
+
+                      <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 space-y-1">
+                        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
+                          Result
+                        </span>
+                        <p className="text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed line-clamp-2">
+                          {cs.result}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Tech Stack Pills */}
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      {cs.techStack.slice(0, 3).map((tech) => (
+                        <span key={tech} className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-neutral-100 dark:bg-white/5 text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-white/5">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
                 {/* Footer Action Bar */}
-                <div className="px-5 py-3 border-t border-neutral-100 dark:border-white/10 flex items-center justify-between gap-2 text-xs">
+                <div className="px-6 py-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between gap-3 text-xs bg-neutral-50/50 dark:bg-white/[0.01]">
                   <Link
                     href={`/case-studies/${cs.slug}`}
-                    className="inline-flex items-center gap-1.5 font-bold text-neutral-900 dark:text-white hover:text-black dark:hover:text-[#D4FF00] transition-colors group-hover:underline"
+                    className="inline-flex items-center gap-1.5 font-bold text-neutral-900 dark:text-white hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
                   >
-                    <span>Read Case Study</span>
+                    <span>Full Case Breakdown</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </Link>
 
@@ -225,7 +349,7 @@ export default function CaseStudiesPage() {
                       href={cs.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-900 hover:text-white dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black transition-all"
+                      className="inline-flex items-center gap-1 text-[11px] font-semibold px-3 py-1.5 rounded-full bg-white dark:bg-white/10 text-neutral-800 dark:text-neutral-200 hover:bg-[#E8623C] hover:text-white dark:hover:bg-[#E8623C] dark:hover:text-white border border-neutral-200 dark:border-white/10 transition-all shadow-2xs"
                     >
                       <span>Visit Live Site</span>
                       <ArrowUpRight className="w-3 h-3" />
