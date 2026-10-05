@@ -14,15 +14,15 @@ import {
   Clock,
   Bot,
   Target,
-  Rocket
+  Rocket,
+  MessageSquare
 } from 'lucide-react';
 import { CORE_SERVICES } from '@/data/services';
 import { TechBadge } from '@/components/ui/TechBadge';
-import { IndustryServicesDirectory } from '@/components/services/IndustryServicesDirectory';
 
 export const metadata: Metadata = {
   title: 'Services | Websites, Business Software, Mobile & Chat Bots | Deep Digital Labs',
-  description: 'Explore our services: Websites & Web Apps, Business Software & SaaS, Mobile App Development, Digital Growth & SEO, and 49+ specialized industry website solutions.',
+  description: 'Explore our services: Websites & Web Apps, Business Software & SaaS, Mobile App Development, Digital Growth & SEO, and 50+ specialized industry website solutions.',
 };
 
 export default function ServicesPage() {
@@ -209,9 +209,67 @@ export default function ServicesPage() {
         </div>
 
         {/* ========================================================================= */}
-        {/* SPECIALIZED INDUSTRY WEBSITE SOLUTIONS (49 Niches)                        */}
+        {/* DEDICATED INDUSTRY SOLUTIONS SHOWCASE BANNER (Points to /industries)       */}
         {/* ========================================================================= */}
-        <IndustryServicesDirectory />
+        <div className="mb-24 relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#12151D] via-neutral-900 to-black border border-neutral-800 p-8 sm:p-12 text-white shadow-2xl">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#E8623C]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="relative z-10 max-w-4xl space-y-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8623C]/20 border border-[#E8623C]/30 text-[#E8623C] text-xs font-mono font-bold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>50+ Dedicated Industry Solutions</span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight font-display">
+              Looking for a website tailored to your <span className="text-gradient-spectrum">specific industry?</span>
+            </h2>
+
+            <p className="text-sm sm:text-base text-neutral-300 max-w-2xl leading-relaxed">
+              We engineer specialized web architectures with industry-specific workflows, booking systems, and lead qualification funnels — from CA &amp; law firms to real estate developers, e-commerce stores, healthcare clinics, and tours &amp; travel agencies.
+            </p>
+
+            {/* Quick Industry Pill Badges */}
+            <div className="flex flex-wrap gap-2 pt-1">
+              {[
+                'Tours & Travels (WhatsApp Queries)',
+                'CA & Accounting Portals',
+                'Real Estate & Construction',
+                'E-Commerce & Retail Stores',
+                'Doctors & Dental Clinics',
+                'Schools & IT Institutes',
+                'Manufacturing & RFQ Portals',
+                'Corporate & SaaS Platforms'
+              ].map((niche) => (
+                <span
+                  key={niche}
+                  className="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-neutral-300 font-medium"
+                >
+                  {niche}
+                </span>
+              ))}
+            </div>
+
+            <div className="pt-3 flex flex-col sm:flex-row items-center gap-4">
+              <Link
+                href="/industries"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full font-bold text-sm bg-gradient-to-r from-[#E8623C] via-[#F0744E] to-[#F59E0B] hover:opacity-95 text-white shadow-xl shadow-[#E8623C]/25 transition-all active:scale-98"
+              >
+                <span>Explore All 50 Industry Website Solutions</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <a
+                href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I'm%20looking%20for%20an%20industry-specific%20website%20for%20my%20business."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full font-semibold text-sm border border-white/20 text-white hover:bg-white/10 transition-all"
+              >
+                <MessageSquare className="w-4 h-4 text-emerald-400" />
+                <span>Chat on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
 
         {/* Why 4 Pillars? The Strategic Advantage */}
         <div className="mb-24 p-8 sm:p-12 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-sm dark:shadow-2xl">

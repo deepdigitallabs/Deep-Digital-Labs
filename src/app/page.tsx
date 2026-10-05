@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { 
   ArrowRight, 
   ExternalLink, 
@@ -21,7 +20,11 @@ import {
   Search,
   Users,
   HelpCircle,
-  PhoneCall
+  PhoneCall,
+  Code2,
+  Layers,
+  Bot,
+  Sparkles
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 import { ProcessTimeline } from '@/components/ui/ProcessTimeline';
@@ -29,7 +32,6 @@ import { Marquee } from '@/registry/magicui/marquee';
 import { BlinkingSquares } from '@/components/ui/blinking-squares';
 import { CursorWave } from '@/components/ui/cursor-wave';
 import { HeroWaveArt } from '@/components/hero/HeroWaveArt';
-import { HeroIndustryShowcase } from '@/components/hero/HeroIndustryShowcase';
 import { cn } from '@/lib/utils';
 import { CASE_STUDIES } from '@/data/caseStudies';
 
@@ -228,24 +230,6 @@ export default function HomePage() {
           className="absolute inset-0 size-full opacity-25 dark:opacity-20 -z-10 [mask-image:radial-gradient(ellipse_85%_70%_at_50%_45%,#000_50%,transparent_100%)] pointer-events-auto"
         />
 
-        {/* Featured Big Brand 3D Single Logo */}
-        <div className="mb-6 sm:mb-8 flex justify-center">
-          <div className="relative group">
-            {/* Ambient Multi-Spectrum Glow */}
-            <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-r from-[#2563EB]/25 via-[#7C3AED]/25 via-[#EC4899]/25 to-[#E8623C]/25 rounded-full blur-2xl sm:blur-3xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 animate-pulse pointer-events-none" />
-            
-            <Image
-              src="/images/logo-single.png"
-              alt="Deep Digital Labs Logo"
-              width={1536}
-              height={1024}
-              priority
-              unoptimized
-              className="relative w-36 sm:w-48 md:w-56 lg:w-64 h-auto object-contain drop-shadow-[0_20px_40px_rgba(232,98,60,0.22)] hover:scale-105 transition-transform duration-300 pointer-events-auto"
-            />
-          </div>
-        </div>
-
         {/* H1 Headline */}
         <h1 className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.12] max-w-4xl mx-auto font-display">
           Build <span className="text-[#E8623C]">.</span> Grow <span className="text-[#E8623C]">.</span><br />
@@ -303,9 +287,6 @@ export default function HomePage() {
           <LaurelRight />
         </div>
 
-        {/* New Hero Section: Dedicated Industry Websites Explorer */}
-        <HeroIndustryShowcase />
-
       </section>
 
       {/* ========================================================================= */}
@@ -339,6 +320,197 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
+      {/* SECTION: CORE ARCHITECTURE & CAPABILITIES (6 Pillars)                     */}
+      {/* ========================================================================= */}
+      <section className="py-16 sm:py-20 px-6 max-w-7xl mx-auto border-t border-neutral-200/80 dark:border-white/[0.06]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="space-y-2.5 max-w-2xl">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
+              Engineering Capabilities
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
+              Built on Modern Architecture &amp; Scalable Stacks
+            </h2>
+            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              Explore our core technical services engineered for high performance, sub-second latency, and zero platform lock-in.
+            </p>
+          </div>
+
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#E8623C] hover:underline shrink-0"
+          >
+            <span>Explore all services &amp; sprint timelines</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Card 1: Web Apps & SaaS */}
+          <Link
+            href="/services/websites-web-apps"
+            className="group p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
+          >
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between">
+                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 group-hover:border-[#E8623C]/30 text-[#E8623C] transition-colors">
+                  <Code2 className="w-5 h-5" />
+                </div>
+                <span className="text-xs font-mono font-bold text-neutral-400 group-hover:text-[#E8623C] transition-colors">
+                  01
+                </span>
+              </div>
+              <h3 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors font-display">
+                Web Apps &amp; SaaS
+              </h3>
+              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                Next.js 15, high-speed portals &amp; modern e-commerce.
+              </p>
+            </div>
+            <div className="pt-4 mt-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between text-xs font-semibold text-neutral-800 dark:text-neutral-200 group-hover:text-[#E8623C] transition-colors">
+              <span>Explore Deliverables</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
+
+          {/* Card 2: Custom ERP & SaaS */}
+          <Link
+            href="/services/business-software-saas"
+            className="group p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
+          >
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between">
+                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 group-hover:border-[#E8623C]/30 text-[#E8623C] transition-colors">
+                  <Layers className="w-5 h-5" />
+                </div>
+                <span className="text-xs font-mono font-bold text-neutral-400 group-hover:text-[#E8623C] transition-colors">
+                  02
+                </span>
+              </div>
+              <h3 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors font-display">
+                Custom ERP &amp; SaaS
+              </h3>
+              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                Multi-tenant software, custom billing &amp; workflow engines.
+              </p>
+            </div>
+            <div className="pt-4 mt-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between text-xs font-semibold text-neutral-800 dark:text-neutral-200 group-hover:text-[#E8623C] transition-colors">
+              <span>Explore Deliverables</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
+
+          {/* Card 3: Mobile Native */}
+          <Link
+            href="/services/mobile-app-development"
+            className="group p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
+          >
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between">
+                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 group-hover:border-[#E8623C]/30 text-[#E8623C] transition-colors">
+                  <Smartphone className="w-5 h-5" />
+                </div>
+                <span className="text-xs font-mono font-bold text-neutral-400 group-hover:text-[#E8623C] transition-colors">
+                  03
+                </span>
+              </div>
+              <h3 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors font-display">
+                Mobile Native
+              </h3>
+              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                iOS &amp; Android with Flutter, offline sync &amp; biometrics.
+              </p>
+            </div>
+            <div className="pt-4 mt-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between text-xs font-semibold text-neutral-800 dark:text-neutral-200 group-hover:text-[#E8623C] transition-colors">
+              <span>Explore Deliverables</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
+
+          {/* Card 4: Growth & SEO */}
+          <Link
+            href="/services/digital-growth-seo"
+            className="group p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
+          >
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between">
+                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 group-hover:border-[#E8623C]/30 text-[#E8623C] transition-colors">
+                  <TrendingUp className="w-5 h-5" />
+                </div>
+                <span className="text-xs font-mono font-bold text-neutral-400 group-hover:text-[#E8623C] transition-colors">
+                  04
+                </span>
+              </div>
+              <h3 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors font-display">
+                Growth &amp; SEO
+              </h3>
+              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                Core Web Vitals, programmatic SEO &amp; conversion funnels.
+              </p>
+            </div>
+            <div className="pt-4 mt-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between text-xs font-semibold text-neutral-800 dark:text-neutral-200 group-hover:text-[#E8623C] transition-colors">
+              <span>Explore Deliverables</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
+
+          {/* Card 5: Chat Bot Development */}
+          <Link
+            href="/services/chat-bot-development"
+            className="group p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/90 dark:border-white/[0.08] hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
+          >
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between">
+                <div className="p-2.5 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 group-hover:border-[#E8623C]/30 text-[#E8623C] transition-colors">
+                  <Bot className="w-5 h-5" />
+                </div>
+                <span className="text-xs font-mono font-bold text-neutral-400 group-hover:text-[#E8623C] transition-colors">
+                  05
+                </span>
+              </div>
+              <h3 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors font-display">
+                Chat Bot Development
+              </h3>
+              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                Automated WhatsApp and website customer support bots.
+              </p>
+            </div>
+            <div className="pt-4 mt-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between text-xs font-semibold text-neutral-800 dark:text-neutral-200 group-hover:text-[#E8623C] transition-colors">
+              <span>Explore Deliverables</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
+
+          {/* Card 6: All Services & Packages */}
+          <Link
+            href="/services"
+            className="group p-6 rounded-2xl bg-gradient-to-br from-[#E8623C]/10 via-[#F59E0B]/5 to-transparent border border-[#E8623C]/30 hover:border-[#E8623C] transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between"
+          >
+            <div className="space-y-3.5">
+              <div className="flex items-center justify-between">
+                <div className="p-2.5 rounded-xl bg-[#E8623C]/20 border border-[#E8623C]/30 text-[#E8623C] transition-colors">
+                  <Sparkles className="w-5 h-5" />
+                </div>
+                <span className="text-xs font-mono font-bold text-[#E8623C]">
+                  All
+                </span>
+              </div>
+              <h3 className="text-lg font-bold text-[#E8623C] group-hover:underline transition-colors font-display">
+                All Services &amp; Packages
+              </h3>
+              <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                Explore all deliverables, pricing scopes &amp; sprint timelines.
+              </p>
+            </div>
+            <div className="pt-4 mt-4 border-t border-[#E8623C]/20 flex items-center justify-between text-xs font-bold text-[#E8623C]">
+              <span>Explore Full Catalog</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
         </div>
       </section>
 

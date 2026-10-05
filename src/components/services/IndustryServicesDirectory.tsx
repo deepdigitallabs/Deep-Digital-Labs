@@ -58,7 +58,7 @@ export function IndustryServicesDirectory() {
       <div className="text-center max-w-4xl mx-auto mb-14 space-y-4">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8623C]/10 border border-[#E8623C]/20 text-[#E8623C] text-xs font-mono font-bold uppercase tracking-wider">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Complete Industry Catalog • 49 Dedicated Solutions</span>
+          <span>Complete Industry Catalog • {INDUSTRY_SERVICES.length} Dedicated Solutions</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
           Specialized Website Development By Industry
@@ -121,7 +121,7 @@ export function IndustryServicesDirectory() {
                 : 'bg-neutral-100 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-white/10'
             }`}
           >
-            All Sectors (49)
+            All Sectors ({INDUSTRY_SERVICES.length})
           </button>
 
           {INDUSTRY_CATEGORIES.map((cat) => {

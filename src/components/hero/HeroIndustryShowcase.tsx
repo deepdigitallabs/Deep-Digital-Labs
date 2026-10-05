@@ -58,7 +58,7 @@ export function HeroIndustryShowcase() {
               What kind of website does your business need?
             </h2>
             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed">
-              Explore 49+ specialized website development architectures built with sub-second speeds, industry-specific features, and zero builder lock-in.
+              Explore 50+ specialized website development architectures built with sub-second speeds, industry-specific features, and zero builder lock-in.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ export function HeroIndustryShowcase() {
               href="/services"
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold bg-[#E8623C] hover:bg-[#F0744E] text-white shadow-md shadow-[#E8623C]/20 transition-all active:scale-98"
             >
-              <span>All 49+ Niches</span>
+              <span>All 50+ Niches</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -227,19 +227,40 @@ export function HeroIndustryShowcase() {
           </div>
         )}
 
-        {/* Bottom Banner */}
-        <div className="relative z-10 mt-8 pt-6 border-t border-neutral-200/80 dark:border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-600 dark:text-neutral-400">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>All 49+ specialized websites come with 100% source code ownership and direct Pune engineering support.</span>
+        {/* Bottom Banner with Travels Direct WhatsApp Highlight */}
+        <div className="relative z-10 mt-8 pt-6 border-t border-neutral-200/80 dark:border-white/[0.08] space-y-3">
+          {/* Highlight feature for Tours & Travels Direct WhatsApp Queries */}
+          <div className="p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-emerald-500/10 via-[#E8623C]/10 to-transparent border border-emerald-500/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+            <div className="flex items-center gap-2.5">
+              <span className="p-1.5 rounded-lg bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 shrink-0">
+                <MessageSquare className="w-4 h-4" />
+              </span>
+              <div className="text-neutral-800 dark:text-neutral-200">
+                <strong className="text-neutral-900 dark:text-white">Featured: Tours, Travels &amp; Cab Agency Website</strong> — Clients send package inquiries directly to your WhatsApp with pre-filled travel dates, passenger counts, vehicle choices &amp; hotel tiers.
+              </div>
+            </div>
+            <Link
+              href="/services/tours-and-travels-website-development"
+              className="text-[#E8623C] font-bold hover:underline inline-flex items-center gap-1 shrink-0"
+            >
+              <span>View Travels Demo &amp; Scope</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
-          <Link
-            href="/services"
-            className="font-bold text-neutral-900 dark:text-white hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors inline-flex items-center gap-1 shrink-0"
-          >
-            <span>Explore Full Catalog on Services Page</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </Link>
+
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-600 dark:text-neutral-400">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>All 50+ specialized websites come with 100% source code ownership and direct Pune engineering support.</span>
+            </div>
+            <Link
+              href="/services"
+              className="font-bold text-neutral-900 dark:text-white hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors inline-flex items-center gap-1 shrink-0"
+            >
+              <span>Explore Full Catalog on Services Page</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
 
       </div>

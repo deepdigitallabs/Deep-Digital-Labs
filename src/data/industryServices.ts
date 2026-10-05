@@ -20,7 +20,7 @@ export const INDUSTRY_CATEGORIES: IndustryCategory[] = [
     description: 'High-authority, trust-building websites for corporate enterprises, consultancies, law firms, and manufacturing businesses.',
     iconName: 'Building2',
     gradient: 'from-blue-600 to-indigo-700',
-    count: 10,
+    count: 11,
   },
   {
     id: 'education-coaching',
@@ -3331,6 +3331,80 @@ export const INDUSTRY_SERVICES: (ServiceDetail & { category: string; categoryNam
     ],
     metaTitle: 'AI & Automation Business Website Development | GenAI & Bot Agencies',
     metaDescription: 'State-of-the-art website development for AI and automation agencies. Interactive workflow visualizers, automation ROI calculators, and pilot consultation funnels.'
+  },
+  {
+    number: '50',
+    shortTitle: 'Tours, Travels & Cabs',
+    displayHeading: 'Tours & Travels Agency Website Development',
+    slug: 'tours-and-travels-website-development',
+    title: 'Tours & Travels Agency Website Development',
+    headline: 'High-converting tour & travel agency websites with instant WhatsApp package inquiries, vehicle rental bookings, and day-by-day itineraries.',
+    shortDescription: 'Direct WhatsApp tour package booking funnels, outstation cab & tempo traveller rental calculators, day-by-day itineraries with photos, and zero aggregator commissions.',
+    fullDescription: 'Custom website development engineered specifically for tour operators, travel agencies, holiday planners, and cab rental operators in Pune and across India. Enable travelers to browse vacation packages, custom road trips, and pilgrimage tours, and instantly send a pre-filled booking inquiry directly to your WhatsApp with package name, travel dates, passenger count, and hotel preferences.',
+    icon: 'Plane',
+    category: 'business-corporate',
+    categoryName: 'Business & Corporate',
+    keyBenefits: [
+      'Instant 1-Click WhatsApp Inquiries pre-filled with package title, dates & passenger count',
+      'Tour package catalog with day-by-day itineraries, photo galleries & downloadable PDF brochures',
+      'Outstation cab & tempo traveller booking calculator with per-km and fixed package route rates',
+      'Zero platform commissions — 100% direct client bookings with zero OTA cuts'
+    ],
+    capabilities: [
+      {
+        title: 'Direct WhatsApp Query Engine',
+        description: 'Pre-populates the traveler\'s WhatsApp app with exact package title, destination, dates, adults/kids, and hotel category for instant closing.'
+      },
+      {
+        title: 'Curated Tour & Pilgrimage Itineraries',
+        description: 'Rich day-by-day travel plans covering Ashtavinayak, Konkan, Goa, Mahabaleshwar, Kerala, Rajasthan, and International holidays.'
+      },
+      {
+        title: 'Fleet & Cab Rental Showcase',
+        description: 'Detailed vehicle specs for Innova Crysta, Ertiga, Swift Dzire, Urbania, and 17/26 Seater Tempo Travellers with pickup/drop forms.'
+      },
+      {
+        title: 'Custom Trip Quotation Engine',
+        description: 'Interactive form enabling clients to choose customized routes, vehicle types, and meal plans, pinging your team with a ready quote.'
+      }
+    ],
+    deliverables: [
+      'Modern Next.js travel portal optimized for mobile with sub-second page loads',
+      'WhatsApp click-to-chat triggers on every package, button, and floating lead bar',
+      'Admin dashboard or simple sheets sync for seasonal package and tariff updates',
+      'Local SEO architecture targeting "Tours and Travels in Pune", "Cab Rental Pune", and holiday keywords'
+    ],
+    techStack: ['Next.js', 'React', 'TailwindCSS', 'TypeScript', 'WhatsApp API', 'Node.js'],
+    techSpecializations: [
+      { category: 'Travel Leads', skills: ['WhatsApp Click-to-Chat', 'Trip Quote Engine', 'Cab Booking Forms', 'PDF Generator'] },
+      { category: 'Frontend', skills: ['Next.js 15', 'Image Optimization', 'Mobile Speed', 'Google Maps'] }
+    ],
+    processTimeline: [
+      { step: '01', title: 'Packages & Fleet Scoping', description: 'Cataloging your domestic/international packages, cab fleet tariffs, and WhatsApp routing setup.', duration: 'Days 1-3' },
+      { step: '02', title: 'Mobile-First UI Design', description: 'Designing inspiring travel layouts, transparent package cards, and prominent WhatsApp booking CTAs.', duration: 'Week 1' },
+      { step: '03', title: 'Next.js Development & Lead Triggers', description: 'Building the site, itinerary modals, cab booking calculators, and WhatsApp pre-filled query engine.', duration: 'Weeks 2-3' },
+      { step: '04', title: 'Testing & Launch', description: 'Verifying mobile speed, testing WhatsApp message formats on Android & iOS, and live deployment.', duration: 'Week 3' }
+    ],
+    faqs: [
+      {
+        question: 'How do clients get the tour package query directly on WhatsApp?',
+        answer: 'When a traveler clicks "Book via WhatsApp" or "Inquire on WhatsApp" on any tour or cab page, their WhatsApp opens with a ready message: "Hi, I want to book the [Package Name] package for [X] passengers departing on [Date]. Please share the best quote." This lets you respond within seconds and close bookings immediately.'
+      },
+      {
+        question: 'Can clients book vehicle rentals like Innova and Tempo Travellers as well as holiday packages?',
+        answer: 'Yes! We create dedicated sections for outstation cab rentals, airport transfers, and local packages with per-km rates, seating capacity, luggage limits, and direct WhatsApp quote requests.'
+      },
+      {
+        question: 'Can we add new tour packages and seasonal offers without coding?',
+        answer: 'Yes. We provide an easy-to-use content management interface where you can publish new destinations, update hotel tiers, and change seasonal holiday prices in minutes.'
+      },
+      {
+        question: 'Do we have to pay commissions on inquiries?',
+        answer: 'None whatsoever. You own 100% of the website, domain, and code. All inquiries come directly to your business WhatsApp and phone without third-party commission deductions.'
+      }
+    ],
+    metaTitle: 'Tours & Travels Website Development Pune | WhatsApp Booking & Cab Sites',
+    metaDescription: 'High-converting website development for tour operators and travels agencies. Direct WhatsApp inquiries, tour itineraries, cab rental calculators, and zero commissions.'
   },
 ];
 

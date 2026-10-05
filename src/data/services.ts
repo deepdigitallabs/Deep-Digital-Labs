@@ -493,6 +493,9 @@ export const ALIAS_SLUGS: Record<string, string> = {
   // Shortened title compatibility aliases
   'software-development-company-website-development': 'software-company-website-development',
   'app-development-company-website-development': 'app-company-website-development',
+  'travels-website-development': 'tours-and-travels-website-development',
+  'tour-and-travels-website-development': 'tours-and-travels-website-development',
+  'pune-tours-and-travels-website-development': 'tours-and-travels-website-development',
 };
 
 export const SERVICES: ServiceDetail[] = [...CORE_SERVICES, ...INDUSTRY_SERVICES];

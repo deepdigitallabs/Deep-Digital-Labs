@@ -47,13 +47,13 @@ export function Navbar() {
           <Link href="/" className="group flex items-center gap-2" aria-label="Deep Digital Labs Home">
             <div className="relative h-9 sm:h-11 flex items-center">
               <Image
-                src="/images/logo-gradient.png"
-                alt="Deep Digital Labs - Technology Builds Tomorrow"
-                width={2154}
-                height={730}
+                src="/images/logo-single.png"
+                alt="Deep Digital Labs"
+                width={1536}
+                height={1024}
                 priority
                 unoptimized
-                className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                className="h-9 sm:h-10 md:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-110 drop-shadow-sm"
               />
             </div>
           </Link>
@@ -207,12 +207,12 @@ export function Navbar() {
                   <div className="pt-3 flex flex-wrap items-center justify-between gap-3 text-xs">
                     <div className="flex items-center gap-3 text-neutral-500 dark:text-neutral-400">
                       <Link
-                        href="/services#industry-catalog"
+                        href="/industries"
                         onClick={() => setMegaMenuOpen(false)}
                         className="text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] font-semibold transition-colors flex items-center gap-1.5"
                       >
                         <Sparkles className="w-3.5 h-3.5 text-[#E8623C]" />
-                        <span>49+ Industry Website Niches</span>
+                        <span>50+ Industry Website Niches</span>
                       </Link>
                       <span className="text-neutral-300 dark:text-neutral-700">•</span>
                       <Link
@@ -350,11 +350,11 @@ export function Navbar() {
                     05 — Chat Bot Development
                   </Link>
                   <Link 
-                    href="/services#industry-catalog" 
+                    href="/industries" 
                     onClick={() => setMobileMenuOpen(false)}
                     className="block text-xs font-semibold text-[#E8623C] hover:underline py-1"
                   >
-                    49+ Industry Website Niches →
+                    50+ Industry Website Niches →
                   </Link>
                   <Link 
                     href="/services" 

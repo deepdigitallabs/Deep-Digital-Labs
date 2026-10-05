@@ -36,15 +36,23 @@ export function Footer() {
           
           {/* Column 1: Brand & Pune Positioning */}
           <div className="lg:col-span-5 space-y-6">
-            <Link href="/" className="inline-flex items-center group" aria-label="Deep Digital Labs Home">
+            <Link href="/" className="inline-flex items-center gap-3 group" aria-label="Deep Digital Labs Home">
               <Image 
-                src="/images/logo-gradient.png" 
-                alt="Deep Digital Labs - Technology Builds Tomorrow" 
-                width={2154} 
-                height={730} 
+                src="/images/logo-single.png" 
+                alt="Deep Digital Labs" 
+                width={1536} 
+                height={1024} 
                 unoptimized
-                className="h-11 sm:h-13 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                className="h-12 sm:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-md"
               />
+              <div className="flex flex-col">
+                <span className="text-xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
+                  Deep<span className="text-[#E8623C]">Digital</span>Labs
+                </span>
+                <span className="text-[11px] text-neutral-500 dark:text-neutral-400 font-semibold tracking-wide">
+                  Build <span className="text-[#E8623C] font-bold">.</span> Grow <span className="text-[#E8623C] font-bold">.</span> Go Digital<span className="text-[#E8623C] font-bold">.</span>
+                </span>
+              </div>
             </Link>
 
             <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-md leading-relaxed">
@@ -109,8 +117,8 @@ export function Footer() {
                 </Link>
               </li>
               <li className="pt-2 space-y-2">
-                <Link href="/services#industry-catalog" className="text-neutral-700 dark:text-neutral-300 font-semibold hover:text-[#E8623C] dark:hover:text-[#E8623C] inline-flex items-center gap-1 transition-colors">
-                  49+ Industry Website Solutions <ArrowUpRight className="w-3.5 h-3.5 text-[#E8623C]" />
+                <Link href="/industries" className="text-neutral-700 dark:text-neutral-300 font-semibold hover:text-[#E8623C] dark:hover:text-[#E8623C] inline-flex items-center gap-1 transition-colors">
+                  50+ Industry Website Solutions <ArrowUpRight className="w-3.5 h-3.5 text-[#E8623C]" />
                 </Link>
                 <div>
                   <Link href="/services" className="text-[#E8623C] font-semibold hover:underline inline-flex items-center gap-1">
