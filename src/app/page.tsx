@@ -268,12 +268,28 @@ export default function HomePage() {
       {/* =========================================================================
              HERO SECTION: High-impact technical visual + typography architecture
              ========================================================================= */}
-      <section className="relative w-full overflow-hidden pb-12 sm:pb-20 pt-28 sm:pt-32 lg:pt-36">
+      <section className="relative w-full overflow-hidden pb-12 sm:pb-20 pt-28 sm:pt-32 lg:pt-36 min-h-[640px] flex items-center">
+        {/* Dynamic Background Image Slider (Synced with foreground slider, 5s auto-transition) */}
+        <div className="absolute inset-0 -z-10 select-none overflow-hidden pointer-events-none">
+          <Image
+            key={`hero-bg-${heroSliderCards[activeHeroSlide].id}`}
+            src={heroSliderCards[activeHeroSlide].image}
+            alt="Hero Background Showcase"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-right-top opacity-30 dark:opacity-25 transition-all duration-1000 animate-in fade-in"
+          />
+          {/* Gradient Masks ensuring 100% typography readability on left and bottom edge blending */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/35 dark:from-[#08090C] dark:via-[#08090C]/95 dark:to-[#08090C]/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#08090C] via-transparent to-transparent h-32 bottom-0" />
+        </div>
+
         {/* Ambient soft glow highlights */}
         <div className="pointer-events-none absolute -top-24 left-1/4 h-[550px] w-[550px] rounded-full bg-[#FF6A00]/8 blur-[130px]" />
         <div className="pointer-events-none absolute top-48 right-10 h-[480px] w-[480px] rounded-full bg-[#174BFF]/8 blur-[140px]" />
 
-        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
             
             {/* Left Column: Typography & Conversion Trigger */}
