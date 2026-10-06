@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { 
@@ -199,6 +199,14 @@ export default function HomePage() {
     setActiveHeroSlide((prev) => (prev + 1) % heroSliderCards.length);
   };
 
+  // Auto-advance hero image slider every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveHeroSlide((prev) => (prev + 1) % heroSliderCards.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [heroSliderCards.length]);
+
   // Selected work items
   const workItems = [
     {
@@ -337,28 +345,19 @@ export default function HomePage() {
             <div className="md:col-span-7 lg:col-span-7 relative w-full flex items-center justify-center">
               <div className="relative w-full max-w-[620px] select-none py-2 px-1">
                 
-                {/* Floating White Circle Button (Right) */}
-                <button
-                  onClick={nextHeroSlide}
-                  type="button"
-                  aria-label="Next Project"
-                  className="absolute -right-2 sm:-right-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-white dark:bg-[#12151D] text-neutral-900 dark:text-white flex items-center justify-center shadow-[0_8px_26px_rgba(0,0,0,0.25)] hover:scale-110 active:scale-95 transition-all cursor-pointer border border-neutral-200 dark:border-white/10"
-                >
-                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-neutral-900 dark:text-white stroke-[2.5]" />
-                </button>
-
-                {/* Single Image Showcase (Clean, No Text Overlays) */}
+                {/* Single Image Showcase (Full Cornered, Clean, No Text Overlays) */}
                 <div 
                   onClick={nextHeroSlide}
-                  className="relative w-full aspect-[16/10] rounded-2xl sm:rounded-3xl overflow-hidden border border-neutral-200/90 dark:border-white/10 shadow-2xl cursor-pointer group bg-neutral-100 dark:bg-[#12151D]"
+                  className="relative w-full aspect-[16/10] rounded-none overflow-hidden border border-neutral-200 dark:border-white/10 shadow-2xl cursor-pointer group bg-neutral-100 dark:bg-[#12151D]"
                 >
                   <Image
+                    key={heroSliderCards[activeHeroSlide].id}
                     src={heroSliderCards[activeHeroSlide].image}
                     alt="Project Screenshot"
                     fill
-                    sizes="(max-width: 768px) 100vw, 620px"
+                    sizes="(max-width: 768px) 100vw, 650px"
                     priority
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="object-cover object-top rounded-none transition-all duration-700 animate-in fade-in group-hover:scale-[1.02]"
                   />
                 </div>
 
