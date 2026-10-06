@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { 
   Building2, 
+  Briefcase,
   GraduationCap, 
   ShoppingBag, 
   Building, 
@@ -14,73 +15,94 @@ import {
   Search, 
   Sparkles, 
   MessageSquare,
-  ChevronRight,
-  Filter,
-  X
+  X,
+  Factory,
+  Truck,
+  Scale,
+  Calculator,
+  Layers,
+  Code2,
+  Workflow,
+  Smartphone,
+  LayoutDashboard,
+  ShieldCheck,
+  Zap,
+  Globe,
+  SlidersHorizontal,
+  Bot,
+  RotateCcw
 } from 'lucide-react';
-import { INDUSTRY_CATEGORIES, INDUSTRY_SERVICES } from '@/data/industryServices';
+import { 
+  INDUSTRY_SOLUTIONS, 
+  SOLUTION_TYPES, 
+  INDUSTRY_CATEGORIES, 
+  IndustrySolutionItem 
+} from '@/data/industrySolutionsData';
 
 export function IndustryServicesDirectory() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedSolution, setSelectedSolution] = useState<string>('All Solutions');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All Industries');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const categoryIcons: Record<string, React.ReactNode> = {
-    Building2: <Building2 className="w-4 h-4" />,
-    GraduationCap: <GraduationCap className="w-4 h-4" />,
-    ShoppingBag: <ShoppingBag className="w-4 h-4" />,
-    Building: <Building className="w-4 h-4" />,
-    HeartPulse: <HeartPulse className="w-4 h-4" />,
-    Cpu: <Cpu className="w-4 h-4" />,
+  const isFiltered = selectedSolution !== 'All Solutions' || selectedCategory !== 'All Industries' || searchQuery.trim() !== '';
+
+  const handleReset = () => {
+    setSelectedSolution('All Solutions');
+    setSelectedCategory('All Industries');
+    setSearchQuery('');
   };
 
-  const filteredServices = useMemo(() => {
-    return INDUSTRY_SERVICES.filter((service) => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+  const filteredSolutions = useMemo(() => {
+    return INDUSTRY_SOLUTIONS.filter((item) => {
+      // 1. Solution type filter
+      const matchesSolution = 
+        selectedSolution === 'All Solutions' || 
+        item.solutionTypes.some((type) => type.toLowerCase() === selectedSolution.toLowerCase()) ||
+        (selectedSolution === 'Business Software' && (item.solutionTypes.includes('CRM & ERP') || item.solutionTypes.includes('Internal Tools'))) ||
+        (selectedSolution === 'AI & Automation' && item.solutionTypes.includes('AI & Automation'));
+
+      if (!matchesSolution) return false;
+
+      // 2. Industry category filter
+      const matchesCategory = 
+        selectedCategory === 'All Industries' || 
+        item.industryCategory.toLowerCase() === selectedCategory.toLowerCase();
+
       if (!matchesCategory) return false;
 
+      // 3. Search query
       if (!searchQuery.trim()) return true;
 
-      const q = searchQuery.toLowerCase();
+      const q = searchQuery.toLowerCase().trim();
       return (
-        service.title.toLowerCase().includes(q) ||
-        service.headline.toLowerCase().includes(q) ||
-        service.shortDescription.toLowerCase().includes(q) ||
-        service.categoryName.toLowerCase().includes(q) ||
-        service.techStack.some((tech) => tech.toLowerCase().includes(q))
+        item.solutionTitle.toLowerCase().includes(q) ||
+        item.businessType.toLowerCase().includes(q) ||
+        item.industryCategory.toLowerCase().includes(q) ||
+        item.shortDescription.toLowerCase().includes(q) ||
+        item.solutionTypes.some((st) => st.toLowerCase().includes(q)) ||
+        item.keyCapabilities.some((cap) => cap.toLowerCase().includes(q))
       );
     });
-  }, [selectedCategory, searchQuery]);
+  }, [selectedSolution, selectedCategory, searchQuery]);
 
   return (
-    <section id="industry-catalog" className="pt-12 pb-24 border-t border-neutral-200 dark:border-white/10">
+    <section id="solutions-directory" className="pt-4 pb-20 relative">
       
-      {/* Header */}
-      <div className="text-center max-w-4xl mx-auto mb-14 space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8623C]/10 border border-[#E8623C]/20 text-[#E8623C] text-xs font-mono font-bold uppercase tracking-wider">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>Complete Industry Catalog • {INDUSTRY_SERVICES.length} Dedicated Solutions</span>
-        </div>
-        <h2 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
-          Specialized Website Development By Industry
-        </h2>
-        <p className="text-base sm:text-lg text-neutral-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          Every industry has unique workflows, customer expectations, and technical needs. Choose your industry below to view dedicated features, timelines, and deliverables.
-        </p>
-      </div>
-
-      {/* Search & Category Filter Controls */}
-      <div className="mb-10 space-y-6">
+      {/* =========================================================================
+             UNIFIED FILTER & SEARCH CONTROL DECK
+             ========================================================================= */}
+      <div className="mb-10 p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#10121A] border border-neutral-200 dark:border-[#242735] shadow-xl backdrop-blur-xl space-y-6">
         
-        {/* Search Bar & Stats */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-5xl mx-auto">
-          <div className="relative w-full sm:max-w-md">
+        {/* Top Control Bar: Search Input & Status */}
+        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 pb-6 border-b border-neutral-100 dark:border-white/[0.08]">
+          <div className="relative flex-1 max-w-2xl">
             <Search className="w-4 h-4 text-neutral-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
               type="text"
-              placeholder="Search by industry, business type, or keyword (e.g., CA, Clinic, School, Fashion)..."
+              placeholder="Search an industry, business type, solution or keyword (e.g. CA, Clinic, Real Estate, SaaS, CRM, Automation)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-10 py-3 rounded-full text-sm bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-300 dark:border-white/10 text-neutral-900 dark:text-white placeholder:text-neutral-400 focus:outline-none focus:border-[#E8623C] dark:focus:border-[#E8623C] transition-colors"
+              className="w-full pl-11 pr-10 py-3.5 rounded-xl text-sm bg-neutral-50 dark:bg-[#171B26] border border-neutral-200 dark:border-[#242735] text-neutral-900 dark:text-white placeholder:text-neutral-400 focus:outline-none focus:border-[#174BFF] dark:focus:border-[#174BFF] shadow-xs transition-colors"
             />
             {searchQuery && (
               <button
@@ -93,141 +115,169 @@ export function IndustryServicesDirectory() {
             )}
           </div>
 
-          <div className="flex items-center gap-3 text-xs font-mono text-neutral-500 dark:text-gray-400">
-            <span>
-              Showing <strong className="text-neutral-900 dark:text-white">{filteredServices.length}</strong> of {INDUSTRY_SERVICES.length} Specialized Niches
+          <div className="flex items-center justify-between md:justify-end gap-3 shrink-0">
+            <span className="text-xs font-mono px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/40 text-[#174BFF] dark:text-[#60A5FA] border border-blue-200 dark:border-blue-900/60 font-bold">
+              Showing {filteredSolutions.length} of {INDUSTRY_SOLUTIONS.length} Solutions
             </span>
-            {searchQuery && (
+            {isFiltered && (
               <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('all');
-                }}
-                className="text-[#E8623C] font-semibold hover:underline"
+                onClick={handleReset}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-[#E8623C] hover:bg-orange-50 dark:hover:bg-orange-950/30 transition-colors cursor-pointer"
               >
-                Reset
+                <RotateCcw className="w-3.5 h-3.5" />
+                <span>Reset</span>
               </button>
             )}
           </div>
         </div>
 
-        {/* Category Filter Pills */}
-        <div className="flex items-center justify-center flex-wrap gap-2 max-w-5xl mx-auto">
-          <button
-            onClick={() => setSelectedCategory('all')}
-            className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
-              selectedCategory === 'all'
-                ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 shadow-md'
-                : 'bg-neutral-100 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-white/10'
-            }`}
-          >
-            All Sectors ({INDUSTRY_SERVICES.length})
-          </button>
+        {/* Filter Row 1: What Can We Build? (Solution Architecture) */}
+        <div className="space-y-2.5">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#174BFF] dark:text-[#60A5FA] flex items-center gap-1.5">
+              <SlidersHorizontal className="w-3.5 h-3.5" />
+              <span>What Can We Build? (Solution Type)</span>
+            </span>
+            <span className="text-[11px] text-neutral-400 dark:text-neutral-500 font-mono hidden sm:inline">
+              Filter by product type
+            </span>
+          </div>
 
-          {INDUSTRY_CATEGORIES.map((cat) => {
-            const isSelected = selectedCategory === cat.id;
-            return (
-              <button
-                key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
-                  isSelected
-                    ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 shadow-md'
-                    : 'bg-neutral-100 dark:bg-white/5 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-white/10 border border-transparent'
-                }`}
-              >
-                <span className={isSelected ? 'text-[#E8623C]' : 'text-neutral-400'}>
-                  {categoryIcons[cat.iconName]}
-                </span>
-                <span>{cat.shortTitle}</span>
-                <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full ${
-                  isSelected 
-                    ? 'bg-white/20 text-white dark:bg-black/10 dark:text-neutral-900' 
-                    : 'bg-neutral-200/70 dark:bg-white/10 text-neutral-500'
-                }`}>
-                  {cat.count}
-                </span>
-              </button>
-            );
-          })}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-thin scrollbar-thumb-neutral-300 dark:scrollbar-thumb-neutral-700">
+            {SOLUTION_TYPES.map((type) => {
+              const isSelected = selectedSolution === type;
+              return (
+                <button
+                  key={type}
+                  onClick={() => setSelectedSolution(type)}
+                  className={`px-3.5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer ${
+                    isSelected
+                      ? 'bg-gradient-to-r from-[#174BFF] to-[#8B2CFF] text-white shadow-md shadow-[#174BFF]/25 font-bold scale-[1.02]'
+                      : 'bg-neutral-50 dark:bg-[#171B26] text-neutral-700 dark:text-neutral-300 border border-neutral-200 dark:border-[#242735] hover:border-[#174BFF]/50 hover:text-[#174BFF] dark:hover:text-white'
+                  }`}
+                >
+                  {type}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Filter Row 2: Explore by Industry (Industry Domains) */}
+        <div className="space-y-2.5 pt-2">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8B2CFF] dark:text-[#C084FC] flex items-center gap-1.5">
+              <Building2 className="w-3.5 h-3.5" />
+              <span>Explore by Industry (Domain)</span>
+            </span>
+            <span className="text-[11px] text-neutral-400 dark:text-neutral-500 font-mono hidden sm:inline">
+              Filter by business sector
+            </span>
+          </div>
+
+          <div className="flex items-center flex-wrap gap-2">
+            {INDUSTRY_CATEGORIES.map((cat) => {
+              const isSelected = selectedCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 cursor-pointer ${
+                    isSelected
+                      ? 'bg-[#174BFF] text-white font-semibold shadow-xs'
+                      : 'bg-neutral-50 dark:bg-[#171B26] text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-[#242735] hover:border-neutral-300 dark:hover:border-neutral-600 hover:text-neutral-900 dark:hover:text-white'
+                  }`}
+                >
+                  {cat}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
       </div>
 
-      {/* Services Grid */}
+      {/* =========================================================================
+             CARDS GRID: 50+ INDUSTRY DIGITAL SOLUTIONS
+             ========================================================================= */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredServices.map((service) => (
+        {filteredSolutions.map((item) => (
           <div
-            key={service.slug}
-            className="p-7 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 hover:border-neutral-900 dark:hover:border-[#E8623C]/60 transition-all duration-300 flex flex-col justify-between shadow-xs hover:shadow-xl group"
+            key={item.slug}
+            className="p-7 rounded-2xl bg-white dark:bg-[#10121A] border border-neutral-200 dark:border-[#242735] hover:border-[#174BFF]/50 dark:hover:border-[#174BFF]/60 hover:shadow-[0_12px_32px_rgba(23,75,255,0.12)] transition-all duration-300 flex flex-col justify-between group"
           >
             <div className="space-y-4">
               
-              {/* Top Tag */}
-              <div className="flex items-center justify-between">
-                <span className="text-[11px] font-mono font-bold text-[#E8623C] dark:text-[#E8623C] px-2.5 py-0.5 rounded-full bg-[#E8623C]/10 border border-[#E8623C]/20">
-                  {service.categoryName}
+              {/* Top Meta: Industry Category & Business Type */}
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-[11px] font-mono font-bold text-[#174BFF] dark:text-[#60A5FA] px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/50">
+                  {item.industryCategory}
+                </span>
+                <span className="text-[11px] font-mono text-neutral-400 dark:text-neutral-500 truncate max-w-[150px]">
+                  {item.businessType}
                 </span>
               </div>
 
-              {/* Title & Headline */}
+              {/* Solution Title & Short Description */}
               <div>
-                <Link href={`/services/${service.slug}`} className="block group-hover:text-black dark:group-hover:text-[#E8623C] transition-colors">
-                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white leading-snug">
-                    {service.title}
+                <Link href={`/services/${item.slug}`} className="block group-hover:text-[#174BFF] transition-colors">
+                  <h3 className="text-xl font-bold font-display text-neutral-900 dark:text-white leading-snug">
+                    {item.solutionTitle}
                   </h3>
                 </Link>
-                <p className="text-xs font-semibold text-neutral-800 dark:text-neutral-200 mt-2">
-                  {service.headline}
-                </p>
-                <p className="text-xs text-neutral-600 dark:text-gray-400 mt-2 leading-relaxed">
-                  {service.shortDescription}
+                <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-2 leading-relaxed">
+                  {item.shortDescription}
                 </p>
               </div>
 
-              {/* Key Deliverables Bullet Points */}
-              <div className="space-y-2 pt-3 border-t border-neutral-200/80 dark:border-white/5">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500 dark:text-gray-500 font-semibold block">
-                  Industry-Specific Features
+              {/* Solution Types (Product Architecture Tags) */}
+              <div className="space-y-1.5 pt-2">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 dark:text-neutral-500 font-bold block">
+                  Solution Architecture
                 </span>
-                {service.keyBenefits.slice(0, 3).map((benefit, i) => (
-                  <div key={i} className="flex items-start gap-2 text-xs text-neutral-700 dark:text-gray-300">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-[#D4FF00] shrink-0 mt-0.5" />
-                    <span className="line-clamp-1">{benefit}</span>
-                  </div>
-                ))}
+                <div className="flex flex-wrap gap-1.5">
+                  {item.solutionTypes.map((type) => (
+                    <span
+                      key={type}
+                      className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-md bg-neutral-100 dark:bg-[#171B26] text-neutral-700 dark:text-neutral-300 border border-neutral-200/80 dark:border-[#242735] group-hover:border-[#174BFF]/30 transition-colors"
+                    >
+                      {type}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              {/* Tech Stack Chips */}
-              <div className="pt-2 flex flex-wrap gap-1.5">
-                {service.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white dark:bg-black/40 border border-neutral-200 dark:border-white/10 text-neutral-700 dark:text-gray-300"
-                  >
-                    {tech}
-                  </span>
+              {/* Key Capabilities */}
+              <div className="space-y-2 pt-3 border-t border-neutral-100 dark:border-white/[0.06]">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 dark:text-neutral-500 font-bold block">
+                  Key Capabilities
+                </span>
+                {item.keyCapabilities.map((cap, i) => (
+                  <div key={i} className="flex items-start gap-2 text-xs text-neutral-700 dark:text-neutral-300">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#174BFF] shrink-0 mt-0.5" />
+                    <span className="leading-tight">{cap}</span>
+                  </div>
                 ))}
               </div>
 
             </div>
 
-            {/* Bottom Actions */}
-            <div className="pt-6 mt-6 border-t border-neutral-200 dark:border-white/10 flex items-center justify-between gap-3">
+            {/* Bottom Actions: Explore Solution & WhatsApp */}
+            <div className="pt-6 mt-6 border-t border-neutral-200 dark:border-[#242735] flex items-center justify-between gap-3">
               <Link
-                href={`/services/${service.slug}`}
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-neutral-900 dark:text-white group-hover:text-black dark:group-hover:text-[#E8623C] transition-colors"
+                href={`/services/${item.slug}`}
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-neutral-900 dark:text-white group-hover:text-[#174BFF] transition-colors"
               >
-                <span>Read More</span>
+                <span>Explore Solution</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
 
               <a
-                href={`https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I'm%20interested%20in%20${encodeURIComponent(service.title)}%20for%20my%20business.`}
+                href={`https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I'm%20interested%20in%20${encodeURIComponent(item.solutionTitle)}%20for%20my%20business.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 text-xs font-semibold transition-colors"
-                title={`Chat with an engineer about ${service.title}`}
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 text-xs font-semibold transition-colors"
+                title={`Chat with an engineer about ${item.solutionTitle}`}
               >
                 <MessageSquare className="w-3 h-3" />
                 <span>WhatsApp</span>
@@ -239,67 +289,32 @@ export function IndustryServicesDirectory() {
       </div>
 
       {/* Empty State */}
-      {filteredServices.length === 0 && (
-        <div className="text-center py-16 p-8 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 max-w-xl mx-auto">
-          <p className="text-base text-neutral-700 dark:text-gray-300 font-semibold">
-            No specialized website service matched &quot;{searchQuery}&quot;.
+      {filteredSolutions.length === 0 && (
+        <div className="text-center py-16 p-8 rounded-2xl bg-white dark:bg-[#10121A] border border-neutral-200 dark:border-[#242735] max-w-xl mx-auto shadow-sm">
+          <p className="text-base text-neutral-800 dark:text-neutral-200 font-semibold">
+            No digital solution matched &quot;{searchQuery}&quot;.
           </p>
-          <p className="text-xs text-neutral-500 dark:text-gray-400 mt-1">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
             Need a custom digital system or hybrid architecture? We engineer bespoke platforms for any business scope.
           </p>
           <div className="mt-5 flex items-center justify-center gap-3">
             <button
-              onClick={() => {
-                setSearchQuery('');
-                setSelectedCategory('all');
-              }}
-              className="px-4 py-2 rounded-full text-xs font-bold bg-neutral-900 text-white dark:bg-white dark:text-black hover:opacity-90 transition-opacity"
+              onClick={handleReset}
+              className="px-4 py-2 rounded-xl text-xs font-semibold bg-neutral-100 dark:bg-white/10 text-neutral-800 dark:text-white hover:bg-neutral-200 transition-colors cursor-pointer"
             >
               Reset Filters
             </button>
-            <Link
-              href="/contact"
-              className="px-4 py-2 rounded-full text-xs font-semibold border border-neutral-300 dark:border-white/20 hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors"
+            <a
+              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20a%20custom%20software%20requirement%20I'd%20like%20to%20discuss."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 rounded-xl text-xs font-bold bg-[#174BFF] text-white hover:opacity-90 transition-opacity"
             >
-              Request Custom Architecture
-            </Link>
+              Consult an Engineer
+            </a>
           </div>
         </div>
       )}
-
-      {/* Advisory Banner */}
-      <div className="mt-16 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-neutral-900 to-neutral-800 text-white dark:from-[#11141D] dark:to-[#0B0D12] border border-neutral-800 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-        <div className="space-y-2 text-center md:text-left">
-          <span className="text-xs font-mono font-bold text-[#E8623C] uppercase tracking-wider">
-            Direct Developer Access • Pune &amp; Global
-          </span>
-          <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
-            Don&apos;t see your exact business model listed?
-          </h3>
-          <p className="text-sm text-neutral-300 max-w-2xl leading-relaxed">
-            We build custom web applications, APIs, multi-branch ERP systems, and workflow engines. Tell us your requirements and we&apos;ll scope a custom solution within 24 hours.
-          </p>
-        </div>
-
-        <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
-          <Link
-            href="/contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-bold text-xs sm:text-sm bg-[#E8623C] hover:bg-[#F0744E] text-white shadow-lg shadow-[#E8623C]/30 transition-all active:scale-95"
-          >
-            <span>Discuss Custom Scope</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-          <a
-            href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20a%20custom%20website%20requirement%20I'd%20like%20to%20discuss."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full font-semibold text-xs sm:text-sm border border-white/20 text-white hover:bg-white/10 transition-all"
-          >
-            <MessageSquare className="w-4 h-4" />
-            <span>Chat on WhatsApp</span>
-          </a>
-        </div>
-      </div>
 
     </section>
   );
