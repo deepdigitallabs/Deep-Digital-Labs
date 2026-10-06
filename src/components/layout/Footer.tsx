@@ -11,7 +11,8 @@ import {
   ArrowRight,
   Sparkles,
   ShieldCheck,
-  Zap
+  Zap,
+  Phone
 } from 'lucide-react';
 
 function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
@@ -114,6 +115,12 @@ export function Footer() {
               <div className="flex items-center gap-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono">
                 <MapPin className="w-3.5 h-3.5 text-[#E8623C] shrink-0" />
                 <span>Pune, Maharashtra 411001, India</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono">
+                <Phone className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                <a href="tel:+919175152244" className="hover:text-[#E8623C] transition-colors font-medium">
+                  Call Us
+                </a>
               </div>
             </div>
 

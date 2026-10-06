@@ -5,8 +5,8 @@ import { ArrowLeft, Sparkles, ArrowRight, MessageSquare, ShieldCheck, Zap, Code2
 import { IndustryServicesDirectory } from '@/components/services/IndustryServicesDirectory';
 
 export const metadata: Metadata = {
-  title: 'Industry Website Solutions | 50+ Specialized Web Development Niches | Deep Digital Labs',
-  description: 'Explore 50+ specialized website development architectures built specifically for your industry — from CA firms and real estate to e-commerce, healthcare, and tour & travels. 100% source code ownership and direct Pune engineering support.',
+  title: 'Digital Solutions Built for Your Industry | 50+ Specialized Solutions | Deep Digital Labs',
+  description: 'Explore 50+ industry-specific digital solutions — from high-performance websites and SaaS platforms to custom business software, mobile apps, AI automation, and integrated business systems. 100% code ownership.',
 };
 
 export default function IndustriesPage() {
@@ -28,16 +28,21 @@ export default function IndustriesPage() {
         <div className="relative mb-14 text-center max-w-4xl mx-auto space-y-5">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#E8623C]/10 via-[#7C3AED]/10 to-blue-500/10 border border-[#E8623C]/20 text-[#E8623C] text-xs font-mono font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Dedicated Industry Architecture • 50 Specialized Solutions</span>
+            <span>Dedicated Industry Architecture • 50+ Specialized Solutions</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-[1.15] font-display">
-            Websites Engineered for Your <span className="text-gradient-spectrum">Exact Industry</span>
+            Digital Solutions Built for Your <span className="text-gradient-spectrum">Industry</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed">
-            Generic website builders fail because each business sector has distinct customer journeys, compliance norms, and conversion triggers. Explore our 50 specialized website architectures built for fast real-world mobile performance, direct WhatsApp inquiry engines, and 100% code ownership.
-          </p>
+          <div className="space-y-3 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+              Every industry has different customers, workflows, operational challenges, and growth opportunities. We build the right digital product for the job — from high-performance websites and SaaS platforms to custom business software, mobile apps, AI automation, and integrated business systems.
+            </p>
+            <p className="text-sm sm:text-base text-neutral-500 dark:text-neutral-400 font-medium leading-relaxed">
+              Explore 50+ industry-specific solution possibilities — designed for real-world performance, scalability, and 100% code ownership.
+            </p>
+          </div>
 
           {/* Value Badges */}
           <div className="pt-2 flex flex-wrap items-center justify-center gap-3 text-xs text-neutral-600 dark:text-neutral-400 font-medium">
