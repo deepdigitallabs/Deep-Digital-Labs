@@ -549,7 +549,7 @@ export default function HomePage() {
           <div className="space-y-1.5 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-[#E8623C]/20 border border-[#E8623C]/40 text-[#E8623C] text-[11px] font-mono font-bold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>50+ Industry Architectures Ready</span>
+
             </div>
             <h4 className="text-lg sm:text-xl font-bold font-display text-white">
               Need an industry-specialized website with tailored inquiry funnels?

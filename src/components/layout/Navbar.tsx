@@ -242,6 +242,9 @@ export function Navbar() {
             <Link href="/solutions" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               Solutions
             </Link>
+            <Link href="/industries" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
+              Industries
+            </Link>
             <Link href="/about" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               About
             </Link>
@@ -370,6 +373,13 @@ export function Navbar() {
               className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
             >
               Solutions
+            </Link>
+            <Link 
+              href="/industries" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
+            >
+              Industries
             </Link>
             <Link 
               href="/about" 
