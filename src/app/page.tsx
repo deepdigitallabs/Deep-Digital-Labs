@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { 
@@ -25,102 +25,11 @@ import {
   Code2, 
   ChevronDown, 
   HelpCircle,
-  ExternalLink,
-  Cpu,
-  Activity,
-  Workflow,
-  Share2
+  ExternalLink
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 import { CASE_STUDIES } from '@/data/caseStudies';
 
-// Interactive Pipeline Step Definitions
-const PIPELINE_STEPS = [
-  {
-    id: 1,
-    title: 'Inbound Source',
-    subtitle: 'WhatsApp / Form',
-    desc: 'New payload received via webhook',
-    icon: MessageSquare,
-    color: 'text-primary',
-    border: 'hover:border-primary',
-    payload: {
-      timestamp: '2026-04-01T10:14:22Z',
-      event: 'inbound_lead',
-      source: 'whatsapp_business_api',
-      company: 'AgriCore Labs, Pune',
-      intent: 'custom_erp_dashboard',
-      sla_latency_ms: 384,
-      status: 'payload_verified'
-    }
-  },
-  {
-    id: 2,
-    title: 'AI Reasoning',
-    subtitle: 'Intent Classifier',
-    desc: 'Extract scope, urgency & budget',
-    icon: Cpu,
-    color: 'text-[#C026D3]',
-    border: 'hover:border-[#C026D3]',
-    payload: {
-      timestamp: '2026-04-01T10:14:22Z',
-      event: 'ai_intent_classified',
-      confidence: 0.984,
-      model: 'mistral-large-fast',
-      extracted_entities: { scope: 'Bespoke ERP + Mobile App', budget_tier: 'Enterprise Sprint' },
-      status: 'routed_to_orchestrator'
-    }
-  },
-  {
-    id: 3,
-    title: 'Core Engine',
-    subtitle: 'n8n Automation',
-    desc: 'Deterministic parallel workflow',
-    icon: Workflow,
-    color: 'text-[#FF6A00]',
-    border: 'border-[#FF6A00]',
-    payload: {
-      timestamp: '2026-04-01T10:14:23Z',
-      event: 'orchestration_executed',
-      flow_id: 'flow_lead_dispatch_v4',
-      tasks_completed: ['sanitize_input', 'deduplicate_record', 'calculate_priority'],
-      status: '200_SUCCESS'
-    }
-  },
-  {
-    id: 4,
-    title: 'Data System',
-    subtitle: 'CRM / ERP Sync',
-    desc: 'PostgreSQL record created',
-    icon: Database,
-    color: 'text-blue-500',
-    border: 'hover:border-blue-500',
-    payload: {
-      timestamp: '2026-04-01T10:14:23Z',
-      event: 'db_transaction_committed',
-      database: 'production_postgres_cluster',
-      row_id: 'rec_8992_inbound',
-      encryption: 'AES-256-GCM',
-      status: 'persisted'
-    }
-  },
-  {
-    id: 5,
-    title: 'Confirmation',
-    subtitle: 'Instant Alert',
-    desc: 'SMS + Founder WhatsApp alert',
-    icon: Zap,
-    color: 'text-emerald-500',
-    border: 'hover:border-emerald-500',
-    payload: {
-      timestamp: '2026-04-01T10:14:23Z',
-      event: 'notification_dispatched',
-      channels: ['WhatsApp: +91 91751 52244', 'Slack: #client-inbound'],
-      dispatch_time_ms: 48,
-      status: 'team_alerted_instantly'
-    }
-  }
-];
 
 const FAQS = [
   {
@@ -143,7 +52,6 @@ const FAQS = [
 
 export default function HomePage() {
   const [callModalOpen, setCallModalOpen] = useState(false);
-  const [activeStep, setActiveStep] = useState(3);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   // Selected work items
@@ -304,8 +212,7 @@ export default function HomePage() {
             {/* Service 01: Business Websites */}
             <div className="relative bg-white dark:bg-[#12151D] rounded-2xl p-7 sm:p-8 border border-neutral-200 dark:border-white/[0.08] hover:border-blue-500/50 shadow-md hover:shadow-xl transition-all group flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-xs text-neutral-500 dark:text-neutral-400 font-bold">01 // IDENTITY &amp; CONVERSION</span>
+                <div className="flex items-center justify-end mb-6">
                   <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-800 flex items-center justify-center text-[#174BFF] group-hover:bg-[#174BFF] group-hover:text-white transition-colors">
                     <Globe className="w-5 h-5" />
                   </div>
@@ -328,8 +235,7 @@ export default function HomePage() {
             {/* Service 02: Business Software */}
             <div className="relative bg-white dark:bg-[#12151D] rounded-2xl p-7 sm:p-8 border border-neutral-200 dark:border-white/[0.08] hover:border-sky-500/50 shadow-md hover:shadow-xl transition-all group flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-xs text-neutral-500 dark:text-neutral-400 font-bold">02 // OPERATIONS ARCHITECTURE</span>
+                <div className="flex items-center justify-end mb-6">
                   <div className="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-950/40 border border-sky-100 dark:border-sky-800 flex items-center justify-center text-[#0284C7] group-hover:bg-[#0284C7] group-hover:text-white transition-colors">
                     <Database className="w-5 h-5" />
                   </div>
@@ -353,12 +259,9 @@ export default function HomePage() {
             <div className="relative bg-gradient-to-b from-white to-amber-50/40 dark:from-[#12151D] dark:to-orange-950/20 rounded-2xl p-7 sm:p-8 border-2 border-[#FF6A00] shadow-xl group flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-2">
-                    <span className="font-mono text-xs text-[#FF6A00] font-bold">03 // INTELLIGENCE</span>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-gradient-to-r from-[#FF6A00] to-[#E11D48] text-white font-bold uppercase tracking-wider">
-                      Featured Solution
-                    </span>
-                  </div>
+                  <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-gradient-to-r from-[#FF6A00] to-[#E11D48] text-white font-bold uppercase tracking-wider">
+                    Featured Solution
+                  </span>
                   <div className="w-10 h-10 rounded-xl bg-orange-100/80 dark:bg-orange-950/60 border border-orange-200 dark:border-orange-800 flex items-center justify-center text-[#FF6A00] group-hover:scale-110 transition-transform">
                     <Bot className="w-5 h-5" />
                   </div>
@@ -381,8 +284,7 @@ export default function HomePage() {
             {/* Service 04: Mobile Apps */}
             <div className="relative bg-white dark:bg-[#12151D] rounded-2xl p-7 sm:p-8 border border-neutral-200 dark:border-white/[0.08] hover:border-purple-500/50 shadow-md hover:shadow-xl transition-all group flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-xs text-neutral-500 dark:text-neutral-400 font-bold">04 // FIELD &amp; NATIVE ACCESS</span>
+                <div className="flex items-center justify-end mb-6">
                   <div className="w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-950/40 border border-purple-100 dark:border-purple-800 flex items-center justify-center text-[#C026D3] group-hover:bg-[#C026D3] group-hover:text-white transition-colors">
                     <Smartphone className="w-5 h-5" />
                   </div>
@@ -413,10 +315,6 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           
           <div className="flex flex-col gap-2 mb-14">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#0284C7]" />
-              <span className="font-mono text-xs uppercase tracking-wider text-[#0284C7] font-bold">PROVEN IMPACT</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-neutral-900 dark:text-white">
               Selected Work.
             </h2>
@@ -574,109 +472,6 @@ export default function HomePage() {
             </div>
 
           </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-             SECTION 5: AI & WORKFLOW AUTOMATION (HIGH-CONTRAST DEDICATED PIPELINE)
-             ========================================================================= */}
-      <section className="w-full py-20 relative overflow-hidden bg-white dark:bg-[#08090C]">
-        <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[800px] rounded-full bg-gradient-to-r from-orange-200/20 via-sky-200/20 to-purple-200/20 dark:from-orange-500/5 dark:via-blue-500/5 dark:to-purple-500/5 blur-[150px]" />
-
-        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8 relative">
-          
-          <div className="flex flex-col items-center text-center max-w-3xl mx-auto gap-3 mb-14">
-            <span className="font-mono text-xs uppercase tracking-wider text-[#FF6A00] px-4 py-1.5 rounded-full bg-orange-50 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-800 font-bold shadow-xs">
-              ZERO BUSYWORK INITIATIVE
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-neutral-900 dark:text-white">
-              Your business has repetitive work.<br />
-              <span className="text-neutral-400 dark:text-neutral-500 font-light">It doesn&apos;t have to.</span>
-            </h2>
-            <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400">
-              We connect your existing tools and automate repetitive business operations using deterministic logic, secure APIs, and autonomous AI agents.
-            </p>
-          </div>
-
-          {/* Interactive Workflow Canvas */}
-          <div className="w-full bg-white/95 dark:bg-[#12151D]/95 rounded-2xl border border-neutral-200 dark:border-white/[0.08] p-6 sm:p-8 shadow-xl backdrop-blur-xl mb-12">
-            
-            {/* Workflow Top Bar */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-neutral-200 dark:border-white/[0.08] mb-8 gap-3">
-              <div className="flex items-center gap-2.5">
-                <Workflow className="w-5 h-5 text-[#0284C7]" />
-                <span className="text-base sm:text-lg font-bold font-display text-neutral-900 dark:text-white">
-                  Pipeline: Enterprise Inbound Qualification &amp; ERP Sync
-                </span>
-              </div>
-              <div className="flex items-center gap-4 font-mono text-xs">
-                <span className="text-neutral-500">LATENCY: <strong className="text-[#0284C7]">&lt; 450ms</strong></span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/40 text-[#174BFF] dark:text-blue-400 border border-blue-200 dark:border-blue-800 font-bold">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#174BFF] animate-pulse" /> ACTIVE TRIGGER
-                </span>
-              </div>
-            </div>
-
-            {/* Connected Nodes Flow (Interactive selector) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 relative items-center">
-              {PIPELINE_STEPS.map((step) => {
-                const IconComponent = step.icon;
-                const isSelected = activeStep === step.id;
-                return (
-                  <button
-                    key={step.id}
-                    onClick={() => setActiveStep(step.id)}
-                    type="button"
-                    className={`p-4 rounded-xl border text-left flex flex-col gap-2 transition-all cursor-pointer ${
-                      isSelected 
-                        ? 'bg-gradient-to-b from-orange-50/70 to-white dark:from-orange-950/30 dark:to-[#12151D] border-[#FF6A00] shadow-md ring-2 ring-[#FF6A00]/20' 
-                        : 'bg-neutral-50 dark:bg-white/[0.03] border-neutral-200 dark:border-white/10 hover:border-neutral-300 dark:hover:border-white/20'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-mono text-xs text-neutral-500 dark:text-neutral-400 font-bold">
-                        0{step.id} // {step.title.toUpperCase()}
-                      </span>
-                      {isSelected && <span className="w-2 h-2 rounded-full bg-[#FF6A00] animate-ping" />}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <IconComponent className={`w-4 h-4 ${step.color}`} />
-                      <span className="font-bold text-sm text-neutral-900 dark:text-white">
-                        {step.subtitle}
-                      </span>
-                    </div>
-                    <span className="font-mono text-[11px] text-neutral-500 dark:text-neutral-400">
-                      {step.desc}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Terminal Payload Telemetry Preview */}
-            <div className="mt-6 bg-neutral-950 p-4 sm:p-5 rounded-xl border border-neutral-800 font-mono text-xs text-neutral-300 flex flex-col gap-1.5 shadow-inner">
-              <div className="flex items-center justify-between pb-2 border-b border-neutral-800">
-                <span className="text-[#FF6A00] font-bold">// LIVE PIPELINE PAYLOAD TRACE — STEP 0{activeStep}</span>
-                <span className="text-emerald-400 font-medium">200_SUCCESS</span>
-              </div>
-              <pre className="text-sky-300 overflow-x-auto text-xs py-1 whitespace-pre-wrap font-mono">
-                {JSON.stringify(PIPELINE_STEPS[activeStep - 1].payload, null, 2)}
-              </pre>
-            </div>
-
-          </div>
-
-          {/* Section Action Trigger */}
-          <div className="flex justify-center">
-            <button
-              onClick={() => setCallModalOpen(true)}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#FF6A00] to-[#174BFF] text-white font-bold text-sm tracking-wider uppercase shadow-[0_10px_24px_rgba(255,106,0,0.25)] hover:shadow-[0_12px_32px_rgba(23,75,255,0.35)] hover:-translate-y-0.5 transition-all cursor-pointer"
-            >
-              <span>Automate My Business</span>
-              <Zap className="w-4 h-4" />
-            </button>
-          </div>
-
         </div>
       </section>
 
@@ -1089,7 +884,7 @@ export default function HomePage() {
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-neutral-900 dark:text-white font-semibold text-sm tracking-wider hover:border-emerald-500 hover:text-emerald-600 transition-all shadow-xs"
               >
                 <MessageSquare className="w-5 h-5 text-emerald-600" />
-                <span>WhatsApp (+91 91751 52244)</span>
+                <span>WhatsApp</span>
               </a>
             </div>
 

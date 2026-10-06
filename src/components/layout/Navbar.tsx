@@ -44,8 +44,8 @@ export function Navbar() {
         <div className="flex items-center justify-between px-5 sm:px-6 py-2 sm:py-2.5 bg-white/85 dark:bg-[#0B0D12]/85 backdrop-blur-xl border border-neutral-200/80 dark:border-white/[0.08] rounded-2xl shadow-xl transition-all duration-200">
           
           {/* Brand Logo */}
-          <Link href="/" className="group flex items-center gap-2" aria-label="Deep Digital Labs Home">
-            <div className="relative h-9 sm:h-11 flex items-center">
+          <Link href="/" className="group flex items-center gap-2.5 sm:gap-3" aria-label="Deep Digital Labs Home">
+            <div className="relative h-8 sm:h-9 md:h-10 flex items-center shrink-0">
               <Image
                 src="/images/logo-single.png"
                 alt="Deep Digital Labs"
@@ -53,15 +53,26 @@ export function Navbar() {
                 height={1024}
                 priority
                 unoptimized
-                className="h-9 sm:h-10 md:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-110 drop-shadow-sm"
+                className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-sm"
               />
             </div>
+            <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight text-neutral-900 dark:text-white font-display whitespace-nowrap">
+              Deep <span className="text-[#E8623C]">Digital</span> Labs
+            </span>
           </Link>
 
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-5 xl:gap-6 text-sm font-medium text-neutral-600 dark:text-neutral-300">
             <Link href="/" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               Home
+            </Link>
+
+            <Link href="/about" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
+              About
+            </Link>
+
+            <Link href="/case-studies" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
+              Work
             </Link>
 
             {/* Services with Mega Menu Dropdown */}
@@ -236,17 +247,11 @@ export function Navbar() {
               )}
             </div>
 
-            <Link href="/case-studies" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
-              Work
-            </Link>
             <Link href="/solutions" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               Solutions
             </Link>
             <Link href="/industries" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               Industries
-            </Link>
-            <Link href="/about" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
-              About
             </Link>
             <Link href="/blog" className="hover:text-neutral-900 dark:hover:text-[#E8623C] transition-colors py-1">
               Blog
@@ -294,6 +299,22 @@ export function Navbar() {
               className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
             >
               Home
+            </Link>
+
+            <Link 
+              href="/about" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
+            >
+              About
+            </Link>
+
+            <Link 
+              href="/case-studies" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
+            >
+              Work
             </Link>
 
             <div>
@@ -361,13 +382,6 @@ export function Navbar() {
             </div>
 
             <Link 
-              href="/case-studies" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
-            >
-              Work
-            </Link>
-            <Link 
               href="/solutions" 
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
@@ -380,13 +394,6 @@ export function Navbar() {
               className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
             >
               Industries
-            </Link>
-            <Link 
-              href="/about" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C] transition-colors"
-            >
-              About
             </Link>
             <Link 
               href="/blog" 

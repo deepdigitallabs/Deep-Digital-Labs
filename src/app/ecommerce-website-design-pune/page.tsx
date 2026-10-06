@@ -976,7 +976,7 @@ export default function EcommerceWebsiteDesignPunePage() {
               className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-neutral-700 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm sm:text-base transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <Phone className="w-4 h-4 text-emerald-400" />
-              <span>Call Now (+91 91751 52244)</span>
+              <span>Call Now</span>
             </a>
 
             <a
