@@ -145,67 +145,6 @@ export default function HomePage() {
   const [callModalOpen, setCallModalOpen] = useState(false);
   const [activeStep, setActiveStep] = useState(3);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [activeHeroSlide, setActiveHeroSlide] = useState(2); // Right card active by default to match reference
-
-  // Hero Section 3-Card Slider Items (matching reference image)
-  const heroSliderCards = [
-    {
-      id: 1,
-      location: 'PUNE · CORPORATE',
-      title: 'Rahul B. Kavale',
-      category: 'CA & Tax Advisory Portal',
-      image: '/images/case-studies/rahul-b-kavale.jpg',
-      slug: 'rahul-b-kavale-and-co'
-    },
-    {
-      id: 2,
-      location: 'MAHARASHTRA · AGRI-TECH',
-      title: 'DairyFlow Pro',
-      category: 'Cloud SaaS Milk Billing ERP',
-      image: '/images/case-studies/dairy-flow-pro.jpg',
-      slug: 'dairy-flow-pro'
-    },
-    {
-      id: 3,
-      location: 'SOLAPUR · COMMERCE',
-      title: 'Yashodeep Agro',
-      category: 'WhatsApp Direct Ordering Catalog',
-      image: '/images/case-studies/yashodeep-agro.jpg',
-      slug: 'yashodeep-agro'
-    },
-    {
-      id: 4,
-      location: 'PAN-INDIA · FLEET',
-      title: 'Trust Carry',
-      category: 'Commercial Logistics & Telemetry',
-      image: '/images/case-studies/trust-carry.jpg',
-      slug: 'trust-carry'
-    },
-    {
-      id: 5,
-      location: 'PUNE · ADVOCATE',
-      title: 'Pasarnikar & Co.',
-      category: 'High-Trust Corporate Platform',
-      image: '/images/case-studies/pasarnikar-payal-amit.jpg',
-      slug: 'rahul-b-kavale-and-co'
-    }
-  ];
-
-  const prevHeroSlide = () => {
-    setActiveHeroSlide((prev) => (prev - 1 + heroSliderCards.length) % heroSliderCards.length);
-  };
-
-  const nextHeroSlide = () => {
-    setActiveHeroSlide((prev) => (prev + 1) % heroSliderCards.length);
-  };
-
-  // Auto-advance hero image slider every 5 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveHeroSlide((prev) => (prev + 1) % heroSliderCards.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [heroSliderCards.length]);
 
   // Selected work items
   const workItems = [
@@ -268,134 +207,73 @@ export default function HomePage() {
       {/* =========================================================================
              HERO SECTION: High-impact technical visual + typography architecture
              ========================================================================= */}
-      <section className="relative w-full overflow-hidden pb-12 sm:pb-20 pt-28 sm:pt-32 lg:pt-36 min-h-[640px] flex items-center">
-        {/* Dynamic Background Image Slider (Synced with foreground slider, 5s auto-transition) */}
-        <div className="absolute inset-0 -z-10 select-none overflow-hidden pointer-events-none">
-          <Image
-            key={`hero-bg-${heroSliderCards[activeHeroSlide].id}`}
-            src={heroSliderCards[activeHeroSlide].image}
-            alt="Hero Background Showcase"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-right-top opacity-30 dark:opacity-25 transition-all duration-1000 animate-in fade-in"
-          />
-          {/* Gradient Masks ensuring 100% typography readability on left and bottom edge blending */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/35 dark:from-[#08090C] dark:via-[#08090C]/95 dark:to-[#08090C]/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#08090C] via-transparent to-transparent h-32 bottom-0" />
-        </div>
-
+      <section className="relative w-full overflow-hidden pb-16 sm:pb-24 pt-28 sm:pt-32 lg:pt-36">
         {/* Ambient soft glow highlights */}
         <div className="pointer-events-none absolute -top-24 left-1/4 h-[550px] w-[550px] rounded-full bg-[#FF6A00]/8 blur-[130px]" />
         <div className="pointer-events-none absolute top-48 right-10 h-[480px] w-[480px] rounded-full bg-[#174BFF]/8 blur-[140px]" />
 
-        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
-            
-            {/* Left Column: Typography & Conversion Trigger */}
-            <div className="md:col-span-5 lg:col-span-5 flex flex-col items-start gap-5 sm:gap-6">
-              
-              {/* Eyebrow Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/[0.05] border border-neutral-200 dark:border-white/10 shadow-xs backdrop-blur-md">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF6A00] opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FF6A00]" />
-                </span>
-                <span className="font-mono text-xs tracking-wider uppercase text-neutral-600 dark:text-neutral-300 font-medium">
-                  Digital Product Studio · Pune, India
-                </span>
-              </div>
-
-              {/* Main Kinetic Display Heading */}
-              <div className="flex flex-col tracking-tight">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display leading-[1.12] text-neutral-900 dark:text-white">
-                  Build.<br />
-                  Grow.<br />
-                  <span className="bg-gradient-to-r from-[#FF6A00] via-[#D51FFF] to-[#174BFF] bg-clip-text text-transparent">
-                    Go Digital.
-                  </span>
-                </h1>
-              </div>
-
-              {/* Supporting Manifesto Copy */}
-              <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 max-w-lg leading-relaxed">
-                Websites, business software, and AI automation built around the authentic way your business operates. Engineered for speed, stability, and zero vendor lock-in.
-              </p>
-
-              {/* CTA Actions */}
-              <div className="flex flex-wrap items-center gap-3 pt-1 w-full sm:w-auto">
-                <button
-                  onClick={() => setCallModalOpen(true)}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#FF6A00] via-[#E11D48] to-[#174BFF] text-white font-bold text-xs sm:text-sm tracking-wider uppercase shadow-[0_8px_20px_rgba(255,106,0,0.25)] hover:shadow-[0_10px_28px_rgba(23,75,255,0.3)] transition-all transform hover:-translate-y-0.5 cursor-pointer active:scale-98"
-                >
-                  <span>Start a Project</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-                <a
-                  href="#work"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white dark:bg-white/[0.05] border border-neutral-200 dark:border-white/10 text-neutral-800 dark:text-neutral-200 font-semibold text-xs sm:text-sm tracking-wider hover:bg-neutral-50 dark:hover:bg-white/10 transition-all shadow-xs"
-                >
-                  <Layers className="w-3.5 h-3.5 text-[#174BFF]" />
-                  <span>View Our Work</span>
-                </a>
-              </div>
-
-              {/* Proof Badges */}
-              <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-5 w-full border-t border-neutral-200 dark:border-white/10">
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-[#0284C7] shrink-0" />
-                  <span className="font-mono text-[10px] sm:text-xs text-neutral-600 dark:text-neutral-400 font-medium whitespace-nowrap">10+ Delivered</span>
-                </div>
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF6A00] shrink-0" />
-                  <span className="font-mono text-[10px] sm:text-xs text-neutral-600 dark:text-neutral-400 font-medium whitespace-nowrap">Direct Dev Support</span>
-                </div>
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <Key className="w-4 h-4 sm:w-5 sm:h-5 text-[#C026D3] shrink-0" />
-                  <span className="font-mono text-[10px] sm:text-xs text-neutral-600 dark:text-neutral-400 font-medium whitespace-nowrap">100% Code Ownership</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column: Hero Section Image Slider (Single Image Showcase, Clean No Text) */}
-            <div className="md:col-span-7 lg:col-span-7 relative w-full flex items-center justify-center">
-              <div className="relative w-full max-w-[620px] select-none py-2 px-1">
-                
-                {/* Single Image Showcase (Full Cornered, Clean, No Text Overlays) */}
-                <div 
-                  onClick={nextHeroSlide}
-                  className="relative w-full aspect-[16/10] rounded-none overflow-hidden border border-neutral-200 dark:border-white/10 shadow-2xl cursor-pointer group bg-neutral-100 dark:bg-[#12151D]"
-                >
-                  <Image
-                    key={heroSliderCards[activeHeroSlide].id}
-                    src={heroSliderCards[activeHeroSlide].image}
-                    alt="Project Screenshot"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 650px"
-                    priority
-                    className="object-cover object-top rounded-none transition-all duration-700 animate-in fade-in group-hover:scale-[1.02]"
-                  />
-                </div>
-
-                {/* Slider Pagination Status Bar (Dots Only, No Text) */}
-                <div className="mt-4 flex items-center justify-center gap-2">
-                  {heroSliderCards.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setActiveHeroSlide(i)}
-                      className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                        activeHeroSlide === i 
-                          ? 'w-7 bg-[#FF6A00] shadow-[0_2px_8px_rgba(255,106,0,0.5)]' 
-                          : 'w-2 bg-neutral-300 dark:bg-white/20 hover:bg-neutral-400 dark:hover:bg-white/40'
-                      }`}
-                      aria-label={`Go to slide ${i + 1}`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6">
+          
+          {/* Eyebrow Badge */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/[0.05] border border-neutral-200 dark:border-white/10 shadow-xs backdrop-blur-md">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF6A00] opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FF6A00]" />
+            </span>
+            <span className="font-mono text-xs tracking-wider uppercase text-neutral-600 dark:text-neutral-300 font-medium">
+              Digital Product Studio · Pune, India
+            </span>
           </div>
+
+          {/* Main Kinetic Display Heading */}
+          <div className="flex flex-col tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-display leading-[1.12] text-neutral-900 dark:text-white">
+              Build.<span className="text-[#FF6A00]"> </span>Grow.<span className="text-[#FF6A00]"> </span><br className="hidden sm:inline" />
+              <span className="bg-gradient-to-r from-[#FF6A00] via-[#D51FFF] to-[#174BFF] bg-clip-text text-transparent">
+                Go Digital.
+              </span>
+            </h1>
+          </div>
+
+          {/* Supporting Manifesto Copy */}
+          <p className="text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed">
+            Websites, business software, and AI automation built around the authentic way your business operates. Engineered for speed, stability, and zero vendor lock-in.
+          </p>
+
+          {/* CTA Actions */}
+          <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2 w-full sm:w-auto">
+            <button
+              onClick={() => setCallModalOpen(true)}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#FF6A00] via-[#E11D48] to-[#174BFF] text-white font-bold text-xs sm:text-sm tracking-wider uppercase shadow-[0_8px_20px_rgba(255,106,0,0.25)] hover:shadow-[0_10px_28px_rgba(23,75,255,0.3)] transition-all transform hover:-translate-y-0.5 cursor-pointer active:scale-98"
+            >
+              <span>Start a Project</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+            <a
+              href="#work"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-white/[0.05] border border-neutral-200 dark:border-white/10 text-neutral-800 dark:text-neutral-200 font-semibold text-xs sm:text-sm tracking-wider hover:bg-neutral-50 dark:hover:bg-white/10 transition-all shadow-xs"
+            >
+              <Layers className="w-4 h-4 text-[#174BFF]" />
+              <span>View Our Work</span>
+            </a>
+          </div>
+
+          {/* Proof Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 pt-8 w-full max-w-2xl border-t border-neutral-200 dark:border-white/10 mt-3">
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-5 h-5 text-[#0284C7] shrink-0" />
+              <span className="font-mono text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-medium">10+ Delivered</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-[#FF6A00] shrink-0" />
+              <span className="font-mono text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-medium">Direct Dev Support</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Key className="w-5 h-5 text-[#C026D3] shrink-0" />
+              <span className="font-mono text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-medium">100% Code Ownership</span>
+            </div>
+          </div>
+
         </div>
       </section>
 
