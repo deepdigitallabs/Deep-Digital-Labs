@@ -54,10 +54,6 @@ export function Footer() {
         {/* Pre-Footer Action Ribbon (Conversion UX) */}
         <div className="mb-12 p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200 dark:border-white/[0.08] shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1.5 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Available for projects • Typical reply &lt; 2 hrs</span>
-            </div>
             <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white">
               Ready to engineer your next digital solution?
             </h3>
