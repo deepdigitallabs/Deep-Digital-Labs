@@ -64,7 +64,7 @@ export function Footer() {
 
           <div className="flex flex-wrap items-center justify-center gap-3 shrink-0 w-full md:w-auto">
             <a
-              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20would%20like%20to%20discuss%20a%20new%20project."
+              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20would%20like%20to%20discuss%20a%20new%20project."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-gradient-to-r from-[#E8623C] to-[#F59E0B] hover:opacity-95 text-white shadow-md shadow-[#E8623C]/20 transition-all hover:scale-[1.02] active:scale-98"
@@ -118,7 +118,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-xs text-neutral-600 dark:text-neutral-400 font-mono">
                 <Phone className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                <a href="tel:+919175152244" className="hover:text-[#E8623C] transition-colors font-medium">
+                <a href="tel:+917756063128" className="hover:text-[#E8623C] transition-colors font-medium">
                   Call Us
                 </a>
               </div>
@@ -259,7 +259,7 @@ export function Footer() {
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <a 
-                  href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project." 
+                  href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 text-neutral-600 hover:text-emerald-600 dark:text-neutral-400 dark:hover:text-emerald-400 transition-colors py-0.5"

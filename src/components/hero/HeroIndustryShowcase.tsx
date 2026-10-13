@@ -198,7 +198,7 @@ export function HeroIndustryShowcase() {
                 </Link>
 
                 <a
-                  href={`https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I'm%20interested%20in%20${encodeURIComponent(service.title)}%20for%20my%20business.`}
+                  href={`https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I'm%20interested%20in%20${encodeURIComponent(service.title)}%20for%20my%20business.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 transition-colors"
