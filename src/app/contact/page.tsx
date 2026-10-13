@@ -94,7 +94,7 @@ export default function ContactPage() {
           </div>
 
           <a
-            href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
+            href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#E8623C] hover:bg-[#F0744E] text-white font-semibold text-xs sm:text-sm transition-all shadow-md shadow-[#E8623C]/20 flex items-center justify-center gap-2 shrink-0 active:scale-98"
@@ -262,7 +262,7 @@ export default function ContactPage() {
                   <div>
                     <div className="text-[11px] text-neutral-500 dark:text-neutral-400">Direct WhatsApp</div>
                     <a
-                      href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project."
+                      href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-bold text-neutral-900 dark:text-white hover:text-emerald-500 transition-colors"

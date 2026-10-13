@@ -80,7 +80,7 @@ export default function EcommerceWebsiteDesignPunePage() {
         '@id': 'https://deepdigitallabs.com/#localbusiness',
         name: 'Deep Digital Labs - E-Commerce Website Design in Pune',
         url: 'https://deepdigitallabs.com/ecommerce-website-design-pune',
-        telephone: '+91-91751-52244',
+        telephone: '+91-77560-63128',
         priceRange: '₹₹',
         address: {
           '@type': 'PostalAddress',
@@ -499,7 +499,7 @@ export default function EcommerceWebsiteDesignPunePage() {
           </Link>
 
           <a
-            href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs%2C%20I%20am%20looking%20for%20an%20e-commerce%20website%20design%20in%20Pune."
+            href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs%2C%20I%20am%20looking%20for%20an%20e-commerce%20website%20design%20in%20Pune."
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-neutral-300 dark:border-white/[0.12] bg-white dark:bg-white/[0.04] text-neutral-800 dark:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.08] font-bold text-sm sm:text-base transition-all shadow-xs"
@@ -972,7 +972,7 @@ export default function EcommerceWebsiteDesignPunePage() {
             </Link>
 
             <a
-              href="tel:+919175152244"
+              href="tel:+917756063128"
               className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-neutral-700 bg-white/5 hover:bg-white/10 text-white font-semibold text-sm sm:text-base transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <Phone className="w-4 h-4 text-emerald-400" />
@@ -980,7 +980,7 @@ export default function EcommerceWebsiteDesignPunePage() {
             </a>
 
             <a
-              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs%2C%20I%20want%20to%20discuss%20an%20e-commerce%20website%20project%20for%20my%20business."
+              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs%2C%20I%20want%20to%20discuss%20an%20e-commerce%20website%20project%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm sm:text-base transition-all flex items-center justify-center gap-2"

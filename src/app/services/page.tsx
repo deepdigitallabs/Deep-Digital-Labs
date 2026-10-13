@@ -160,7 +160,7 @@ export default function ServicesPage() {
 
           <div className="pt-2 flex flex-wrap justify-center items-center gap-4">
             <a
-              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
+              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 bg-[#E8623C] hover:bg-[#F0744E] text-white px-7 py-3 rounded-full font-bold text-sm transition-all shadow-lg shadow-[#E8623C]/25 active:scale-98"
@@ -474,7 +474,7 @@ export default function ServicesPage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I'm%20looking%20for%20an%20industry-specific%20website%20for%20my%20business."
+                href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I'm%20looking%20for%20an%20industry-specific%20website%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full font-semibold text-sm border border-white/20 text-white hover:bg-white/10 transition-all"
@@ -560,7 +560,7 @@ export default function ServicesPage() {
           </p>
           <div className="pt-4 flex flex-col sm:flex-row gap-3.5 justify-center items-center">
             <a
-              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20get%20a%20quote%20for%20my%20business."
+              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20get%20a%20quote%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm bg-emerald-600 text-white hover:bg-emerald-500 transition-all shadow-md active:scale-95"

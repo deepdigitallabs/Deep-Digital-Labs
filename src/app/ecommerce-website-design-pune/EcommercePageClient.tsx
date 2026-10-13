@@ -201,7 +201,7 @@ export function EcommercePageClient() {
                 </p>
                 <div className="pt-3 flex flex-col sm:flex-row gap-3 justify-center">
                   <a
-                    href={`https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs%2C%20I%20just%20submitted%20an%20audit%20request%20for%20${encodeURIComponent(auditForm.name)}%20(${encodeURIComponent(auditForm.websiteUrl || 'New Store')}).`}
+                    href={`https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs%2C%20I%20just%20submitted%20an%20audit%20request%20for%20${encodeURIComponent(auditForm.name)}%20(${encodeURIComponent(auditForm.websiteUrl || 'New Store')}).`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs inline-flex items-center justify-center gap-1.5"

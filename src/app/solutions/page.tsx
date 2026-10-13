@@ -84,7 +84,7 @@ export default function SolutionsPage() {
 
           <div className="pt-2 flex flex-wrap justify-center items-center gap-4">
             <a
-              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20an%20operational%20problem%20in%20my%20business%20I%20want%20to%20solve."
+              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20an%20operational%20problem%20in%20my%20business%20I%20want%20to%20solve."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 bg-[#E8623C] hover:bg-[#F0744E] text-white px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25 hover:shadow-xl active:scale-98"
@@ -266,7 +266,7 @@ export default function SolutionsPage() {
                   <div className="pt-3 border-t border-neutral-200/80 dark:border-white/[0.06] flex items-center justify-between">
                     <span className="text-xs text-neutral-500">Live example: Dairy Flow Pro &amp; Yashodeep Agro</span>
                     <a
-                      href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20replace%20Excel%20and%20WhatsApp%20in%20my%20business."
+                      href="https://wa.me/917756063128?text=Hi,%20I%20want%20to%20replace%20Excel%20and%20WhatsApp%20in%20my%20business."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1"
@@ -756,7 +756,7 @@ export default function SolutionsPage() {
                   <div className="pt-3 border-t border-neutral-200/80 dark:border-white/[0.06] flex items-center justify-between">
                     <span className="text-xs text-neutral-500">Fast 2-week turnaround per integration</span>
                     <a
-                      href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20integrate%20my%20software%20and%20payments."
+                      href="https://wa.me/917756063128?text=Hi,%20I%20want%20to%20integrate%20my%20software%20and%20payments."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1"
@@ -1092,7 +1092,7 @@ export default function SolutionsPage() {
             </p>
             <div className="pt-3 flex flex-wrap justify-center gap-4">
               <a
-                href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20solution%20for%20my%20business."
+                href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20solution%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-7 py-3 rounded-xl bg-[#E8623C] hover:bg-[#F0744E] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-[#E8623C]/30 flex items-center gap-2 active:scale-98"

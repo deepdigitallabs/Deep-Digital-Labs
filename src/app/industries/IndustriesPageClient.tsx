@@ -214,7 +214,7 @@ export function IndustriesPageClient() {
               </button>
 
               <a
-                href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20a%20custom%20software%20idea%20and%20want%20to%20discuss%20it."
+                href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20a%20custom%20software%20idea%20and%20want%20to%20discuss%20it."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 font-semibold text-xs sm:text-sm transition-all"

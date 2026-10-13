@@ -80,7 +80,7 @@ export default function PuneWebsiteDevelopmentPage() {
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3.5 justify-center items-center">
           <a
-            href="https://wa.me/919175152244?text=Hi,%20I%20am%20looking%20for%20a%20website%20development%20company%20in%20Pune."
+            href="https://wa.me/917756063128?text=Hi,%20I%20am%20looking%20for%20a%20website%20development%20company%20in%20Pune."
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#E8623C] hover:bg-[#F0744E] text-white font-semibold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25"
@@ -266,7 +266,7 @@ export default function PuneWebsiteDevelopmentPage() {
           </p>
           <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="https://wa.me/919175152244?text=Hi,%20I%20want%20to%20discuss%20a%20website%20project%20in%20Pune."
+              href="https://wa.me/917756063128?text=Hi,%20I%20want%20to%20discuss%20a%20website%20project%20in%20Pune."
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-xl bg-[#E8623C] text-white font-bold text-sm hover:bg-[#F0744E] transition-all"

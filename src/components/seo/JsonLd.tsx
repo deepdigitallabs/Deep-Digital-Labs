@@ -21,7 +21,7 @@ export function JsonLd() {
         },
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+91-091751-52244',
+          telephone: '+91-77560-63128',
           contactType: 'Customer Support & Sales',
           email: 'deepdigitallabs@gmail.com',
           availableLanguage: ['English', 'Hindi', 'Marathi']
@@ -36,7 +36,7 @@ export function JsonLd() {
         '@id': 'https://deepdigitallabs.com/#localbusiness',
         name: 'Deep Digital Labs - Website Development Company in Pune',
         image: 'https://deepdigitallabs.com/office.jpg',
-        telephone: '+91-091751-52244',
+        telephone: '+91-77560-63128',
         priceRange: '₹₹',
         address: {
           '@type': 'PostalAddress',

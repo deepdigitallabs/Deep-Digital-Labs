@@ -878,7 +878,7 @@ export default function HomePage() {
                 <ArrowRight className="w-5 h-5" />
               </button>
               <a
-                href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20an%20idea%20and%20want%20to%20discuss%20a%20project."
+                href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20an%20idea%20and%20want%20to%20discuss%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-neutral-900 dark:text-white font-semibold text-sm tracking-wider hover:border-emerald-500 hover:text-emerald-600 transition-all shadow-xs"
