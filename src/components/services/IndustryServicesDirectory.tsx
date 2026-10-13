@@ -273,7 +273,7 @@ export function IndustryServicesDirectory() {
               </Link>
 
               <a
-                href={`https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I'm%20interested%20in%20${encodeURIComponent(item.solutionTitle)}%20for%20my%20business.`}
+                href={`https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I'm%20interested%20in%20${encodeURIComponent(item.solutionTitle)}%20for%20my%20business.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 text-xs font-semibold transition-colors"
@@ -305,7 +305,7 @@ export function IndustryServicesDirectory() {
               Reset Filters
             </button>
             <a
-              href="https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20a%20custom%20software%20requirement%20I'd%20like%20to%20discuss."
+              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20a%20custom%20software%20requirement%20I'd%20like%20to%20discuss."
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-xl text-xs font-bold bg-[#174BFF] text-white hover:opacity-90 transition-opacity"

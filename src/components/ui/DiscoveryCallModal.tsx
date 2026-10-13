@@ -89,7 +89,7 @@ export function DiscoveryCallModal({ isOpen, onClose }: DiscoveryCallModalProps)
               </p>
               <div className="pt-4 flex flex-col sm:flex-row gap-3 justify-center">
                 <a
-                  href={`https://wa.me/919175152244?text=Hi%20Deep%20Digital%20Labs,%20I%20just%20submitted%20a%20project%20inquiry%20for%20${encodeURIComponent(projectType)}%20(${encodeURIComponent(formData.name)}).`}
+                  href={`https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20just%20submitted%20a%20project%20inquiry%20for%20${encodeURIComponent(projectType)}%20(${encodeURIComponent(formData.name)}).`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-gradient-to-r from-[#174BFF] to-[#8B2CFF] hover:opacity-95 text-white rounded-xl text-xs font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-md shadow-[#174BFF]/20"
