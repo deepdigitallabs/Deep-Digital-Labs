@@ -19,7 +19,7 @@ export default function CaseStudiesPage() {
   const [selectedService, setSelectedService] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const businessSectors = ['All', 'CA', 'Agriculture', 'Dairy', 'Logistics'];
+  const businessSectors = ['All', 'CA', 'Agriculture', 'Dairy', 'Logistics', 'Packaging'];
   const services = ['All', 'SaaS', 'Web'];
 
   const filteredCases = useMemo(() => {

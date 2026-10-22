@@ -55,6 +55,7 @@ export default function PuneWebsiteDevelopmentPage() {
     { title: 'CA Firms & Corporate Advisory', desc: 'Trustworthy, high-credibility websites that generate verified corporate inbound inquiries.' },
     { title: 'Agri-Tech & Commerce', desc: 'Custom product catalogs, inventory management, and fast billing software.' },
     { title: 'Logistics & Supply Chain', desc: 'Consignment tracking platforms, client portals, and fleet operations.' },
+    { title: 'Packaging & Industrial Materials', desc: 'B2B digital product catalogs, raw material specification sheets, and bulk quote request funnels.' },
     { title: 'Healthcare & Clinics', desc: 'Doctor appointment booking, clinic locations, and patient communication portals.' },
     { title: 'Real Estate & Construction', desc: 'High-speed property showcases, lead capture forms, and project brochures.' },
     { title: 'Retail & Local E-Commerce', desc: 'Direct online ordering with UPI payments, WhatsApp alerts, and zero marketplace commission.', href: '/ecommerce-website-design-pune' }

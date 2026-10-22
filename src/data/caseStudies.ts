@@ -5,7 +5,7 @@ export interface Metric {
 }
 
 export type ProjectCategory = 'Business' | 'Civic & Public';
-export type BusinessSector = 'CA' | 'Agriculture' | 'Dairy' | 'Logistics' | 'Manufacturing' | 'Healthcare' | 'Civic & Public';
+export type BusinessSector = 'CA' | 'Agriculture' | 'Dairy' | 'Logistics' | 'Manufacturing' | 'Packaging' | 'Healthcare' | 'Civic & Public';
 
 export interface CaseStudy {
   slug: string;
@@ -218,6 +218,48 @@ export const CASE_STUDIES: CaseStudy[] = [
       author: 'Logistics Director',
       role: 'Operations Head',
       company: 'Trust Carry Logistics'
+    },
+    featured: true
+  },
+  {
+    slug: 'onedesk-packaging',
+    title: 'Onedesk Packaging Solutions',
+    client: 'Onedesk Packaging Solutions',
+    location: 'Mumbai / Pune, India',
+    category: 'Sustainable Packaging Raw Materials & B2B Web Portal',
+    projectType: 'Business',
+    sector: 'Packaging',
+    industry: 'Packaging & Sustainable Materials',
+    service: 'Web',
+    liveUrl: 'https://onedesk-packaging.web.app/',
+    summary: 'Engineered a modern, high-conversion B2B digital catalog and corporate web presence for a premier supplier of eco-friendly packaging raw materials.',
+    heroImage: '/images/case-studies/onedesk-packaging.png',
+    accentColor: '#0284c7',
+    tags: ['Web Portal', 'B2B Catalog', 'Interactive UI', 'Responsive Design'],
+    techStack: ['Responsive Web', 'B2B RFQ Funnel', 'Modern CSS Architecture', 'Digital Catalog'],
+    problem: 'Industrial buyers and packaging converters required an authoritative, modern digital portal to verify material technical specs (GSM, tensile strength, eco-certifications) for kraft paper, water-based inks, and adhesives before requesting wholesale quotations.',
+    whatWeBuilt: 'A clean, high-speed corporate web portal featuring structured raw material catalogs, interactive product grade matrices, streamlined B2B quotation inquiries, and instant mobile responsiveness.',
+    result: 'Elevated Onedesk Packaging\'s brand presence across domestic and international markets, enabling packaging converters and manufacturers to evaluate specifications and submit RFQ inquiries seamlessly.',
+    beforeAfter: {
+      before: 'Fragmented offline brochures, delayed quote inquiries, and limited visibility among industrial procurement teams.',
+      after: 'Authoritative digital product catalog, verified material specifications, and streamlined inbound B2B quotation pipeline.'
+    },
+    evidenceHighlights: [
+      { label: 'Sustainable Catalog', description: 'Curated technical showcases for kraft paper, water-based inks, eco-friendly adhesives, and specialty films.' },
+      { label: 'B2B RFQ Funnel', description: 'Interactive quotation request system connecting packaging procurement managers directly with sales.' },
+      { label: 'Sub-Second Loading', description: 'Optimized performance ensuring fast, seamless browsing across mobile and desktop devices.' }
+    ],
+    architectureHighlights: [
+      'Fluid, responsive UI architecture highlighting product specifications and material sustainability',
+      'Comprehensive product showcases organized by material category, applications, and eco-credentials',
+      'Streamlined B2B inquiry routing connecting buyers directly with product specialists',
+      'Engineered for maximum cross-device accessibility and international procurement standards'
+    ],
+    testimonial: {
+      quote: 'The digital portal engineered by Deep Digital Labs has set a new standard for our business. Prospective clients can easily explore our eco-friendly materials and request bulk quotes with total confidence.',
+      author: 'Leadership Team',
+      role: 'Director of Business Development',
+      company: 'Onedesk Packaging Solutions'
     },
     featured: true
   },

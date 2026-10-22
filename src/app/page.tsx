@@ -81,6 +81,18 @@ export default function HomePage() {
       stack: ['SaaS Architecture', 'SMS Gateway', 'Billing Engine']
     },
     {
+      slug: 'onedesk-packaging',
+      title: 'Onedesk Packaging',
+      category: 'Sustainable Packaging · B2B Web',
+      domain: 'onedesk-packaging.web.app',
+      year: '2025',
+      image: '/images/case-studies/onedesk-packaging.png',
+      badge: 'B2B Catalog Live',
+      badgeColor: 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800',
+      desc: 'High-speed B2B digital catalog and industrial corporate portal showcasing sustainable packaging raw materials (kraft paper, water-based inks, adhesives) with seamless bulk quote routing.',
+      stack: ['Web Architecture', 'B2B Catalog', 'RFQ Engine']
+    },
+    {
       slug: 'yashodeep-agro',
       title: 'Yashodeep Agro',
       category: 'Agri-Inputs & Retail',
@@ -93,7 +105,7 @@ export default function HomePage() {
       stack: ['WhatsApp Commerce', 'Offline Caching', 'PWA']
     },
     {
-      slug: 'trust-carry',
+      slug: 'trust-carry-logistics',
       title: 'Trust Carry Logistics',
       category: 'Freight & Logistics',
       domain: 'trustcarrylogistics.in',
@@ -366,13 +378,27 @@ export default function HomePage() {
                         </span>
                       ))}
                     </div>
-                    <Link 
-                      href={`/case-studies/${study.slug}`}
-                      className="inline-flex items-center gap-1 font-semibold text-xs sm:text-sm text-[#174BFF] dark:text-blue-400 hover:underline"
-                    >
-                      <span>Case Study</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    <div className="flex items-center gap-3">
+                      {study.domain && (
+                        <a
+                          href={`https://${study.domain}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 font-semibold text-xs sm:text-sm text-neutral-500 hover:text-[#174BFF] dark:hover:text-blue-400 transition-colors"
+                          title={`Visit live site ${study.domain}`}
+                        >
+                          <span>Live Site</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      )}
+                      <Link 
+                        href={`/case-studies/${study.slug}`}
+                        className="inline-flex items-center gap-1 font-semibold text-xs sm:text-sm text-[#174BFF] dark:text-blue-400 hover:underline"
+                      >
+                        <span>Case Study</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
