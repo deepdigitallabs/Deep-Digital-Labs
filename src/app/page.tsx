@@ -112,6 +112,28 @@ export default function HomePage() {
       badge: 'Enterprise Fleet',
       desc: 'Commercial logistics portal featuring interactive shipment waypoint lookup, truck fleet payload matrices, and streamlined B2B corporate quote builders.',
       stack: ['Fleet CRM', 'Waypoint Telemetry', 'Quote Matrix']
+    },
+    {
+      slug: 'vishal-travels',
+      title: 'Vishal Travels',
+      category: 'Tour & Fleet Mobility · Pune',
+      domain: 'toursandtravels2.vercel.app',
+      year: '2026',
+      image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&auto=format&fit=crop&q=80',
+      badge: 'Production Live',
+      desc: 'Executive bus & luxury Tempo Traveller charter portal with real-time route distance tariff estimators, pilgrimage package catalogs, and instant WhatsApp booking dispatch.',
+      stack: ['Next.js 15', 'Fare Calculator', 'Fleet Logistics']
+    },
+    {
+      slug: 'shivam-tours-and-travels',
+      title: 'Shivam Tours & Travels',
+      category: 'Passenger Mobility & Charter',
+      domain: 'toursandtravels-one.vercel.app',
+      year: '2026',
+      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop&q=80',
+      badge: 'Fleet Portal Live',
+      desc: 'High-converting group transportation platform featuring outstation pilgrimage booking engines, vehicle rate sheets, and sub-30-minute quote dispatch.',
+      stack: ['React', 'Charter Booking', 'Mobile-First']
     }
   ];
 
@@ -207,15 +229,15 @@ export default function HomePage() {
               </p>
             </div>
             <div className="font-mono text-xs text-neutral-500 font-medium hidden md:block">
-              // 04_CORE_SPECIALIZATIONS
+              // 05_CORE_SPECIALIZATIONS
             </div>
           </div>
 
-          {/* 4 Precision Service Cards (2x2 Grid) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+          {/* 5 Precision Service Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-7">
             
             {/* Service 01: Business Websites */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-2">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   Business Websites
@@ -242,7 +264,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 02: Business Software */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-2">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   Business Software
@@ -269,7 +291,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 03: AI & Automation */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-2">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   AI &amp; Workflow Automation
@@ -296,7 +318,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 04: Mobile Apps */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-3">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   Mobile Applications
@@ -314,6 +336,33 @@ export default function HomePage() {
               <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end">
                 <Link
                   href="/services/mobile-app-development"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
+                >
+                  <span>View Details</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Service 05: Digital Growth & SEO */}
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group md:col-span-2 lg:col-span-3">
+              <div>
+                <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
+                  Digital Growth &amp; SEO
+                </h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
+                  Technical SEO, local Google search ranking, and conversion rate optimization designed to get qualified traffic, phone inquiries, and measurable business growth.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6 font-mono text-xs text-neutral-600 dark:text-neutral-400">
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Technical SEO</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Local SEO &amp; Maps</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">GA4 Analytics</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Conversion Rate</span>
+                </div>
+              </div>
+              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end">
+                <Link
+                  href="/services/digital-growth-seo"
                   className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
                 >
                   <span>View Details</span>

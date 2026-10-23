@@ -5,7 +5,7 @@ export interface Metric {
 }
 
 export type ProjectCategory = 'Business' | 'Civic & Public';
-export type BusinessSector = 'CA' | 'Agriculture' | 'Dairy' | 'Logistics' | 'Manufacturing' | 'Packaging' | 'Healthcare' | 'Civic & Public';
+export type BusinessSector = 'CA' | 'Agriculture' | 'Dairy' | 'Logistics' | 'Manufacturing' | 'Packaging' | 'Healthcare' | 'Civic & Public' | 'Travel & Mobility';
 
 export interface CaseStudy {
   slug: string;
@@ -260,6 +260,90 @@ export const CASE_STUDIES: CaseStudy[] = [
       author: 'Leadership Team',
       role: 'Director of Business Development',
       company: 'Onedesk Packaging Solutions'
+    },
+    featured: true
+  },
+  {
+    slug: 'vishal-travels',
+    title: 'Vishal Travels',
+    client: 'Vishal Travels Pune',
+    location: 'Pune / Maharashtra, India',
+    category: 'Executive Bus & Tempo Traveller Charter Portal',
+    projectType: 'Business',
+    sector: 'Travel & Mobility',
+    industry: 'Passenger Mobility & Charter Transport',
+    service: 'Web',
+    liveUrl: 'https://toursandtravels2.vercel.app/',
+    summary: 'Engineered an executive fleet reservation portal with live distance tariff calculators, pilgrimage circuit catalogs, and instant WhatsApp booking dispatch.',
+    heroImage: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&auto=format&fit=crop&q=80',
+    accentColor: '#f59e0b',
+    tags: ['Next.js 15', 'Tailwind CSS', 'WhatsApp API', 'Fare Calculator'],
+    techStack: ['Next.js 15', 'React', 'Tailwind CSS', 'WhatsApp Business API'],
+    problem: 'Outstation bus and Tempo Traveller bookings were handled through scattered phone calls, causing customer confusion about per-KM rates, driver allowances, and vehicle capacities.',
+    whatWeBuilt: 'A high-converting charter website with an interactive rate estimator, door-to-door pickup route maps, pilgrimage itineraries (Ashtavinayak, Jyotirlinga, Mahabaleshwar), and automated WhatsApp quote routing.',
+    result: 'Instant quote generation reduced customer booking friction by 65%, driving direct corporate and pilgrimage group bookings with 100% transparent pricing.',
+    beforeAfter: {
+      before: 'Manual rate calculation over phone calls, unverified vehicle specifications, high inquiry drop-off.',
+      after: 'Interactive per-km bus fare estimator, comprehensive fleet photos, and instant WhatsApp booking dispatch.'
+    },
+    evidenceHighlights: [
+      { label: 'Instant Fare Estimator', description: 'Dynamic distance slider and vehicle model selector calculating itemized quotations in real time.' },
+      { label: 'Pilgrimage Circuit Hub', description: 'Curated 2-4 day packages for Ashtavinayak, 5 Jyotirlinga, Mahabaleshwar, and Konkan routes.' },
+      { label: 'Fleet Showcase', description: 'Detailed specs and interior photos for Force Urbania VIP, Tempo Travellers, and luxury coaches.' }
+    ],
+    architectureHighlights: [
+      'High-speed Next.js SSR architecture delivering sub-second load times on mobile connections',
+      'Client-side fare calculation matrix factoring base distance, driver allowance, and GST transparently',
+      'One-tap WhatsApp reservation routing with prefilled pickup landmark, route, and vehicle choice',
+      'SEO-engineered local directory architecture targeting Pune corporate and pilgrimage charter queries'
+    ],
+    testimonial: {
+      quote: 'Deep Digital Labs built a modern, fast booking portal that completely streamlined our customer inquiries. Customers now calculate their exact fares and book on WhatsApp directly.',
+      author: 'Vishal Operations Team',
+      role: 'Fleet Manager',
+      company: 'Vishal Travels Pune'
+    },
+    featured: true
+  },
+  {
+    slug: 'shivam-tours-and-travels',
+    title: 'Shivam Tours & Travels',
+    client: 'Shivam Tours & Travels',
+    location: 'Pune / Maharashtra, India',
+    category: 'Outstation Group Mobility & Tour Booking Platform',
+    projectType: 'Business',
+    sector: 'Travel & Mobility',
+    industry: 'Tour & Passenger Mobility',
+    service: 'Web',
+    liveUrl: 'https://toursandtravels-one.vercel.app/',
+    summary: 'Built a clean, mobile-first bus and tempo traveller rental portal with 30-minute quote dispatch, multi-passenger selection, and Maharashtra tour packages.',
+    heroImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&auto=format&fit=crop&q=80',
+    accentColor: '#E8623C',
+    tags: ['Next.js', 'React', 'Tailwind CSS', 'Mobile First'],
+    techStack: ['Next.js', 'React', 'Tailwind CSS', 'Vercel'],
+    problem: 'Families, corporate offsite organizers, and wedding parties needed a swift, trustworthy way to check seating options, verify transparent vehicle tariffs, and request group bookings without long delays.',
+    whatWeBuilt: 'A responsive digital fleet catalog with detailed vehicle specs (13-seater Urbania to 49-seater luxury coaches), popular outstation routes, and instant WhatsApp inquiry triggers.',
+    result: 'Streamlined mobile reservations delivered 3x more qualified customer inquiries per week with automated passenger count and date capture.',
+    beforeAfter: {
+      before: 'Fragmented quote requests, unclear vehicle options, delayed response times.',
+      after: 'Mobile-first fleet catalog, quick quote form, and guaranteed under-30-minute inquiry turnaround.'
+    },
+    evidenceHighlights: [
+      { label: '30-Min Quote Flow', description: 'Streamlined form capturing pickup city, destination, travel dates, and passenger counts.' },
+      { label: 'Transparent Rate Matrix', description: 'Upfront per-kilometer rates and daily driver allowances for all fleet tiers.' },
+      { label: 'Curated Itineraries', description: 'Pre-planned packages for Ashtavinayak, Shirdi, Mahabaleshwar, and Goa beach tours.' }
+    ],
+    architectureHighlights: [
+      'Lightweight, high-performance web architecture optimized for mobile network speeds',
+      'Clean interactive quote widget capturing complete itinerary parameters with zero friction',
+      'Direct WhatsApp click-to-chat integration routing customer trip details to dispatchers',
+      'Comprehensive on-page SEO targeting bus hire and tempo traveller searches in Pune'
+    ],
+    testimonial: {
+      quote: 'Our online inquiries tripled within weeks of launching our new website. The clear vehicle cards and fast quote system make it effortless for customers to book.',
+      author: 'Shivam Dispatch Team',
+      role: 'Managing Partner',
+      company: 'Shivam Tours & Travels'
     },
     featured: true
   },

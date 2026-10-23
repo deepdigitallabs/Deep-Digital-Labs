@@ -16,7 +16,6 @@ import {
   Bot
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
-import { ThemeToggle } from '@/components/theme/ThemeToggle';
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -252,7 +251,6 @@ export function Navbar() {
 
           {/* Desktop Right Actions */}
           <div className="hidden sm:flex items-center gap-2.5">
-            <ThemeToggle />
             <button
               onClick={() => setDiscoveryModalOpen(true)}
               className="inline-flex items-center gap-2 bg-[#E8623C] hover:bg-[#D7532F] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-xs active:scale-98 cursor-pointer"
@@ -264,7 +262,6 @@ export function Navbar() {
 
           {/* Mobile Actions */}
           <div className="flex lg:hidden items-center gap-1.5">
-            <ThemeToggle className="scale-90" />
             <button
               onClick={() => setDiscoveryModalOpen(true)}
               className="bg-[#E8623C] text-white px-2.5 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1 cursor-pointer"
