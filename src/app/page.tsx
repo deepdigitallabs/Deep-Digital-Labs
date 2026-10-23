@@ -220,30 +220,30 @@ export default function HomePage() {
           
           {/* Section Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4 pb-4 border-b border-neutral-200 dark:border-white/10">
-            <div className="flex flex-col gap-2">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-neutral-900 dark:text-white">
-                What we build.
+            <div className="flex flex-col gap-2 max-w-3xl">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-neutral-900 dark:text-white leading-[1.15]">
+                Web, Software &amp; AI Solutions for Growing Businesses in Pune
               </h2>
-              <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl">
-                Digital products designed strictly around your operational reality, not cookie-cutter layouts.
+              <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl">
+                Deep Digital Labs builds websites, custom software, automation and mobile apps around how your business actually runs, not off-the-shelf templates.
               </p>
             </div>
-            <div className="font-mono text-xs text-neutral-500 font-medium hidden md:block">
-              // 05_CORE_SPECIALIZATIONS
+            <div className="font-mono text-xs text-neutral-500 font-medium hidden md:block shrink-0">
+              // 05_CORE_SERVICES
             </div>
           </div>
 
           {/* 5 Precision Service Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-7">
             
-            {/* Service 01: Business Websites */}
+            {/* Service 01: Business Website Development */}
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-2">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
-                  Business Websites
+                  Business Website Development
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                  Websites designed to turn visitors into enquiries, customers and long-term business opportunities. Hand-coded with sub-second speeds and flawless mobile performance.
+                  Fast, mobile-friendly websites that turn visitors into enquiries and customers. We handle design, development, local SEO and e-commerce, built to pass Core Web Vitals.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6 font-mono text-xs text-neutral-600 dark:text-neutral-400">
                   <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Web Design</span>
@@ -255,118 +255,113 @@ export default function HomePage() {
               <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end">
                 <Link
                   href="/services/websites-web-apps"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors group-hover:translate-x-0.5"
                 >
-                  <span>View Details</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Explore website development →</span>
                 </Link>
               </div>
             </div>
 
-            {/* Service 02: Business Software */}
+            {/* Service 02: Custom Business Software & SaaS */}
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-2">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
-                  Business Software
+                  Custom Business Software &amp; SaaS
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                  Custom dashboards, bespoke mini-ERPs, and back-office management systems tailored directly to how your dispatch, accounting, and sales operations move.
+                  Custom CRMs, mini-ERPs, dashboards and internal tools that match how your sales, dispatch and accounting teams work, replacing spreadsheets and disconnected apps.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6 font-mono text-xs text-neutral-600 dark:text-neutral-400">
                   <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Custom CRM</span>
-                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Agri/Fleet ERP</span>
-                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Telemetry Dashboards</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">ERP Systems</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Analytics Dashboards</span>
                   <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Internal Tools</span>
                 </div>
               </div>
               <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end">
                 <Link
                   href="/services/business-software-saas"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors group-hover:translate-x-0.5"
                 >
-                  <span>View Details</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Explore business software →</span>
                 </Link>
               </div>
             </div>
 
-            {/* Service 03: AI & Automation */}
+            {/* Service 03: AI Chatbots & Workflow Automation */}
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-2">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
-                  AI &amp; Workflow Automation
+                  AI Chatbots &amp; Workflow Automation
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                  Automate repetitive busywork, connect legacy siloed databases, and implement conversational AI agents where they eliminate real human bottlenecks.
+                  Automate repetitive tasks, connect your existing systems, and deploy AI chatbots and WhatsApp bots that handle customer queries and lead follow-ups around the clock.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6 font-mono text-xs text-neutral-600 dark:text-neutral-400">
-                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Autonomous Agents</span>
-                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">n8n Pipelines</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">AI Chatbots</span>
                   <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">WhatsApp Bots</span>
-                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Instant Webhooks</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">n8n Automation</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">API Integrations</span>
                 </div>
               </div>
               <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end">
                 <Link
                   href="/services/chat-bot-development"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors group-hover:translate-x-0.5"
                 >
-                  <span>View Details</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Explore AI &amp; automation →</span>
                 </Link>
               </div>
             </div>
 
-            {/* Service 04: Mobile Apps */}
+            {/* Service 04: Mobile App Development */}
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-3">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
-                  Mobile Applications
+                  Mobile App Development
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                  High-performance customer-facing mobile applications and field-team tools built with smooth offline synchronization for uninterrupted operations.
+                  Android and iOS apps for customers and field teams, built with Flutter and native tech, with offline-first sync so work continues without connectivity.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6 font-mono text-xs text-neutral-600 dark:text-neutral-400">
-                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Flutter Engine</span>
-                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Native Android</span>
-                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">iOS Systems</span>
-                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Offline First</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Flutter Apps</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Android</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">iOS</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Offline-First</span>
                 </div>
               </div>
               <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end">
                 <Link
                   href="/services/mobile-app-development"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors group-hover:translate-x-0.5"
                 >
-                  <span>View Details</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Explore mobile app development →</span>
                 </Link>
               </div>
             </div>
 
-            {/* Service 05: Digital Growth & SEO */}
+            {/* Service 05: SEO & Digital Growth */}
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group md:col-span-2 lg:col-span-3">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
-                  Digital Growth &amp; SEO
+                  SEO &amp; Digital Growth
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                  Technical SEO, local Google search ranking, and conversion rate optimization designed to get qualified traffic, phone inquiries, and measurable business growth.
+                  Technical SEO, Google Maps and local search ranking, GA4 tracking and conversion optimization to bring in qualified traffic, calls and measurable leads.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6 font-mono text-xs text-neutral-600 dark:text-neutral-400">
                   <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Technical SEO</span>
-                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Local SEO &amp; Maps</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Local SEO &amp; Google Maps</span>
                   <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">GA4 Analytics</span>
-                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Conversion Rate</span>
+                  <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Conversion Optimization</span>
                 </div>
               </div>
               <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end">
                 <Link
                   href="/services/digital-growth-seo"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors group-hover:translate-x-0.5"
                 >
-                  <span>View Details</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Explore SEO services →</span>
                 </Link>
               </div>
             </div>
@@ -382,15 +377,15 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4 pb-4 border-b border-neutral-200 dark:border-white/10">
-            <div className="flex flex-col gap-2">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-neutral-900 dark:text-white">
-                Selected Work.
+            <div className="flex flex-col gap-2 max-w-3xl">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-neutral-900 dark:text-white leading-[1.15]">
+                Our Web &amp; Software Projects in Pune and Across India
               </h2>
-              <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl">
-                Production-grade websites, custom software, and digital systems built for growing businesses. Engineered for performance, reliability, and real commercial outcomes.
+              <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
+                Websites, software platforms and booking systems we have built for businesses in tax advisory, dairy, packaging, agriculture, logistics and travel. Each project is built for speed, reliability and real business results.
               </p>
             </div>
-            <div className="font-mono text-xs text-neutral-500 font-medium hidden md:block">
+            <div className="font-mono text-xs text-neutral-500 font-medium hidden md:block shrink-0">
               // PRODUCTION_RECORDS
             </div>
           </div>
