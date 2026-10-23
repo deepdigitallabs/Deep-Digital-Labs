@@ -65,14 +65,6 @@ export function Navbar() {
               Home
             </Link>
 
-            <Link href="/about" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-1">
-              About
-            </Link>
-
-            <Link href="/case-studies" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-1">
-              Work
-            </Link>
-
             {/* Services with Mega Menu Dropdown */}
             <div 
               className="relative"
@@ -172,7 +164,7 @@ export function Navbar() {
                       </p>
                     </Link>
 
-                    {/* 5. Chat Bot Development */}
+                    {/* 5. AI & Automation */}
                     <Link 
                       href="/services/chat-bot-development" 
                       onClick={() => setMegaMenuOpen(false)}
@@ -247,6 +239,9 @@ export function Navbar() {
             <Link href="/case-studies" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-1">
               Work
             </Link>
+            <Link href="/about" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-1">
+              About
+            </Link>
             <Link href="/blog" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-1">
               Blog
             </Link>
@@ -296,22 +291,6 @@ export function Navbar() {
               className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
             >
               Home
-            </Link>
-
-            <Link 
-              href="/about" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
-            >
-              About
-            </Link>
-
-            <Link 
-              href="/case-studies" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
-            >
-              Work
             </Link>
 
             <div>
@@ -376,7 +355,14 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
             >
-              Work &amp; Case Studies
+              Work
+            </Link>
+            <Link 
+              href="/about" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+            >
+              About
             </Link>
             <Link 
               href="/blog" 

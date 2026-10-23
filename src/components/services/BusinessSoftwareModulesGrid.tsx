@@ -136,21 +136,6 @@ export function BusinessSoftwareModulesGrid() {
                 ))}
               </div>
             </div>
-
-            {/* Card Action */}
-            <div className="pt-6 mt-6 border-t border-slate-100 dark:border-white/10 flex items-center justify-between">
-              <span className="font-mono text-[11px] text-slate-400 dark:text-gray-500">
-                {mod.features.length} Features Included
-              </span>
-              <button
-                type="button"
-                onClick={() => handleEnquire(mod.title)}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#E8623C] hover:text-[#D7532F] transition-colors cursor-pointer"
-              >
-                <span>Request Scoping</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
-            </div>
           </div>
         ))}
       </div>
