@@ -130,7 +130,7 @@ export function BusinessSoftwareCatalogModal({
               {/* Module Header */}
               <div className="pb-5 border-b border-neutral-100 dark:border-white/10">
                 <div className="flex items-center gap-2 mb-2 font-mono text-xs text-[#E8623C] font-semibold">
-                  <span>MODULE {activeModule.number}</span>
+                  <span className="px-2 py-0.5 rounded bg-orange-100 dark:bg-orange-950/60">{activeModule.number}</span>
                   <span>•</span>
                   <span>{activeModule.tag}</span>
                 </div>

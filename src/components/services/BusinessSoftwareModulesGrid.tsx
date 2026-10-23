@@ -108,7 +108,7 @@ export function BusinessSoftwareModulesGrid() {
               {/* Top row */}
               <div className="flex items-center justify-between gap-2 mb-3">
                 <span className="font-mono text-xs font-bold px-2 py-0.5 rounded bg-orange-100 dark:bg-orange-950/60 text-[#E8623C]">
-                  MODULE {mod.number}
+                  {mod.number}
                 </span>
                 <span className="text-[11px] font-mono text-slate-500 dark:text-gray-400 font-medium">
                   {mod.tag}

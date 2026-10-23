@@ -142,7 +142,7 @@ export function WebsiteCategoriesModal({
             <div>
               <div className="flex items-center justify-between gap-3 mb-4">
                 <span className="font-mono text-xs font-bold px-2.5 py-1 rounded bg-orange-100 dark:bg-orange-950/60 text-[#E8623C]">
-                  CATEGORY {activeCategory.number}
+                  {activeCategory.number}
                 </span>
                 <span className="text-xs font-mono text-neutral-500 dark:text-neutral-400">
                   {activeCategory.tag}

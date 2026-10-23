@@ -217,12 +217,6 @@ export default function HomePage() {
             {/* Service 01: Business Websites */}
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group">
               <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-xs text-neutral-400">01</span>
-                  <div className="w-10 h-10 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] flex items-center justify-center">
-                    <Globe className="w-5 h-5" />
-                  </div>
-                </div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   Business Websites
                 </h3>
@@ -236,15 +230,7 @@ export default function HomePage() {
                   <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">E-commerce</span>
                 </div>
               </div>
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
-                <button
-                  type="button"
-                  onClick={() => setWebsiteModalOpen(true)}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] hover:bg-orange-100 dark:hover:bg-orange-900/50 text-xs font-semibold tracking-wider font-mono transition-colors cursor-pointer"
-                >
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>16 Service Categories</span>
-                </button>
+              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end">
                 <Link
                   href="/services/websites-web-apps"
                   className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
@@ -258,12 +244,6 @@ export default function HomePage() {
             {/* Service 02: Business Software */}
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group">
               <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-xs text-neutral-400">02</span>
-                  <div className="w-10 h-10 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] flex items-center justify-center">
-                    <Database className="w-5 h-5" />
-                  </div>
-                </div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   Business Software
                 </h3>
@@ -277,15 +257,7 @@ export default function HomePage() {
                   <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Internal Tools</span>
                 </div>
               </div>
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
-                <button
-                  type="button"
-                  onClick={() => setSoftwareModalOpen(true)}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] hover:bg-orange-100 dark:hover:bg-orange-900/50 text-xs font-semibold tracking-wider font-mono transition-colors cursor-pointer"
-                >
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>18 Software Modules</span>
-                </button>
+              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end">
                 <Link
                   href="/services/business-software-saas"
                   className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
@@ -299,12 +271,6 @@ export default function HomePage() {
             {/* Service 03: AI & Automation */}
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group">
               <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-xs text-neutral-400">03</span>
-                  <div className="w-10 h-10 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] flex items-center justify-center">
-                    <Bot className="w-5 h-5" />
-                  </div>
-                </div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   AI &amp; Workflow Automation
                 </h3>
@@ -318,15 +284,7 @@ export default function HomePage() {
                   <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Instant Webhooks</span>
                 </div>
               </div>
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
-                <button
-                  type="button"
-                  onClick={() => setAiModalOpen(true)}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] hover:bg-orange-100 dark:hover:bg-orange-900/50 text-xs font-semibold tracking-wider font-mono transition-colors cursor-pointer"
-                >
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>13 Automation Categories</span>
-                </button>
+              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end">
                 <Link
                   href="/services/chat-bot-development"
                   className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
@@ -340,12 +298,6 @@ export default function HomePage() {
             {/* Service 04: Mobile Apps */}
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group">
               <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-xs text-neutral-400">04</span>
-                  <div className="w-10 h-10 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] flex items-center justify-center">
-                    <Smartphone className="w-5 h-5" />
-                  </div>
-                </div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   Mobile Applications
                 </h3>
@@ -359,15 +311,7 @@ export default function HomePage() {
                   <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Offline First</span>
                 </div>
               </div>
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
-                <button
-                  type="button"
-                  onClick={() => setMobileModalOpen(true)}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] hover:bg-orange-100 dark:hover:bg-orange-900/50 text-xs font-semibold tracking-wider font-mono transition-colors cursor-pointer"
-                >
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>16 App Categories</span>
-                </button>
+              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end">
                 <Link
                   href="/services/mobile-app-development"
                   className="inline-flex items-center gap-1 text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
@@ -394,7 +338,7 @@ export default function HomePage() {
                 Selected Work.
               </h2>
               <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl">
-                Real digital products delivering revenue velocity and operational calm to growing enterprises.
+                Production-grade websites, custom software, and digital systems built for growing businesses. Engineered for performance, reliability, and real commercial outcomes.
               </p>
             </div>
             <div className="font-mono text-xs text-neutral-500 font-medium hidden md:block">
