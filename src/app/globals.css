@@ -3,147 +3,129 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Kombai-Inspired Premium Light Palette */
+  /* Clean, Refined Professional Light Palette */
   --bg-main: #FAFAFA;
   --bg-surface: #FFFFFF;
   --bg-card: #FFFFFF;
-  --bg-subtle: #F3F4F6;
-  --border-subtle: #E5E7EB;
-  --border-strong: #D1D5DB;
-  --text-main: #111827;
-  --text-muted: #4B5563;
-  --text-subtle: #6B7280;
+  --bg-subtle: #F4F5F7;
+  --border-subtle: #E2E8F0;
+  --border-strong: #CBD5E1;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-subtle: #64748B;
   
-  /* Brand Accent: Kombai Sunset Coral */
+  /* Signature Brand Accent (Warm Coral / Studio Terracotta) */
   --brand: #E8623C;
   --brand-hover: #D7532F;
-  --brand-light: #FFF2ED;
+  --brand-light: #FFF5F2;
   --brand-subtle: rgba(232, 98, 60, 0.08);
   --accent: #E8623C;
   --accent-foreground: #FFFFFF;
   --accent-highlight: #E8623C;
 
-  /* Official Brand Spectrum Palette (from Logo) */
-  --spectrum-cyan: #00D2FF;
-  --spectrum-blue: #2563EB;
-  --spectrum-violet: #7C3AED;
-  --spectrum-magenta: #EC4899;
-  --spectrum-coral: #E8623C;
-  --spectrum-gold: #FBBF24;
-  
-  --pill-bg: #F3F4F6;
-  --pill-border: #E5E7EB;
-  --pill-text: #1F2937;
-  --nav-bg: rgba(255, 255, 255, 0.90);
-  --nav-border: rgba(229, 231, 235, 0.85);
-  --card-shadow: 0 4px 24px -2px rgba(15, 23, 42, 0.06);
+  --pill-bg: #F1F5F9;
+  --pill-border: #E2E8F0;
+  --pill-text: #1E293B;
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --nav-border: #E2E8F0;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
 }
 
 .dark {
-  /* Kombai-Inspired Signature Dark Palette */
-  --bg-main: #08090C;
-  --bg-surface: #0E1015;
-  --bg-card: #12151D;
-  --bg-subtle: #171B24;
+  /* Clean, Refined Professional Dark Palette */
+  --bg-main: #0B0D11;
+  --bg-surface: #11141A;
+  --bg-card: #151821;
+  --bg-subtle: #191E28;
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.16);
-  --text-main: #F4F5F7;
-  --text-muted: #9CA3AF;
-  --text-subtle: #6B7280;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-subtle: #64748B;
   
-  /* Brand Accent: Kombai Sunset Coral */
+  /* Signature Brand Accent */
   --brand: #E8623C;
   --brand-hover: #F0744E;
-  --brand-light: rgba(232, 98, 60, 0.18);
-  --brand-subtle: rgba(232, 98, 60, 0.12);
+  --brand-light: rgba(232, 98, 60, 0.14);
+  --brand-subtle: rgba(232, 98, 60, 0.08);
   --accent: #E8623C;
   --accent-foreground: #FFFFFF;
   --accent-highlight: #E8623C;
 
-  /* Official Brand Spectrum Palette (from Logo) */
-  --spectrum-cyan: #38BDF8;
-  --spectrum-blue: #3B82F6;
-  --spectrum-violet: #8B5CF6;
-  --spectrum-magenta: #F43F5E;
-  --spectrum-coral: #F97316;
-  --spectrum-gold: #FCD34D;
-  
-  --pill-bg: #141720;
+  --pill-bg: #151821;
   --pill-border: rgba(255, 255, 255, 0.08);
-  --pill-text: #E8623C;
-  --nav-bg: rgba(10, 12, 16, 0.82);
+  --pill-text: #F8FAFC;
+  --nav-bg: rgba(11, 13, 17, 0.88);
   --nav-border: rgba(255, 255, 255, 0.08);
-  --card-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.65);
+  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
 }
 
 body {
   font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: var(--bg-main);
   color: var(--text-main);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   overflow-x: hidden;
 }
 
 .font-display {
   font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.025em;
 }
 
-/* Kombai-style background glows */
-.kombai-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(232, 98, 60, 0.15) 0%, rgba(232, 98, 60, 0.03) 45%, transparent 70%);
+/* Subtle, refined background grid */
+.subtle-grid {
+  background-image: linear-gradient(to right, rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
 
-.kombai-grid {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
+.dark .subtle-grid {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
 
-.kombai-grid-light {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
-/* Kombai Button Styling */
-.kombai-btn {
+/* Primary Button Styling */
+.btn-primary {
   display: inline-flex;
   align-items: center;
-  border-radius: 8px;
+  justify-content: center;
+  border-radius: 10px;
   background-color: #E8623C;
   color: #FFFFFF;
   font-weight: 600;
-  transition: all 0.2s ease;
-  padding: 4px 18px 4px 6px;
-  box-shadow: 0 4px 20px -2px rgba(232, 98, 60, 0.35);
+  transition: all 0.15s ease;
+  padding: 10px 22px;
+  box-shadow: 0 1px 2px 0 rgba(232, 98, 60, 0.15);
 }
 
-.kombai-btn:hover {
-  background-color: #F0744E;
+.btn-primary:hover {
+  background-color: #D7532F;
   transform: translateY(-1px);
-  box-shadow: 0 6px 24px -2px rgba(232, 98, 60, 0.45);
+  box-shadow: 0 4px 12px 0 rgba(232, 98, 60, 0.25);
 }
 
-.kombai-btn-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  background-color: rgba(0, 0, 0, 0.2);
-  display: flex;
+.btn-secondary {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 12px;
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
+  border-radius: 10px;
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+  font-weight: 600;
+  transition: all 0.15s ease;
+  padding: 10px 20px;
 }
 
-.kombai-btn:hover .kombai-btn-icon {
-  transform: scale(1.05);
+.btn-secondary:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--border-strong);
 }
 
-/* Magic UI Marquee Keyframes */
+/* Marquee Animations */
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -170,7 +152,6 @@ body {
   animation: marquee-vertical var(--duration, 40s) linear infinite;
 }
 
-/* Tech Marquee Keyframes */
 @keyframes tech-marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
@@ -185,25 +166,3 @@ body {
 .animate-tech-marquee:hover {
   animation-play-state: paused;
 }
-
-/* Deep Digital Labs Official Spectrum Styles */
-.text-gradient-spectrum {
-  background: linear-gradient(135deg, #0284C7 0%, #4F46E5 22%, #9333EA 45%, #E11D48 68%, #EA580C 88%, #D97706 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.dark .text-gradient-spectrum {
-  background: linear-gradient(135deg, #38BDF8 0%, #6366F1 22%, #A855F7 45%, #F43F5E 68%, #FB923C 88%, #FBBF24 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.border-gradient-spectrum {
-  border-image: linear-gradient(135deg, #00D2FF, #7C3AED, #EC4899, #F97316) 1;
-}
-
-.bg-spectrum-aurora {
-  background: radial-gradient(circle at 75% 20%, rgba(124, 58, 237, 0.18) 0%, rgba(236, 72, 153, 0.14) 25%, rgba(249, 115, 22, 0.12) 50%, rgba(0, 210, 255, 0.08) 75%, transparent 100%);
-}
-

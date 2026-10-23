@@ -210,9 +210,9 @@ export const CORE_SERVICES: ServiceDetail[] = [
     displayHeading: '03 — Mobile Apps',
     slug: 'mobile-app-development',
     title: 'Mobile App Development',
-    headline: 'Native-speed Android, iOS, and cross-platform mobile apps.',
-    shortDescription: 'Cross-platform mobile apps, native performance, push notifications, payment integration, and offline-first solutions.',
-    fullDescription: 'Launch your mobile app on both the Apple App Store and Google Play Store with a single high-performance codebase. Smooth animations, offline support, hardware camera/GPS integration, and secure in-app payments.',
+    headline: 'High-performance mobile applications built for customers, employees and field teams.',
+    shortDescription: 'Intuitive mobile experiences with secure backend integrations, real-time updates and offline-first capabilities that keep business operations running.',
+    fullDescription: 'High-performance mobile applications built for customers, employees and field teams. We develop intuitive mobile experiences with secure backend integrations, real-time updates and offline-first capabilities that keep business operations running, even when internet connectivity is unreliable.',
     icon: 'Smartphone',
     keyBenefits: [
       'One codebase reaching both iOS & Android without extra cost',
@@ -358,13 +358,13 @@ export const CORE_SERVICES: ServiceDetail[] = [
   },
   {
     number: '05',
-    shortTitle: 'Chat Bot Development',
-    displayHeading: '05 — Chat Bot Development',
+    shortTitle: 'AI & Automation',
+    displayHeading: '05 — AI & Workflow Automation',
     slug: 'chat-bot-development',
-    title: 'Chat Bot Development & Automation',
-    headline: 'Smart WhatsApp & website chat bots that answer customers and capture leads 24/7.',
-    shortDescription: 'Custom AI and rule-based chat bots for WhatsApp, websites, and apps that answer inquiries instantly, book appointments, and capture qualified leads.',
-    fullDescription: 'Never lose another customer inquiry to slow response times. We build smart, custom chat bots for WhatsApp Business, websites, and social channels. Your bots handle customer questions 24/7, qualify inquiries, book appointments directly into your calendar, and instantly notify your team on WhatsApp or CRM.',
+    title: 'AI & Workflow Automation',
+    headline: 'Automate repetitive busywork, connect legacy siloed databases, and implement conversational AI agents where they eliminate real human bottlenecks.',
+    shortDescription: 'AI agents, multi-agent workflows, n8n automation, WhatsApp Business bots, API webhooks, RAG knowledge bases, and document OCR.',
+    fullDescription: 'Eliminate manual operational bottlenecks. We engineer autonomous AI agents, multi-step n8n pipelines, WhatsApp Business automations, and intelligent RAG knowledge assistants that integrate directly with your databases and legacy software.',
     icon: 'Bot',
     keyBenefits: [
       '24/7 instant customer replies on WhatsApp & website — zero wait times',
@@ -468,6 +468,7 @@ import { INDUSTRY_SERVICES } from './industryServices';
 
 // Compatibility aliases so existing detail pages resolve cleanly
 export const ALIAS_SLUGS: Record<string, string> = {
+  'ai-workflow-automation': 'chat-bot-development',
   'websites-web-apps': 'websites-web-apps',
   'web-development': 'websites-web-apps',
   'saas-web-development': 'websites-web-apps',

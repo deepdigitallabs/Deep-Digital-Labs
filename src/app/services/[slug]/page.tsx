@@ -17,6 +17,11 @@ import { SERVICES, getServiceBySlug, ALIAS_SLUGS } from '@/data/services';
 import { CASE_STUDIES } from '@/data/caseStudies';
 import { TechBadge } from '@/components/ui/TechBadge';
 
+import { WebsiteCategoriesGrid } from '@/components/services/WebsiteCategoriesGrid';
+import { BusinessSoftwareModulesGrid } from '@/components/services/BusinessSoftwareModulesGrid';
+import { AiAutomationCategoriesGrid } from '@/components/services/AiAutomationCategoriesGrid';
+import { MobileAppCategoriesGrid } from '@/components/services/MobileAppCategoriesGrid';
+
 interface PageProps {
   params: Promise<{
     slug: string;
@@ -65,7 +70,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-gray-400 font-mono">
           <Link href="/" className="hover:text-slate-900 dark:hover:text-white transition-colors">Home</Link>
           <ChevronRight className="w-3 h-3" />
-          <Link href="/services" className="hover:text-slate-900 dark:hover:text-white transition-colors">Services</Link>
+          <Link href="/#services" className="hover:text-slate-900 dark:hover:text-white transition-colors">Services</Link>
           <ChevronRight className="w-3 h-3" />
           <span className="text-slate-900 dark:text-white font-semibold">{service.title}</span>
         </div>
@@ -112,35 +117,47 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Section: Architectural Capabilities */}
+        {/* Section: Architectural Capabilities / Specialized Directory */}
         <div className="py-16 border-b border-slate-200 dark:border-white/10">
-          <div className="mb-12">
-            <span className="text-xs font-mono uppercase tracking-widest text-slate-500 dark:text-gray-400 font-bold">
-              Capabilities
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mt-1">
-              What We Build &amp; Deliver
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {service.capabilities.map((cap, idx) => (
-              <div
-                key={idx}
-                className="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-slate-300 dark:bg-[#0F0F11] dark:border-white/10 transition-colors space-y-3 shadow-xs"
-              >
-                <div className="text-xs font-mono text-slate-500 dark:text-gray-400 font-bold">
-                  MOD-0{idx + 1}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
-                  {cap.title}
-                </h3>
-                <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">
-                  {cap.description}
-                </p>
+          {service.slug === 'websites-web-apps' || service.slug === 'web-development' ? (
+            <WebsiteCategoriesGrid />
+          ) : service.slug === 'business-software-saas' || service.slug === 'custom-software' ? (
+            <BusinessSoftwareModulesGrid />
+          ) : service.slug === 'chat-bot-development' || service.slug === 'ai-workflow-automation' ? (
+            <AiAutomationCategoriesGrid />
+          ) : service.slug === 'mobile-app-development' ? (
+            <MobileAppCategoriesGrid />
+          ) : (
+            <>
+              <div className="mb-12">
+                <span className="text-xs font-mono uppercase tracking-widest text-slate-500 dark:text-gray-400 font-bold">
+                  Capabilities
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mt-1">
+                  What We Build &amp; Deliver
+                </h2>
               </div>
-            ))}
-          </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {service.capabilities.map((cap, idx) => (
+                  <div
+                    key={idx}
+                    className="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-slate-300 dark:bg-[#0F0F11] dark:border-white/10 transition-colors space-y-3 shadow-xs"
+                  >
+                    <div className="text-xs font-mono text-slate-500 dark:text-gray-400 font-bold">
+                      MOD-0{idx + 1}
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
+                      {cap.title}
+                    </h3>
+                    <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed">
+                      {cap.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
 
         {/* Section: Process Timeline */}
