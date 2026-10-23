@@ -390,14 +390,14 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Case Study Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Case Study Grid: 3 cards in one row on desktop */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {workItems.map((study) => (
               <div 
                 key={study.slug}
                 className="bg-white dark:bg-[#12151C] rounded-2xl border border-neutral-200/90 dark:border-white/10 overflow-hidden flex flex-col group hover:border-[#E8623C]/60 transition-all shadow-xs hover:shadow-md"
               >
-                <div className="relative w-full h-64 bg-neutral-100 dark:bg-neutral-900 overflow-hidden flex items-center justify-center p-4">
+                <div className="relative w-full h-52 bg-neutral-100 dark:bg-neutral-900 overflow-hidden flex items-center justify-center p-3">
                   <Image 
                     src={study.image} 
                     alt={study.title} 
@@ -411,13 +411,13 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="p-7 sm:p-8 flex flex-col flex-1 justify-between">
+                <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between">
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-xs uppercase font-bold text-[#E8623C]">{study.category}</span>
                       <span className="font-mono text-xs text-neutral-400 font-medium">{study.year}</span>
                     </div>
-                    <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors">
+                    <h3 className="text-xl font-bold font-display text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors">
                       {study.title}
                     </h3>
                     <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
@@ -425,21 +425,21 @@ export default function HomePage() {
                     </p>
                   </div>
 
-                  <div className="pt-6 mt-6 border-t border-neutral-100 dark:border-white/10 flex items-center justify-between">
-                    <div className="flex flex-wrap gap-1 font-mono text-xs text-neutral-500">
+                  <div className="pt-4 mt-5 border-t border-neutral-100 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
+                    <div className="flex flex-wrap gap-1 font-mono text-[11px] text-neutral-500">
                       {study.stack.map((t, idx) => (
                         <span key={idx}>
                           {t}{idx < study.stack.length - 1 ? ' · ' : ''}
                         </span>
                       ))}
                     </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 shrink-0">
                       {study.domain && (
                         <a
                           href={`https://${study.domain}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 font-semibold text-xs sm:text-sm text-neutral-500 hover:text-[#E8623C] transition-colors"
+                          className="inline-flex items-center gap-1 font-semibold text-xs text-neutral-500 hover:text-[#E8623C] transition-colors"
                           title={`Visit live site ${study.domain}`}
                         >
                           <span>Live Site</span>
@@ -448,10 +448,10 @@ export default function HomePage() {
                       )}
                       <Link 
                         href={`/case-studies/${study.slug}`}
-                        className="inline-flex items-center gap-1 font-semibold text-xs sm:text-sm text-[#E8623C] hover:underline"
+                        className="inline-flex items-center gap-1 font-semibold text-xs text-[#E8623C] hover:underline"
                       >
                         <span>Case Study</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </div>
                   </div>
