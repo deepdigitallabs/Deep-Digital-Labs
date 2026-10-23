@@ -149,16 +149,7 @@ export default function HomePage() {
       <section className="relative w-full overflow-hidden pb-16 sm:pb-24 pt-28 sm:pt-32 lg:pt-36">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6">
           
-          {/* Eyebrow Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-white/[0.04] border border-neutral-200 dark:border-white/10 shadow-xs">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E8623C] opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E8623C]" />
-            </span>
-            <span className="font-mono text-xs tracking-wider uppercase text-neutral-600 dark:text-neutral-300 font-medium">
-              Digital Product Studio · Pune, India
-            </span>
-          </div>
+
 
           {/* Main Display Heading */}
           <div className="flex flex-col tracking-tight">
@@ -390,8 +381,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Case Study Grid: 3 cards in one row on desktop */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Case Study Grid: 3 cards in one row */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {workItems.map((study) => (
               <div 
                 key={study.slug}
