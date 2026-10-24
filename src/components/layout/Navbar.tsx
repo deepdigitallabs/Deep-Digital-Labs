@@ -39,9 +39,9 @@ export function Navbar() {
   return (
     <>
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-6xl">
-        <div className="flex items-center justify-between px-5 sm:px-6 py-2.5 bg-white/90 dark:bg-[#0E1117]/90 backdrop-blur-xl border border-neutral-200 dark:border-white/10 rounded-2xl shadow-sm transition-all duration-150">
+        <div className="flex items-center justify-between px-5 sm:px-6 py-2.5 bg-white/95 backdrop-blur-xl border border-neutral-200/90 rounded-full shadow-sm transition-all duration-150">
           
-          {/* Brand Logo - Full Logo */}
+          {/* Brand Logo - Full Logo on clean background */}
           <Link href="/" className="group flex items-center gap-2.5 sm:gap-3" aria-label="Deep Digital Labs Home">
             <div className="relative h-10 sm:h-12 flex items-center shrink-0">
               <Image
@@ -56,8 +56,8 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-neutral-600 dark:text-neutral-300">
-            <Link href="/" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-1">
+          <div className="hidden lg:flex items-center gap-6 text-sm font-semibold text-[#1B1F4B]">
+            <Link href="/" className="hover:text-[#E8338C] transition-colors py-1">
               Home
             </Link>
 
@@ -69,20 +69,20 @@ export function Navbar() {
             >
               <Link 
                 href="/#services" 
-                className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors flex items-center gap-1 py-1"
+                className="hover:text-[#E8338C] transition-colors flex items-center gap-1 py-1"
               >
                 <span>Services</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${megaMenuOpen ? 'rotate-180 text-[#E8623C]' : 'text-neutral-400'}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${megaMenuOpen ? 'rotate-180 text-[#E8338C]' : 'text-neutral-400'}`} />
               </Link>
 
               {/* Mega Menu Container */}
               {megaMenuOpen && (
                 <div 
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[720px] bg-white dark:bg-[#12151C] border border-neutral-200 dark:border-white/10 rounded-2xl p-5 shadow-xl z-50 animate-in fade-in slide-in-from-top-2 duration-150 text-left"
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[720px] bg-white border border-neutral-200/90 rounded-2xl p-5 shadow-xl z-50 animate-in fade-in slide-in-from-top-2 duration-150 text-left"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pb-4 border-b border-neutral-100 dark:border-white/10">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pb-4 border-b border-neutral-100">
                     
                     {/* 1. Websites & Web Apps */}
                     <Link 
@@ -232,16 +232,16 @@ export function Navbar() {
               )}
             </div>
 
-            <Link href="/case-studies" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-1">
+            <Link href="/case-studies" className="hover:text-[#E8338C] transition-colors py-1">
               Work
             </Link>
-            <Link href="/about" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-1">
+            <Link href="/about" className="hover:text-[#E8338C] transition-colors py-1">
               About
             </Link>
-            <Link href="/blog" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-1">
+            <Link href="/blog" className="hover:text-[#E8338C] transition-colors py-1">
               Blog
             </Link>
-            <Link href="/contact" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-1">
+            <Link href="/contact" className="hover:text-[#E8338C] transition-colors py-1">
               Contact
             </Link>
           </div>
@@ -252,15 +252,15 @@ export function Navbar() {
               href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20an%20inquiry%20about%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-100 dark:hover:bg-white/5 transition-colors border border-transparent hover:border-emerald-500/20"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#1B1F4B] hover:text-[#25D366] hover:bg-emerald-50 transition-colors border border-transparent hover:border-[#25D366]/20"
             >
-              <MessageSquare className="w-3.5 h-3.5 text-emerald-500" />
+              <MessageSquare className="w-3.5 h-3.5 text-[#25D366]" />
               <span className="hidden xl:inline">+91 77560 63128</span>
               <span className="xl:hidden">WhatsApp</span>
             </a>
             <button
               onClick={() => setDiscoveryModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-[#E8623C] hover:bg-[#D7532F] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-xs active:scale-98 cursor-pointer"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF9A1F] via-[#F0367A] to-[#6A3DE8] hover:opacity-95 text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all shadow-md shadow-[#F0367A]/20 hover:shadow-lg hover:-translate-y-0.5 active:scale-98 cursor-pointer"
             >
               <span>Start a Project</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -292,11 +292,11 @@ export function Navbar() {
 
         {/* Mobile Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-2 p-5 rounded-2xl bg-white dark:bg-[#12151C] border border-neutral-200 dark:border-white/10 shadow-xl text-left space-y-2 animate-in fade-in slide-in-from-top-2 duration-150">
+          <div className="lg:hidden mt-2 p-5 rounded-3xl bg-white border border-neutral-200/90 shadow-xl text-left space-y-2 animate-in fade-in slide-in-from-top-2 duration-150">
             <Link 
               href="/" 
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+              className="block py-2 text-sm font-semibold text-[#1B1F4B] hover:text-[#E8338C]"
             >
               Home
             </Link>
@@ -304,53 +304,53 @@ export function Navbar() {
             <div>
               <button 
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                className="w-full flex items-center justify-between py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+                className="w-full flex items-center justify-between py-2 text-sm font-semibold text-[#1B1F4B] hover:text-[#E8338C]"
               >
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180 text-[#E8623C]' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? 'rotate-180 text-[#E8338C]' : ''}`} />
               </button>
 
               {mobileServicesOpen && (
-                <div className="pl-3 pr-2 py-2 space-y-2 border-l border-neutral-200 dark:border-white/10 mt-1">
+                <div className="pl-3 pr-2 py-2 space-y-2 border-l-2 border-[#E8338C]/30 mt-1">
                   <Link 
                     href="/services/websites-web-apps" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-0.5"
+                    className="block text-xs font-medium text-[#4B5070] hover:text-[#E8338C] py-0.5"
                   >
                     Web Apps &amp; SaaS
                   </Link>
                   <Link 
                     href="/services/business-software-saas" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-0.5"
+                    className="block text-xs font-medium text-[#4B5070] hover:text-[#E8338C] py-0.5"
                   >
                     Custom ERP &amp; Software
                   </Link>
                   <Link 
                     href="/services/mobile-app-development" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-0.5"
+                    className="block text-xs font-medium text-[#4B5070] hover:text-[#E8338C] py-0.5"
                   >
                     Mobile Applications
                   </Link>
                   <Link 
                     href="/services/digital-growth-seo" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-0.5"
+                    className="block text-xs font-medium text-[#4B5070] hover:text-[#E8338C] py-0.5"
                   >
                     Digital Growth &amp; SEO
                   </Link>
                   <Link 
                     href="/services/chat-bot-development" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xs font-medium text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] py-0.5"
+                    className="block text-xs font-medium text-[#4B5070] hover:text-[#E8338C] py-0.5"
                   >
                     AI &amp; Automation
                   </Link>
                   <Link 
                     href="/#services" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-xs font-semibold text-[#E8623C] hover:underline pt-1"
+                    className="block text-xs font-semibold text-[#E8338C] hover:underline pt-1"
                   >
                     All Services &amp; Packages →
                   </Link>
@@ -361,28 +361,28 @@ export function Navbar() {
             <Link 
               href="/case-studies" 
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+              className="block py-2 text-sm font-semibold text-[#1B1F4B] hover:text-[#E8338C]"
             >
               Work
             </Link>
             <Link 
               href="/about" 
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+              className="block py-2 text-sm font-semibold text-[#1B1F4B] hover:text-[#E8338C]"
             >
               About
             </Link>
             <Link 
               href="/blog" 
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+              className="block py-2 text-sm font-semibold text-[#1B1F4B] hover:text-[#E8338C]"
             >
               Blog
             </Link>
             <Link 
               href="/contact" 
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-[#E8623C]"
+              className="block py-2 text-sm font-semibold text-[#1B1F4B] hover:text-[#E8338C]"
             >
               Contact
             </Link>

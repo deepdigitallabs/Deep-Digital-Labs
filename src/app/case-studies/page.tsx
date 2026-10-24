@@ -4,193 +4,231 @@ import React from 'react';
 import Link from 'next/link';
 import { 
   ArrowRight, 
-  ExternalLink,
   MapPin,
-  ArrowUpRight
+  ArrowUpRight,
+  Sparkles
 } from 'lucide-react';
 import { CASE_STUDIES } from '@/data/caseStudies';
+
+function WhatsAppIcon({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  );
+}
 
 export default function CaseStudiesPage() {
   const filteredCases = CASE_STUDIES;
 
   return (
-    <div className="pt-32 pb-24 bg-white text-neutral-900 dark:bg-[#050505] dark:text-white min-h-screen transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-            Our Work
-          </span>
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-tight font-display">
-            Real Websites &amp; Software <br />
-            <span className="text-[#E8623C]">Built for Growing Businesses</span>
+    <div className="bg-white text-[#4B5070] min-h-screen">
+      
+      {/* Header Section */}
+      <section className="relative pt-36 pb-16 overflow-hidden bg-white">
+        {/* Soft Blurred Gradient Circles */}
+        <div 
+          aria-hidden="true" 
+          className="absolute top-16 left-1/4 -translate-x-1/2 w-96 h-96 rounded-full bg-gradient-to-tr from-[#FF7A1A]/15 to-[#E8338C]/15 blur-3xl pointer-events-none -z-10" 
+        />
+        <div 
+          aria-hidden="true" 
+          className="absolute top-28 right-1/4 translate-x-1/3 w-96 h-96 rounded-full bg-gradient-to-bl from-[#6A3DE8]/15 to-[#E8338C]/15 blur-3xl pointer-events-none -z-10" 
+        />
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E8338C]/20 bg-[#F7F5FF] text-xs font-mono font-semibold text-[#E8338C] shadow-xs">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Our Work &amp; Case Studies</span>
+          </div>
+
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-[#1B1F4B] tracking-tight leading-tight font-display">
+            Real Websites &amp; <span className="brand-gradient-text">Software</span>
           </h1>
-          
-          <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-2xl mx-auto">
-            See the websites, booking systems, and business tools we have built for businesses in Pune and across India.
+
+          <div className="tagline-divider max-w-sm mx-auto text-xs font-medium tracking-wider">
+            Build • Grow • Digital
+          </div>
+
+          <p className="text-base sm:text-lg text-[#4B5070] leading-relaxed max-w-2xl mx-auto">
+            Take a look at the live websites, booking systems, and business tools we have delivered for companies in Pune and across India.
           </p>
         </div>
+      </section>
 
-        {/* Case Studies Bento Grid */}
-        {filteredCases.length === 0 ? (
-          <div className="text-center py-20 p-8 rounded-3xl bg-neutral-50 dark:bg-[#0D0E12] border border-neutral-200 dark:border-white/10 space-y-4">
-            <p className="text-lg text-neutral-800 dark:text-neutral-200 font-semibold font-display">No projects found</p>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-            {filteredCases.map((cs) => (
-              <div
-                key={cs.slug}
-                className="group flex flex-col justify-between rounded-2xl bg-white dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 hover:border-[#E8623C]/60 dark:hover:border-[#E8623C]/60 transition-all duration-300 overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1"
-              >
-                <div>
-                  {/* Visual Header with Image & Live Badges */}
-                  <div className="h-52 relative overflow-hidden bg-neutral-100 dark:bg-black border-b border-neutral-200 dark:border-white/10">
-                    <div 
-                      className="absolute inset-0 bg-cover bg-top transition-transform duration-500 group-hover:scale-105 opacity-100"
-                      style={{ backgroundImage: `url(${cs.heroImage})` }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
-                    
-                    {/* Top Badges */}
-                    <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between">
-                      <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-white/90 dark:bg-black/80 text-neutral-800 dark:text-neutral-200 font-bold backdrop-blur-md border border-white/20">
-                        {cs.industry}
-                      </span>
+      {/* Case Studies Grid Section (Alternate #F7F5FF) */}
+      <section className="py-16 bg-[#F7F5FF] border-t border-neutral-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {filteredCases.length === 0 ? (
+            <div className="text-center py-20 p-8 rounded-3xl bg-white border border-neutral-200/80 space-y-4">
+              <p className="text-lg text-[#1B1F4B] font-semibold font-display">No projects found</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+              {filteredCases.map((cs) => (
+                <div
+                  key={cs.slug}
+                  className="card-brand group flex flex-col justify-between overflow-hidden"
+                >
+                  <div>
+                    {/* Visual Header with Image & Live Badges */}
+                    <div className="h-52 relative overflow-hidden bg-neutral-100 border-b border-neutral-200/60">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-top transition-transform duration-500 group-hover:scale-105"
+                        style={{ backgroundImage: `url(${cs.heroImage})` }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#1B1F4B]/85 via-[#1B1F4B]/30 to-transparent" />
+                      
+                      {/* Top Badges */}
+                      <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between">
+                        <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-white/95 text-[#1B1F4B] font-bold shadow-xs">
+                          {cs.industry}
+                        </span>
 
-                      {cs.liveUrl && (
-                        <a
-                          href={cs.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="flex items-center gap-1.5 text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-emerald-500/90 hover:bg-emerald-600 text-white font-bold shadow-xs transition-colors backdrop-blur-md"
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                          <span>Live Site ↗</span>
-                        </a>
-                      )}
+                        {cs.liveUrl && (
+                          <a
+                            href={cs.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="flex items-center gap-1.5 text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold shadow-xs transition-colors"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                            <span>Live Site ↗</span>
+                          </a>
+                        )}
+                      </div>
+
+                      {/* Location Tag */}
+                      <div className="absolute bottom-3 left-3.5 flex items-center gap-1 text-[11px] text-white/95 font-medium">
+                        <MapPin className="w-3 h-3 text-[#FF7A1A]" />
+                        <span>{cs.location}</span>
+                      </div>
                     </div>
 
-                    {/* Location Tag */}
-                    <div className="absolute bottom-3 left-3.5 flex items-center gap-1 text-[11px] text-white/90 font-medium">
-                      <MapPin className="w-3 h-3 text-[#E8623C]" />
-                      <span>{cs.location}</span>
+                    {/* Body Content */}
+                    <div className="p-6 space-y-4">
+                      <div>
+                        <span className="text-[10px] font-mono uppercase tracking-widest text-[#E8338C] font-bold">
+                          {cs.client}
+                        </span>
+                        <h2 className="text-lg font-bold text-[#1B1F4B] group-hover:text-[#E8338C] transition-colors leading-snug mt-0.5 font-display">
+                          {cs.title}
+                        </h2>
+                      </div>
+
+                      {/* Structured Info */}
+                      <div className="space-y-2.5 text-xs">
+                        <div className="p-3 rounded-xl bg-[#F7F5FF] border border-neutral-200/60 space-y-1">
+                          <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#FF7A1A]">
+                            The Goal
+                          </span>
+                          <p className="text-[#4B5070] leading-relaxed line-clamp-2">
+                            {cs.problem}
+                          </p>
+                        </div>
+
+                        <div className="p-3 rounded-xl bg-[#F7F5FF] border border-neutral-200/60 space-y-1">
+                          <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#E8338C]">
+                            What We Built
+                          </span>
+                          <p className="text-[#4B5070] leading-relaxed line-clamp-2">
+                            {cs.whatWeBuilt}
+                          </p>
+                        </div>
+
+                        <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200/60 space-y-1">
+                          <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700">
+                            Result
+                          </span>
+                          <p className="text-emerald-900 font-medium leading-relaxed line-clamp-2">
+                            {cs.result}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Tech Stack Pills */}
+                      <div className="flex flex-wrap gap-1.5 pt-1">
+                        {cs.techStack.slice(0, 3).map((tech) => (
+                          <span key={tech} className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white text-[#4B5070] border border-neutral-200">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
-                  {/* Body Content */}
-                  <div className="p-6 space-y-4">
-                    <div>
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-                        {cs.client}
-                      </span>
-                      <h2 className="text-lg font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors leading-snug mt-0.5">
-                        {cs.title}
-                      </h2>
-                    </div>
-
-                    {/* Problem / Solution / Result Structured Evidence */}
-                    <div className="space-y-2.5 text-xs">
-                      <div className="p-2.5 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-1">
-                        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">
-                          Problem
-                        </span>
-                        <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed line-clamp-2">
-                          {cs.problem}
-                        </p>
-                      </div>
-
-                      <div className="p-2.5 rounded-xl bg-neutral-50 dark:bg-white/[0.03] border border-neutral-100 dark:border-white/5 space-y-1">
-                        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#E8623C]">
-                          What We Built
-                        </span>
-                        <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed line-clamp-2">
-                          {cs.whatWeBuilt}
-                        </p>
-                      </div>
-
-                      <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 space-y-1">
-                        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
-                          Result
-                        </span>
-                        <p className="text-neutral-800 dark:text-neutral-200 font-medium leading-relaxed line-clamp-2">
-                          {cs.result}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Tech Stack Pills */}
-                    <div className="flex flex-wrap gap-1.5 pt-1">
-                      {cs.techStack.slice(0, 3).map((tech) => (
-                        <span key={tech} className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-neutral-100 dark:bg-white/5 text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-white/5">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Footer Action Bar */}
-                <div className="px-6 py-4 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between gap-3 text-xs bg-neutral-50/50 dark:bg-white/[0.01]">
-                  <Link
-                    href={`/case-studies/${cs.slug}`}
-                    className="inline-flex items-center gap-1.5 font-bold text-neutral-900 dark:text-white hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors"
-                  >
-                    <span>View Project Details</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                  </Link>
-
-                  {cs.liveUrl && (
-                    <a
-                      href={cs.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-[11px] font-semibold px-3 py-1.5 rounded-full bg-white dark:bg-white/10 text-neutral-800 dark:text-neutral-200 hover:bg-[#E8623C] hover:text-white dark:hover:bg-[#E8623C] dark:hover:text-white border border-neutral-200 dark:border-white/10 transition-all shadow-2xs"
+                  {/* Footer Action Bar */}
+                  <div className="px-6 py-4 border-t border-neutral-100 flex items-center justify-between gap-3 text-xs bg-neutral-50/50">
+                    <Link
+                      href={`/case-studies/${cs.slug}`}
+                      className="inline-flex items-center gap-1.5 font-bold text-[#1B1F4B] hover:text-[#E8338C] transition-colors"
                     >
-                      <span>Visit Live Site</span>
-                      <ArrowUpRight className="w-3 h-3" />
-                    </a>
-                  )}
+                      <span>View Details</span>
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                    </Link>
+
+                    {cs.liveUrl && (
+                      <a
+                        href={cs.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[11px] font-semibold px-3 py-1.5 rounded-full bg-white text-[#1B1F4B] hover:text-[#E8338C] border border-neutral-200 transition-all shadow-xs"
+                      >
+                        <span>Visit Site</span>
+                        <ArrowUpRight className="w-3 h-3" />
+                      </a>
+                    )}
+                  </div>
+
                 </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
 
-              </div>
-            ))}
+      {/* FINAL CALL TO ACTION (Navy #1B1F4B) */}
+      <section className="py-24 bg-[#1B1F4B] text-white relative overflow-hidden">
+        <div 
+          aria-hidden="true" 
+          className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-gradient-to-r from-[#FF7A1A]/20 via-[#E8338C]/20 to-[#6A3DE8]/20 blur-3xl pointer-events-none" 
+        />
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-mono font-medium text-pink-300">
+            <span>Direct WhatsApp &amp; Inquiries</span>
           </div>
-        )}
 
-        {/* Bottom CTA Block */}
-        <div className="mt-20 p-8 sm:p-14 rounded-3xl bg-slate-900 text-white space-y-6 text-center shadow-lg transition-colors duration-200">
-          <span className="text-xs font-mono font-bold tracking-widest uppercase bg-white/10 text-emerald-400 px-3.5 py-1 rounded-full">
-            Pune Developer Team
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight max-w-2xl mx-auto text-white">
-            Let’s Build Something That Scales.
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white font-display">
+            Want to build something similar for your <span className="bg-gradient-to-r from-[#FFB81C] via-[#FF7A1A] to-[#E8338C] bg-clip-text text-transparent">business</span>?
           </h2>
-          <p className="text-base text-slate-300 max-w-xl mx-auto font-normal leading-relaxed">
-            Tell us about what you want to build. We’ll understand your requirements and get back to you directly with a clear timeline and fair pricing.
+
+          <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto leading-relaxed">
+            Tell us about your project. We’ll understand what you need, share live demos of similar work, and give you a fair fixed quote.
           </p>
-          <div className="pt-2 flex flex-col sm:flex-row gap-3.5 justify-center items-center">
+
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm bg-white text-slate-900 hover:bg-slate-100 transition-all shadow-md active:scale-95"
+              className="btn-primary"
             >
-              <span>Book a 30-Minute Discovery Call</span>
+              <span>Get a Free Quote</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/917756063128?text=Hi,%20I%20want%20to%20discuss%20a%20software%20project."
+              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20saw%20your%20case%20studies%20and%20want%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-all shadow-md active:scale-95"
+              className="px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-semibold text-sm transition-all shadow-md shadow-[#25D366]/20 flex items-center gap-2 active:scale-98 hover:-translate-y-0.5"
             >
+              <WhatsAppIcon className="w-4 h-4" />
               <span>Chat on WhatsApp</span>
             </a>
           </div>
         </div>
+      </section>
 
-      </div>
     </div>
   );
 }

@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
+const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -70,11 +69,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`light ${plusJakartaSans.variable} ${spaceGrotesk.variable} antialiased`} data-theme="light">
+    <html lang="en" className={`light ${inter.variable} ${plusJakartaSans.variable} antialiased`} data-theme="light">
       <head>
         <JsonLd />
       </head>
-      <body className="min-h-screen bg-[var(--bg-main)] text-[var(--text-main)] flex flex-col selection:bg-[#E8623C] selection:text-white transition-colors duration-200">
+      <body className="min-h-screen bg-white text-[#4B5070] font-sans flex flex-col selection:bg-[#E8338C]/20 selection:text-[#1B1F4B] transition-colors duration-200">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

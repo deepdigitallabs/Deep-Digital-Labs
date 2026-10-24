@@ -1,128 +1,155 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
-:root {
-  /* Clean, Refined Professional Light Palette */
-  --bg-main: #FAFAFA;
-  --bg-surface: #FFFFFF;
-  --bg-card: #FFFFFF;
-  --bg-subtle: #F4F5F7;
-  --border-subtle: #E2E8F0;
-  --border-strong: #CBD5E1;
-  --text-main: #0F172A;
-  --text-muted: #475569;
-  --text-subtle: #64748B;
+@theme {
+  --color-navy: #1B1F4B;
+  --color-pink: #E8338C;
+  --color-orange: #FF7A1A;
+  --color-yellow: #FFB81C;
+  --color-purple: #6A3DE8;
+  --color-soft: #F7F5FF;
+  --color-body: #4B5070;
   
-  /* Signature Brand Accent (Warm Coral / Studio Terracotta) */
-  --brand: #E8623C;
-  --brand-hover: #D7532F;
-  --brand-light: #FFF5F2;
-  --brand-subtle: rgba(232, 98, 60, 0.08);
-  --accent: #E8623C;
-  --accent-foreground: #FFFFFF;
-  --accent-highlight: #E8623C;
-
-  --pill-bg: #F1F5F9;
-  --pill-border: #E2E8F0;
-  --pill-text: #1E293B;
-  --nav-bg: rgba(255, 255, 255, 0.92);
-  --nav-border: #E2E8F0;
-  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  --font-sans: var(--font-sans), Inter, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-display), "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
-.dark {
-  /* Clean, Refined Professional Dark Palette */
-  --bg-main: #0B0D11;
-  --bg-surface: #11141A;
-  --bg-card: #151821;
-  --bg-subtle: #191E28;
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
-  --text-main: #F8FAFC;
-  --text-muted: #94A3B8;
-  --text-subtle: #64748B;
-  
-  /* Signature Brand Accent */
-  --brand: #E8623C;
-  --brand-hover: #F0744E;
-  --brand-light: rgba(232, 98, 60, 0.14);
-  --brand-subtle: rgba(232, 98, 60, 0.08);
-  --accent: #E8623C;
-  --accent-foreground: #FFFFFF;
-  --accent-highlight: #E8623C;
+:root {
+  /* Brand Tokens matching Logo */
+  --navy: #1B1F4B;
+  --pink: #E8338C;
+  --orange: #FF7A1A;
+  --yellow: #FFB81C;
+  --purple: #6A3DE8;
+  --soft: #F7F5FF;
+  --body: #4B5070;
+  --brand-gradient: linear-gradient(135deg, #FF9A1F 0%, #F0367A 50%, #6A3DE8 100%);
+  --badge-gradient: linear-gradient(90deg, #FF7A1A 0%, #E8338C 100%);
 
-  --pill-bg: #151821;
-  --pill-border: rgba(255, 255, 255, 0.08);
-  --pill-text: #F8FAFC;
-  --nav-bg: rgba(11, 13, 17, 0.88);
-  --nav-border: rgba(255, 255, 255, 0.08);
-  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  /* Base theme variables */
+  --bg-main: #FFFFFF;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F7F5FF;
+  --text-main: #1B1F4B;
+  --text-body: #4B5070;
+  --border-subtle: rgba(27, 31, 75, 0.08);
 }
 
 body {
-  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: var(--bg-main);
-  color: var(--text-main);
-  transition: background-color 0.15s ease, color 0.15s ease;
+  font-family: var(--font-sans), Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #FFFFFF;
+  color: #4B5070;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-.font-display {
-  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), "Plus Jakarta Sans", system-ui, sans-serif;
+  color: #1B1F4B;
   letter-spacing: -0.025em;
 }
 
-/* Subtle, refined background grid */
-.subtle-grid {
-  background-image: linear-gradient(to right, rgba(148, 163, 184, 0.07) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
-  background-size: 48px 48px;
+.font-display {
+  font-family: var(--font-display), "Plus Jakarta Sans", system-ui, sans-serif;
+  letter-spacing: -0.025em;
 }
 
-.dark .subtle-grid {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 48px 48px;
+/* Brand Gradient Utilities */
+.brand-gradient {
+  background: linear-gradient(135deg, #FF9A1F 0%, #F0367A 50%, #6A3DE8 100%);
 }
 
-/* Primary Button Styling */
+.brand-gradient-text {
+  background: linear-gradient(135deg, #FF9A1F 0%, #F0367A 50%, #6A3DE8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.badge-gradient {
+  background: linear-gradient(90deg, #FF7A1A 0%, #E8338C 100%);
+}
+
+/* Primary Button: Brand Gradient, White text, Fully Rounded, Lift & Glow on Hover */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  background-color: #E8623C;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #FF9A1F 0%, #F0367A 50%, #6A3DE8 100%);
   color: #FFFFFF;
   font-weight: 600;
-  transition: all 0.15s ease;
-  padding: 10px 22px;
-  box-shadow: 0 1px 2px 0 rgba(232, 98, 60, 0.15);
+  font-size: 0.875rem;
+  padding: 0.75rem 1.75rem;
+  box-shadow: 0 4px 14px 0 rgba(240, 54, 122, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
 }
 
 .btn-primary:hover {
-  background-color: #D7532F;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px 0 rgba(232, 98, 60, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(240, 54, 122, 0.35);
+  filter: brightness(1.05);
 }
 
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button: White, Navy Border, Turns Pink on Hover */
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  background-color: transparent;
-  color: var(--text-main);
-  border: 1px solid var(--border-subtle);
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: #FFFFFF;
+  color: #1B1F4B;
+  border: 2px solid #1B1F4B;
   font-weight: 600;
-  transition: all 0.15s ease;
-  padding: 10px 20px;
+  font-size: 0.875rem;
+  padding: 0.7rem 1.6rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
 }
 
 .btn-secondary:hover {
-  background-color: var(--bg-subtle);
-  border-color: var(--border-strong);
+  border-color: #E8338C;
+  color: #E8338C;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px 0 rgba(232, 51, 140, 0.12);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Brand Card: White, 16-20px rounded corners, soft shadow, subtle hover lift */
+.card-brand {
+  background-color: #FFFFFF;
+  border-radius: 1.25rem; /* 20px */
+  border: 1px solid rgba(27, 31, 75, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(27, 31, 75, 0.05), 0 2px 6px -1px rgba(27, 31, 75, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-brand:hover {
+  transform: translateY(-3px);
+  border-color: rgba(232, 51, 140, 0.25);
+  box-shadow: 0 12px 30px -4px rgba(27, 31, 75, 0.08), 0 4px 12px -2px rgba(240, 54, 122, 0.08);
+}
+
+/* Icon in filled gradient circle matching logo "D" */
+.icon-gradient-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 154, 31, 0.14) 0%, rgba(240, 54, 122, 0.14) 50%, rgba(106, 61, 232, 0.14) 100%);
+  color: #E8338C;
 }
 
 /* Marquee Animations */
@@ -135,21 +162,8 @@ body {
   }
 }
 
-@keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(calc(-100% - var(--gap, 1rem)));
-  }
-}
-
 .animate-marquee {
   animation: marquee var(--duration, 40s) linear infinite;
-}
-
-.animate-marquee-vertical {
-  animation: marquee-vertical var(--duration, 40s) linear infinite;
 }
 
 @keyframes tech-marquee {

@@ -4,17 +4,9 @@ import Link from 'next/link';
 import { 
   ArrowRight, 
   Check, 
-  X, 
   CheckCircle2, 
-  MessageSquare, 
-  ShieldCheck, 
-  Zap, 
-  Code2, 
-  Smartphone, 
-  Clock, 
   Star,
-  Users,
-  Award
+  Sparkles
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -45,33 +37,44 @@ function WhatsAppIcon({ className = "w-4 h-4" }: { className?: string }) {
 
 export default function WhyUsPage() {
   return (
-    <div className="pt-32 pb-24 bg-[var(--bg-main)] text-[var(--text-main)] min-h-screen transition-colors duration-200">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* ========================================================================= */}
-        {/* HERO SECTION                                                              */}
-        {/* ========================================================================= */}
-        <div className="text-center max-w-4xl mx-auto mb-20 space-y-6">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-[#12151D] text-xs font-medium text-neutral-700 dark:text-neutral-300 shadow-xs">
-            <span className="font-bold text-neutral-900 dark:text-white">Why Deep Digital Labs</span>
-            <span className="text-neutral-300 dark:text-neutral-600">•</span>
-            <span>Pune, Maharashtra</span>
+    <div className="bg-white text-[#4B5070] min-h-screen">
+      
+      {/* HERO SECTION */}
+      <section className="relative pt-36 pb-20 overflow-hidden bg-white">
+        {/* Soft Blurred Gradient Circles */}
+        <div 
+          aria-hidden="true" 
+          className="absolute top-16 left-1/4 -translate-x-1/2 w-96 h-96 rounded-full bg-gradient-to-tr from-[#FF7A1A]/15 to-[#E8338C]/15 blur-3xl pointer-events-none -z-10" 
+        />
+        <div 
+          aria-hidden="true" 
+          className="absolute top-28 right-1/4 translate-x-1/3 w-96 h-96 rounded-full bg-gradient-to-bl from-[#6A3DE8]/15 to-[#E8338C]/15 blur-3xl pointer-events-none -z-10" 
+        />
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E8338C]/20 bg-[#F7F5FF] text-xs font-mono font-semibold text-[#E8338C] shadow-xs">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Why Deep Digital Labs • Pune, Maharashtra</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-neutral-900 dark:text-white font-display leading-[1.12]">
-            Why Pune&apos;s Best Businesses Build With Deep Digital Labs
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-[#1B1F4B] tracking-tight leading-tight font-display">
+            Why Pune Businesses Build With <span className="brand-gradient-text">Us</span>
           </h1>
 
-          <p className="text-base sm:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-3xl mx-auto">
-            A more direct development experience. We build fast, high-converting websites and business software using modern, maintainable technology — with 100% code ownership, pay in stages as we finish each part, and direct WhatsApp collaboration with your developers.
+          <div className="tagline-divider max-w-sm mx-auto text-xs font-medium tracking-wider">
+            Build • Grow • Digital
+          </div>
+
+          <p className="text-base sm:text-xl text-[#4B5070] leading-relaxed max-w-3xl mx-auto">
+            A direct, honest development experience. We build fast, high-converting websites and business software — with 100% code ownership, stage-wise payments, and direct WhatsApp communication with your developers.
           </p>
 
-          <div className="pt-2 flex flex-wrap justify-center items-center gap-4">
+          <div className="pt-4 flex flex-wrap justify-center items-center gap-4">
             <a
               href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 bg-[#E8623C] hover:bg-[#F0744E] text-white px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#E8623C]/25 hover:shadow-xl active:scale-98"
+              className="px-7 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-semibold text-sm transition-all shadow-md shadow-[#25D366]/20 flex items-center gap-2 active:scale-98 hover:-translate-y-0.5"
             >
               <WhatsAppIcon className="w-4 h-4" />
               <span>Chat on WhatsApp</span>
@@ -80,7 +83,7 @@ export default function WhyUsPage() {
 
             <Link
               href="/case-studies"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] hover:border-[#E8623C]/40 text-neutral-800 dark:text-neutral-200 font-semibold text-sm transition-all shadow-xs"
+              className="btn-secondary"
             >
               <span>Explore Real Projects</span>
               <ArrowRight className="w-4 h-4" />
@@ -88,349 +91,340 @@ export default function WhyUsPage() {
           </div>
 
           {/* Proof Badges */}
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-neutral-600 dark:text-neutral-400 font-medium">
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-[#4B5070] font-medium">
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+              <CheckCircle2 className="w-4 h-4 text-[#FF7A1A]" />
               <span>10+ Projects Delivered</span>
             </span>
-            <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">•</span>
+            <span className="hidden sm:inline text-neutral-300">•</span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-              <span>You Own 100% of Your Code</span>
+              <CheckCircle2 className="w-4 h-4 text-[#E8338C]" />
+              <span>100% Code &amp; Site Ownership</span>
             </span>
-            <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">•</span>
+            <span className="hidden sm:inline text-neutral-300">•</span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-              <span>Fast on Mobile Phones</span>
+              <CheckCircle2 className="w-4 h-4 text-[#6A3DE8]" />
+              <span>Fast on Indian 4G/5G</span>
             </span>
           </div>
         </div>
+      </section>
 
-        {/* ========================================================================= */}
-        {/* COMPARISON MATRIX                                                         */}
-        {/* ========================================================================= */}
-        <div className="mb-24">
-          <div className="text-center max-w-2xl mx-auto space-y-2 mb-10">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
+      {/* COMPARISON MATRIX (Alternate #F7F5FF Section) */}
+      <section className="py-20 bg-[#F7F5FF] border-y border-neutral-200/60">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto space-y-2 mb-12">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#E8338C] font-bold">
               Development Models
             </span>
-            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
-              Why Our Direct Model Works Better
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1B1F4B] tracking-tight font-display">
+              Why Our Direct Model Works <span className="brand-gradient-text">Better</span>
             </h2>
-            <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
-              How our direct engineering partnership compares with traditional agency layers and generic site builders.
+            <p className="text-xs sm:text-sm text-[#4B5070]">
+              How our direct developer partnership compares with traditional agencies and template builders.
             </p>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-neutral-200/80 dark:border-white/[0.08] bg-white dark:bg-[#12151D] shadow-sm">
+          <div className="overflow-x-auto rounded-2xl border border-neutral-200/80 bg-white shadow-sm">
             <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[620px]">
               <thead>
-                <tr className="border-b border-neutral-200/80 dark:border-white/[0.08] bg-neutral-50/70 dark:bg-white/[0.02]">
-                  <th className="py-4 px-5 font-bold text-neutral-900 dark:text-white">Capability &amp; Approach</th>
-                  <th className="py-4 px-5 font-bold text-[#E8623C] bg-[#E8623C]/5 border-x border-[#E8623C]/20">
-                    Deep Digital Labs (Direct Model)
+                <tr className="border-b border-neutral-200/80 bg-[#F7F5FF]">
+                  <th className="py-4 px-5 font-bold text-[#1B1F4B]">Capability &amp; Approach</th>
+                  <th className="py-4 px-5 font-bold text-[#E8338C] bg-[#E8338C]/5 border-x border-[#E8338C]/20">
+                    Deep Digital Labs (Direct)
                   </th>
-                  <th className="py-4 px-5 font-medium text-neutral-500 dark:text-neutral-400">
-                    Traditional Agency Model
+                  <th className="py-4 px-5 font-medium text-[#4B5070]">
+                    Traditional Agencies
                   </th>
-                  <th className="py-4 px-5 font-medium text-neutral-500 dark:text-neutral-400">
-                    Templates &amp; Generic CMS
+                  <th className="py-4 px-5 font-medium text-[#4B5070]">
+                    Generic Site Builders
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-neutral-100 dark:divide-white/[0.04]">
+              <tbody className="divide-y divide-neutral-100">
                 <tr>
-                  <td className="py-4 px-5 font-semibold text-neutral-800 dark:text-neutral-200">
+                  <td className="py-4 px-5 font-semibold text-[#1B1F4B]">
                     Communication
                   </td>
-                  <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0" />
+                  <td className="py-4 px-5 font-bold text-[#1B1F4B] bg-[#E8338C]/5 border-x border-[#E8338C]/20 flex items-center gap-2">
+                    <Check className="w-4 h-4 text-[#25D366] shrink-0" />
                     <span>Direct WhatsApp with developer</span>
                   </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Layered account managers &amp; ticket queues
+                  <td className="py-4 px-5 text-[#4B5070]">
+                    Middle managers &amp; slow ticket queues
                   </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Variable response times &amp; community forums
+                  <td className="py-4 px-5 text-[#4B5070]">
+                    Automated bots &amp; forum threads
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="py-4 px-5 font-semibold text-neutral-800 dark:text-neutral-200">
+                  <td className="py-4 px-5 font-semibold text-[#1B1F4B]">
                     Code Ownership
                   </td>
-                  <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>100% You own Git code, database &amp; domain</span>
+                  <td className="py-4 px-5 font-bold text-[#1B1F4B] bg-[#E8338C]/5 border-x border-[#E8338C]/20 flex items-center gap-2">
+                    <Check className="w-4 h-4 text-[#25D366] shrink-0" />
+                    <span>100% You own Git, code &amp; domain</span>
                   </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Vendor hosting lock-in &amp; ongoing retainers
+                  <td className="py-4 px-5 text-[#4B5070]">
+                    Hosting lock-in &amp; retainer contracts
                   </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Closed platform dependencies (Wix, Shopify)
+                  <td className="py-4 px-5 text-[#4B5070]">
+                    Closed platform dependencies (Wix/Shopify)
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="py-4 px-5 font-semibold text-neutral-800 dark:text-neutral-200">
+                  <td className="py-4 px-5 font-semibold text-[#1B1F4B]">
                     Speed &amp; Performance
                   </td>
-                  <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>Modern, maintainable technology (Fast Next.js 15)</span>
+                  <td className="py-4 px-5 font-bold text-[#1B1F4B] bg-[#E8338C]/5 border-x border-[#E8338C]/20 flex items-center gap-2">
+                    <Check className="w-4 h-4 text-[#25D366] shrink-0" />
+                    <span>Sub-second load times on 4G/5G</span>
                   </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Heavier CMS layers (3s–5s on mobile)
+                  <td className="py-4 px-5 text-[#4B5070]">
+                    Heavier CMS stacks (3s–6s mobile)
                   </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Plugin-heavy architectures (4s–8s load)
-                  </td>
-                </tr>
-
-                <tr>
-                  <td className="py-4 px-5 font-semibold text-neutral-800 dark:text-neutral-200">
-                    Delivery Experience
-                  </td>
-                  <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>A more direct development experience (2–3 weeks)</span>
-                  </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Multi-stage corporate review cycles (2–4 months)
-                  </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Unpredictable milestones &amp; builder constraints
+                  <td className="py-4 px-5 text-[#4B5070]">
+                    Plugin-heavy templates (4s–8s load)
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="py-4 px-5 font-semibold text-neutral-800 dark:text-neutral-200">
-                    Tech Stack
+                  <td className="py-4 px-5 font-semibold text-[#1B1F4B]">
+                    Turnaround Time
                   </td>
-                  <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>Next.js 15, React, Flutter, Node &amp; Edge CDN</span>
+                  <td className="py-4 px-5 font-bold text-[#1B1F4B] bg-[#E8338C]/5 border-x border-[#E8338C]/20 flex items-center gap-2">
+                    <Check className="w-4 h-4 text-[#25D366] shrink-0" />
+                    <span>Ready in 2–3 weeks</span>
                   </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Legacy PHP stacks or complex enterprise CMS
+                  <td className="py-4 px-5 text-[#4B5070]">
+                    2 to 4 months of corporate delays
                   </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Pre-configured visual templates &amp; widgets
+                  <td className="py-4 px-5 text-[#4B5070]">
+                    Do-it-yourself trial and error
                   </td>
                 </tr>
 
                 <tr>
-                  <td className="py-4 px-5 font-semibold text-neutral-800 dark:text-neutral-200">
+                  <td className="py-4 px-5 font-semibold text-[#1B1F4B]">
                     Pricing Transparency
                   </td>
-                  <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>Pay in stages as we finish each part, transparent scope upfront</span>
+                  <td className="py-4 px-5 font-bold text-[#1B1F4B] bg-[#E8338C]/5 border-x border-[#E8338C]/20 flex items-center gap-2">
+                    <Check className="w-4 h-4 text-[#25D366] shrink-0" />
+                    <span>Pay in stages as each part is done</span>
                   </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Hourly billing models with potential scope expansion
+                  <td className="py-4 px-5 text-[#4B5070]">
+                    Hourly overages &amp; scope-creep bills
                   </td>
-                  <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
-                    Subscription tiers &amp; recurring app fees
+                  <td className="py-4 px-5 text-[#4B5070]">
+                    Monthly subscription tiers that increase
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
+      </section>
 
-        {/* ========================================================================= */}
-        {/* 6 CORE PILLARS                                                            */}
-        {/* ========================================================================= */}
-        <div className="mb-24 space-y-12">
+      {/* 6 CORE PILLARS (White Section) */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#FF7A1A] font-bold">
               Our Principles
             </span>
-            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-white font-display">
-              The 6 Principles We Never Compromise On
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1B1F4B] tracking-tight font-display">
+              6 Rules We <span className="brand-gradient-text">Never</span> Compromise On
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
             {/* 1 */}
-            <div className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-sm">
+            <div className="card-brand p-7 space-y-3">
+              <div className="icon-gradient-circle font-mono font-bold text-sm">
                 01
               </div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+              <h3 className="text-lg font-bold text-[#1B1F4B] font-display">
                 Direct WhatsApp Access
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                You talk directly to the software engineer building your product. No middle managers, no customer care delays, and no waiting 48 hours for a ticket reply.
+              <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
+                You talk directly to the software engineer building your product. No middle managers and no waiting 48 hours for a ticket reply.
               </p>
             </div>
 
             {/* 2 */}
-            <div className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-sm">
+            <div className="card-brand p-7 space-y-3">
+              <div className="icon-gradient-circle font-mono font-bold text-sm">
                 02
               </div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+              <h3 className="text-lg font-bold text-[#1B1F4B] font-display">
                 100% Code &amp; Domain Ownership
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                You own 100% of your source code, your GitHub repository, your domain, and your hosting. We never lock you into proprietary hosting platforms.
+              <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
+                You own 100% of your source code, your GitHub repository, your domain, and your hosting. We never lock you in.
               </p>
             </div>
 
             {/* 3 */}
-            <div className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-sm">
+            <div className="card-brand p-7 space-y-3">
+              <div className="icon-gradient-circle font-mono font-bold text-sm">
                 03
               </div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
-                Performance-Optimized Websites
+              <h3 className="text-lg font-bold text-[#1B1F4B] font-display">
+                Fast on Mobile Phones
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Fast-loading websites optimized for Core Web Vitals and real-world mobile performance on Indian 4G/5G networks.
+              <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
+                Fast-loading websites optimized for real-world mobile performance on Indian 4G/5G connections.
               </p>
             </div>
 
             {/* 4 */}
-            <div className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-sm">
+            <div className="card-brand p-7 space-y-3">
+              <div className="icon-gradient-circle font-mono font-bold text-sm">
                 04
               </div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+              <h3 className="text-lg font-bold text-[#1B1F4B] font-display">
                 Built for Pune Businesses
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                We understand Pune&apos;s business landscape — from CA firms in Deccan and Swargate to manufacturing in Bhosari, agritech, and clinics across Kothrud and Baner.
+              <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
+                We understand Pune&apos;s business landscape — from CA firms in Deccan and Swargate to manufacturing in Bhosari, clinics, and traders.
               </p>
             </div>
 
             {/* 5 */}
-            <div className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-sm">
+            <div className="card-brand p-7 space-y-3">
+              <div className="icon-gradient-circle font-mono font-bold text-sm">
                 05
               </div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+              <h3 className="text-lg font-bold text-[#1B1F4B] font-display">
                 Clear 2–3 Week Turnaround
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                We work in focused agile sprints. Your website is planned, designed, coded, tested, and live within 2 to 3 weeks with zero unnecessary delays.
+              <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
+                We work in focused sprints. Your project is designed, coded, tested, and live within 2 to 3 weeks with zero unnecessary delays.
               </p>
             </div>
 
             {/* 6 */}
-            <div className="p-7 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] shadow-xs hover:border-[#E8623C]/50 transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#E8623C]/10 text-[#E8623C] flex items-center justify-center font-mono font-bold text-sm">
+            <div className="card-brand p-7 space-y-3">
+              <div className="icon-gradient-circle font-mono font-bold text-sm">
                 06
               </div>
-              <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
+              <h3 className="text-lg font-bold text-[#1B1F4B] font-display">
                 Zero Tech Jargon
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                We explain everything in plain language so you always understand what you are paying for, how your system works, and how it helps your business grow.
+              <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
+                We explain everything in plain language so you always understand what you are getting and how it helps your business grow.
               </p>
             </div>
 
           </div>
         </div>
+      </section>
 
-        {/* ========================================================================= */}
-        {/* REAL CLIENT PROOF                                                         */}
-        {/* ========================================================================= */}
-        <div className="mb-24 p-8 sm:p-10 rounded-3xl bg-neutral-50/70 dark:bg-white/[0.02] border border-neutral-200/80 dark:border-white/[0.06]">
-          <div className="text-center max-w-2xl mx-auto space-y-2 mb-8">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
+      {/* REAL CLIENT PROOF (Alternate #F7F5FF Section) */}
+      <section className="py-20 bg-[#F7F5FF] border-t border-neutral-200/60">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#E8338C] font-bold">
               Real Client Feedback
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white font-display">
-              What Pune Business Owners Say
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1B1F4B] font-display">
+              What Pune Business Owners <span className="brand-gradient-text">Say</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-4">
-              <div className="flex text-amber-400 gap-1 text-sm">
+            <div className="card-brand p-6 space-y-4">
+              <div className="flex text-[#FFB81C] gap-1 text-sm">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                &ldquo;Deep Digital Labs gave our CA firm an exceptional digital presence. The website loads instantaneously and our inbound corporate inquiries are now pre-qualified through structured practice forms.&rdquo;
+              <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
+                &ldquo;Deep Digital Labs gave our CA firm an exceptional digital presence. The website loads instantaneously and our inbound corporate inquiries are now pre-qualified through structured forms.&rdquo;
               </p>
-              <div className="pt-2 border-t border-neutral-100 dark:border-white/[0.04]">
-                <div className="text-xs font-bold text-neutral-900 dark:text-white">Rahul B. Kavale</div>
-                <div className="text-[11px] text-neutral-500 dark:text-neutral-400">Founder &amp; CA Partner · Pune</div>
+              <div className="pt-2 border-t border-neutral-100">
+                <div className="text-xs font-bold text-[#1B1F4B]">Rahul B. Kavale</div>
+                <div className="text-[11px] text-[#4B5070]">CA Partner · Pune</div>
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-4">
-              <div className="flex text-amber-400 gap-1 text-sm">
+            <div className="card-brand p-6 space-y-4">
+              <div className="flex text-[#FFB81C] gap-1 text-sm">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
                 &ldquo;They built our inventory and billing portal from scratch. What took 3 days of manual paperwork is now handled in real time on our phones.&rdquo;
               </p>
-              <div className="pt-2 border-t border-neutral-100 dark:border-white/[0.04]">
-                <div className="text-xs font-bold text-neutral-900 dark:text-white">Operations Director</div>
-                <div className="text-[11px] text-neutral-500 dark:text-neutral-400">Yashodeep Agro · Pune &amp; Solapur</div>
+              <div className="pt-2 border-t border-neutral-100">
+                <div className="text-xs font-bold text-[#1B1F4B]">Operations Director</div>
+                <div className="text-[11px] text-[#4B5070]">Yashodeep Agro · Pune &amp; Solapur</div>
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#12151D] border border-neutral-200/80 dark:border-white/[0.08] space-y-4">
-              <div className="flex text-amber-400 gap-1 text-sm">
+            <div className="card-brand p-6 space-y-4">
+              <div className="flex text-[#FFB81C] gap-1 text-sm">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
                 &ldquo;The speed and reliability are exceptional. High Google speed scores, zero recurring builder fees, and direct WhatsApp access to the developer who actually built it.&rdquo;
               </p>
-              <div className="pt-2 border-t border-neutral-100 dark:border-white/[0.04]">
-                <div className="text-xs font-bold text-neutral-900 dark:text-white">Kishor Gunjal</div>
-                <div className="text-[11px] text-neutral-500 dark:text-neutral-400">GoNidhi User · Pune</div>
+              <div className="pt-2 border-t border-neutral-100">
+                <div className="text-xs font-bold text-[#1B1F4B]">Kishor Gunjal</div>
+                <div className="text-[11px] text-[#4B5070]">GoNidhi User · Pune</div>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* ========================================================================= */}
-        {/* COMPACT BOTTOM CTA                                                        */}
-        {/* ========================================================================= */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-neutral-950 dark:bg-[#0E1118] border border-neutral-800 dark:border-white/[0.08] text-white text-center space-y-4 max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(232,98,60,0.12),transparent_70%)]" />
-          
-          <div className="relative z-10 space-y-3">
-            <span className="inline-block px-3 py-1 rounded-full bg-[#E8623C]/10 border border-[#E8623C]/20 text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-              Ready to Upgrade?
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-bold font-display tracking-tight text-white">
-              Ready to build something that actually drives revenue?
-            </h2>
-            <p className="text-xs sm:text-sm text-neutral-300 max-w-lg mx-auto leading-relaxed">
-              Tell us about your business goals. We’ll review your requirements and reply directly on WhatsApp with honest advice and a clear quote.
-            </p>
-            <div className="pt-3 flex justify-center">
-              <a
-                href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-7 py-3 rounded-xl bg-[#E8623C] hover:bg-[#F0744E] text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-[#E8623C]/30 flex items-center gap-2 active:scale-98"
-              >
-                <WhatsAppIcon className="w-4 h-4" />
-                <span>Chat on WhatsApp</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </a>
-            </div>
-            <div className="pt-2 text-xs font-mono text-neutral-400">
-              Pune, Maharashtra HQ · Serving businesses worldwide
-            </div>
+      {/* FINAL CALL TO ACTION (Navy #1B1F4B) */}
+      <section className="py-24 bg-[#1B1F4B] text-white relative overflow-hidden">
+        <div 
+          aria-hidden="true" 
+          className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-gradient-to-r from-[#FF7A1A]/20 via-[#E8338C]/20 to-[#6A3DE8]/20 blur-3xl pointer-events-none" 
+        />
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-mono font-medium text-pink-300">
+            <span>Direct WhatsApp &amp; Inquiries</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white font-display">
+            Ready to build something that <span className="bg-gradient-to-r from-[#FFB81C] via-[#FF7A1A] to-[#E8338C] bg-clip-text text-transparent">works</span>?
+          </h2>
+
+          <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto leading-relaxed">
+            Tell us about your business goals. We’ll review your requirements and reply directly on WhatsApp with honest advice and a clear quote.
+          </p>
+
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="btn-primary"
+            >
+              <span>Talk to Our Team</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <a
+              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-semibold text-sm transition-all shadow-md shadow-[#25D366]/20 flex items-center gap-2 active:scale-98 hover:-translate-y-0.5"
+            >
+              <WhatsAppIcon className="w-4 h-4" />
+              <span>Chat on WhatsApp</span>
+            </a>
           </div>
         </div>
+      </section>
 
-      </div>
     </div>
   );
 }
