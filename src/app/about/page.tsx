@@ -80,85 +80,85 @@ export default function AboutPage() {
           <div className="lg:col-span-6 p-8 sm:p-10 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 space-y-6 shadow-sm dark:shadow-2xl">
             <div className="flex items-center justify-between pb-3 border-b border-neutral-200 dark:border-white/10">
               <h3 className="text-xs font-mono uppercase tracking-widest text-neutral-500 dark:text-gray-400 font-bold">
-                Engineering Baseline
+                Our Track Record
               </h3>
-              <span className="text-xs font-mono text-neutral-900 dark:text-[#D4FF00] font-semibold">Verified Metrics</span>
+              <span className="text-xs font-mono text-neutral-900 dark:text-[#E8623C] font-semibold">Real Numbers</span>
             </div>
             
             <div className="grid grid-cols-2 gap-4">
               <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 shadow-sm">
-                <div className="text-neutral-900 dark:text-[#D4FF00] font-mono text-3xl font-extrabold mb-1">10+</div>
-                <div className="font-semibold text-neutral-900 dark:text-white text-sm">Live Products</div>
-                <div className="text-xs text-neutral-500 dark:text-gray-500 mt-1">SaaS, Civic &amp; Logistics</div>
+                <div className="text-neutral-900 dark:text-[#E8623C] font-mono text-3xl font-extrabold mb-1">10+</div>
+                <div className="font-semibold text-neutral-900 dark:text-white text-sm">Projects Delivered</div>
+                <div className="text-xs text-neutral-500 dark:text-gray-500 mt-1">Websites, ERPs &amp; apps</div>
               </div>
               <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 shadow-sm">
-                <div className="text-neutral-900 dark:text-white font-mono text-3xl font-extrabold mb-1">95+</div>
-                <div className="font-semibold text-neutral-900 dark:text-white text-sm">Core Web Vitals</div>
-                <div className="text-xs text-neutral-500 dark:text-gray-500 mt-1">Optimized mobile speed</div>
+                <div className="text-neutral-900 dark:text-white font-mono text-3xl font-extrabold mb-1">&lt; 1s</div>
+                <div className="font-semibold text-neutral-900 dark:text-white text-sm">Mobile Speed</div>
+                <div className="text-xs text-neutral-500 dark:text-gray-500 mt-1">Fast on 4G in India</div>
               </div>
               <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 shadow-sm">
-                <div className="text-neutral-900 dark:text-[#D4FF00] font-mono text-3xl font-extrabold mb-1">99.9%</div>
-                <div className="font-semibold text-neutral-900 dark:text-white text-sm">Uptime Maintained</div>
-                <div className="text-xs text-neutral-500 dark:text-gray-500 mt-1">Edge CDN &amp; High Concurrency</div>
+                <div className="text-neutral-900 dark:text-[#E8623C] font-mono text-3xl font-extrabold mb-1">99.9%</div>
+                <div className="font-semibold text-neutral-900 dark:text-white text-sm">Uptime</div>
+                <div className="text-xs text-neutral-500 dark:text-gray-500 mt-1">Always online for customers</div>
               </div>
               <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 shadow-sm">
                 <div className="text-neutral-900 dark:text-white font-mono text-3xl font-extrabold mb-1">100%</div>
-                <div className="font-semibold text-neutral-900 dark:text-white text-sm">IP Ownership</div>
-                <div className="text-xs text-neutral-500 dark:text-gray-500 mt-1">You own your website and code</div>
+                <div className="font-semibold text-neutral-900 dark:text-white text-sm">Ownership</div>
+                <div className="text-xs text-neutral-500 dark:text-gray-500 mt-1">You own your code &amp; site</div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Our Philosophy (3 Bento Cards) */}
+        {/* How We Work (3 Cards) */}
         <div className="py-20 border-b border-neutral-200 dark:border-white/10">
           <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-widest text-neutral-500 dark:text-[#D4FF00] font-semibold">
-              The Guiding Principles
+            <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-semibold">
+              Our Principles
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
-              Our Engineering Philosophy
+              How We Work With You
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Principle 1 */}
-            <div className="p-8 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 hover:border-neutral-900 dark:hover:border-[#D4FF00]/40 transition-all space-y-4 shadow-sm">
-              <div className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-neutral-900 dark:text-[#D4FF00] flex items-center justify-center shadow-sm">
-                <Cpu className="w-6 h-6" />
+            <div className="p-8 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-xs space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-[#E8623C] flex items-center justify-center shadow-sm">
+                <Target className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
-                Product-Led, Not Ticket-Led
+                Focused on Customer Results
               </h3>
               <p className="text-sm text-neutral-600 dark:text-gray-400 leading-relaxed">
-                We care about your business metrics, not just logging hours. If a requested feature will hurt performance or runway, we advise against it. We help you cut feature bloat and ship to market faster.
+                We care about bringing you inquiries, not showing off fancy animations that slow down your website. If a feature will not help your business, we will honestly tell you to skip it.
               </p>
             </div>
 
             {/* Principle 2 */}
-            <div className="p-8 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 hover:border-neutral-900 dark:hover:border-[#D4FF00]/40 transition-all space-y-4 shadow-sm">
-              <div className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-neutral-900 dark:text-[#D4FF00] flex items-center justify-center shadow-sm">
+            <div className="p-8 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-xs space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-[#E8623C] flex items-center justify-center shadow-sm">
                 <Code2 className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
-                Engineering Craftsmanship
+                Clean, Fast Code
               </h3>
               <p className="text-sm text-neutral-600 dark:text-gray-400 leading-relaxed">
-                We write clean, strictly typed, maintainable code. We build systems that your future in-house engineering team will love, backed by strict TypeScript types, automated testing, and CI/CD pipelines.
+                We write clean code without heavy plugins or fragile templates. Your website opens quickly, stays secure, and will not break after a few months.
               </p>
             </div>
 
             {/* Principle 3 */}
-            <div className="p-8 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 hover:border-neutral-900 dark:hover:border-[#D4FF00]/40 transition-all space-y-4 shadow-sm">
-              <div className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-neutral-900 dark:text-[#D4FF00] flex items-center justify-center shadow-sm">
-                <GitBranch className="w-6 h-6" />
+            <div className="p-8 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 shadow-xs space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-[#E8623C] flex items-center justify-center shadow-sm">
+                <MessageSquare className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
-                Radical Transparency
+                Direct WhatsApp Updates
               </h3>
               <p className="text-sm text-neutral-600 dark:text-gray-400 leading-relaxed">
-                Zero black-box consulting. You get direct access to our GitHub repositories, daily asynchronous standups on Slack, and weekly sprint demos on Zoom. You see every commit in real-time.
+                No tickets, no wait times, and no corporate confusion. You chat directly with Deepak and our developers on WhatsApp, with regular demos as we build.
               </p>
             </div>
 
@@ -217,7 +217,7 @@ export default function AboutPage() {
                   Fast Turnaround
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  We work in focused agile sprints. Your website or software is architected, developed, and deployed to production in 2 to 3 weeks — not months of corporate bureaucracy.
+                  Your website or software is designed, built, and launched in 2 to 3 weeks — not months of corporate waiting.
                 </p>
               </div>
 
@@ -243,7 +243,7 @@ export default function AboutPage() {
                   Post-Launch Support
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  We stay in your corner after launch day. Routine security updates, uptime telemetry, rapid bug fixes, and continuous feature additions via dedicated retainers.
+                  We stay in your corner after launch day. Quick fixes, regular updates, and friendly help directly on WhatsApp whenever you need it.
                 </p>
               </div>
 
@@ -256,7 +256,7 @@ export default function AboutPage() {
                   Business-Focused Solutions
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  We don’t build tech for tech’s sake. Every feature is aligned to measurable business outcomes: more qualified client inquiries, automated operational tasks, and higher conversion.
+                  We don’t build tech for tech’s sake. Every feature has one clear goal: bringing you more client calls, saving you time on repetitive work, and making your business look trustworthy.
                 </p>
               </div>
 

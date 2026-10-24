@@ -20,15 +20,15 @@ export default function CaseStudiesPage() {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
           <span className="text-xs font-mono uppercase tracking-widest text-[#E8623C] font-bold">
-            Shipped Products &amp; Verified Case Studies
+            Our Work
           </span>
           <h1 className="text-4xl sm:text-6xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-tight font-display">
-            Client Case Studies &amp; <br />
-            <span className="text-gradient-spectrum">Shipped Systems</span>
+            Real Websites &amp; Software <br />
+            <span className="text-[#E8623C]">Built for Growing Businesses</span>
           </h1>
           
           <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-2xl mx-auto">
-            Real software and websites engineered for commercial businesses. Explore our portfolio of custom ERPs, high-converting business portals, and verified live applications.
+            See the websites, booking systems, and business tools we have built for businesses in Pune and across India.
           </p>
         </div>
 

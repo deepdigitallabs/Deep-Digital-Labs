@@ -43,11 +43,11 @@ export function Footer() {
     <footer className="bg-neutral-50 dark:bg-[#080A0E] border-t border-neutral-200 dark:border-white/10 pt-14 pb-12 relative text-neutral-800 dark:text-neutral-200 transition-colors duration-150">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* Main 5-Column Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-neutral-200 dark:border-white/10">
+        {/* Main 4-Column Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-neutral-200 dark:border-white/10">
           
           {/* Brand Info (4 Columns) */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-4 space-y-4">
+          <div className="sm:col-span-2 lg:col-span-4 space-y-4">
             <Link href="/" className="inline-flex items-center gap-2.5 group" aria-label="Deep Digital Labs Home">
               <Image 
                 src="/images/logo-single.png" 
@@ -67,129 +67,96 @@ export function Footer() {
               </div>
             </Link>
 
-            <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 max-w-sm leading-relaxed">
-              High-performance business websites, custom operational software, and mobile apps engineered for growing businesses in Pune and across India.
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-sm leading-relaxed">
+              We build websites, custom business software, and mobile apps for businesses in Pune and across India.
             </p>
 
             {/* Quick Contact & Location */}
-            <div className="space-y-2 pt-1 text-xs text-neutral-600 dark:text-neutral-400 font-mono">
+            <div className="space-y-2 pt-1 text-xs text-neutral-600 dark:text-neutral-400">
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#E8623C] shrink-0" />
-                <span>Pune, Maharashtra 411001, India</span>
+                <MapPin className="w-4 h-4 text-[#E8623C] shrink-0" />
+                <span>Pune, Maharashtra, India</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#E8623C] shrink-0" />
+                <Phone className="w-4 h-4 text-[#E8623C] shrink-0" />
                 <a href="tel:+917756063128" className="hover:text-[#E8623C] transition-colors font-medium">
                   +91 77560 63128
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-[#E8623C] shrink-0" />
+                <a href="mailto:deepdigitallabs@gmail.com" className="hover:text-[#E8623C] transition-colors font-medium">
+                  deepdigitallabs@gmail.com
                 </a>
               </div>
             </div>
 
             {/* Trust Badges */}
             <div className="flex flex-wrap items-center gap-2 pt-2">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-[11px] font-medium text-neutral-700 dark:text-neutral-300">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-xs font-medium text-neutral-700 dark:text-neutral-300">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#E8623C]" />
-                100% Code Ownership
+                You own 100% of code
               </span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-[11px] font-medium text-neutral-700 dark:text-neutral-300">
-                <Zap className="w-3.5 h-3.5 text-[#E8623C]" />
-                Sub-Second Speed
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-xs font-medium text-neutral-700 dark:text-neutral-300">
+                <Zap className="w-3.5 h-3.5 text-emerald-500" />
+                Fast on mobile
               </span>
             </div>
           </div>
 
-          {/* 1. Services & Solutions (Merged) */}
-          <div className="col-span-1 lg:col-span-3 space-y-3">
+          {/* 1. Services */}
+          <div className="lg:col-span-3 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white font-mono">
-              Services &amp; Solutions
+              Services
             </h3>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/services/websites-web-apps" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Business Websites &amp; Portals
+                  Business Websites
                 </Link>
               </li>
               <li>
                 <Link href="/services/business-software-saas" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Custom ERP &amp; Billing Software
+                  Custom Business Software
                 </Link>
               </li>
               <li>
                 <Link href="/services/mobile-app-development" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Flutter Mobile Apps (iOS &amp; Android)
+                  Mobile Apps (Android &amp; iOS)
                 </Link>
               </li>
               <li>
                 <Link href="/services/chat-bot-development" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  AI Chatbots &amp; WhatsApp Automation
+                  WhatsApp &amp; AI Chatbots
                 </Link>
               </li>
               <li>
                 <Link href="/services/digital-growth-seo" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Local SEO &amp; Google Maps Growth
+                  Local SEO &amp; Google Maps
                 </Link>
               </li>
               <li>
                 <Link href="/ecommerce-website-design-pune" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Pune E-Commerce Web Stores
+                  E-Commerce Websites
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* 2. Pune Localities Served */}
-          <div className="col-span-1 lg:col-span-2 space-y-3">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white font-mono">
-              Pune Areas Served
-            </h3>
-            <ul className="space-y-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
-              <li>
-                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Baner &amp; Balewadi
-                </Link>
-              </li>
-              <li>
-                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Hinjewadi Tech Hub
-                </Link>
-              </li>
-              <li>
-                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Kothrud &amp; Karve Nagar
-                </Link>
-              </li>
-              <li>
-                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Wakad &amp; Pimple Saudagar
-                </Link>
-              </li>
-              <li>
-                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Pimpri-Chinchwad (PCMC)
-                </Link>
-              </li>
-              <li>
-                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Viman Nagar &amp; Kharadi
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* 3. Company */}
-          <div className="col-span-1 lg:col-span-2 space-y-3">
+          {/* 2. Company */}
+          <div className="lg:col-span-2 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white font-mono">
               Company
             </h3>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/about" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  About Deepak &amp; Team
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link href="/case-studies" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Verified Case Studies
+                  Our Work
                 </Link>
               </li>
               <li>
@@ -199,36 +166,31 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/solutions" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Business Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Tech Insights &amp; Guides
+                  Solutions by Industry
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Contact Pune Studio
+                  Contact Us
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* 4. Connect */}
-          <div className="col-span-1 lg:col-span-3 space-y-3">
+          {/* 3. Direct Contact */}
+          <div className="lg:col-span-3 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white font-mono">
-              Direct Contact
+              Talk to Us
             </h3>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <ul className="space-y-2 text-sm">
               <li>
                 <a 
                   href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project." 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-neutral-600 hover:text-emerald-500 dark:text-neutral-400 dark:hover:text-emerald-400 transition-colors py-0.5"
+                  className="inline-flex items-center gap-2 text-neutral-600 hover:text-emerald-500 dark:text-neutral-400 dark:hover:text-emerald-400 transition-colors py-0.5 font-medium"
                 >
-                  <MessageSquare className="w-3.5 h-3.5 text-emerald-500" />
+                  <MessageSquare className="w-4 h-4 text-emerald-500" />
                   <span>WhatsApp: +91 77560 63128</span>
                 </a>
               </li>
@@ -237,7 +199,7 @@ export function Footer() {
                   href="tel:+917756063128" 
                   className="inline-flex items-center gap-2 text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5"
                 >
-                  <Phone className="w-3.5 h-3.5 text-[#E8623C]" />
+                  <Phone className="w-4 h-4 text-[#E8623C]" />
                   <span>Call: +91 77560 63128</span>
                 </a>
               </li>
@@ -246,7 +208,7 @@ export function Footer() {
                   href="mailto:deepdigitallabs@gmail.com" 
                   className="inline-flex items-center gap-2 text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5"
                 >
-                  <Mail className="w-3.5 h-3.5 text-[#E8623C]" />
+                  <Mail className="w-4 h-4 text-[#E8623C]" />
                   <span>deepdigitallabs@gmail.com</span>
                 </a>
               </li>
@@ -255,10 +217,10 @@ export function Footer() {
                   href="https://maps.google.com/?q=Deep+Digital+Labs+Pune" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-neutral-600 hover:text-amber-500 dark:text-neutral-400 dark:hover:text-amber-400 transition-colors py-0.5 font-medium"
+                  className="inline-flex items-center gap-2 text-neutral-600 hover:text-amber-500 dark:text-neutral-400 dark:hover:text-amber-400 transition-colors py-0.5"
                 >
-                  <MapPin className="w-3.5 h-3.5 text-amber-500" />
-                  <span>Google Business: 5.0 ★★★★★</span>
+                  <MapPin className="w-4 h-4 text-amber-500" />
+                  <span>Pune Studio (5.0 ★ Google)</span>
                 </a>
               </li>
               <li>
@@ -268,8 +230,8 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5"
                 >
-                  <LinkedInIcon className="w-3.5 h-3.5" />
-                  <span>LinkedIn · Deep Digital Labs</span>
+                  <LinkedInIcon className="w-4 h-4" />
+                  <span>LinkedIn</span>
                 </a>
               </li>
               <li>

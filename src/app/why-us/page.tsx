@@ -91,17 +91,17 @@ export default function WhyUsPage() {
           <div className="pt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-neutral-600 dark:text-neutral-400 font-medium">
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-              <span>10+ Production Deployments</span>
+              <span>10+ Projects Delivered</span>
             </span>
             <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">•</span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-              <span>100% Source Code Ownership</span>
+              <span>You Own 100% of Your Code</span>
             </span>
             <span className="hidden sm:inline text-neutral-300 dark:text-neutral-700">•</span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-              <span>Performance-Optimized Websites</span>
+              <span>Fast on Mobile Phones</span>
             </span>
           </div>
         </div>

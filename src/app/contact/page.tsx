@@ -69,11 +69,11 @@ export default function ContactPage() {
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-neutral-900 dark:text-white tracking-tight font-display">
-            Let’s Build Something <span className="text-[#E8623C]">That Scales.</span>
+            Contact Us in <span className="text-[#E8623C]">Pune</span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-2xl mx-auto">
-            Tell us about what you want to build. We’ll understand your requirements and get back to you directly with a clear timeline and fair pricing.
+            Tell us what you want to build. We’ll understand your business and get back to you directly on WhatsApp with a clear timeline and a fair fixed quote.
           </p>
         </div>
 
