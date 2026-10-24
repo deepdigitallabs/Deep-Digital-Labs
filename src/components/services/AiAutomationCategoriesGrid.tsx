@@ -17,7 +17,7 @@ export function AiAutomationCategoriesGrid() {
           AI &amp; Workflow Automation Categories
         </h2>
         <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-400 mt-1.5 max-w-2xl leading-relaxed">
-          Automate repetitive busywork, connect legacy siloed databases, and implement conversational AI agents where they eliminate real human bottlenecks.
+          Save time on repetitive work, connect legacy siloed databases, and implement conversational AI agents that handle everyday customer requests.
         </p>
       </div>
 

@@ -194,7 +194,7 @@ export const CORE_SERVICES: ServiceDetail[] = [
     faqs: [
       {
         question: 'Do we own the source code?',
-        answer: 'Yes, 100%. All intellectual property, source code, and assets belong entirely to you with zero vendor lock-in.'
+        answer: 'Yes, 100%. All intellectual property, source code, and assets belong entirely to you. You own your website and code.'
       },
       {
         question: 'How fast can you deliver an MVP?',
@@ -362,9 +362,9 @@ export const CORE_SERVICES: ServiceDetail[] = [
     displayHeading: '05 — AI & Workflow Automation',
     slug: 'chat-bot-development',
     title: 'AI & Workflow Automation',
-    headline: 'Automate repetitive busywork, connect legacy siloed databases, and implement conversational AI agents where they eliminate real human bottlenecks.',
+    headline: 'Save time on repetitive work, connect legacy siloed databases, and implement conversational AI agents that handle everyday customer requests.',
     shortDescription: 'AI agents, multi-agent workflows, n8n automation, WhatsApp Business bots, API webhooks, RAG knowledge bases, and document OCR.',
-    fullDescription: 'Eliminate manual operational bottlenecks. We engineer autonomous AI agents, multi-step n8n pipelines, WhatsApp Business automations, and intelligent RAG knowledge assistants that integrate directly with your databases and legacy software.',
+    fullDescription: 'Save time on repetitive work. We engineer autonomous AI agents, multi-step n8n pipelines, WhatsApp Business automations, and intelligent RAG knowledge assistants that integrate directly with your databases and legacy software.',
     icon: 'Bot',
     keyBenefits: [
       '24/7 instant customer replies on WhatsApp & website — zero wait times',

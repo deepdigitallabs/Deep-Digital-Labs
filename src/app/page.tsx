@@ -314,7 +314,7 @@ export default function HomePage() {
                 Web, Software &amp; AI Solutions for Growing Businesses in Pune
               </h2>
               <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl">
-                We build websites, custom business software, automation, and mobile apps around how your business actually runs, not rigid off-the-shelf templates.
+                We build websites, custom business software, automation, and mobile apps built around how your business actually works, not rigid off-the-shelf templates.
               </p>
             </div>
             <div className="text-xs text-neutral-500 font-medium hidden md:block shrink-0">
@@ -358,7 +358,7 @@ export default function HomePage() {
                   Custom Business Software &amp; SaaS
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                  Custom CRMs, mini-ERPs, billing portals, and dashboards tailored to how your sales, dispatch, and accounts operate, replacing messy spreadsheets.
+                  Custom CRMs, mini-ERPs, billing portals, and dashboards built around how your business actually works, replacing messy spreadsheets.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6 font-mono text-xs text-neutral-600 dark:text-neutral-400">
                   <span className="bg-neutral-100 dark:bg-white/5 px-2.5 py-1 rounded-md font-medium">Custom CRM</span>
@@ -468,7 +468,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4 pb-4 border-b border-neutral-200 dark:border-white/10">
             <div className="flex flex-col gap-2 max-w-3xl">
               <span className="text-xs font-mono uppercase tracking-wider text-[#E8623C] font-semibold">
-                Client Success Stories
+                Our Work
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-neutral-900 dark:text-white leading-[1.15]">
                 Our Web &amp; Software Projects in Pune and Across India
@@ -478,7 +478,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="text-xs text-neutral-500 font-medium hidden md:block shrink-0">
-              Verified Production Results
+              Our Work
             </div>
           </div>
 
@@ -592,7 +592,7 @@ export default function HomePage() {
               More than a website.
             </h2>
             <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl">
-              A modern digital system built around how your business actually runs, eliminating lost leads, manual delays, and spreadsheet chaos.
+              A modern digital system built around how your business actually works, eliminating lost leads, manual delays, and spreadsheet chaos.
             </p>
           </div>
 
@@ -605,7 +605,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold font-display text-neutral-900 dark:text-white">Business First</h3>
               <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                Engineered strictly to increase customer inquiries and eliminate manual bottlenecks, not just surface-level aesthetics.
+                Engineered strictly to increase customer inquiries and save time on repetitive work, not just surface-level aesthetics.
               </p>
             </div>
 
@@ -645,7 +645,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold font-display text-neutral-900 dark:text-white">Full Ownership</h3>
               <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                You own 100% of your code, domain, and database. No monthly platform fees to keep your website online, and zero lock-in.
+                You own 100% of your code, domain, and database. No monthly platform fees. You own your website and code.
               </p>
             </div>
 
@@ -867,7 +867,7 @@ export default function HomePage() {
                   <div className="text-3xl sm:text-4xl font-bold font-display text-neutral-900 dark:text-white tracking-tight mt-1 flex items-baseline gap-1.5">
                     ₹499 <span className="text-sm font-normal text-neutral-500">/ month</span>
                   </div>
-                  <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium block mt-1">Flexible monthly or ₹9,999 fixed milestone (3 to 5 days)</span>
+                  <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium block mt-1">Flexible monthly, or pay in stages as we finish each part (from ₹9,999)</span>
                 </div>
                 <ul className="flex flex-col gap-2.5 text-sm text-neutral-700 dark:text-neutral-300">
                   <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>Up to 5 mobile-optimized pages</span></li>
@@ -975,7 +975,7 @@ export default function HomePage() {
                   <div className="text-3xl sm:text-4xl font-bold font-display text-neutral-900 dark:text-white tracking-tight mt-1 flex items-baseline gap-1.5">
                     ₹1,999 <span className="text-sm font-normal text-neutral-500">/ month</span>
                   </div>
-                  <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium block mt-1">Flexible monthly or custom sprint milestones</span>
+                  <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium block mt-1">Flexible monthly, or pay in stages as we finish each part</span>
                 </div>
                 <ul className="flex flex-col gap-2.5 text-sm text-neutral-700 dark:text-neutral-300">
                   <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>Custom billing, invoice generation &amp; GST logic</span></li>
@@ -1011,7 +1011,7 @@ export default function HomePage() {
                   <div className="text-3xl sm:text-4xl font-bold font-display text-neutral-900 dark:text-white tracking-tight mt-1 flex items-baseline gap-1.5">
                     ₹2,499 <span className="text-sm font-normal text-neutral-500">/ month</span>
                   </div>
-                  <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium block mt-1">Cross-platform Flutter build or sprint milestones</span>
+                  <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium block mt-1">Cross-platform Flutter build, or pay in stages as we finish each part</span>
                 </div>
                 <ul className="flex flex-col gap-2.5 text-sm text-neutral-700 dark:text-neutral-300">
                   <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>Native Android &amp; iOS mobile application</span></li>

@@ -63,7 +63,7 @@ export default function WhyUsPage() {
           </h1>
 
           <p className="text-base sm:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed max-w-3xl mx-auto">
-            A more direct development experience. We build fast, high-converting websites and business software using modern, maintainable technology — with 100% code ownership, milestone transparency, and direct WhatsApp collaboration with your developers.
+            A more direct development experience. We build fast, high-converting websites and business software using modern, maintainable technology — with 100% code ownership, pay in stages as we finish each part, and direct WhatsApp collaboration with your developers.
           </p>
 
           <div className="pt-2 flex flex-wrap justify-center items-center gap-4">
@@ -225,7 +225,7 @@ export default function WhyUsPage() {
                   </td>
                   <td className="py-4 px-5 font-bold text-neutral-900 dark:text-white bg-[#E8623C]/5 border-x border-[#E8623C]/20 flex items-center gap-2">
                     <Check className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span>Milestone-based pricing, transparent scope upfront</span>
+                    <span>Pay in stages as we finish each part, transparent scope upfront</span>
                   </td>
                   <td className="py-4 px-5 text-neutral-600 dark:text-neutral-400">
                     Hourly billing models with potential scope expansion

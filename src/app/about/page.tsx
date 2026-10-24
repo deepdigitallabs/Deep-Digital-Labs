@@ -69,7 +69,7 @@ export default function AboutPage() {
             </h2>
             <div className="text-neutral-600 dark:text-gray-400 space-y-4 text-sm sm:text-base leading-relaxed">
               <p>
-                Deep Digital Labs is a Pune-based digital development studio helping businesses build modern websites, custom software and automation without bloated overheads, slow timelines, or frustrating vendor lock-in.
+                Deep Digital Labs is a Pune-based digital development studio helping businesses build modern websites, custom software and automation without bloated overheads, slow timelines, or recurring lock-in. You own your website and code.
               </p>
               <p>
                 Based in Pune, Maharashtra, we build business websites, cross-platform Android/iOS mobile apps, and operational portals tailored to Indian businesses. Every project comes with 100% source code ownership, GST-compliant invoicing, and direct WhatsApp support with our developer team in Pune.
@@ -104,7 +104,7 @@ export default function AboutPage() {
               <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 shadow-sm">
                 <div className="text-neutral-900 dark:text-white font-mono text-3xl font-extrabold mb-1">100%</div>
                 <div className="font-semibold text-neutral-900 dark:text-white text-sm">IP Ownership</div>
-                <div className="text-xs text-neutral-500 dark:text-gray-500 mt-1">Zero vendor lock-in</div>
+                <div className="text-xs text-neutral-500 dark:text-gray-500 mt-1">You own your website and code</div>
               </div>
             </div>
           </div>
@@ -201,10 +201,10 @@ export default function AboutPage() {
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-bold text-neutral-900 dark:text-white font-display">
-                  Clear, Milestone Pricing
+                  Pay in Stages as We Finish Each Part
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  Fixed milestone scopes agreed upon upfront. No surprise hourly overages, no hidden builder subscription taxes, and no unexpected change-request fees.
+                  Pay in stages as each part of your project is delivered. No surprise hourly overages, no hidden builder subscription taxes, and no unexpected change-request fees.
                 </p>
               </div>
 
@@ -230,7 +230,7 @@ export default function AboutPage() {
                   100% Code &amp; Data Ownership
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  You own your complete GitHub repository, databases, domain, and cloud hosting infrastructure. You are never held hostage by proprietary vendor locks.
+                  You own your complete GitHub repository, databases, domain, and cloud hosting infrastructure. You own your website and code with complete freedom.
                 </p>
               </div>
 
