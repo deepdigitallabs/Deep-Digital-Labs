@@ -188,27 +188,47 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* FINAL CALL TO ACTION (Navy #1B1F4B) */}
-      <section className="py-24 bg-[#1B1F4B] text-white relative overflow-hidden">
+      {/* FINAL CALL TO ACTION (Navy #1B1F4B With Animated Background) */}
+      <section className="py-24 sm:py-32 bg-[#1B1F4B] text-white relative overflow-hidden bg-[radial-gradient(#ffffff15_1px,transparent_1px)] [background-size:24px_24px]">
+        {/* Animated Background Mesh Orbs */}
         <div 
           aria-hidden="true" 
-          className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-gradient-to-r from-[#FF7A1A]/20 via-[#E8338C]/20 to-[#6A3DE8]/20 blur-3xl pointer-events-none" 
+          className="pointer-events-none absolute -top-32 -left-20 w-[600px] h-[450px] bg-gradient-to-br from-[#FF7A1A]/30 via-[#E8338C]/25 to-transparent rounded-full blur-3xl -z-10 animate-mesh-pulse" 
+        />
+        <div 
+          aria-hidden="true" 
+          className="pointer-events-none absolute -bottom-32 -right-20 w-[650px] h-[500px] bg-gradient-to-tl from-[#6A3DE8]/35 via-[#E8338C]/20 to-transparent rounded-full blur-3xl -z-10 animate-float-slow" 
+        />
+        <div 
+          aria-hidden="true" 
+          className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-gradient-to-r from-[#FFB81C]/20 via-[#FF7A1A]/15 to-[#E8338C]/15 rounded-full blur-3xl -z-10 animate-float-reverse" 
+        />
+
+        {/* Floating Decorative Rings */}
+        <div 
+          aria-hidden="true"
+          className="pointer-events-none absolute top-10 right-12 w-40 h-40 rounded-full border border-white/10 animate-float-slow -z-10 hidden md:block" 
+        />
+        <div 
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-12 left-12 w-28 h-28 rounded-full border border-white/10 animate-float -z-10 hidden md:block" 
         />
         
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-mono font-medium text-pink-300">
-            <span>Direct WhatsApp &amp; Inquiries</span>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-7 relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold backdrop-blur-md shadow-lg shadow-black/10">
+            <Sparkles className="w-3.5 h-3.5 text-[#FFB81C] animate-pulse" />
+            <span className="text-white">Direct WhatsApp &amp; Inquiries</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white font-display">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-display leading-[1.12]">
             Want to build something similar for your <span className="bg-gradient-to-r from-[#FFB81C] via-[#FF7A1A] to-[#E8338C] bg-clip-text text-transparent">business</span>?
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed">
             Tell us about your project. We’ll understand what you need, share live demos of similar work, and give you a fair fixed quote.
           </p>
 
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+          <div className="pt-3 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
               className="btn-primary"
@@ -220,12 +240,20 @@ export default function CaseStudiesPage() {
               href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20saw%20your%20case%20studies%20and%20want%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-semibold text-sm transition-all shadow-md shadow-[#25D366]/20 flex items-center gap-2 active:scale-98 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-bold text-sm bg-[#25D366] hover:bg-[#20ba5a] text-white transition-all shadow-lg shadow-[#25D366]/30 active:scale-95 hover:-translate-y-0.5"
             >
-              <WhatsAppIcon className="w-4 h-4" />
-              <span>Chat on WhatsApp</span>
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white" />
+              </span>
+              <WhatsAppIcon className="w-4 h-4 fill-white" />
+              <span>Chat on WhatsApp (+91 77560 63128)</span>
             </a>
           </div>
+
+          <p className="text-xs text-slate-400 font-medium pt-1">
+            ⚡ Quick response under 15 minutes · No sales pressure · Free consultation
+          </p>
         </div>
       </section>
 

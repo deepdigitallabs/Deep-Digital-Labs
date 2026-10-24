@@ -1086,26 +1086,40 @@ export default function HomePage() {
       {/* =========================================================================
              11. FINAL CALL TO ACTION (Navy #1B1F4B With Gradient Glow & Short Form)
              ========================================================================= */}
-      <section className="w-full py-24 relative bg-[#1B1F4B] text-white overflow-hidden" id="contact">
+      <section className="w-full py-24 sm:py-32 relative bg-[#1B1F4B] text-white overflow-hidden bg-[radial-gradient(#ffffff15_1px,transparent_1px)] [background-size:24px_24px]" id="contact">
         
-        {/* Soft radial glowing accents */}
+        {/* Animated Background Mesh Orbs */}
         <div 
           aria-hidden="true" 
-          className="pointer-events-none absolute -top-24 right-0 w-[500px] h-[500px] bg-gradient-to-br from-[#E8338C]/20 via-[#FF7A1A]/10 to-transparent rounded-full blur-3xl -z-10" 
+          className="pointer-events-none absolute -top-32 -right-20 w-[650px] h-[500px] bg-gradient-to-br from-[#E8338C]/25 via-[#FF7A1A]/20 to-transparent rounded-full blur-3xl -z-10 animate-mesh-pulse" 
         />
         <div 
           aria-hidden="true" 
-          className="pointer-events-none absolute -bottom-24 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#6A3DE8]/25 via-transparent to-transparent rounded-full blur-3xl -z-10" 
+          className="pointer-events-none absolute -bottom-32 -left-20 w-[650px] h-[500px] bg-gradient-to-tr from-[#6A3DE8]/35 via-[#E8338C]/20 to-transparent rounded-full blur-3xl -z-10 animate-float-slow" 
+        />
+        <div 
+          aria-hidden="true" 
+          className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[400px] bg-gradient-to-r from-[#FFB81C]/15 via-[#FF7A1A]/15 to-[#E8338C]/15 rounded-full blur-3xl -z-10 animate-float-reverse" 
         />
 
-        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
+        {/* Floating Decorative Rings (CSS Animated) */}
+        <div 
+          aria-hidden="true"
+          className="pointer-events-none absolute top-12 left-16 w-36 h-36 rounded-full border border-white/10 animate-float-slow -z-10 hidden md:block" 
+        />
+        <div 
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-12 right-20 w-28 h-28 rounded-full border border-white/10 animate-float -z-10 hidden md:block" 
+        />
+
+        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             {/* Left: Headline, Direct WhatsApp & Guarantees */}
             <div className="lg:col-span-6 flex flex-col gap-6">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold backdrop-blur-sm">
-                  <Sparkles className="w-3.5 h-3.5 text-[#FFB81C]" />
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold backdrop-blur-md shadow-lg shadow-black/10">
+                  <Sparkles className="w-3.5 h-3.5 text-[#FFB81C] animate-pulse" />
                   <span className="text-[#FFB81C]">Let&apos;s Build Together</span>
                 </div>
 

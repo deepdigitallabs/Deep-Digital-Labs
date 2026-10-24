@@ -75,29 +75,29 @@ export function FloatingWhatsApp() {
         </div>
       )}
 
-      {/* 2. Interactive WhatsApp Chat Popup Window */}
+      {/* 2. Interactive WhatsApp Chat Popup Window (Compact & Small) */}
       {isOpen && (
         <div 
           role="dialog"
           aria-label="WhatsApp Chat Window"
-          className="mb-4 w-[calc(100vw-2.5rem)] sm:w-[360px] bg-white rounded-3xl shadow-2xl border border-neutral-200/90 overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col"
+          className="mb-3 w-[295px] sm:w-[310px] bg-white rounded-2xl shadow-2xl border border-neutral-200/90 overflow-hidden animate-in fade-in zoom-in-95 duration-200 flex flex-col"
         >
           {/* Header */}
-          <div className="bg-[#075E54] text-white p-4 flex items-center justify-between">
-            <div className="flex items-center gap-3">
+          <div className="bg-[#075E54] text-white py-2.5 px-3 flex items-center justify-between">
+            <div className="flex items-center gap-2">
               <div className="relative">
-                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-xs">
-                  <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-[#FF9A1F] via-[#F0367A] to-[#6A3DE8] flex items-center justify-center text-white font-extrabold text-sm">
+                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-xs">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#FF9A1F] via-[#F0367A] to-[#6A3DE8] flex items-center justify-center text-white font-extrabold text-xs">
                     D
                   </div>
                 </div>
-                <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-[#25D366] border-2 border-[#075E54]" />
+                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-[#25D366] border-2 border-[#075E54]" />
               </div>
               <div>
-                <h3 className="font-bold text-sm leading-tight text-white">Deep Digital Labs</h3>
-                <div className="flex items-center gap-1 text-[11px] text-emerald-200 font-medium">
+                <h3 className="font-bold text-xs leading-tight text-white">Deep Digital Labs</h3>
+                <div className="flex items-center gap-1 text-[10px] text-emerald-200 font-medium">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-                  <span>Replies in 15 mins · Pune</span>
+                  <span>Replies in 15 mins</span>
                 </div>
               </div>
             </div>
@@ -105,50 +105,47 @@ export function FloatingWhatsApp() {
             <button
               onClick={() => setIsOpen(false)}
               aria-label="Close chat window"
-              className="w-8 h-8 rounded-full hover:bg-white/10 text-white flex items-center justify-center transition-colors cursor-pointer"
+              className="w-6 h-6 rounded-full hover:bg-white/10 text-white flex items-center justify-center transition-colors cursor-pointer"
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4" />
             </button>
           </div>
 
           {/* Chat Body */}
-          <div className="p-4 bg-[#ECE5DD]/40 space-y-3.5 max-h-[380px] overflow-y-auto">
+          <div className="p-3 bg-[#ECE5DD]/40 space-y-2.5 max-h-[240px] overflow-y-auto">
             {/* Timestamp */}
             <div className="text-center">
-              <span className="px-2.5 py-0.5 rounded-md bg-white/80 text-[10px] font-semibold text-[#4B5070] shadow-2xs">
+              <span className="px-2 py-0.5 rounded-md bg-white/80 text-[9px] font-semibold text-[#4B5070] shadow-2xs">
                 Today
               </span>
             </div>
 
             {/* Received Message Bubble */}
-            <div className="bg-white rounded-2xl rounded-tl-xs p-3.5 shadow-sm text-xs text-[#1B1F4B] space-y-2 max-w-[90%] border border-neutral-100">
-              <div className="font-bold text-[11px] text-[#075E54]">Deep Digital Labs Team</div>
-              <p className="leading-relaxed text-[#4B5070]">
-                Hello! 👋 Welcome to Deep Digital Labs Pune.
+            <div className="bg-white rounded-xl rounded-tl-xs p-2.5 shadow-xs text-[11px] text-[#1B1F4B] space-y-1.5 border border-neutral-100">
+              <div className="font-bold text-[10px] text-[#075E54]">Deep Digital Labs Team</div>
+              <p className="leading-snug text-[#4B5070]">
+                Hi! 👋 Want to build a website, app, or software? Message us directly for an honest recommendation &amp; fair quote.
               </p>
-              <p className="leading-relaxed text-[#4B5070]">
-                Tell us what you want to build. We’ll understand your business, give you an honest recommendation and a fair fixed quote.
-              </p>
-              <div className="flex items-center justify-end gap-1 text-[10px] text-[#4B5070]/60 pt-1">
+              <div className="flex items-center justify-end gap-1 text-[9px] text-[#4B5070]/60">
                 <span>Just now</span>
-                <CheckCheck className="w-3.5 h-3.5 text-[#34B7F1]" />
+                <CheckCheck className="w-3 h-3 text-[#34B7F1]" />
               </div>
             </div>
 
             {/* Quick Topics */}
-            <div className="space-y-1.5 pt-1">
-              <div className="text-[10px] uppercase font-bold text-[#4B5070] px-1 tracking-wider">
-                Choose a topic to chat:
+            <div className="space-y-1">
+              <div className="text-[9px] uppercase font-bold text-[#4B5070] px-0.5 tracking-wider">
+                Quick Topics:
               </div>
-              <div className="flex flex-col gap-1.5">
+              <div className="grid grid-cols-2 gap-1.5">
                 {QUICK_TOPICS.map((topic, i) => (
                   <button
                     key={i}
                     onClick={() => openWhatsAppWith(topic.text)}
-                    className="w-full text-left p-2.5 rounded-xl bg-white hover:bg-emerald-50/60 border border-neutral-200/80 hover:border-[#25D366]/50 text-xs text-[#1B1F4B] font-medium transition-all shadow-2xs hover:shadow-xs flex items-center justify-between group cursor-pointer"
+                    className="p-1.5 rounded-lg bg-white hover:bg-emerald-50/70 border border-neutral-200/80 hover:border-[#25D366]/50 text-[10.5px] text-[#1B1F4B] font-medium transition-all shadow-2xs flex items-center justify-between text-left group cursor-pointer"
                   >
-                    <span>{topic.label}</span>
-                    <WhatsAppIcon className="w-3.5 h-3.5 fill-[#25D366] shrink-0 opacity-70 group-hover:opacity-100" />
+                    <span className="truncate pr-1">{topic.label.replace(/^[^\s]+\s*/, '')}</span>
+                    <WhatsAppIcon className="w-3 h-3 fill-[#25D366] shrink-0 opacity-80" />
                   </button>
                 ))}
               </div>
@@ -156,25 +153,25 @@ export function FloatingWhatsApp() {
           </div>
 
           {/* Footer Input */}
-          <div className="p-3 bg-white border-t border-neutral-200/80">
-            <form onSubmit={handleSubmit} className="flex items-center gap-2">
+          <div className="p-2.5 bg-white border-t border-neutral-200/80">
+            <form onSubmit={handleSubmit} className="flex items-center gap-1.5">
               <input
                 type="text"
                 value={customMessage}
                 onChange={(e) => setCustomMessage(e.target.value)}
                 placeholder="Type your message..."
-                className="flex-1 px-3.5 py-2.5 rounded-full bg-neutral-100 border border-neutral-200 text-xs text-[#1B1F4B] placeholder:text-[#4B5070]/50 focus:outline-none focus:border-[#25D366] transition-all"
+                className="flex-1 px-3 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 text-xs text-[#1B1F4B] placeholder:text-[#4B5070]/50 focus:outline-none focus:border-[#25D366] transition-all"
               />
               <button
                 type="submit"
                 aria-label="Send message on WhatsApp"
-                className="w-9 h-9 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white flex items-center justify-center shrink-0 shadow-md shadow-[#25D366]/30 active:scale-95 transition-all cursor-pointer"
+                className="w-7 h-7 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white flex items-center justify-center shrink-0 shadow-sm shadow-[#25D366]/30 active:scale-95 transition-all cursor-pointer"
               >
-                <Send className="w-4 h-4 fill-white" />
+                <Send className="w-3.5 h-3.5 fill-white" />
               </button>
             </form>
-            <div className="text-[10px] text-center text-[#4B5070]/70 pt-2 font-medium">
-              Direct chat with lead developers · No spam
+            <div className="text-[9px] text-center text-[#4B5070]/70 pt-1 font-medium">
+              Direct developer chat · No spam
             </div>
           </div>
         </div>

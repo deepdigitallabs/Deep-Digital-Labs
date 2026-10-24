@@ -47,15 +47,15 @@ export const CORE_SERVICES: ServiceDetail[] = [
     displayHeading: '01 — Websites & Web Apps',
     slug: 'websites-web-apps',
     title: 'Websites & Web Applications',
-    headline: 'High-performance business websites, e-commerce, and custom web applications.',
-    shortDescription: 'Modern, blazing-fast web applications, e-commerce stores, and responsive corporate portals engineered for speed and conversion.',
-    fullDescription: 'We design and code fast, accessible, and high-converting websites and web applications. Clean semantic HTML5, modern CSS3, responsive React and Next.js interfaces that rank at the top of Google and deliver sub-second load times.',
+    headline: 'Custom Business Websites, E-Commerce & Web Apps Built to Win More Customers.',
+    shortDescription: 'Fast, professional websites, online stores, and custom web applications built to build customer trust, rank on Google, and convert visitors into inquiries.',
+    fullDescription: 'We design and build fast, modern websites and web applications designed to turn visitors into paying customers. Your site loads instantly on mobile phones, ranks higher on Google, and makes it effortless for clients to contact you or purchase online — with 100% code ownership and zero monthly platform fees.',
     icon: 'Code2',
     keyBenefits: [
-      'Core Web Vitals optimized for fast real-world mobile performance',
-      'Pixel-perfect responsive design tailored for mobile, tablet, and desktop',
-      'SEO-optimized architecture with automated schema and metadata',
-      'Zero monthly builder fees — clean code on your own infrastructure'
+      'Instant mobile loading that keeps customers from bouncing away',
+      'Stunning, responsive design tailored for mobile phones, tablets, and desktops',
+      'Built-in Google SEO architecture so clients find your business first',
+      '100% full code ownership — no recurring website builder monthly fees'
     ],
     capabilities: [
       {
@@ -76,10 +76,10 @@ export const CORE_SERVICES: ServiceDetail[] = [
       }
     ],
     deliverables: [
-      'Production-ready Next.js / React application',
-      'Responsive, mobile-first design across all screen sizes',
-      'Interactive contact & booking forms with CRM / email notifications',
-      'Technical SEO & Core Web Vitals optimization'
+      'Complete, production-ready custom web application',
+      'Mobile-first responsive design tested on all modern devices',
+      'Direct WhatsApp and inquiry forms connected to your email / CRM',
+      'Google SEO setup & speed optimization for maximum visibility'
     ],
     techStack: ['React', 'Next.js', 'Node.js', 'Python', 'MongoDB', 'PostgreSQL'],
     techSpecializations: [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { Mail, BookOpen, Sparkles } from 'lucide-react';
+import { Mail, BookOpen, Sparkles, ShieldCheck } from 'lucide-react';
 import { BLOG_POSTS } from '@/data/blogPosts';
 import { BlogGrid } from '@/components/blog/BlogGrid';
 import { NewsletterForm } from '@/components/blog/NewsletterForm';
@@ -77,31 +77,60 @@ export default function BlogPage() {
           <BlogGrid posts={BLOG_POSTS} />
 
           {/* ========================================================================= */}
-          {/* NEWSLETTER SUBSCRIPTION BOX (BUSINESS-FOCUSED)                            */}
+          {/* NEWSLETTER SUBSCRIPTION BOX (VIBRANT LOGO SPECTRUM CARD)                  */}
           {/* ========================================================================= */}
-          <div className="mt-24 p-8 sm:p-12 rounded-3xl bg-[#F7F5FF] border border-neutral-200/80 text-center space-y-6 shadow-sm max-w-3xl mx-auto relative overflow-hidden">
-            <div 
-              aria-hidden="true" 
-              className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-gradient-to-br from-[#FF7A1A]/10 to-[#E8338C]/15 blur-2xl pointer-events-none" 
-            />
-
-            <div className="icon-gradient-circle mx-auto">
-              <Mail className="w-5 h-5" />
-            </div>
+          <div className="mt-24 relative rounded-3xl p-[2.5px] bg-gradient-to-r from-[#FF7A1A] via-[#E8338C] to-[#6A3DE8] shadow-2xl max-w-3xl mx-auto overflow-hidden group">
             
-            <div className="max-w-xl mx-auto space-y-2">
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1B1F4B] font-display">
-                Get Practical Guides in Your Inbox
-              </h3>
-              <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
-                Actionable breakdowns of website costs, WhatsApp conversion tactics, local SEO, and custom software strategy for Pune &amp; Indian businesses.
-              </p>
-            </div>
+            <div className="p-8 sm:p-12 rounded-[22px] bg-[#1B1F4B] text-white text-center space-y-6 relative overflow-hidden bg-[radial-gradient(#ffffff15_1px,transparent_1px)] [background-size:20px_20px]">
+              
+              {/* Animated Glowing Logo Gradient Mesh Orbs */}
+              <div 
+                aria-hidden="true" 
+                className="pointer-events-none absolute -top-24 -left-20 w-64 h-64 rounded-full bg-gradient-to-br from-[#FF7A1A]/35 via-[#E8338C]/25 to-transparent blur-3xl animate-mesh-pulse -z-10" 
+              />
+              <div 
+                aria-hidden="true" 
+                className="pointer-events-none absolute -bottom-24 -right-20 w-64 h-64 rounded-full bg-gradient-to-tl from-[#6A3DE8]/40 via-[#E8338C]/25 to-transparent blur-3xl animate-float-slow -z-10" 
+              />
+              <div 
+                aria-hidden="true" 
+                className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-44 rounded-full bg-gradient-to-r from-[#FFB81C]/20 via-[#FF7A1A]/15 to-[#E8338C]/15 blur-2xl animate-float-reverse -z-10" 
+              />
 
-            <NewsletterForm />
-            
-            <div className="text-xs text-[#4B5070]/80">
-              Zero spam. One practical guide per month. Unsubscribe anytime in 1-click.
+              {/* Floating Decorative Ring */}
+              <div 
+                aria-hidden="true"
+                className="pointer-events-none absolute top-4 right-6 w-20 h-20 rounded-full border border-white/10 animate-float-slow -z-10 hidden sm:block" 
+              />
+
+              {/* Mail Icon in 3D Logo Gradient Badge */}
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#FF7A1A] via-[#E8338C] to-[#6A3DE8] text-white flex items-center justify-center shadow-lg shadow-[#E8338C]/40 mx-auto animate-float">
+                <Mail className="w-6 h-6 text-white" />
+              </div>
+              
+              <div className="max-w-xl mx-auto space-y-2.5 relative z-10">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-[11px] font-semibold text-[#FFB81C]">
+                  <Sparkles className="w-3.5 h-3.5 text-[#FFB81C] animate-pulse" />
+                  <span>Free Monthly Insights</span>
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display tracking-tight">
+                  Get <span className="bg-gradient-to-r from-[#FFB81C] via-[#FF7A1A] to-[#E8338C] bg-clip-text text-transparent">Practical Guides</span> in Your Inbox
+                </h3>
+
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed max-w-lg mx-auto">
+                  Actionable breakdowns of website costs, WhatsApp conversion tactics, local SEO, and custom software strategy for Pune &amp; Indian businesses.
+                </p>
+              </div>
+
+              <div className="relative z-10">
+                <NewsletterForm />
+              </div>
+              
+              <div className="text-xs text-slate-300 relative z-10 flex items-center justify-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-[#25D366] shrink-0" />
+                <span>Zero spam. One practical guide per month. Unsubscribe anytime in 1-click.</span>
+              </div>
             </div>
           </div>
         </div>

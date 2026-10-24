@@ -78,7 +78,7 @@ export function Navbar() {
               {/* Mega Menu Container */}
               {megaMenuOpen && (
                 <div 
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[720px] bg-white border border-neutral-200/90 rounded-2xl p-5 shadow-xl z-50 animate-in fade-in slide-in-from-top-2 duration-150 text-left"
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[760px] bg-white border border-neutral-200/90 rounded-2xl p-5 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 duration-150 text-left"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -88,18 +88,18 @@ export function Navbar() {
                     <Link 
                       href="/services/websites-web-apps" 
                       onClick={() => setMegaMenuOpen(false)}
-                      className="p-3 rounded-xl hover:bg-neutral-50 dark:hover:bg-white/[0.04] transition-all group"
+                      className="p-3 rounded-xl hover:bg-[#F7F5FF] transition-all group"
                     >
-                      <div className="flex items-center gap-2 mb-1">
-                        <div className="p-1.5 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] shrink-0">
+                      <div className="flex items-center gap-2.5 mb-1.5">
+                        <div className="p-2 rounded-lg bg-pink-50 text-[#E8338C] shrink-0 group-hover:scale-105 transition-transform">
                           <Code2 className="w-4 h-4" />
                         </div>
-                        <span className="text-xs font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors leading-tight">
-                          Web Apps &amp; SaaS
+                        <span className="text-xs font-bold text-[#1B1F4B] group-hover:text-[#E8338C] transition-colors leading-tight">
+                          Websites &amp; Web Apps
                         </span>
                       </div>
-                      <p className="text-[11px] text-neutral-500 dark:text-neutral-400 leading-relaxed pl-7">
-                        Fast Next.js portals &amp; modern web apps.
+                      <p className="text-[11px] text-[#4B5070] leading-relaxed pl-8">
+                        Fast business portals, stores &amp; modern apps.
                       </p>
                     </Link>
 
@@ -107,18 +107,18 @@ export function Navbar() {
                     <Link 
                       href="/services/business-software-saas" 
                       onClick={() => setMegaMenuOpen(false)}
-                      className="p-3 rounded-xl hover:bg-neutral-50 dark:hover:bg-white/[0.04] transition-all group"
+                      className="p-3 rounded-xl hover:bg-[#F7F5FF] transition-all group"
                     >
-                      <div className="flex items-center gap-2 mb-1">
-                        <div className="p-1.5 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] shrink-0">
+                      <div className="flex items-center gap-2.5 mb-1.5">
+                        <div className="p-2 rounded-lg bg-purple-50 text-[#6A3DE8] shrink-0 group-hover:scale-105 transition-transform">
                           <Layers className="w-4 h-4" />
                         </div>
-                        <span className="text-xs font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors leading-tight">
+                        <span className="text-xs font-bold text-[#1B1F4B] group-hover:text-[#6A3DE8] transition-colors leading-tight">
                           Custom ERP &amp; Software
                         </span>
                       </div>
-                      <p className="text-[11px] text-neutral-500 dark:text-neutral-400 leading-relaxed pl-7">
-                        Billing, inventory, and back-office tools.
+                      <p className="text-[11px] text-[#4B5070] leading-relaxed pl-8">
+                        Billing, inventory, CRM &amp; operations tools.
                       </p>
                     </Link>
 
@@ -126,17 +126,17 @@ export function Navbar() {
                     <Link 
                       href="/services/mobile-app-development" 
                       onClick={() => setMegaMenuOpen(false)}
-                      className="p-3 rounded-xl hover:bg-neutral-50 dark:hover:bg-white/[0.04] transition-all group"
+                      className="p-3 rounded-xl hover:bg-[#F7F5FF] transition-all group"
                     >
-                      <div className="flex items-center gap-2 mb-1">
-                        <div className="p-1.5 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] shrink-0">
+                      <div className="flex items-center gap-2.5 mb-1.5">
+                        <div className="p-2 rounded-lg bg-orange-50 text-[#FF7A1A] shrink-0 group-hover:scale-105 transition-transform">
                           <Smartphone className="w-4 h-4" />
                         </div>
-                        <span className="text-xs font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors leading-tight">
+                        <span className="text-xs font-bold text-[#1B1F4B] group-hover:text-[#FF7A1A] transition-colors leading-tight">
                           Mobile Applications
                         </span>
                       </div>
-                      <p className="text-[11px] text-neutral-500 dark:text-neutral-400 leading-relaxed pl-7">
+                      <p className="text-[11px] text-[#4B5070] leading-relaxed pl-8">
                         High-performance iOS &amp; Android apps.
                       </p>
                     </Link>
@@ -145,18 +145,18 @@ export function Navbar() {
                     <Link 
                       href="/services/digital-growth-seo" 
                       onClick={() => setMegaMenuOpen(false)}
-                      className="p-3 rounded-xl hover:bg-neutral-50 dark:hover:bg-white/[0.04] transition-all group"
+                      className="p-3 rounded-xl hover:bg-[#F7F5FF] transition-all group"
                     >
-                      <div className="flex items-center gap-2 mb-1">
-                        <div className="p-1.5 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] shrink-0">
+                      <div className="flex items-center gap-2.5 mb-1.5">
+                        <div className="p-2 rounded-lg bg-amber-50 text-[#D97706] shrink-0 group-hover:scale-105 transition-transform">
                           <TrendingUp className="w-4 h-4" />
                         </div>
-                        <span className="text-xs font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors leading-tight">
+                        <span className="text-xs font-bold text-[#1B1F4B] group-hover:text-[#D97706] transition-colors leading-tight">
                           Growth &amp; SEO
                         </span>
                       </div>
-                      <p className="text-[11px] text-neutral-500 dark:text-neutral-400 leading-relaxed pl-7">
-                        Local search visibility &amp; conversions.
+                      <p className="text-[11px] text-[#4B5070] leading-relaxed pl-8">
+                        Top Google rankings &amp; buyer leads.
                       </p>
                     </Link>
 
@@ -164,18 +164,18 @@ export function Navbar() {
                     <Link 
                       href="/services/chat-bot-development" 
                       onClick={() => setMegaMenuOpen(false)}
-                      className="p-3 rounded-xl hover:bg-neutral-50 dark:hover:bg-white/[0.04] transition-all group"
+                      className="p-3 rounded-xl hover:bg-[#F7F5FF] transition-all group"
                     >
-                      <div className="flex items-center gap-2 mb-1">
-                        <div className="p-1.5 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-[#E8623C] shrink-0">
+                      <div className="flex items-center gap-2.5 mb-1.5">
+                        <div className="p-2 rounded-lg bg-emerald-50 text-[#25D366] shrink-0 group-hover:scale-105 transition-transform">
                           <Bot className="w-4 h-4" />
                         </div>
-                        <span className="text-xs font-bold text-neutral-900 dark:text-white group-hover:text-[#E8623C] transition-colors leading-tight">
-                          AI &amp; Automation
+                        <span className="text-xs font-bold text-[#1B1F4B] group-hover:text-[#25D366] transition-colors leading-tight">
+                          AI &amp; WhatsApp Bots
                         </span>
                       </div>
-                      <p className="text-[11px] text-neutral-500 dark:text-neutral-400 leading-relaxed pl-7">
-                        WhatsApp bots &amp; workflow pipelines.
+                      <p className="text-[11px] text-[#4B5070] leading-relaxed pl-8">
+                        Smart chatbots, auto-replies &amp; workflows.
                       </p>
                     </Link>
 
@@ -183,38 +183,39 @@ export function Navbar() {
                     <Link 
                       href="/#services" 
                       onClick={() => setMegaMenuOpen(false)}
-                      className="p-3 rounded-xl bg-orange-50/60 dark:bg-orange-950/30 hover:bg-orange-100/60 dark:hover:bg-orange-950/50 transition-all group border border-orange-200/50 dark:border-orange-800/30"
+                      className="p-3 rounded-xl bg-gradient-to-br from-[#F7F5FF] to-[#FFF5F8] hover:from-[#EFEAFF] hover:to-[#FFEBF2] transition-all group border border-[#E8338C]/20 shadow-xs"
                     >
-                      <div className="flex items-center gap-2 mb-1">
-                        <div className="p-1.5 rounded-lg bg-[#E8623C] text-white shrink-0">
+                      <div className="flex items-center gap-2.5 mb-1.5">
+                        <div className="p-2 rounded-lg bg-gradient-to-r from-[#FF7A1A] via-[#E8338C] to-[#6A3DE8] text-white shrink-0 shadow-xs group-hover:scale-105 transition-transform">
                           <Sparkles className="w-4 h-4" />
                         </div>
-                        <span className="text-xs font-bold text-[#E8623C] group-hover:underline transition-colors leading-tight">
-                          All Services
+                        <span className="text-xs font-bold text-[#1B1F4B] group-hover:text-[#E8338C] transition-colors leading-tight">
+                          All Services &amp; Pricing
                         </span>
                       </div>
-                      <p className="text-[11px] text-neutral-500 dark:text-neutral-400 leading-relaxed pl-7">
-                        Explore full deliverables and pricing.
+                      <p className="text-[11px] text-[#4B5070] leading-relaxed pl-8">
+                        Explore full deliverables and packages.
                       </p>
                     </Link>
 
                   </div>
 
                   {/* Mega Menu Footer */}
-                  <div className="pt-3 flex flex-wrap items-center justify-between gap-3 text-xs">
-                    <div className="flex items-center gap-3 text-neutral-500">
+                  <div className="pt-3.5 flex flex-wrap items-center justify-between gap-3 text-xs">
+                    <div className="flex items-center gap-3 text-[#4B5070]">
+                      <span className="text-xs font-semibold text-neutral-400">Quick Links:</span>
                       <Link
                         href="/case-studies"
                         onClick={() => setMegaMenuOpen(false)}
-                        className="text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] font-medium transition-colors"
+                        className="text-[#1B1F4B] hover:text-[#E8338C] font-semibold transition-colors"
                       >
                         Client Case Studies
                       </Link>
-                      <span>•</span>
+                      <span className="text-neutral-300">•</span>
                       <Link
                         href="/ecommerce-website-design-pune"
                         onClick={() => setMegaMenuOpen(false)}
-                        className="text-neutral-700 dark:text-neutral-300 hover:text-[#E8623C] font-medium transition-colors"
+                        className="text-[#1B1F4B] hover:text-[#E8338C] font-semibold transition-colors"
                       >
                         Pune E-Commerce
                       </Link>
@@ -222,10 +223,10 @@ export function Navbar() {
                     <Link
                       href="/#services"
                       onClick={() => setMegaMenuOpen(false)}
-                      className="text-[#E8623C] font-semibold hover:underline flex items-center gap-1"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E8338C] hover:text-[#c42372] transition-colors"
                     >
-                      <span>View all services</span>
-                      <ArrowRight className="w-3 h-3" />
+                      <span>View All Services</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>
@@ -281,7 +282,7 @@ export function Navbar() {
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-1.5 rounded-lg text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors"
+              className="p-1.5 rounded-lg text-[#1B1F4B] hover:bg-neutral-100 transition-colors"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
