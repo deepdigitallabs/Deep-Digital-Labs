@@ -91,7 +91,7 @@ export default function HomePage() {
     },
     {
       slug: 'dairy-flow-pro',
-      title: 'DairyFlow',
+      title: 'GoNidhi',
       category: 'Dairy Processing & Agri-Tech',
       domain: 'dairy-flow-pro.vercel.app',
       year: '2025',
@@ -117,7 +117,7 @@ export default function HomePage() {
       slug: 'yashodeep-agro',
       title: 'Yashodeep Agro',
       category: 'Agri-Inputs & Retail',
-      domain: 'yashodeepagro.com',
+      domain: 'yashodeep-agro.vercel.app',
       year: '2024',
       image: '/images/case-studies/yashodeep-agro.jpg',
       badge: 'Catalog Live',
@@ -749,43 +749,43 @@ export default function HomePage() {
           {/* Industry Badges with specific category links */}
           <div className="flex flex-wrap gap-2.5 pt-6">
             <Link 
-              href="/industries?category=Professional+Services#solutions-directory" 
+              href="/case-studies/rahul-b-kavale-and-co" 
               className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
             >
               Professional Services &amp; CA Firms
             </Link>
             <Link 
-              href="/industries?category=Real+Estate+%26+Construction#solutions-directory" 
+              href="/solutions" 
               className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
             >
               Real Estate &amp; Builders
             </Link>
             <Link 
-              href="/industries?category=Healthcare+%26+Wellness#solutions-directory" 
+              href="/services/websites-web-apps" 
               className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
             >
               Healthcare &amp; Diagnostics
             </Link>
             <Link 
-              href="/industries?category=Manufacturing#solutions-directory" 
+              href="/services/business-software-saas" 
               className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
             >
               Manufacturing Units
             </Link>
             <Link 
-              href="/industries?category=Agriculture#solutions-directory" 
+              href="/case-studies/yashodeep-agro" 
               className="px-4 py-2 rounded-xl bg-orange-50 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-800/60 font-mono text-xs sm:text-sm text-[#E8623C] font-semibold hover:bg-orange-100 transition-colors"
             >
               Agriculture &amp; Farm Inputs
             </Link>
             <Link 
-              href="/industries?category=Logistics+%26+Supply+Chain#solutions-directory" 
+              href="/case-studies/trust-carry-logistics" 
               className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
             >
               Logistics &amp; Freight
             </Link>
             <Link 
-              href="/industries?category=Hospitality+%26+Tourism#solutions-directory" 
+              href="/case-studies/vishal-travels" 
               className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
             >
               Hospitality &amp; Resorts
@@ -797,7 +797,7 @@ export default function HomePage() {
               B2B Wholesale &amp; Retail
             </Link>
             <Link 
-              href="/industries?category=Education+%26+Training#solutions-directory" 
+              href="/solutions" 
               className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
             >
               Education &amp; Academies
@@ -806,7 +806,7 @@ export default function HomePage() {
 
           <div className="pt-8">
             <Link
-              href="/industries"
+              href="/solutions"
               className="inline-flex items-center gap-2 text-sm font-semibold text-[#E8623C] hover:underline"
             >
               <span>Explore solutions tailored for 30+ Pune &amp; Maharashtra business types</span>
@@ -973,15 +973,7 @@ export default function HomePage() {
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/20 hover:shadow-md transition-all flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="w-9 h-9 rounded-xl bg-orange-500/10 text-[#E8623C] flex items-center justify-center shrink-0">
-                      <Globe className="w-4 h-4" />
-                    </div>
-                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-neutral-100 dark:bg-white/10 text-neutral-700 dark:text-neutral-300">
-                      Most Requested
-                    </span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight mt-3">
+                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
                     Business Website Development
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed min-h-[40px]">
@@ -1017,15 +1009,7 @@ export default function HomePage() {
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/20 hover:shadow-md transition-all flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="w-9 h-9 rounded-xl bg-orange-500/10 text-[#E8623C] flex items-center justify-center shrink-0">
-                      <TrendingUp className="w-4 h-4" />
-                    </div>
-                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-neutral-100 dark:bg-white/10 text-neutral-700 dark:text-neutral-300">
-                      Google Maps Rank
-                    </span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight mt-3">
+                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
                     SEO &amp; Digital Growth
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed min-h-[40px]">
@@ -1061,15 +1045,7 @@ export default function HomePage() {
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/20 hover:shadow-md transition-all flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="w-9 h-9 rounded-xl bg-orange-500/10 text-[#E8623C] flex items-center justify-center shrink-0">
-                      <Bot className="w-4 h-4" />
-                    </div>
-                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-neutral-100 dark:bg-white/10 text-neutral-700 dark:text-neutral-300">
-                      24/7 WhatsApp AI
-                    </span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight mt-3">
+                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
                     AI Chatbots &amp; Automation
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed min-h-[40px]">
@@ -1105,15 +1081,7 @@ export default function HomePage() {
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/20 hover:shadow-md transition-all flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="w-9 h-9 rounded-xl bg-orange-500/10 text-[#E8623C] flex items-center justify-center shrink-0">
-                      <Database className="w-4 h-4" />
-                    </div>
-                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-neutral-100 dark:bg-white/10 text-neutral-700 dark:text-neutral-300">
-                      Operations ERP
-                    </span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight mt-3">
+                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
                     Custom Business Software &amp; SaaS
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed min-h-[40px]">
@@ -1149,15 +1117,7 @@ export default function HomePage() {
             <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/20 hover:shadow-md transition-all flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="w-9 h-9 rounded-xl bg-orange-500/10 text-[#E8623C] flex items-center justify-center shrink-0">
-                      <Smartphone className="w-4 h-4" />
-                    </div>
-                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-neutral-100 dark:bg-white/10 text-neutral-700 dark:text-neutral-300">
-                      Android &amp; iOS
-                    </span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight mt-3">
+                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
                     Mobile App Development
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed min-h-[40px]">
@@ -1193,47 +1153,9 @@ export default function HomePage() {
             <div className="bg-white dark:bg-[#151821] rounded-2xl p-6 sm:p-7 border-2 border-[#E8623C] shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="w-9 h-9 rounded-xl bg-orange-500/15 text-[#E8623C] flex items-center justify-center shrink-0">
-                      <Sparkles className="w-4 h-4" />
-                    </div>
-                    <span className="text-[11px] font-mono font-semibold px-2 py-0.5 rounded bg-[#E8623C]/10 text-[#E8623C]">
-                      Full Tech Partner
-                    </span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight mt-3">
+                  <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
                     Dedicated Growth Partner
                   </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed min-h-[40px]">
-                    Your on-call senior engineering team for continuous development, feature additions, speed audits, and updates.
-                  </p>
-                </div>
-                <div className="py-4 border-y border-neutral-100 dark:border-white/10">
-                  <span className="font-mono text-[11px] text-neutral-400 dark:text-neutral-500 font-semibold uppercase tracking-wider">MONTHLY RETAINER</span>
-                  <div className="text-3xl sm:text-4xl font-bold font-display text-neutral-900 dark:text-white tracking-tight mt-1 flex items-baseline gap-1.5">
-                    ₹4,999 <span className="text-sm font-normal text-neutral-500">/ month</span>
-                  </div>
-                  <span className="text-xs text-[#E8623C] font-semibold block mt-1">Priority 24 to 48h turnaround</span>
-                </div>
-                <ul className="flex flex-col gap-2.5 text-sm text-neutral-700 dark:text-neutral-300">
-                  <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>Direct WhatsApp access to lead engineering team</span></li>
-                  <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>Rapid turnarounds on new landing pages &amp; features</span></li>
-                  <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>Continuous security, backups &amp; uptime monitoring</span></li>
-                  <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>Monthly Google search rankings &amp; speed audits</span></li>
-                  <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>Flexible scope (cancel or pause anytime)</span></li>
-                </ul>
-              </div>
-              <div className="pt-6">
-                <button
-                  onClick={() => setCallModalOpen(true)}
-                  className="w-full min-h-[44px] inline-flex items-center justify-center py-3.5 px-4 rounded-xl bg-[#E8623C] hover:bg-[#D7532F] text-white font-semibold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-xs active:scale-[0.98]"
-                >
-                  Join Growth Partner
-                </button>
-              </div>
-            </div>
-
-          </div>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed min-h-[40px]">
                     Your on-call senior engineering team for continuous development, feature additions, speed audits, and updates.
                   </p>

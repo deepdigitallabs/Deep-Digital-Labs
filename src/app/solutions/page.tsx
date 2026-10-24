@@ -264,7 +264,7 @@ export default function SolutionsPage() {
                   </div>
 
                   <div className="pt-3 border-t border-neutral-200/80 dark:border-white/[0.06] flex items-center justify-between">
-                    <span className="text-xs text-neutral-500">Live example: Dairy Flow Pro &amp; Yashodeep Agro</span>
+                    <span className="text-xs text-neutral-500">Live example: GoNidhi &amp; Yashodeep Agro</span>
                     <a
                       href="https://wa.me/917756063128?text=Hi,%20I%20want%20to%20replace%20Excel%20and%20WhatsApp%20in%20my%20business."
                       target="_blank"
@@ -809,8 +809,8 @@ export default function SolutionsPage() {
               </div>
               <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
                 <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Live: Rahul B. Kavale &amp; Co.</span>
-                <Link href="/industries/ca-firms" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
-                  <span>View Details</span>
+                <Link href="/case-studies/rahul-b-kavale-and-co" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>View Case Study</span>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
@@ -834,8 +834,8 @@ export default function SolutionsPage() {
               </div>
               <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
                 <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Bhosari &amp; Chakan Ready</span>
-                <Link href="/industries/manufacturing" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
-                  <span>View Details</span>
+                <Link href="/services/business-software-saas" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>Explore Software</span>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
@@ -858,9 +858,9 @@ export default function SolutionsPage() {
                 </div>
               </div>
               <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
-                <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Live: Dairy Flow Pro</span>
-                <Link href="/industries/dairy-farming" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
-                  <span>View Details</span>
+                <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Live: GoNidhi</span>
+                <Link href="/case-studies/dairy-flow-pro" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>View Case Study</span>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
@@ -884,8 +884,8 @@ export default function SolutionsPage() {
               </div>
               <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
                 <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Live: Trust Carry Logistics</span>
-                <Link href="/industries/logistics" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
-                  <span>View Details</span>
+                <Link href="/case-studies/trust-carry-logistics" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>View Case Study</span>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
@@ -909,8 +909,8 @@ export default function SolutionsPage() {
               </div>
               <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
                 <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">Reduces No-Shows</span>
-                <Link href="/industries/healthcare" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
-                  <span>View Details</span>
+                <Link href="/services/websites-web-apps" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>Explore Websites</span>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
@@ -934,8 +934,8 @@ export default function SolutionsPage() {
               </div>
               <div className="pt-3 border-t border-neutral-100 dark:border-white/[0.06] flex items-center justify-between">
                 <span className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">High Local Conversion</span>
-                <Link href="/industries/retail" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
-                  <span>View Details</span>
+                <Link href="/ecommerce-website-design-pune" className="text-xs font-bold text-[#E8623C] hover:underline flex items-center gap-1">
+                  <span>Explore E-commerce</span>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>

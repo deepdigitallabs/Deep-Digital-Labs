@@ -390,7 +390,7 @@ export default function WhyUsPage() {
               </p>
               <div className="pt-2 border-t border-neutral-100 dark:border-white/[0.04]">
                 <div className="text-xs font-bold text-neutral-900 dark:text-white">Kishor Gunjal</div>
-                <div className="text-[11px] text-neutral-500 dark:text-neutral-400">Dairy Flow Pro User · Pune</div>
+                <div className="text-[11px] text-neutral-500 dark:text-neutral-400">GoNidhi User · Pune</div>
               </div>
             </div>
           </div>

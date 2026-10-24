@@ -65,7 +65,7 @@ export function TechMarquee({ headline }: TechMarqueeProps) {
 export function ClientTrustMarquee() {
   const clients = [
     { name: 'Rahul B. Kavale & Co.', market: 'Corporate & Legal' },
-    { name: 'Dairy Flow Pro', market: 'In-House Dairy SaaS ERP' },
+    { name: 'GoNidhi', market: 'In-House Dairy SaaS ERP' },
     { name: 'Yashodeep Agro', market: 'Agri-Tech Platform' },
     { name: 'Trust Carry Logistics', market: 'Logistics & Supply Chain' },
     { name: 'Santosh Phadtare', market: 'Political Tech & Mobilization' },

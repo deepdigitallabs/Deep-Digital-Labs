@@ -198,8 +198,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Industries Directory
+                <Link href="/solutions" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
+                  Business Solutions
                 </Link>
               </li>
               <li>

@@ -97,8 +97,8 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'dairy-flow-pro',
-    title: 'Dairy Flow Pro',
-    client: 'Deep Digital Labs (In-House Product)',
+    title: 'GoNidhi',
+    client: 'GoNidhi (Deep Digital Labs In-House Product)',
     location: 'Pune / Maharashtra, India',
     category: 'Enterprise Dairy ERP & Automated Billing SaaS',
     projectType: 'Business',
@@ -130,10 +130,10 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Database transaction isolation preventing duplicate entries during concurrent collection rushes'
     ],
     testimonial: {
-      quote: 'Dairy Flow Pro was built from firsthand fieldwork in dairy cooperatives. It eliminates manual register errors and gives collection managers complete operational and financial control.',
+      quote: 'GoNidhi was built from firsthand fieldwork in dairy cooperatives. It eliminates manual register errors and gives collection managers complete operational and financial control.',
       author: 'Product Engineering Team',
       role: 'In-House Venture Lead',
-      company: 'Dairy Flow Pro (Deep Digital Labs)'
+      company: 'GoNidhi (Deep Digital Labs)'
     },
     featured: true
   },

@@ -42,10 +42,10 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: '3',
-    quote: 'Dairy Flow Pro eliminated hours of manual spreadsheet bookkeeping every week. Their engineering pod operates with speed and high technical rigor.',
+    quote: 'GoNidhi eliminated hours of manual spreadsheet bookkeeping every week. Their engineering pod operates with speed and high technical rigor.',
     author: 'Chief Executive Officer',
     role: 'Founder & Managing Director',
-    company: 'Dairy Flow Pro (In-House SaaS)',
+    company: 'GoNidhi (In-House SaaS)',
     location: 'Pune, India',
     rating: 5
   }

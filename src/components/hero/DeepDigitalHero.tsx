@@ -147,7 +147,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
                 </div>
               </div>
 
-              {/* Tab 1: SaaS ERP Dashboard (Dairy Flow Pro Real Architecture) */}
+              {/* Tab 1: SaaS ERP Dashboard (GoNidhi Real Architecture) */}
               {activeTab === 'saas' && (
                 <div className="p-5 space-y-4 font-sans animate-in fade-in duration-200">
                   <div className="flex items-center justify-between">
@@ -155,7 +155,7 @@ export function DeepDigitalHero({ onOpenDiscovery }: DeepDigitalHeroProps) {
                       <div className="text-[10px] font-mono uppercase tracking-widest text-[#00FFA3] font-semibold">
                         In-House SaaS Product • Live Production
                       </div>
-                      <div className="text-base font-bold text-white">Dairy Flow Pro Multi-Tenant System</div>
+                      <div className="text-base font-bold text-white">GoNidhi Multi-Tenant System</div>
                     </div>
                     <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono bg-emerald-950/80 border border-emerald-800 text-emerald-400">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
