@@ -19,13 +19,15 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://deepdigitallabs.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://deepdigitallabs.com"),
+  metadataBase: new URL(siteUrl),
   title: "Deep Digital Labs | Website & Software Development Company in Pune",
   description: "Deep Digital Labs builds high-speed websites, custom business software, ERPs, and mobile apps for businesses in Pune. Simple process, 2 to 3 weeks delivery, direct developer access.",
-  authors: [{ name: "Deepak Dukare", url: "https://deepdigitallabs.com" }],
+  authors: [{ name: "Deepak Dukare", url: siteUrl }],
   alternates: {
-    canonical: "https://deepdigitallabs.com",
+    canonical: siteUrl,
   },
   icons: {
     icon: [
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Deep Digital Labs | Website & Software Development Company in Pune",
     description: "Deep Digital Labs builds high-speed websites, custom business software, ERPs, and mobile apps for businesses in Pune. Simple process, 2 to 3 weeks delivery, direct developer access.",
-    url: "https://deepdigitallabs.com",
+    url: siteUrl,
     siteName: "Deep Digital Labs",
     locale: "en_IN",
     type: "website",

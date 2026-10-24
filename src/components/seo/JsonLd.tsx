@@ -1,4 +1,4 @@
-import React from 'react';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://deepdigitallabs.vercel.app';
 
 export function JsonLd() {
   const schema = {
@@ -6,17 +6,17 @@ export function JsonLd() {
     '@graph': [
       {
         '@type': 'Organization',
-        '@id': 'https://deepdigitallabs.com/#organization',
+        '@id': `${siteUrl}/#organization`,
         name: 'Deep Digital Labs',
-        url: 'https://deepdigitallabs.com',
-        logo: 'https://deepdigitallabs.com/icon.png',
-        image: 'https://deepdigitallabs.com/og-image.png',
+        url: siteUrl,
+        logo: `${siteUrl}/icon.png`,
+        image: `${siteUrl}/og-image.png`,
         description: 'Deep Digital Labs is a website and software development company in Pune, building fast, modern websites, custom ERPs, and mobile apps for growing businesses.',
         founder: {
           '@type': 'Person',
           name: 'Deepak Dukare',
           jobTitle: 'Founder & Lead Software Engineer',
-          url: 'https://deepdigitallabs.com/about'
+          url: `${siteUrl}/about`
         },
         address: {
           '@type': 'PostalAddress',
@@ -41,9 +41,9 @@ export function JsonLd() {
       },
       {
         '@type': 'LocalBusiness',
-        '@id': 'https://deepdigitallabs.com/#localbusiness',
+        '@id': `${siteUrl}/#localbusiness`,
         name: 'Deep Digital Labs - Website & Software Development Company in Pune',
-        image: 'https://deepdigitallabs.com/og-image.png',
+        image: `${siteUrl}/og-image.png`,
         telephone: '+91-77560-63128',
         email: 'deepdigitallabs@gmail.com',
         priceRange: '₹₹',

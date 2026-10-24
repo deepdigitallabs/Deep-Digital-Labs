@@ -4,7 +4,7 @@ import { SERVICES } from '@/data/services';
 import { BLOG_POSTS } from '@/data/blogPosts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://deepdigitallabs.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://deepdigitallabs.vercel.app';
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
