@@ -259,13 +259,13 @@ export function Navbar() {
               <span className="hidden xl:inline">+91 77560 63128</span>
               <span className="xl:hidden">WhatsApp</span>
             </a>
-            <button
-              onClick={() => setDiscoveryModalOpen(true)}
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FF9A1F] via-[#F0367A] to-[#6A3DE8] hover:opacity-95 text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all shadow-md shadow-[#F0367A]/20 hover:shadow-lg hover:-translate-y-0.5 active:scale-98 cursor-pointer"
             >
               <span>Start a Project</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Actions */}
@@ -387,6 +387,17 @@ export function Navbar() {
             >
               Contact
             </Link>
+
+            <div className="pt-2">
+              <Link
+                href="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#FF9A1F] via-[#F0367A] to-[#6A3DE8] text-white py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider shadow-sm active:scale-98"
+              >
+                <span>Start a Project</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
         )}
       </nav>
