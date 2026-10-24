@@ -63,12 +63,23 @@ export default function HomePage() {
   const [softwareModalOpen, setSoftwareModalOpen] = useState(false);
   const [aiModalOpen, setAiModalOpen] = useState(false);
   const [mobileModalOpen, setMobileModalOpen] = useState(false);
+  const [heroTab, setHeroTab] = useState<'speed' | 'whatsapp' | 'erp'>('speed');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [contactName, setContactName] = useState('');
   const [contactPhone, setContactPhone] = useState('');
   const [contactService, setContactService] = useState('Business Website Development (from ₹499/mo)');
   const [contactMessage, setContactMessage] = useState('');
   const [contactSubmitted, setContactSubmitted] = useState(false);
+
+  const marqueeClients = [
+    { name: 'Rahul B. Kavale & Co.', category: 'Tax & Advisory · Pune' },
+    { name: 'GoNidhi', category: 'Dairy SaaS ERP' },
+    { name: 'Yashodeep Agro', category: 'Agri-Inputs & Retail' },
+    { name: 'Trust Carry Logistics', category: 'Commercial Freight' },
+    { name: 'Vishal Travels', category: 'Luxury Bus Charter · Pune' },
+    { name: 'Shivam Tours & Travels', category: 'Passenger Fleet' },
+    { name: 'Onedesk Packaging', category: 'B2B Raw Materials' },
+  ];
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -166,27 +177,38 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full text-neutral-900 dark:text-neutral-100 relative bg-white dark:bg-[#0B0D11] transition-colors duration-150">
       
-      {/* Editorial Ambient Depth Accent (Single restrained brand tone, no generic rainbow grids) */}
+      {/* Rich Warm Ambient Lighting & Depth Gradients */}
       <div 
         aria-hidden="true" 
-        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[480px] bg-gradient-to-b from-orange-500/[0.04] via-transparent to-transparent -z-10" 
+        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[640px] bg-gradient-to-b from-orange-500/[0.08] via-amber-500/[0.03] to-transparent blur-3xl -z-10" 
+      />
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none absolute top-20 left-1/2 -translate-x-1/2 w-[700px] h-[340px] bg-[#E8623C]/[0.08] rounded-full blur-[140px] -z-10" 
+      />
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none absolute top-40 right-10 w-[380px] h-[300px] bg-amber-500/[0.05] rounded-full blur-[120px] -z-10" 
       />
 
       {/* =========================================================================
              HERO SECTION: High-Impact, Pune-Focused, High Conversion
              ========================================================================= */}
-      <section className="relative w-full overflow-hidden pb-16 sm:pb-24 pt-28 sm:pt-32 lg:pt-36">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6">
+      <section className="relative w-full overflow-hidden pb-16 sm:pb-20 pt-28 sm:pt-32 lg:pt-36">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6">
           
           {/* Main Display Heading */}
           <div className="flex flex-col items-center tracking-tight text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-100/90 dark:bg-white/5 text-xs font-semibold text-neutral-800 dark:text-neutral-200 mb-5 shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-neutral-200 dark:border-white/10 bg-white/80 dark:bg-white/5 text-xs font-semibold text-neutral-800 dark:text-neutral-200 mb-5 shadow-xs backdrop-blur-md">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span>Pune Studio · Available for New Projects</span>
             </div>
             
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-display leading-[1.12] text-neutral-900 dark:text-white max-w-4xl">
-              Website &amp; Software Development Company in Pune
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-display leading-[1.12] text-neutral-900 dark:text-white max-w-4xl tracking-tight">
+              Website &amp; Software Development Company in{' '}
+              <span className="bg-gradient-to-r from-neutral-900 via-[#E8623C] to-[#E8623C] dark:from-white dark:via-orange-300 dark:to-[#E8623C] bg-clip-text text-transparent">
+                Pune
+              </span>
             </h1>
             
             <p className="text-xl sm:text-2xl font-bold font-display text-[#E8623C] mt-3.5 tracking-tight">
@@ -196,14 +218,14 @@ export default function HomePage() {
 
           {/* Supporting Copy */}
           <p className="text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed text-center font-normal">
-            High-speed websites, custom business software, ERPs, and mobile apps engineered around how your business actually runs. 2 to 3 weeks delivery, 100% code ownership, and no monthly platform fees.
+            High-speed websites, custom business software, ERPs, and mobile apps engineered around how your business actually runs. 2 to 3 weeks delivery, 100% code ownership, and zero monthly platform ransom fees.
           </p>
 
           {/* CTA Actions */}
           <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2 w-full sm:w-auto">
             <button
               onClick={() => setCallModalOpen(true)}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#E8623C] hover:bg-[#D7532F] text-white font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-xs transition-all active:scale-[0.98] cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#E8623C] hover:bg-[#D7532F] text-white font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-md shadow-[#E8623C]/20 hover:shadow-lg hover:shadow-[#E8623C]/30 transition-all active:scale-[0.98] cursor-pointer"
             >
               <span>Start a Project</span>
               <ArrowRight className="w-4 h-4" />
@@ -220,7 +242,7 @@ export default function HomePage() {
           </div>
 
           {/* Proof Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-8 pt-8 w-full max-w-3xl border-t border-neutral-200 dark:border-white/10 mt-3">
+          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-8 pt-7 w-full max-w-3xl border-t border-neutral-200/80 dark:border-white/10 mt-2">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-[#E8623C] shrink-0" />
               <span className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-medium">10+ Websites &amp; Systems Delivered</span>
@@ -239,6 +261,253 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* ========================================================================= */}
+          {/* HERO LIVE ARCHITECTURE & PERFORMANCE CONSOLE (Rich Interactive Proof)    */}
+          {/* ========================================================================= */}
+          <div className="w-full max-w-4xl mt-6 rounded-2xl bg-white dark:bg-[#12151C] border border-neutral-200/90 dark:border-white/10 shadow-xl overflow-hidden transition-all text-left">
+            {/* Console Window Header with Tabs */}
+            <div className="px-4 py-3 bg-neutral-100/80 dark:bg-black/40 border-b border-neutral-200/80 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+                <span className="ml-2 font-mono text-xs text-neutral-500 font-medium hidden sm:inline">
+                  deep-digital-labs.engine // live-proof
+                </span>
+              </div>
+              
+              {/* Interactive Tabs */}
+              <div className="flex items-center gap-1 bg-white dark:bg-white/5 p-1 rounded-xl border border-neutral-200 dark:border-white/10 font-mono text-xs font-semibold">
+                <button
+                  type="button"
+                  onClick={() => setHeroTab('speed')}
+                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${heroTab === 'speed' ? 'bg-[#E8623C] text-white shadow-xs' : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'}`}
+                >
+                  ⚡ Sub-0.5s Speed
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setHeroTab('whatsapp')}
+                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${heroTab === 'whatsapp' ? 'bg-[#E8623C] text-white shadow-xs' : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'}`}
+                >
+                  💬 WhatsApp Engine
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setHeroTab('erp')}
+                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${heroTab === 'erp' ? 'bg-[#E8623C] text-white shadow-xs' : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'}`}
+                >
+                  🏢 Cloud ERP (GoNidhi)
+                </button>
+              </div>
+            </div>
+
+            {/* Tab 1: Speed Audit */}
+            {heroTab === 'speed' && (
+              <div className="p-6 sm:p-7 flex flex-col gap-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block">
+                      Google Lighthouse 100% Passed · Verified on Indian 4G
+                    </span>
+                    <h3 className="text-lg font-bold font-display text-neutral-900 dark:text-white mt-0.5">
+                      Production Mobile Loading Benchmark (Pune Region)
+                    </h3>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-bold w-fit">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>Real CDN Edge Delivery</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-mono">
+                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
+                    <span className="block text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">99</span>
+                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Lighthouse Score</span>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
+                    <span className="block text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">0.5s</span>
+                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">LCP Speed</span>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
+                    <span className="block text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">0 ms</span>
+                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Total Blocking</span>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
+                    <span className="block text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">0.00</span>
+                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Layout Shift (CLS)</span>
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t border-neutral-100 dark:border-white/10 flex flex-wrap items-center justify-between text-xs text-neutral-600 dark:text-neutral-400 gap-2">
+                  <span>Engineered with Next.js 15, Turbopack, and Tailwind CSS. Clean, zero bloated WordPress plugins.</span>
+                  <Link href="/services/websites-web-apps" className="text-[#E8623C] font-semibold hover:underline flex items-center gap-1">
+                    <span>Explore Website Architecture</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            )}
+
+            {/* Tab 2: WhatsApp Lead Funnel */}
+            {heroTab === 'whatsapp' && (
+              <div className="p-6 sm:p-7 flex flex-col gap-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block">
+                      Instant WhatsApp Routing · Zero Lead Drop
+                    </span>
+                    <h3 className="text-lg font-bold font-display text-neutral-900 dark:text-white mt-0.5">
+                      Sub-2 Second Direct WhatsApp Notification
+                    </h3>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#25D366]/10 border border-[#25D366]/20 text-[#25D366] text-xs font-mono font-bold w-fit">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+                    <span>Real-Time Webhook Active</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Left: Visitor Action */}
+                  <div className="p-4 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10 flex flex-col justify-between">
+                    <div>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block mb-1">
+                        Step 1: Website Visitor Action
+                      </span>
+                      <p className="text-sm font-semibold text-neutral-900 dark:text-white">
+                        Customer taps WhatsApp Button or Submits Inquiry Form
+                      </p>
+                      <div className="mt-3 p-3 rounded-lg bg-white dark:bg-black/40 border border-neutral-200/80 dark:border-white/10 font-mono text-xs text-neutral-700 dark:text-neutral-300 space-y-1">
+                        <div>Name: Vikram Shinde</div>
+                        <div>Requirement: Commercial CA Advisory Portal</div>
+                        <div>Location: Baner, Pune</div>
+                      </div>
+                    </div>
+                    <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium mt-3 block">
+                      ✓ Instant client confirmation screen
+                    </span>
+                  </div>
+
+                  {/* Right: WhatsApp Alert to Business Owner */}
+                  <div className="p-4 rounded-xl bg-[#25D366]/5 border border-[#25D366]/20 flex flex-col justify-between">
+                    <div>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-[#25D366] font-bold block mb-1">
+                        Step 2: Instant WhatsApp Notification to Owner
+                      </span>
+                      <p className="text-sm font-semibold text-neutral-900 dark:text-white">
+                        Delivered to Phone in under 2 seconds
+                      </p>
+                      <div className="mt-3 p-3 rounded-lg bg-white dark:bg-[#12151C] border border-[#25D366]/20 font-mono text-xs text-neutral-800 dark:text-neutral-200 space-y-1 shadow-2xs">
+                        <div className="text-emerald-600 dark:text-emerald-400 font-bold">📲 WhatsApp Alert: New Inbound Lead!</div>
+                        <div>From: Vikram Shinde (Baner, Pune)</div>
+                        <div>Service: Tax &amp; Advisory Website</div>
+                        <div className="text-neutral-500 dark:text-neutral-400 text-[10px] pt-1">One-tap Call or Reply via WhatsApp Business</div>
+                      </div>
+                    </div>
+                    <span className="text-[11px] text-neutral-500 font-medium mt-3 block">
+                      Never miss a customer while away from your desk
+                    </span>
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t border-neutral-100 dark:border-white/10 flex flex-wrap items-center justify-between text-xs text-neutral-600 dark:text-neutral-400 gap-2">
+                  <span>Included standard on every Deep Digital Labs website and web app.</span>
+                  <Link href="/services/ai-workflow-automation" className="text-[#E8623C] font-semibold hover:underline flex items-center gap-1">
+                    <span>Explore WhatsApp Automations</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            )}
+
+            {/* Tab 3: Cloud ERP (GoNidhi) */}
+            {heroTab === 'erp' && (
+              <div className="p-6 sm:p-7 flex flex-col gap-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold block">
+                      In-House SaaS · Production Live
+                    </span>
+                    <h3 className="text-lg font-bold font-display text-neutral-900 dark:text-white mt-0.5">
+                      GoNidhi — Multi-Tenant Dairy SaaS Platform
+                    </h3>
+                  </div>
+                  <a 
+                    href="https://dairy-flow-pro.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-mono font-bold w-fit hover:bg-blue-500/20 transition-colors"
+                  >
+                    <span>Visit Live System</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-mono">
+                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
+                    <span className="block text-2xl sm:text-3xl font-extrabold text-blue-600 dark:text-blue-400">850+</span>
+                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Active Dairy Farmers</span>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
+                    <span className="block text-2xl sm:text-3xl font-extrabold text-blue-600 dark:text-blue-400">&lt;50ms</span>
+                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">FAT/SNF Pricing Engine</span>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
+                    <span className="block text-2xl sm:text-3xl font-extrabold text-blue-600 dark:text-blue-400">0%</span>
+                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Billing Disputes</span>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
+                    <span className="block text-2xl sm:text-3xl font-extrabold text-blue-600 dark:text-blue-400">2+ hrs</span>
+                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Saved Daily in Excel</span>
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t border-neutral-100 dark:border-white/10 flex flex-wrap items-center justify-between text-xs text-neutral-600 dark:text-neutral-400 gap-2">
+                  <span>Custom ERP software, CRM dashboards, and billing tools built around your exact business workflow.</span>
+                  <Link href="/services/business-software-saas" className="text-[#E8623C] font-semibold hover:underline flex items-center gap-1">
+                    <span>Explore Custom Software</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================================
+             CLIENT TRUST & AUTHORITY MARQUEE (Established Maharashtra Brands)
+             ========================================================================= */}
+      <section className="w-full py-8 border-y border-neutral-200/80 dark:border-white/10 bg-neutral-50/70 dark:bg-[#0E1117]/80 overflow-hidden relative">
+        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8 mb-4 text-center">
+          <span className="text-xs font-mono uppercase tracking-wider text-neutral-500 font-semibold">
+            Trusted by established practices, fleet operators &amp; businesses across Pune &amp; Maharashtra
+          </span>
+        </div>
+        
+        <div className="relative w-full overflow-hidden flex items-center">
+          {/* Side gradient masks for smooth fade in/out */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 z-10 bg-gradient-to-r from-neutral-50 dark:from-[#0E1117] to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 z-10 bg-gradient-to-l from-neutral-50 dark:from-[#0E1117] to-transparent pointer-events-none" />
+
+          {/* Infinite scrolling track */}
+          <div className="animate-tech-marquee flex items-center gap-4 sm:gap-6 py-1">
+            {[...marqueeClients, ...marqueeClients].map((client, index) => (
+              <div
+                key={`${client.name}-${index}`}
+                className="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-white dark:bg-[#151821] border border-neutral-200/80 dark:border-white/10 hover:border-[#E8623C]/50 transition-all shrink-0 shadow-2xs"
+              >
+                <div className="w-2 h-2 rounded-full bg-[#E8623C] shrink-0" />
+                <span className="font-bold text-sm text-neutral-900 dark:text-white font-display">
+                  {client.name}
+                </span>
+                <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-neutral-100 dark:bg-white/5 text-neutral-600 dark:text-neutral-400 font-medium">
+                  {client.category}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
