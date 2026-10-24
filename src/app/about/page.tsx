@@ -187,7 +187,7 @@ export default function AboutPage() {
                 Direct WhatsApp Updates
               </h3>
               <p className="text-sm text-[#4B5070] leading-relaxed">
-                No tickets, no wait times, and no middleman confusion. You chat directly with Deepak and our developers on WhatsApp with clear demos as we build.
+                No tickets, no wait times, and no middleman confusion. You chat directly with our lead software developers on WhatsApp with clear demos as we build.
               </p>
             </div>
 

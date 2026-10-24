@@ -152,6 +152,66 @@ h1, h2, h3, h4, h5, h6 {
   color: #E8338C;
 }
 
+/* Background Dotted Grid */
+.bg-grid-dots {
+  background-image: radial-gradient(circle, rgba(27, 31, 75, 0.08) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* Blinking Cursor for Hero Key Word */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 3px;
+  height: 0.82em;
+  background-color: #E8338C;
+  margin-left: 3px;
+  vertical-align: baseline;
+  animation: cursor-blink 1s step-start infinite;
+}
+
+/* Floating Animations (CSS only) */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(8px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 6s ease-in-out infinite;
+}
+
+/* Mesh Pulse */
+@keyframes mesh-pulse {
+  0%, 100% { transform: scale(1) translate(0px, 0px); opacity: 0.22; }
+  50% { transform: scale(1.1) translate(-10px, 15px); opacity: 0.32; }
+}
+
+.animate-mesh-pulse {
+  animation: mesh-pulse 8s ease-in-out infinite alternate;
+}
+
 /* Marquee Animations */
 @keyframes marquee {
   from {
@@ -174,9 +234,19 @@ h1, h2, h3, h4, h5, h6 {
 .animate-tech-marquee {
   display: flex;
   width: max-content;
-  animation: tech-marquee 25s linear infinite;
+  animation: tech-marquee 28s linear infinite;
 }
 
 .animate-tech-marquee:hover {
   animation-play-state: paused;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
