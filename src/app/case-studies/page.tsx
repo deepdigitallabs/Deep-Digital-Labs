@@ -51,7 +51,7 @@ export default function CaseStudiesPage() {
           </div>
 
           <p className="text-base sm:text-lg text-[#4B5070] leading-relaxed max-w-2xl mx-auto">
-            Take a look at the live websites, booking systems, and business tools we have delivered for companies in Pune and across India.
+            Take a look at the live websites, booking systems, and business tools we have delivered for growing companies across India and worldwide.
           </p>
         </div>
       </section>

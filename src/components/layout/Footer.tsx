@@ -58,7 +58,7 @@ export function Footer() {
             </Link>
 
             <p className="text-sm text-[#4B5070] max-w-sm leading-relaxed">
-              We build websites, custom business software, and mobile apps for businesses in Pune and across India.
+              We build websites, custom business software, and mobile apps for ambitious businesses across India and worldwide.
             </p>
 
             {/* Quick Contact & Location */}
