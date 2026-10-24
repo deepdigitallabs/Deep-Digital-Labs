@@ -48,23 +48,14 @@ export function Footer() {
           
           {/* Brand Info (4 Columns) */}
           <div className="sm:col-span-2 lg:col-span-4 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-2.5 group" aria-label="Deep Digital Labs Home">
+            <Link href="/" className="inline-flex items-center group" aria-label="Deep Digital Labs Home">
               <Image 
-                src="/images/logo-single.png" 
+                src="/images/logo-full.png" 
                 alt="Deep Digital Labs" 
-                width={1536} 
-                height={1024} 
-                unoptimized
-                className="h-9 sm:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                width={600} 
+                height={203} 
+                className="h-10 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
-              <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-tight text-neutral-900 dark:text-white font-display">
-                  Deep <span className="text-[#E8623C]">Digital</span> Labs
-                </span>
-                <span className="text-[11px] text-neutral-500 dark:text-neutral-400 font-medium">
-                  Build · Grow · Go Digital
-                </span>
-              </div>
             </Link>
 
             <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-sm leading-relaxed">

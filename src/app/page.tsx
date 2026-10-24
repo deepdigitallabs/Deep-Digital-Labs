@@ -125,7 +125,7 @@ export default function HomePage() {
 
           {/* H1 */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-display leading-[1.12] text-neutral-900 dark:text-white max-w-4xl tracking-tight">
-            Website Development Company in{' '}
+            Your All-in-One Digital Partner in{' '}
             <span className="text-[#E8623C]">
               Pune
             </span>
@@ -133,7 +133,7 @@ export default function HomePage() {
 
           {/* Subline */}
           <p className="text-base sm:text-xl text-neutral-700 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed text-center font-normal">
-            We build websites, apps and online stores that bring you more customers. Fixed price. Ready in 2-3 weeks. You own everything.
+            Websites, mobile apps, business software, chatbots and SEO, all built by one team you can talk to directly.
           </p>
 
           {/* Action Buttons */}
@@ -243,10 +243,9 @@ export default function HomePage() {
                   Clean, fast websites that make your business look trustworthy and turn visitors into phone calls.
                 </p>
               </div>
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-between text-xs">
-                <span className="font-semibold text-neutral-900 dark:text-white">Starting from {`{{WEBSITE_STARTING_PRICE}}`}</span>
-                <Link href="/services/websites-web-apps" className="text-[#E8623C] hover:underline font-medium">
-                  Details →
+              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end text-xs">
+                <Link href="/services/websites-web-apps" className="text-[#E8623C] hover:underline font-medium inline-flex items-center gap-1">
+                  <span>Learn more →</span>
                 </Link>
               </div>
             </div>
@@ -264,10 +263,9 @@ export default function HomePage() {
                   Simple custom portals, billing tools, and dashboards to manage your daily orders and staff without messy Excel sheets.
                 </p>
               </div>
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-between text-xs">
-                <span className="font-semibold text-neutral-900 dark:text-white">Starting from {`{{SOFTWARE_STARTING_PRICE}}`}</span>
-                <Link href="/services/business-software-saas" className="text-[#E8623C] hover:underline font-medium">
-                  Details →
+              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end text-xs">
+                <Link href="/services/business-software-saas" className="text-[#E8623C] hover:underline font-medium inline-flex items-center gap-1">
+                  <span>Learn more →</span>
                 </Link>
               </div>
             </div>
@@ -285,10 +283,9 @@ export default function HomePage() {
                   Easy-to-use Android and iPhone apps for your customers, field workers, or delivery team.
                 </p>
               </div>
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-between text-xs">
-                <span className="font-semibold text-neutral-900 dark:text-white">Starting from {`{{APP_STARTING_PRICE}}`}</span>
-                <Link href="/services/mobile-app-development" className="text-[#E8623C] hover:underline font-medium">
-                  Details →
+              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end text-xs">
+                <Link href="/services/mobile-app-development" className="text-[#E8623C] hover:underline font-medium inline-flex items-center gap-1">
+                  <span>Learn more →</span>
                 </Link>
               </div>
             </div>
@@ -306,21 +303,14 @@ export default function HomePage() {
                   Get found on Google Maps and reply to customer inquiries instantly on WhatsApp, even when you&apos;re busy.
                 </p>
               </div>
-              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-between text-xs">
-                <span className="font-semibold text-neutral-900 dark:text-white">Starting from {`{{MARKETING_STARTING_PRICE}}`}</span>
-                <Link href="/services/chat-bot-development" className="text-[#E8623C] hover:underline font-medium">
-                  Details →
+              <div className="pt-4 border-t border-neutral-100 dark:border-white/10 flex items-center justify-end text-xs">
+                <Link href="/services/chat-bot-development" className="text-[#E8623C] hover:underline font-medium inline-flex items-center gap-1">
+                  <span>Learn more →</span>
                 </Link>
               </div>
             </div>
 
           </div>
-
-          {/* Discrete Technology Line */}
-          <div className="mt-8 pt-4 border-t border-neutral-200/60 dark:border-white/5 text-center text-xs text-neutral-500 dark:text-neutral-400">
-            <span>Technology we use: React, Next.js, Flutter, Node.js, and PostgreSQL for fast, reliable systems.</span>
-          </div>
-
         </div>
       </section>
 
@@ -573,20 +563,20 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-             6. PRICING (Basic, Medium, High Packages with Placeholders)
+             6. PRICING (Tailored Quotes According to Customer Scope)
              ========================================================================= */}
       <section className="w-full py-20 bg-neutral-50/50 dark:bg-[#0A0D13] border-b border-neutral-200 dark:border-white/10" id="pricing">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           
           <div className="flex flex-col gap-3 mb-14 text-center items-center">
             <span className="text-xs font-mono uppercase tracking-wider text-[#E8623C] font-semibold">
-              Pricing Packages
+              Transparent Pricing
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-neutral-900 dark:text-white">
-              Clear packages with no hidden costs
+              Tailored to your business needs
             </h2>
             <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl">
-              Pay in stages as each part is delivered. No monthly builder fees.
+              Pay in stages as each part is delivered. Clear upfront quotes with no hidden costs or monthly builder fees.
             </p>
           </div>
 
@@ -609,12 +599,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="py-4 border-y border-neutral-100 dark:border-white/10">
-                  <span className="text-xs text-neutral-400 font-mono uppercase font-semibold">Fixed Price</span>
-                  <div className="text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
-                    {`{{BASIC_PRICE}}`}
+                  <span className="text-xs text-neutral-400 font-mono uppercase font-semibold">Pricing</span>
+                  <div className="text-2xl sm:text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
+                    Custom Quote
                   </div>
                   <span className="text-xs text-neutral-500 dark:text-neutral-400 mt-1 block">
-                    Ready in {`{{BASIC_DAYS}}`}
+                    Tailored to your pages &amp; design scope
                   </span>
                 </div>
 
@@ -629,12 +619,12 @@ export default function HomePage() {
 
               <div className="pt-6 mt-6 border-t border-neutral-100 dark:border-white/10">
                 <a
-                  href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20am%20interested%20in%20the%20Basic%20Website%20Package."
+                  href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20would%20like%20a%20custom%20quote%20for%20a%20Basic%20Website%20Package."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center py-3.5 px-4 rounded-xl bg-neutral-100 hover:bg-neutral-200 dark:bg-white/5 dark:hover:bg-white/10 text-neutral-900 dark:text-white font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
                 >
-                  Choose Basic Package
+                  Get a Custom Quote
                 </a>
               </div>
             </div>
@@ -659,12 +649,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="py-4 border-y border-neutral-100 dark:border-white/10">
-                  <span className="text-xs text-neutral-400 font-mono uppercase font-semibold">Fixed Price</span>
-                  <div className="text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
-                    {`{{MEDIUM_PRICE}}`}
+                  <span className="text-xs text-[#E8623C] font-mono uppercase font-semibold">Pricing</span>
+                  <div className="text-2xl sm:text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
+                    Custom Quote
                   </div>
                   <span className="text-xs text-neutral-500 dark:text-neutral-400 mt-1 block">
-                    Ready in {`{{MEDIUM_DAYS}}`}
+                    Tailored to your catalog &amp; lead features
                   </span>
                 </div>
 
@@ -679,12 +669,12 @@ export default function HomePage() {
 
               <div className="pt-6 mt-6 border-t border-neutral-100 dark:border-white/10">
                 <a
-                  href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20am%20interested%20in%20the%20Medium%20Growth%20Package."
+                  href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20would%20like%20a%20custom%20quote%20for%20the%20Medium%20Growth%20Package."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center py-3.5 px-4 rounded-xl bg-[#E8623C] hover:bg-[#D7532F] text-white font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer shadow-md shadow-[#E8623C]/20"
                 >
-                  Choose Medium Package
+                  Get a Custom Quote
                 </a>
               </div>
             </div>
@@ -705,12 +695,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="py-4 border-y border-neutral-100 dark:border-white/10">
-                  <span className="text-xs text-neutral-400 font-mono uppercase font-semibold">Fixed Price</span>
-                  <div className="text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
-                    {`{{HIGH_PRICE}}`}
+                  <span className="text-xs text-neutral-400 font-mono uppercase font-semibold">Pricing</span>
+                  <div className="text-2xl sm:text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
+                    Custom Quote
                   </div>
                   <span className="text-xs text-neutral-500 dark:text-neutral-400 mt-1 block">
-                    Ready in {`{{HIGH_DAYS}}`}
+                    Tailored to your workflows &amp; app features
                   </span>
                 </div>
 
@@ -725,7 +715,7 @@ export default function HomePage() {
 
               <div className="pt-6 mt-6 border-t border-neutral-100 dark:border-white/10">
                 <a
-                  href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20the%20High%20Custom%20Software%20Package."
+                  href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20Custom%20Software%20or%20Mobile%20App."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center py-3.5 px-4 rounded-xl bg-neutral-100 hover:bg-neutral-200 dark:bg-white/5 dark:hover:bg-white/10 text-neutral-900 dark:text-white font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
@@ -739,8 +729,8 @@ export default function HomePage() {
 
           {/* What affects the price note */}
           <div className="mt-10 p-5 rounded-2xl bg-white dark:bg-[#12151C] border border-neutral-200/90 dark:border-white/10 max-w-3xl mx-auto text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 text-center leading-relaxed">
-            <span className="font-bold text-neutral-900 dark:text-white">What affects the price? </span>
-            The total cost depends on how many pages you need, whether you need custom features (like customer logins or payment gateways), and whether you need an Android or iPhone mobile app. We always give you a fixed quote before starting.
+            <span className="font-bold text-neutral-900 dark:text-white">How our pricing works: </span>
+            Every business project is unique. Like leading IT companies, we assess your requirements and provide a clear, tailored quote before any work starts. You only pay for what your business actually needs, with milestone-based delivery and zero surprise costs.
           </div>
 
         </div>

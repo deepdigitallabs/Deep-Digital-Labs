@@ -43,14 +43,14 @@ export function Navbar() {
           
           {/* Brand Logo - Full Logo */}
           <Link href="/" className="group flex items-center gap-2.5 sm:gap-3" aria-label="Deep Digital Labs Home">
-            <div className="relative h-8 sm:h-9 flex items-center shrink-0">
+            <div className="relative h-10 sm:h-12 flex items-center shrink-0">
               <Image
                 src="/images/logo-full.png"
                 alt="Deep Digital Labs - Pune"
                 width={600}
                 height={203}
                 priority
-                className="h-7 sm:h-8 w-auto object-contain transition-transform duration-200 group-hover:scale-102"
+                className="h-9 sm:h-11 md:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
             </div>
           </Link>
