@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Deep Digital Labs | Website & Software Development Company in Pune",
   description: "Deep Digital Labs builds high-speed websites, custom business software, ERPs, and mobile apps for businesses in Pune. Simple process, 2 to 3 weeks delivery, direct developer access.",
-  authors: [{ name: "Deepak Dukare", url: siteUrl }],
+  authors: [{ name: "Deep Digital Labs", url: siteUrl }],
   alternates: {
     canonical: siteUrl,
   },

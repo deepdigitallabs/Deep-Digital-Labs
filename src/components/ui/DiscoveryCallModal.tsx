@@ -188,10 +188,10 @@ export function DiscoveryCallModal({ isOpen, onClose, initialProjectDetails }: D
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Deepak Sharma"
+                    placeholder="e.g. Rahul Sharma"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 focus:outline-none focus:border-[#E8623C] transition-colors"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 focus:outline-none focus:border-[#E8338C] transition-colors"
                   />
                 </div>
                 <div>
@@ -204,7 +204,7 @@ export function DiscoveryCallModal({ isOpen, onClose, initialProjectDetails }: D
                     placeholder="+91 98765 43210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 focus:outline-none focus:border-[#E8623C] transition-colors"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 focus:outline-none focus:border-[#E8338C] transition-colors"
                   />
                 </div>
               </div>
@@ -216,10 +216,10 @@ export function DiscoveryCallModal({ isOpen, onClose, initialProjectDetails }: D
                 <input
                   type="email"
                   required
-                  placeholder="deepak@company.in"
+                  placeholder="contact@company.in"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 focus:outline-none focus:border-[#E8623C] transition-colors"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 focus:outline-none focus:border-[#E8338C] transition-colors"
                 />
               </div>
 

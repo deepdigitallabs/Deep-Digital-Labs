@@ -22,57 +22,91 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="pt-32 pb-24 bg-white text-neutral-900 dark:bg-[#050505] dark:text-white min-h-screen transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* ========================================================================= */}
-        {/* HEADER: BUYER-FIRST KNOWLEDGE BASE                                        */}
-        {/* ========================================================================= */}
-        <div className="text-center max-w-4xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8623C]/10 border border-[#E8623C]/20 text-[#E8623C] text-xs font-mono font-bold uppercase tracking-wider">
-            <BookOpen className="w-3.5 h-3.5" />
-            <span>Practical Business Insights · Pune &amp; India</span>
-          </div>
+    <div className="pt-28 pb-24 bg-white text-[#4B5070] min-h-screen">
+      
+      {/* ========================================================================= */}
+      {/* HERO: PRACTICAL KNOWLEDGE BASE                                            */}
+      {/* ========================================================================= */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#F7F5FF] via-[#F7F5FF]/60 to-white pt-12 pb-16 border-b border-neutral-200/60 bg-grid-dots">
+        {/* Soft Background Mesh Blurs */}
+        <div 
+          aria-hidden="true" 
+          className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-r from-[#FF7A1A]/15 via-[#E8338C]/15 to-[#6A3DE8]/15 rounded-full blur-3xl -z-10 animate-[mesh-pulse_10s_ease-in-out_infinite]" 
+        />
 
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-tight font-display">
-            Business Guides, Pricing &amp; Tech Strategy
-          </h1>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto space-y-5">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-neutral-200/80 text-xs font-semibold text-[#1B1F4B] shadow-xs">
+              <BookOpen className="w-3.5 h-3.5 text-[#FF7A1A]" />
+              <span>Practical Guides for Indian Businesses · Pune Studio</span>
+            </div>
 
-          <p className="text-base sm:text-lg text-neutral-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            Practical answers to the questions business owners actually ask: realistic website costs in Pune, capturing WhatsApp leads, replacing spreadsheets, and ranking on Google. Zero confusing tech talk.
-          </p>
-        </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1B1F4B] tracking-tight leading-[1.15] font-display">
+              Business Guides, Pricing &amp;{' '}
+              <span className="brand-gradient-text">Tech Strategy</span>
+            </h1>
 
-        {/* ========================================================================= */}
-        {/* INTERACTIVE BLOG GRID (CATEGORY TABS + SEARCH + CARDS)                    */}
-        {/* ========================================================================= */}
-        <BlogGrid posts={BLOG_POSTS} />
-
-        {/* ========================================================================= */}
-        {/* NEWSLETTER SUBSCRIPTION BOX (BUSINESS-FOCUSED)                            */}
-        {/* ========================================================================= */}
-        <div className="mt-24 p-8 sm:p-12 rounded-3xl bg-neutral-50 dark:bg-[#0F0F11] border border-neutral-200 dark:border-white/10 text-center space-y-6 shadow-xs max-w-4xl mx-auto">
-          <div className="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-[#E8623C] flex items-center justify-center mx-auto shadow-xs">
-            <Mail className="w-6 h-6" />
-          </div>
-          
-          <div className="max-w-2xl mx-auto space-y-2">
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-white font-display">
-              Get Practical Business &amp; Tech Guides in Your Inbox
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-gray-400 leading-relaxed">
-              Actionable advice on website costs, capturing WhatsApp leads, local SEO, and automating operational workflows for Pune and Indian businesses.
+            <p className="text-base sm:text-lg text-[#4B5070] leading-relaxed max-w-2xl mx-auto">
+              Real answers to the questions business owners actually ask: transparent website costs in Pune, capturing WhatsApp leads, replacing spreadsheets with custom software, and ranking on Google. Zero confusing tech talk.
             </p>
-          </div>
 
-          <NewsletterForm />
-          
-          <div className="text-[11px] text-neutral-500 dark:text-gray-500">
-            Zero spam. One practical article per month. Unsubscribe at any time.
+            {/* Quick Filter Chips */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold text-[#1B1F4B]">
+              <span className="px-3 py-1 rounded-full bg-white border border-neutral-200/70 shadow-xs">
+                ⚡ Real Pune Cost Breakdowns
+              </span>
+              <span className="px-3 py-1 rounded-full bg-white border border-neutral-200/70 shadow-xs">
+                💬 WhatsApp Lead Funnels
+              </span>
+              <span className="px-3 py-1 rounded-full bg-white border border-neutral-200/70 shadow-xs">
+                📊 Spreadsheet Replacement
+              </span>
+              <span className="px-3 py-1 rounded-full bg-white border border-neutral-200/70 shadow-xs">
+                🔒 100% Code Ownership
+              </span>
+            </div>
           </div>
         </div>
+      </section>
 
-      </div>
+      {/* ========================================================================= */}
+      {/* INTERACTIVE BLOG GRID (CATEGORY TABS + SEARCH + CARDS)                    */}
+      {/* ========================================================================= */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BlogGrid posts={BLOG_POSTS} />
+
+          {/* ========================================================================= */}
+          {/* NEWSLETTER SUBSCRIPTION BOX (BUSINESS-FOCUSED)                            */}
+          {/* ========================================================================= */}
+          <div className="mt-24 p-8 sm:p-12 rounded-3xl bg-[#F7F5FF] border border-neutral-200/80 text-center space-y-6 shadow-sm max-w-3xl mx-auto relative overflow-hidden">
+            <div 
+              aria-hidden="true" 
+              className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-gradient-to-br from-[#FF7A1A]/10 to-[#E8338C]/15 blur-2xl pointer-events-none" 
+            />
+
+            <div className="icon-gradient-circle mx-auto">
+              <Mail className="w-5 h-5" />
+            </div>
+            
+            <div className="max-w-xl mx-auto space-y-2">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1B1F4B] font-display">
+                Get Practical Guides in Your Inbox
+              </h3>
+              <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
+                Actionable breakdowns of website costs, WhatsApp conversion tactics, local SEO, and custom software strategy for Pune &amp; Indian businesses.
+              </p>
+            </div>
+
+            <NewsletterForm />
+            
+            <div className="text-xs text-[#4B5070]/80">
+              Zero spam. One practical guide per month. Unsubscribe anytime in 1-click.
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

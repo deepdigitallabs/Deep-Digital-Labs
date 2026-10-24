@@ -13,9 +13,8 @@ export function JsonLd() {
         image: `${siteUrl}/og-image.png`,
         description: 'Deep Digital Labs is a website and software development company in Pune, building fast, modern websites, custom ERPs, and mobile apps for growing businesses.',
         founder: {
-          '@type': 'Person',
-          name: 'Deepak Dukare',
-          jobTitle: 'Founder & Lead Software Engineer',
+          '@type': 'Organization',
+          name: 'Deep Digital Labs Team',
           url: `${siteUrl}/about`
         },
         address: {
@@ -175,7 +174,7 @@ export function JsonLd() {
             name: 'How does Deep Digital Labs differ from generic agencies or WordPress freelancers?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'You talk directly with Deepak Dukare and senior engineers—no junior middlemen or account managers. We build with modern, high-performance tech stacks (Next.js, React, Flutter, PostgreSQL) that load in under 1 second and are built to scale.'
+              text: 'You talk directly with our senior software engineers—no junior middlemen or account managers. We build with modern, high-performance tech stacks (Next.js, React, Flutter, PostgreSQL) that load in under 1 second and are built to scale.'
             }
           }
         ]

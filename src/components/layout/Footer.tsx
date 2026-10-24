@@ -146,7 +146,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/about" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
-                  About Deepak &amp; Team
+                  About Our Team
                 </Link>
               </li>
               <li>

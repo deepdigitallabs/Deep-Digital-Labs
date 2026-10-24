@@ -25,17 +25,6 @@ import {
 } from 'lucide-react';
 import { PricingPackages } from '@/components/pricing/PricingPackages';
 
-// Technology stack for under-hero marquee
-const TECH_STACK = [
-  { name: 'Next.js 15', category: 'Fast Web Framework' },
-  { name: 'React', category: 'Interactive UI' },
-  { name: 'Flutter', category: 'Android & iOS Apps' },
-  { name: 'WhatsApp Business API', category: 'Chat Automation' },
-  { name: 'PostgreSQL', category: 'Secure Databases' },
-  { name: 'AWS Cloud', category: 'Reliable Hosting' },
-  { name: 'Node.js', category: 'Fast Backend APIs' },
-  { name: 'Tailwind CSS', category: 'Modern Design' }
-];
 
 const FAQS = [
   {
@@ -371,35 +360,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =========================================================================
-             2. TECHNOLOGY LOGOS MARQUEE ("Tools we use to build your business")
-             ========================================================================= */}
-      <section className="w-full py-6 border-y border-neutral-200/70 bg-[#F7F5FF] overflow-hidden">
-        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8 mb-3 text-center">
-          <span className="text-xs font-mono font-bold tracking-wider uppercase text-[#1B1F4B]">
-            Tools we use to build your business:
-          </span>
-        </div>
-
-        <div className="relative w-full overflow-hidden flex items-center">
-          {/* Fade edges */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#F7F5FF] to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#F7F5FF] to-transparent z-10" />
-
-          <div className="animate-tech-marquee flex items-center gap-6 sm:gap-10 whitespace-nowrap">
-            {[...TECH_STACK, ...TECH_STACK].map((tool, index) => (
-              <div 
-                key={index} 
-                className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-neutral-200/80 shadow-xs shrink-0"
-              >
-                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#FF7A1A] to-[#E8338C]" />
-                <span className="text-xs font-bold text-[#1B1F4B]">{tool.name}</span>
-                <span className="text-[10px] text-[#4B5070] font-medium">({tool.category})</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* =========================================================================
              3. STATS STRIP (With Scroll Count-Up & Pulsing Available Dot)
@@ -1146,41 +1106,76 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
-            {/* Left: Headline & Large WhatsApp Button */}
+            {/* Left: Headline, Direct WhatsApp & Guarantees */}
             <div className="lg:col-span-6 flex flex-col gap-6">
-              <div>
-                <span className="text-[11px] font-mono uppercase tracking-widest text-pink-300 font-bold px-3 py-1 rounded-full bg-white/10 border border-white/15">
-                  Let&apos;s Build Together
-                </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display leading-tight text-white mt-4">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold backdrop-blur-sm">
+                  <Sparkles className="w-3.5 h-3.5 text-[#FFB81C]" />
+                  <span className="text-[#FFB81C]">Let&apos;s Build Together</span>
+                </div>
+
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-[1.15] text-white tracking-tight">
                   Ready to grow your business{' '}
                   <span className="bg-gradient-to-r from-[#FFB81C] via-[#FF7A1A] to-[#E8338C] bg-clip-text text-transparent">
                     online
                   </span>?
                 </h2>
-                <p className="text-base text-slate-300 mt-3 leading-relaxed">
+
+                <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-xl">
                   Tell us what you want to build. We’ll understand your business, give you an honest recommendation and a fair fixed quote within 24 hours.
                 </p>
               </div>
 
-              {/* Instant WhatsApp Quick Callout */}
-              <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3">
-                <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>Instant Response on WhatsApp</span>
+              {/* Direct WhatsApp Quick Chat Card */}
+              <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.05] border border-white/10 backdrop-blur-sm space-y-4 shadow-xl">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#25D366]/15 border border-[#25D366]/30 text-[#25D366] text-xs font-semibold">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#25D366]" />
+                    </span>
+                    <span>Quick Reply on WhatsApp</span>
+                  </div>
+                  <span className="text-xs text-slate-300 font-medium">
+                    Usually replies within 15 minutes
+                  </span>
                 </div>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Prefer chatting directly with our team instead of waiting for emails? Tap below to open WhatsApp with your project requirements.
-                </p>
+
+                <div className="space-y-1">
+                  <h3 className="text-base font-bold text-white font-display">
+                    Prefer to chat directly?
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    Message us on WhatsApp. Talk directly with our team — no sales pressure, just friendly advice.
+                  </p>
+                </div>
+
                 <a
                   href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project%20for%20my%20business."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm transition-all shadow-lg shadow-[#25D366]/20 active:scale-98 hover:-translate-y-0.5"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm sm:text-base transition-all shadow-lg shadow-[#25D366]/25 hover:shadow-[#25D366]/40 hover:-translate-y-0.5 active:scale-98"
                 >
-                  <WhatsAppIcon className="w-5 h-5 fill-white" />
+                  <WhatsAppIcon className="w-5 h-5 fill-white shrink-0" />
                   <span>Chat on WhatsApp (+91 77560 63128)</span>
+                  <ArrowRight className="w-4 h-4" />
                 </a>
+              </div>
+
+              {/* 3 Clear Guarantees */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs font-medium text-slate-200">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#25D366] shrink-0" />
+                  <span>Fixed price quote</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#25D366] shrink-0" />
+                  <span>Pay in stages</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#25D366] shrink-0" />
+                  <span>100% code ownership</span>
+                </div>
               </div>
             </div>
 
