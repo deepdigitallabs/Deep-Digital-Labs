@@ -1084,32 +1084,32 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-             11. FINAL CALL TO ACTION (Navy #1B1F4B With Gradient Glow & Short Form)
+             11. FINAL CALL TO ACTION (White Background With Animated Brand Mesh)
              ========================================================================= */}
-      <section className="w-full py-24 sm:py-32 relative bg-[#1B1F4B] text-white overflow-hidden bg-[radial-gradient(#ffffff15_1px,transparent_1px)] [background-size:24px_24px]" id="contact">
+      <section className="w-full py-24 sm:py-32 relative bg-white text-[#4B5070] overflow-hidden bg-[radial-gradient(rgba(27,31,75,0.08)_1.2px,transparent_1.2px)] [background-size:24px_24px] border-t border-neutral-200/70" id="contact">
         
         {/* Animated Background Mesh Orbs */}
         <div 
           aria-hidden="true" 
-          className="pointer-events-none absolute -top-32 -right-20 w-[650px] h-[500px] bg-gradient-to-br from-[#E8338C]/25 via-[#FF7A1A]/20 to-transparent rounded-full blur-3xl -z-10 animate-mesh-pulse" 
+          className="pointer-events-none absolute -top-32 -right-20 w-[650px] h-[500px] bg-gradient-to-br from-[#E8338C]/15 via-[#FF7A1A]/12 to-transparent rounded-full blur-3xl -z-10 animate-mesh-pulse" 
         />
         <div 
           aria-hidden="true" 
-          className="pointer-events-none absolute -bottom-32 -left-20 w-[650px] h-[500px] bg-gradient-to-tr from-[#6A3DE8]/35 via-[#E8338C]/20 to-transparent rounded-full blur-3xl -z-10 animate-float-slow" 
+          className="pointer-events-none absolute -bottom-32 -left-20 w-[650px] h-[500px] bg-gradient-to-tr from-[#6A3DE8]/18 via-[#E8338C]/12 to-transparent rounded-full blur-3xl -z-10 animate-float-slow" 
         />
         <div 
           aria-hidden="true" 
-          className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[400px] bg-gradient-to-r from-[#FFB81C]/15 via-[#FF7A1A]/15 to-[#E8338C]/15 rounded-full blur-3xl -z-10 animate-float-reverse" 
+          className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[400px] bg-gradient-to-r from-[#FFB81C]/10 via-[#FF7A1A]/08 to-[#E8338C]/08 rounded-full blur-3xl -z-10 animate-float-reverse" 
         />
 
         {/* Floating Decorative Rings (CSS Animated) */}
         <div 
           aria-hidden="true"
-          className="pointer-events-none absolute top-12 left-16 w-36 h-36 rounded-full border border-white/10 animate-float-slow -z-10 hidden md:block" 
+          className="pointer-events-none absolute top-12 left-16 w-36 h-36 rounded-full border border-[#1B1F4B]/10 animate-float-slow -z-10 hidden md:block" 
         />
         <div 
           aria-hidden="true"
-          className="pointer-events-none absolute bottom-12 right-20 w-28 h-28 rounded-full border border-white/10 animate-float -z-10 hidden md:block" 
+          className="pointer-events-none absolute bottom-12 right-20 w-28 h-28 rounded-full border border-[#1B1F4B]/10 animate-float -z-10 hidden md:block" 
         />
 
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1118,25 +1118,25 @@ export default function HomePage() {
             {/* Left: Headline, Direct WhatsApp & Guarantees */}
             <div className="lg:col-span-6 flex flex-col gap-6">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold backdrop-blur-md shadow-lg shadow-black/10">
-                  <Sparkles className="w-3.5 h-3.5 text-[#FFB81C] animate-pulse" />
-                  <span className="text-[#FFB81C]">Let&apos;s Build Together</span>
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F7F5FF] border border-neutral-200/90 text-xs font-semibold text-[#1B1F4B] shadow-xs">
+                  <Sparkles className="w-3.5 h-3.5 text-[#FF7A1A] animate-pulse" />
+                  <span>Let&apos;s Build Together</span>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-[1.15] text-white tracking-tight">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-[1.15] text-[#1B1F4B] tracking-tight">
                   Ready to grow your business{' '}
-                  <span className="bg-gradient-to-r from-[#FFB81C] via-[#FF7A1A] to-[#E8338C] bg-clip-text text-transparent">
+                  <span className="brand-gradient-text">
                     online
                   </span>?
                 </h2>
 
-                <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-xl">
+                <p className="text-base sm:text-lg text-[#4B5070] leading-relaxed max-w-xl">
                   Tell us what you want to build. We’ll understand your business, give you an honest recommendation and a fair fixed quote within 24 hours.
                 </p>
               </div>
 
               {/* Direct WhatsApp Quick Chat Card */}
-              <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.05] border border-white/10 backdrop-blur-sm space-y-4 shadow-xl">
+              <div className="p-5 sm:p-6 rounded-2xl bg-[#F7F5FF] border border-neutral-200/90 space-y-4 shadow-sm">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#25D366]/15 border border-[#25D366]/30 text-[#25D366] text-xs font-semibold">
                     <span className="relative flex h-2 w-2">
@@ -1145,16 +1145,16 @@ export default function HomePage() {
                     </span>
                     <span>Quick Reply on WhatsApp</span>
                   </div>
-                  <span className="text-xs text-slate-300 font-medium">
+                  <span className="text-xs text-[#4B5070] font-medium">
                     Usually replies within 15 minutes
                   </span>
                 </div>
 
                 <div className="space-y-1">
-                  <h3 className="text-base font-bold text-white font-display">
+                  <h3 className="text-base font-bold text-[#1B1F4B] font-display">
                     Prefer to chat directly?
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#4B5070] leading-relaxed">
                     Message us on WhatsApp. Talk directly with our team — no sales pressure, just friendly advice.
                   </p>
                 </div>
@@ -1172,7 +1172,7 @@ export default function HomePage() {
               </div>
 
               {/* 3 Clear Guarantees */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs font-medium text-slate-200">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs font-semibold text-[#1B1F4B]">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#25D366] shrink-0" />
                   <span>Fixed price quote</span>
@@ -1189,7 +1189,7 @@ export default function HomePage() {
             </div>
 
             {/* Right: Short Contact Form */}
-            <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 text-[#4B5070] shadow-2xl border border-white/10">
+            <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 text-[#4B5070] shadow-xl border border-neutral-200/90">
               {contactSubmitted ? (
                 <div className="py-8 text-center space-y-3">
                   <div className="w-14 h-14 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">

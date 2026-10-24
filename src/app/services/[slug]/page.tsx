@@ -390,9 +390,9 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </section>
 
       {/* ========================================================================= */}
-      {/* BOTTOM CTA: SOFT LAVENDER SECTION WITH ANIMATED BRAND GRADIENT MESH       */}
+      {/* BOTTOM CTA: WHITE SECTION WITH ANIMATED BRAND GRADIENT MESH               */}
       {/* ========================================================================= */}
-      <section className="py-24 sm:py-32 bg-[#F7F5FF] text-[#4B5070] relative overflow-hidden bg-[radial-gradient(rgba(27,31,75,0.08)_1.2px,transparent_1.2px)] [background-size:24px_24px] border-t border-neutral-200/70">
+      <section className="py-24 sm:py-32 bg-white text-[#4B5070] relative overflow-hidden bg-[radial-gradient(rgba(27,31,75,0.08)_1.2px,transparent_1.2px)] [background-size:24px_24px] border-t border-neutral-200/70">
         
         {/* Animated Background Mesh Orbs (Tuned for Soft Lavender) */}
         <div 
