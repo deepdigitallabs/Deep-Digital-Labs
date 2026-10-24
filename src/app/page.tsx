@@ -164,10 +164,13 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="flex flex-col w-full text-neutral-900 dark:text-white relative bg-white dark:bg-[#0B0D11] transition-colors duration-150">
+    <div className="flex flex-col w-full text-neutral-900 dark:text-neutral-100 relative bg-white dark:bg-[#0B0D11] transition-colors duration-150">
       
-      {/* Background Subtle Grid Pattern */}
-      <div className="pointer-events-none fixed inset-0 -z-10 subtle-grid opacity-75" />
+      {/* Editorial Ambient Depth Accent (Single restrained brand tone, no generic rainbow grids) */}
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[480px] bg-gradient-to-b from-orange-500/[0.04] via-transparent to-transparent -z-10" 
+      />
 
       {/* =========================================================================
              HERO SECTION: High-Impact, Pune-Focused, High Conversion
@@ -177,22 +180,22 @@ export default function HomePage() {
           
           {/* Main Display Heading */}
           <div className="flex flex-col items-center tracking-tight text-center">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-100/80 dark:bg-white/5 text-xs font-semibold text-neutral-800 dark:text-neutral-200 mb-4">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-neutral-200 dark:border-white/10 bg-neutral-100/90 dark:bg-white/5 text-xs font-semibold text-neutral-800 dark:text-neutral-200 mb-5 shadow-2xs">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
               <span>Pune Studio · Available for New Projects</span>
             </div>
             
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-display leading-[1.14] text-neutral-900 dark:text-white max-w-4xl">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-display leading-[1.12] text-neutral-900 dark:text-white max-w-4xl">
               Website &amp; Software Development Company in Pune
             </h1>
             
-            <p className="text-xl sm:text-2xl font-bold font-display text-gradient-spectrum mt-3">
+            <p className="text-xl sm:text-2xl font-bold font-display text-[#E8623C] mt-3.5 tracking-tight">
               Build. Grow. Go Digital.
             </p>
           </div>
 
           {/* Supporting Copy */}
-          <p className="text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed text-center">
+          <p className="text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed text-center font-normal">
             High-speed websites, custom business software, ERPs, and mobile apps engineered around how your business actually runs. 2 to 3 weeks delivery, 100% code ownership, and no monthly platform fees.
           </p>
 
@@ -200,7 +203,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2 w-full sm:w-auto">
             <button
               onClick={() => setCallModalOpen(true)}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#E8623C] hover:bg-[#D7532F] text-white font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-md transition-all active:scale-98 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#E8623C] hover:bg-[#D7532F] text-white font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-xs transition-all active:scale-[0.98] cursor-pointer"
             >
               <span>Start a Project</span>
               <ArrowRight className="w-4 h-4" />
@@ -209,15 +212,15 @@ export default function HomePage() {
               href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20website%20or%20software%20project%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm tracking-wider transition-all shadow-md active:scale-98 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/15 text-neutral-900 dark:text-white font-semibold text-xs sm:text-sm tracking-wider hover:border-[#E8623C] hover:text-[#E8623C] dark:hover:border-[#E8623C] transition-all shadow-xs active:scale-[0.98] cursor-pointer"
             >
-              <MessageSquare className="w-4 h-4" />
+              <MessageSquare className="w-4 h-4 text-[#25D366]" />
               <span>WhatsApp: +91 77560 63128</span>
             </a>
           </div>
 
           {/* Proof Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 pt-8 w-full max-w-3xl border-t border-neutral-200 dark:border-white/10 mt-3">
+          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-8 pt-8 w-full max-w-3xl border-t border-neutral-200 dark:border-white/10 mt-3">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-[#E8623C] shrink-0" />
               <span className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-medium">10+ Websites &amp; Systems Delivered</span>
@@ -1000,13 +1003,15 @@ export default function HomePage() {
             </div>
 
             {/* Model 2: Growth Partner (FEATURED) */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border-2 border-[#E8623C] shadow-md flex flex-col justify-between relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3.5 py-0.5 rounded-full bg-[#E8623C] text-white font-mono text-xs uppercase tracking-wider font-bold">
-                Most Popular
-              </div>
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border-2 border-[#E8623C] shadow-sm flex flex-col justify-between relative">
               <div className="flex flex-col gap-4">
                 <div>
-                  <span className="font-mono text-xs text-[#E8623C] uppercase font-bold">DEDICATED TECH PARTNER</span>
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-mono text-xs text-[#E8623C] uppercase font-bold tracking-wider">DEDICATED TECH PARTNER</span>
+                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-[#E8623C]/10 text-[#E8623C]">
+                      Continuous Sprints
+                    </span>
+                  </div>
                   <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mt-1">Growth Partner</h3>
                   <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2">
                     Your on-call senior developer for continuous new features, marketing landing pages, and speed optimization.
@@ -1028,7 +1033,7 @@ export default function HomePage() {
               <div className="pt-6">
                 <button
                   onClick={() => setCallModalOpen(true)}
-                  className="w-full inline-flex items-center justify-center py-3 rounded-xl bg-[#E8623C] hover:bg-[#D7532F] text-white font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-xs"
+                  className="w-full inline-flex items-center justify-center py-3 rounded-xl bg-[#E8623C] hover:bg-[#D7532F] text-white font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-xs active:scale-[0.98]"
                 >
                   Start Monthly Retainer
                 </button>
@@ -1214,7 +1219,7 @@ export default function HomePage() {
                   <CheckCircle2 className="w-10 h-10 text-emerald-500" />
                   <h4 className="text-lg font-bold text-neutral-900 dark:text-white">Thank You! Inquiry Received.</h4>
                   <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 max-w-md">
-                    Deepak Dukare will review your details and reach out shortly via WhatsApp or phone.
+                    Our engineering team will review your details and reach out shortly via WhatsApp or phone.
                   </p>
                   <button
                     onClick={() => setContactSubmitted(false)}
