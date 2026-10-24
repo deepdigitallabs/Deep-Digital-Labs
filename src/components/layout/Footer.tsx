@@ -8,8 +8,6 @@ import {
   Mail, 
   MessageSquare,
   ArrowUp,
-  ShieldCheck,
-  Zap,
   Phone
 } from 'lucide-react';
 
@@ -79,18 +77,6 @@ export function Footer() {
                   deepdigitallabs@gmail.com
                 </a>
               </div>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="flex flex-wrap items-center gap-2 pt-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-neutral-200/80 text-xs font-semibold text-[#1B1F4B] shadow-2xs">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#E8338C]" />
-                You own 100% of code
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-neutral-200/80 text-xs font-semibold text-[#1B1F4B] shadow-2xs">
-                <Zap className="w-3.5 h-3.5 text-[#FF7A1A]" />
-                Fast on mobile
-              </span>
             </div>
           </div>
 
