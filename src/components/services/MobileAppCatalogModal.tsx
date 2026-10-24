@@ -42,7 +42,7 @@ export function MobileAppCatalogModal({
             </div>
             <div>
               <h2 className="text-lg sm:text-xl font-bold font-display text-neutral-900 dark:text-white flex items-center gap-2">
-                <span>16 Mobile Application Categories</span>
+                <span>Mobile Application Categories</span>
                 <span className="hidden sm:inline-flex text-[11px] font-mono px-2 py-0.5 rounded-full bg-orange-100 dark:bg-orange-950/60 text-[#E8623C] font-semibold">
                   Flutter &amp; Native
                 </span>

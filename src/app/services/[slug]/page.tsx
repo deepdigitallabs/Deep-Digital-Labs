@@ -80,7 +80,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         
         {/* Hero Section */}
         <div className="max-w-4xl space-y-6 pb-16 border-b border-slate-200 dark:border-white/10">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white tracking-tight leading-tight">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white tracking-tight leading-snug">
             {service.headline}
           </h1>
 
@@ -144,9 +144,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                     key={idx}
                     className="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-slate-300 dark:bg-[#0F0F11] dark:border-white/10 transition-colors space-y-3 shadow-xs"
                   >
-                    <div className="text-xs font-mono text-slate-500 dark:text-gray-400 font-bold">
-                      MOD-0{idx + 1}
-                    </div>
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
                       {cap.title}
                     </h3>

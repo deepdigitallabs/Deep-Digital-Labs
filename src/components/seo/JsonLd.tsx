@@ -136,38 +136,30 @@ export function JsonLd() {
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://deepdigitallabs.com/#faq',
+        '@id': `${siteUrl}/#faq`,
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'How does Deep Digital Labs differ from generic agencies or WordPress freelancers?',
+            name: 'Do I own the code?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'We do not build with fragile plugins or generic templates that break over time. Every digital product is engineered using modern, high-performance tech stacks (Next.js, React, Flutter, and PostgreSQL). You receive clean source code, pages that load in under 1 second, and direct communication with Deepak Dukare and senior engineers.'
+              text: 'Yes. After final payment you get the source code, domain, hosting and database access. Nothing stays locked with us. You own everything with no monthly fees to keep your site online.'
             }
           },
           {
             '@type': 'Question',
-            name: 'Do I own 100% of my source code and infrastructure?',
+            name: 'How fast can you deliver?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes, unconditionally. Upon delivery, you retain complete ownership of all repository code, domain registrations, databases, and deployment pipelines. You own everything with no monthly platform fees to keep your site online.'
+              text: 'Most business websites go live in 2 to 4 weeks. Custom software and apps are planned in phases, and we give a timeline after the first call.'
             }
           },
           {
             '@type': 'Question',
-            name: 'How fast can a business website or custom platform be delivered?',
+            name: 'Can you connect WhatsApp and automate follow-ups?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Standard bespoke corporate websites typically launch within 2 to 3 weeks. Custom business software, ERP systems, and mobile applications follow structured milestone sprint releases.'
-            }
-          },
-          {
-            '@type': 'Question',
-            name: 'Can you integrate WhatsApp lead capture and business automation?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Absolutely. We specialize in connecting websites and forms directly with WhatsApp Business APIs, automated CRM logging, and instant alerts so your sales team never misses a qualified lead.'
+              text: 'Yes. Website enquiries can go straight to your WhatsApp, with click-to-chat buttons, instant lead notifications, and automated replies.'
             }
           },
           {
@@ -177,20 +169,28 @@ export function JsonLd() {
               '@type': 'Answer',
               text: 'We are based right here in Pune, Maharashtra. We work with clients across Baner, Hinjewadi, Kothrud, Viman Nagar, Pimpri-Chinchwad, and across Maharashtra through direct WhatsApp, phone calls, and in-person consultations.'
             }
+          },
+          {
+            '@type': 'Question',
+            name: 'How does Deep Digital Labs differ from generic agencies or WordPress freelancers?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'You talk directly with Deepak Dukare and senior engineers—no junior middlemen or account managers. We build with modern, high-performance tech stacks (Next.js, React, Flutter, PostgreSQL) that load in under 1 second and are built to scale.'
+            }
           }
         ]
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://deepdigitallabs.com/#website',
-        url: 'https://deepdigitallabs.com',
+        '@id': `${siteUrl}/#website`,
+        url: siteUrl,
         name: 'Deep Digital Labs',
         publisher: {
-          '@id': 'https://deepdigitallabs.com/#organization'
+          '@id': `${siteUrl}/#organization`
         },
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://deepdigitallabs.com/case-studies?search={search_term_string}',
+          target: `${siteUrl}/case-studies?search={search_term_string}`,
           'query-input': 'required name=search_term_string'
         }
       }

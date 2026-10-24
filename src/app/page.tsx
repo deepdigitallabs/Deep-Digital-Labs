@@ -25,8 +25,7 @@ import {
   Phone,
   Mail,
   CheckCircle2,
-  MapPin,
-  Award
+  MapPin
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 import { WebsiteCategoriesModal } from '@/components/services/WebsiteCategoriesModal';
@@ -36,24 +35,24 @@ import { MobileAppCatalogModal } from '@/components/services/MobileAppCatalogMod
 
 const FAQS = [
   {
-    question: 'How does Deep Digital Labs differ from generic agencies or WordPress freelancers?',
-    answer: 'We do not build with fragile plugins or generic templates that break over time. Every digital product is engineered using modern, high-performance tech stacks (Next.js, React, Flutter, and PostgreSQL). You receive clean source code, pages that load in under 1 second, and direct communication with Deepak Dukare and senior engineers in Pune.'
+    question: 'Do I own the code?',
+    answer: 'Yes. After final payment you get the source code, domain, hosting and database access. Nothing stays locked with us. You own everything with no monthly fees to keep your site online.'
   },
   {
-    question: 'Do I own 100% of my source code and infrastructure?',
-    answer: 'Yes, unconditionally. Upon delivery, you retain complete ownership of all repository code, domain registrations, databases, and deployment pipelines. You own everything with no monthly platform fees to keep your website online.'
+    question: 'How fast can you deliver?',
+    answer: 'Most business websites go live in 2 to 4 weeks. Custom software and apps are planned in phases, and we give a timeline after the first call.'
   },
   {
-    question: 'How fast can a business website or custom platform be delivered?',
-    answer: 'Standard bespoke business websites launch in 2 to 3 weeks. Custom business software, mini-ERPs, and mobile applications follow structured milestone sprint releases.'
-  },
-  {
-    question: 'Can you integrate WhatsApp lead capture and business automation?',
-    answer: 'Absolutely. We specialize in connecting websites and forms directly with WhatsApp Business APIs, automated CRM logging, and instant alerts so your sales team never misses a qualified lead.'
+    question: 'Can you connect WhatsApp and automate follow-ups?',
+    answer: 'Yes. Website enquiries can go straight to your WhatsApp, with click-to-chat buttons, instant lead notifications, and automated replies.'
   },
   {
     question: 'Where are you based and can we meet in person in Pune?',
     answer: 'We are based right here in Pune, Maharashtra. We work with clients across Baner, Hinjewadi, Kothrud, Viman Nagar, Pimpri-Chinchwad, and across Maharashtra through direct WhatsApp, phone calls, and in-person consultations.'
+  },
+  {
+    question: 'How does Deep Digital Labs differ from generic agencies or WordPress freelancers?',
+    answer: 'You talk directly with Deepak Dukare and senior engineers—no junior middlemen or account managers. We build with modern, high-performance tech stacks (Next.js, React, Flutter, PostgreSQL) that load in under 1 second and are built to scale.'
   }
 ];
 
@@ -63,7 +62,6 @@ export default function HomePage() {
   const [softwareModalOpen, setSoftwareModalOpen] = useState(false);
   const [aiModalOpen, setAiModalOpen] = useState(false);
   const [mobileModalOpen, setMobileModalOpen] = useState(false);
-  const [heroTab, setHeroTab] = useState<'speed' | 'whatsapp' | 'erp'>('speed');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [contactName, setContactName] = useState('');
   const [contactPhone, setContactPhone] = useState('');
@@ -145,7 +143,7 @@ export default function HomePage() {
       image: '/images/case-studies/trust-carry.jpg',
       badge: 'Enterprise Fleet',
       metric: '5x faster quotes · 200+ shipments tracked',
-      desc: 'Commercial logistics portal featuring interactive shipment waypoint lookup, truck fleet payload matrices, and streamlined B2B corporate quote builders.',
+      desc: 'Commercial logistics portal featuring real-time shipment tracking, truck fleet payload matrices, and streamlined B2B corporate quote builders.',
       stack: ['Fleet CRM', 'Real-Time Tracking', 'Quote Matrix']
     },
     {
@@ -211,38 +209,39 @@ export default function HomePage() {
               </span>
             </h1>
             
-            <p className="text-xl sm:text-2xl font-bold font-display text-[#E8623C] mt-3.5 tracking-tight">
+            <p className="text-base sm:text-lg font-semibold text-[#E8623C] mt-2 font-display tracking-normal">
               Build. Grow. Go Digital.
             </p>
           </div>
 
-          {/* Supporting Copy */}
-          <p className="text-base sm:text-lg md:text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed text-center font-normal">
-            High-speed websites, custom business software, ERPs, and mobile apps engineered around how your business actually runs. 2 to 3 weeks delivery, 100% code ownership, and zero monthly platform ransom fees.
+          {/* Supporting Copy (Owner-focused, clear value proposition) */}
+          <p className="text-base sm:text-lg md:text-xl text-neutral-700 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed text-center font-normal">
+            We build fast websites, online stores, mobile apps and business software for Pune businesses. You talk directly to the developer, and you own everything we build.
           </p>
 
           {/* CTA Actions */}
-          <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2 w-full sm:w-auto">
+          <div className="flex flex-wrap items-center justify-center gap-3.5 pt-1 w-full sm:w-auto">
             <button
               onClick={() => setCallModalOpen(true)}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#E8623C] hover:bg-[#D7532F] text-white font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-md shadow-[#E8623C]/20 hover:shadow-lg hover:shadow-[#E8623C]/30 transition-all active:scale-[0.98] cursor-pointer"
             >
-              <span>Start a Project</span>
+              <span>Get a Free Quote</span>
               <ArrowRight className="w-4 h-4" />
             </button>
             <a
-              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20website%20or%20software%20project%20for%20my%20business."
+              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20get%20a%20free%20quote%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-white/5 border border-neutral-300 dark:border-white/15 text-neutral-900 dark:text-white font-semibold text-xs sm:text-sm tracking-wider hover:border-[#E8623C] hover:text-[#E8623C] dark:hover:border-[#E8623C] transition-all shadow-xs active:scale-[0.98] cursor-pointer"
             >
               <MessageSquare className="w-4 h-4 text-[#25D366]" />
-              <span>WhatsApp: +91 77560 63128</span>
+              <span>Chat on WhatsApp</span>
             </a>
           </div>
 
+
           {/* Proof Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-8 pt-7 w-full max-w-3xl border-t border-neutral-200/80 dark:border-white/10 mt-2">
+          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-8 pt-6 w-full max-w-3xl border-t border-neutral-200/80 dark:border-white/10 mt-1">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-[#E8623C] shrink-0" />
               <span className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-medium">10+ Websites &amp; Systems Delivered</span>
@@ -259,218 +258,6 @@ export default function HomePage() {
               <Star className="w-4 h-4 text-amber-500 fill-amber-500 shrink-0" />
               <span className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-medium">5.0 ★ Google Business Reviews</span>
             </div>
-          </div>
-
-          {/* ========================================================================= */}
-          {/* HERO LIVE ARCHITECTURE & PERFORMANCE CONSOLE (Rich Interactive Proof)    */}
-          {/* ========================================================================= */}
-          <div className="w-full max-w-4xl mt-6 rounded-2xl bg-white dark:bg-[#12151C] border border-neutral-200/90 dark:border-white/10 shadow-xl overflow-hidden transition-all text-left">
-            {/* Console Window Header with Tabs */}
-            <div className="px-4 py-3 bg-neutral-100/80 dark:bg-black/40 border-b border-neutral-200/80 dark:border-white/10 flex flex-wrap items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-                <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                <span className="ml-2 font-mono text-xs text-neutral-500 font-medium hidden sm:inline">
-                  deep-digital-labs.engine // live-proof
-                </span>
-              </div>
-              
-              {/* Interactive Tabs */}
-              <div className="flex items-center gap-1 bg-white dark:bg-white/5 p-1 rounded-xl border border-neutral-200 dark:border-white/10 font-mono text-xs font-semibold">
-                <button
-                  type="button"
-                  onClick={() => setHeroTab('speed')}
-                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${heroTab === 'speed' ? 'bg-[#E8623C] text-white shadow-xs' : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'}`}
-                >
-                  ⚡ Sub-0.5s Speed
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setHeroTab('whatsapp')}
-                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${heroTab === 'whatsapp' ? 'bg-[#E8623C] text-white shadow-xs' : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'}`}
-                >
-                  💬 WhatsApp Engine
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setHeroTab('erp')}
-                  className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${heroTab === 'erp' ? 'bg-[#E8623C] text-white shadow-xs' : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'}`}
-                >
-                  🏢 Cloud ERP (GoNidhi)
-                </button>
-              </div>
-            </div>
-
-            {/* Tab 1: Speed Audit */}
-            {heroTab === 'speed' && (
-              <div className="p-6 sm:p-7 flex flex-col gap-5">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div>
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block">
-                      Google Lighthouse 100% Passed · Verified on Indian 4G
-                    </span>
-                    <h3 className="text-lg font-bold font-display text-neutral-900 dark:text-white mt-0.5">
-                      Production Mobile Loading Benchmark (Pune Region)
-                    </h3>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-bold w-fit">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span>Real CDN Edge Delivery</span>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-mono">
-                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
-                    <span className="block text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">99</span>
-                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Lighthouse Score</span>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
-                    <span className="block text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">0.5s</span>
-                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">LCP Speed</span>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
-                    <span className="block text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">0 ms</span>
-                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Total Blocking</span>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
-                    <span className="block text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">0.00</span>
-                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Layout Shift (CLS)</span>
-                  </div>
-                </div>
-
-                <div className="pt-3 border-t border-neutral-100 dark:border-white/10 flex flex-wrap items-center justify-between text-xs text-neutral-600 dark:text-neutral-400 gap-2">
-                  <span>Engineered with Next.js 15, Turbopack, and Tailwind CSS. Clean, zero bloated WordPress plugins.</span>
-                  <Link href="/services/websites-web-apps" className="text-[#E8623C] font-semibold hover:underline flex items-center gap-1">
-                    <span>Explore Website Architecture</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            )}
-
-            {/* Tab 2: WhatsApp Lead Funnel */}
-            {heroTab === 'whatsapp' && (
-              <div className="p-6 sm:p-7 flex flex-col gap-5">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div>
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold block">
-                      Instant WhatsApp Routing · Zero Lead Drop
-                    </span>
-                    <h3 className="text-lg font-bold font-display text-neutral-900 dark:text-white mt-0.5">
-                      Sub-2 Second Direct WhatsApp Notification
-                    </h3>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#25D366]/10 border border-[#25D366]/20 text-[#25D366] text-xs font-mono font-bold w-fit">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-                    <span>Real-Time Webhook Active</span>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {/* Left: Visitor Action */}
-                  <div className="p-4 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10 flex flex-col justify-between">
-                    <div>
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block mb-1">
-                        Step 1: Website Visitor Action
-                      </span>
-                      <p className="text-sm font-semibold text-neutral-900 dark:text-white">
-                        Customer taps WhatsApp Button or Submits Inquiry Form
-                      </p>
-                      <div className="mt-3 p-3 rounded-lg bg-white dark:bg-black/40 border border-neutral-200/80 dark:border-white/10 font-mono text-xs text-neutral-700 dark:text-neutral-300 space-y-1">
-                        <div>Name: Vikram Shinde</div>
-                        <div>Requirement: Commercial CA Advisory Portal</div>
-                        <div>Location: Baner, Pune</div>
-                      </div>
-                    </div>
-                    <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium mt-3 block">
-                      ✓ Instant client confirmation screen
-                    </span>
-                  </div>
-
-                  {/* Right: WhatsApp Alert to Business Owner */}
-                  <div className="p-4 rounded-xl bg-[#25D366]/5 border border-[#25D366]/20 flex flex-col justify-between">
-                    <div>
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-[#25D366] font-bold block mb-1">
-                        Step 2: Instant WhatsApp Notification to Owner
-                      </span>
-                      <p className="text-sm font-semibold text-neutral-900 dark:text-white">
-                        Delivered to Phone in under 2 seconds
-                      </p>
-                      <div className="mt-3 p-3 rounded-lg bg-white dark:bg-[#12151C] border border-[#25D366]/20 font-mono text-xs text-neutral-800 dark:text-neutral-200 space-y-1 shadow-2xs">
-                        <div className="text-emerald-600 dark:text-emerald-400 font-bold">📲 WhatsApp Alert: New Inbound Lead!</div>
-                        <div>From: Vikram Shinde (Baner, Pune)</div>
-                        <div>Service: Tax &amp; Advisory Website</div>
-                        <div className="text-neutral-500 dark:text-neutral-400 text-[10px] pt-1">One-tap Call or Reply via WhatsApp Business</div>
-                      </div>
-                    </div>
-                    <span className="text-[11px] text-neutral-500 font-medium mt-3 block">
-                      Never miss a customer while away from your desk
-                    </span>
-                  </div>
-                </div>
-
-                <div className="pt-3 border-t border-neutral-100 dark:border-white/10 flex flex-wrap items-center justify-between text-xs text-neutral-600 dark:text-neutral-400 gap-2">
-                  <span>Included standard on every Deep Digital Labs website and web app.</span>
-                  <Link href="/services/ai-workflow-automation" className="text-[#E8623C] font-semibold hover:underline flex items-center gap-1">
-                    <span>Explore WhatsApp Automations</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            )}
-
-            {/* Tab 3: Cloud ERP (GoNidhi) */}
-            {heroTab === 'erp' && (
-              <div className="p-6 sm:p-7 flex flex-col gap-5">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div>
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold block">
-                      In-House SaaS · Production Live
-                    </span>
-                    <h3 className="text-lg font-bold font-display text-neutral-900 dark:text-white mt-0.5">
-                      GoNidhi — Multi-Tenant Dairy SaaS Platform
-                    </h3>
-                  </div>
-                  <a 
-                    href="https://dairy-flow-pro.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-mono font-bold w-fit hover:bg-blue-500/20 transition-colors"
-                  >
-                    <span>Visit Live System</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-mono">
-                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
-                    <span className="block text-2xl sm:text-3xl font-extrabold text-blue-600 dark:text-blue-400">850+</span>
-                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Active Dairy Farmers</span>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
-                    <span className="block text-2xl sm:text-3xl font-extrabold text-blue-600 dark:text-blue-400">&lt;50ms</span>
-                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">FAT/SNF Pricing Engine</span>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
-                    <span className="block text-2xl sm:text-3xl font-extrabold text-blue-600 dark:text-blue-400">0%</span>
-                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Billing Disputes</span>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200/80 dark:border-white/10">
-                    <span className="block text-2xl sm:text-3xl font-extrabold text-blue-600 dark:text-blue-400">2+ hrs</span>
-                    <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Saved Daily in Excel</span>
-                  </div>
-                </div>
-
-                <div className="pt-3 border-t border-neutral-100 dark:border-white/10 flex flex-wrap items-center justify-between text-xs text-neutral-600 dark:text-neutral-400 gap-2">
-                  <span>Custom ERP software, CRM dashboards, and billing tools built around your exact business workflow.</span>
-                  <Link href="/services/business-software-saas" className="text-[#E8623C] font-semibold hover:underline flex items-center gap-1">
-                    <span>Explore Custom Software</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </div>
-            )}
           </div>
 
         </div>
@@ -539,7 +326,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-7">
             
             {/* Service 01: Business Website Development */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-2">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-[#E8623C]/50 shadow-xs hover:shadow-xl dark:hover:shadow-black/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group lg:col-span-2">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   Business Website Development
@@ -565,7 +352,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 02: Custom Business Software & SaaS */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-2">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-[#E8623C]/50 shadow-xs hover:shadow-xl dark:hover:shadow-black/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group lg:col-span-2">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   Custom Business Software &amp; SaaS
@@ -591,7 +378,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 03: AI Chatbots & Workflow Automation */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-2">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-[#E8623C]/50 shadow-xs hover:shadow-xl dark:hover:shadow-black/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group lg:col-span-2">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   AI Chatbots &amp; Workflow Automation
@@ -617,7 +404,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 04: Mobile App Development */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group lg:col-span-3">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-[#E8623C]/50 shadow-xs hover:shadow-xl dark:hover:shadow-black/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group lg:col-span-3">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   Mobile App Development
@@ -643,7 +430,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 05: SEO & Digital Growth */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-xs flex flex-col justify-between group md:col-span-2 lg:col-span-3">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 hover:border-[#E8623C]/50 shadow-xs hover:shadow-xl dark:hover:shadow-black/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group md:col-span-2 lg:col-span-3">
               <div>
                 <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mb-3 group-hover:text-[#E8623C] transition-colors">
                   SEO &amp; Digital Growth
@@ -874,43 +661,7 @@ export default function HomePage() {
 
           </div>
 
-          {/* Verified PageSpeed Scorecard */}
-          <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#12151C] border border-neutral-200/90 dark:border-white/10 shadow-xs">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-3 text-center md:text-left">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
-                  <Award className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-base font-bold font-display text-neutral-900 dark:text-white">
-                    Verified Google Core Web Vitals Benchmark
-                  </h4>
-                  <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                    Real audited performance on standard mobile 4G connections in India
-                  </p>
-                </div>
-              </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full md:w-auto text-center font-mono">
-                <div className="px-4 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200 dark:border-white/10">
-                  <span className="block text-2xl font-bold text-emerald-600 dark:text-emerald-400">99/100</span>
-                  <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Performance</span>
-                </div>
-                <div className="px-4 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200 dark:border-white/10">
-                  <span className="block text-2xl font-bold text-emerald-600 dark:text-emerald-400">0.5s</span>
-                  <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Load Time (LCP)</span>
-                </div>
-                <div className="px-4 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200 dark:border-white/10">
-                  <span className="block text-2xl font-bold text-emerald-600 dark:text-emerald-400">0 ms</span>
-                  <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Blocking Time</span>
-                </div>
-                <div className="px-4 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200 dark:border-white/10">
-                  <span className="block text-2xl font-bold text-emerald-600 dark:text-emerald-400">100%</span>
-                  <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Vitals Passed</span>
-                </div>
-              </div>
-            </div>
-          </div>
 
         </div>
       </section>
@@ -920,13 +671,9 @@ export default function HomePage() {
              ========================================================================= */}
       <section className="w-full py-20 border-b border-neutral-200 dark:border-white/10">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
-          
           <div className="flex flex-col gap-2 mb-14">
-            <span className="text-xs font-mono uppercase tracking-wider text-[#E8623C] font-semibold">
-              Consistent 2 to 3 Weeks Delivery
-            </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-neutral-900 dark:text-white">
-              From idea to launch in 2 to 3 weeks.
+              From idea to launch.
             </h2>
             <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl">
               A transparent, milestone-driven process designed to eliminate unnecessary meetings and launch on time.
@@ -944,7 +691,6 @@ export default function HomePage() {
                   Understand your business workflow, customer needs, and agree on clear milestones.
                 </p>
               </div>
-              <span className="font-mono text-xs text-neutral-500 font-semibold mt-6 pt-2 border-t border-neutral-100 dark:border-white/10">Week 01</span>
             </div>
 
             <div className="bg-white dark:bg-[#12151C] p-6 rounded-2xl border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between">
@@ -955,7 +701,6 @@ export default function HomePage() {
                   Design clean, modern layouts tailored for mobile, with clear call-to-actions.
                 </p>
               </div>
-              <span className="font-mono text-xs text-neutral-500 font-semibold mt-6 pt-2 border-t border-neutral-100 dark:border-white/10">Week 01–02</span>
             </div>
 
             <div className="bg-white dark:bg-[#12151C] p-6 rounded-2xl border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between">
@@ -966,7 +711,6 @@ export default function HomePage() {
                   Code high-speed Next.js or Flutter app, set up databases, and connect WhatsApp lead alerts.
                 </p>
               </div>
-              <span className="font-mono text-xs text-neutral-500 font-semibold mt-6 pt-2 border-t border-neutral-100 dark:border-white/10">Week 02–03</span>
             </div>
 
             <div className="bg-white dark:bg-[#12151C] p-6 rounded-2xl border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between">
@@ -977,7 +721,6 @@ export default function HomePage() {
                   Fast edge server launch, Google Core Web Vitals audit, and 100% code ownership handover.
                 </p>
               </div>
-              <span className="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-6 pt-2 border-t border-neutral-100 dark:border-white/10">Week 03 Go-Live</span>
             </div>
 
             <div className="bg-white dark:bg-[#12151C] p-6 rounded-2xl border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between">
@@ -988,103 +731,13 @@ export default function HomePage() {
                   Direct WhatsApp developer on call, routine updates, and continuous feature expansion.
                 </p>
               </div>
-              <span className="font-mono text-xs text-neutral-500 font-semibold mt-6 pt-2 border-t border-neutral-100 dark:border-white/10">Ongoing Retainer</span>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* =========================================================================
-             SECTION 6: INDUSTRIES (PROVEN DOMAIN FOCUS)
-             ========================================================================= */}
-      <section className="w-full py-16 bg-white dark:bg-[#0B0D11] border-b border-neutral-200 dark:border-white/10" id="industries">
-        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
-          
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-neutral-200 dark:border-white/10">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-wider text-[#E8623C] font-semibold">
-                Industry Expertise
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
-                Built for different businesses. Designed around your workflow.
-              </h2>
-            </div>
-            <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 max-w-sm">
-              From tax advisory firms in Pune to logistics, dairy, and manufacturing across Maharashtra.
-            </p>
-          </div>
 
-          {/* Industry Badges with specific category links */}
-          <div className="flex flex-wrap gap-2.5 pt-6">
-            <Link 
-              href="/case-studies/rahul-b-kavale-and-co" 
-              className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
-            >
-              Professional Services &amp; CA Firms
-            </Link>
-            <Link 
-              href="/solutions" 
-              className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
-            >
-              Real Estate &amp; Builders
-            </Link>
-            <Link 
-              href="/services/websites-web-apps" 
-              className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
-            >
-              Healthcare &amp; Diagnostics
-            </Link>
-            <Link 
-              href="/services/business-software-saas" 
-              className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
-            >
-              Manufacturing Units
-            </Link>
-            <Link 
-              href="/case-studies/yashodeep-agro" 
-              className="px-4 py-2 rounded-xl bg-orange-50 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-800/60 font-mono text-xs sm:text-sm text-[#E8623C] font-semibold hover:bg-orange-100 transition-colors"
-            >
-              Agriculture &amp; Farm Inputs
-            </Link>
-            <Link 
-              href="/case-studies/trust-carry-logistics" 
-              className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
-            >
-              Logistics &amp; Freight
-            </Link>
-            <Link 
-              href="/case-studies/vishal-travels" 
-              className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
-            >
-              Hospitality &amp; Resorts
-            </Link>
-            <Link 
-              href="/ecommerce-website-design-pune" 
-              className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
-            >
-              B2B Wholesale &amp; Retail
-            </Link>
-            <Link 
-              href="/solutions" 
-              className="px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 font-mono text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 hover:border-[#E8623C] hover:text-[#E8623C] transition-colors font-medium"
-            >
-              Education &amp; Academies
-            </Link>
-          </div>
-
-          <div className="pt-8">
-            <Link
-              href="/solutions"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#E8623C] hover:underline"
-            >
-              <span>Explore solutions tailored for 30+ Pune &amp; Maharashtra business types</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-        </div>
-      </section>
 
       {/* =========================================================================
              SECTION 7: CLIENT TESTIMONIALS (WITH PROOF & VERIFIED RATINGS)
@@ -1094,10 +747,6 @@ export default function HomePage() {
           
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
             <div className="flex flex-col gap-2 max-w-xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 font-mono text-xs font-semibold w-fit">
-                <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
-                <span>5.0 ★ Rating from Pune &amp; Maharashtra Clients</span>
-              </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-neutral-900 dark:text-white">
                 Trusted by local business owners.
               </h2>
@@ -1122,21 +771,9 @@ export default function HomePage() {
             
             {/* Review 1 */}
             <div className="bg-white dark:bg-[#12151C] p-7 sm:p-8 rounded-2xl border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between hover:border-neutral-300 dark:hover:border-white/20 transition-all">
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1 text-amber-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-500" />
-                    ))}
-                  </div>
-                  <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                    Verified Client
-                  </span>
-                </div>
-                <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
-                  &ldquo;Deep Digital Labs transformed our firm&apos;s digital presence. The corporate portal and client tax calculation tools allow corporate clients to quickly understand our advisory services. The loading speed and design polish are remarkable.&rdquo;
-                </p>
-              </div>
+              <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
+                &ldquo;Deep Digital Labs transformed our firm&apos;s digital presence. The corporate portal and client tax calculation tools allow corporate clients to quickly understand our advisory services. The loading speed and design polish are remarkable.&rdquo;
+              </p>
               <div className="pt-6 mt-6 border-t border-neutral-100 dark:border-white/10 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-bold text-sm flex items-center justify-center shrink-0">
@@ -1153,21 +790,9 @@ export default function HomePage() {
 
             {/* Review 2 */}
             <div className="bg-white dark:bg-[#12151C] p-7 sm:p-8 rounded-2xl border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between hover:border-neutral-300 dark:hover:border-white/20 transition-all">
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1 text-amber-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-500" />
-                    ))}
-                  </div>
-                  <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                    Verified Client
-                  </span>
-                </div>
-                <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
-                  &ldquo;Our rural dealers and farmers have zero patience for slow-loading websites. The online product catalog Deepak engineered opens instantly even on weak rural mobile data, and wholesale inquiries land straight into our WhatsApp.&rdquo;
-                </p>
-              </div>
+              <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
+                &ldquo;Our rural dealers and farmers have zero patience for slow-loading websites. The online product catalog Deepak engineered opens instantly even on weak rural mobile data, and wholesale inquiries land straight into our WhatsApp.&rdquo;
+              </p>
               <div className="pt-6 mt-6 border-t border-neutral-100 dark:border-white/10 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-600 to-teal-600 text-white font-bold text-sm flex items-center justify-center shrink-0">
@@ -1184,21 +809,9 @@ export default function HomePage() {
 
             {/* Review 3 */}
             <div className="bg-white dark:bg-[#12151C] p-7 sm:p-8 rounded-2xl border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between hover:border-neutral-300 dark:hover:border-white/20 transition-all">
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1 text-amber-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-500" />
-                    ))}
-                  </div>
-                  <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                    Verified Client
-                  </span>
-                </div>
-                <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
-                  &ldquo;Since launching our new booking portal and outstation fare estimator, our bus and Tempo Traveller charter bookings surged over 4x. Customers get accurate quotes in seconds instead of calling back and forth.&rdquo;
-                </p>
-              </div>
+              <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
+                &ldquo;Since launching our new booking portal and outstation fare estimator, our bus and Tempo Traveller charter bookings surged over 4x. Customers get accurate quotes in seconds instead of calling back and forth.&rdquo;
+              </p>
               <div className="pt-6 mt-6 border-t border-neutral-100 dark:border-white/10 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-600 to-amber-600 text-white font-bold text-sm flex items-center justify-center shrink-0">
@@ -1239,7 +852,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             
             {/* Service 1: Business Website Development */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/20 hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-[#E8623C]/50 hover:shadow-xl dark:hover:shadow-black/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
@@ -1261,7 +874,7 @@ export default function HomePage() {
                   <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>Direct WhatsApp chat button &amp; click-to-call</span></li>
                   <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>Google Map location &amp; address integration</span></li>
                   <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>Free SSL, domain setup &amp; cloud hosting</span></li>
-                  <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>100% code ownership (no platform ransom)</span></li>
+                  <li className="flex items-start gap-2.5"><Check className="w-4 h-4 text-[#E8623C] shrink-0 mt-0.5" /> <span>You own everything. No monthly fees to keep your site online.</span></li>
                 </ul>
               </div>
               <div className="pt-6">
@@ -1275,7 +888,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 2: SEO & Digital Growth */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/20 hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-[#E8623C]/50 hover:shadow-xl dark:hover:shadow-black/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
@@ -1311,7 +924,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 3: AI Chatbots & Workflow Automation */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/20 hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-[#E8623C]/50 hover:shadow-xl dark:hover:shadow-black/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
@@ -1347,7 +960,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 4: Custom Business Software & SaaS */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/20 hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-[#E8623C]/50 hover:shadow-xl dark:hover:shadow-black/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
@@ -1383,7 +996,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 5: Mobile App Development */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/20 hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-6 sm:p-7 border border-neutral-200/90 dark:border-white/10 hover:border-[#E8623C]/50 hover:shadow-xl dark:hover:shadow-black/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
@@ -1419,7 +1032,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 6: Dedicated Growth Partner */}
-            <div className="bg-white dark:bg-[#151821] rounded-2xl p-6 sm:p-7 border-2 border-[#E8623C] shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+            <div className="bg-white dark:bg-[#151821] rounded-2xl p-6 sm:p-7 border-2 border-[#E8623C] shadow-sm hover:shadow-xl dark:hover:shadow-black/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div className="flex flex-col gap-4">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold font-display text-neutral-900 dark:text-white leading-tight">
