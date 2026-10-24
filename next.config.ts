@@ -1,16 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-    ],
-  },
   async redirects() {
     return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'deepdigitallabs.vercel.app',
+          },
+        ],
+        destination: 'https://deepdigitallabs.com/:path*',
+        permanent: true,
+      },
       {
         source: '/ecommerce-website-development-pune',
         destination: '/ecommerce-website-design-pune',

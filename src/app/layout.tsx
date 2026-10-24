@@ -20,36 +20,45 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Deep Digital Labs | Website Development Company in Pune",
-  description: "Deep Digital Labs builds websites, apps and online stores for businesses in Pune. Simple process, fast delivery, direct developer access. Get a free consultation.",
-  keywords: [
-    "Website Development Company in Pune",
-    "web development company Pune",
-    "web design company Pune",
-    "app development company Pune",
-    "small business website Pune",
-    "e-commerce website development Pune",
-    "Next.js developers Pune",
-    "Flutter mobile apps Pune",
-    "custom software development Pune",
-    "SEO services Pune"
-  ],
-  authors: [{ name: "Deep Digital Labs" }],
+  metadataBase: new URL("https://deepdigitallabs.com"),
+  title: "Deep Digital Labs | Website & Software Development Company in Pune",
+  description: "Deep Digital Labs builds high-speed websites, custom business software, ERPs, and mobile apps for businesses in Pune. Simple process, 2 to 3 weeks delivery, direct developer access.",
+  authors: [{ name: "Deepak Dukare", url: "https://deepdigitallabs.com" }],
+  alternates: {
+    canonical: "https://deepdigitallabs.com",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
-    title: "Deep Digital Labs | Website Development Company in Pune",
-    description: "Deep Digital Labs builds websites, apps and online stores for businesses in Pune. Simple process, fast delivery, direct developer access. Get a free consultation.",
+    title: "Deep Digital Labs | Website & Software Development Company in Pune",
+    description: "Deep Digital Labs builds high-speed websites, custom business software, ERPs, and mobile apps for businesses in Pune. Simple process, 2 to 3 weeks delivery, direct developer access.",
     url: "https://deepdigitallabs.com",
     siteName: "Deep Digital Labs",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Deep Digital Labs - Website & Software Development Company in Pune",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deep Digital Labs | Website Development Company in Pune",
-    description: "Deep Digital Labs builds websites, apps and online stores for businesses in Pune. Simple process, fast delivery, direct developer access.",
+    title: "Deep Digital Labs | Website & Software Development Company in Pune",
+    description: "Websites, custom software, ERPs, and mobile apps engineered for growing businesses in Pune. 100% code ownership.",
     creator: "@deepdigitallabs",
+    images: ["/og-image.png"],
   },
-  metadataBase: new URL("https://deepdigitallabs.com"),
 };
 
 export default function RootLayout({

@@ -7,13 +7,14 @@ import {
   Menu, 
   X, 
   ChevronDown, 
-  Code2,
-  Smartphone,
+  Code2, 
+  Smartphone, 
   TrendingUp, 
   ArrowRight, 
-  Sparkles,
-  Layers,
-  Bot
+  Sparkles, 
+  Layers, 
+  Bot,
+  MessageSquare
 } from 'lucide-react';
 import { DiscoveryCallModal } from '@/components/ui/DiscoveryCallModal';
 
@@ -40,22 +41,18 @@ export function Navbar() {
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-6xl">
         <div className="flex items-center justify-between px-5 sm:px-6 py-2.5 bg-white/90 dark:bg-[#0E1117]/90 backdrop-blur-xl border border-neutral-200 dark:border-white/10 rounded-2xl shadow-sm transition-all duration-150">
           
-          {/* Brand Logo */}
+          {/* Brand Logo - Full Logo */}
           <Link href="/" className="group flex items-center gap-2.5 sm:gap-3" aria-label="Deep Digital Labs Home">
             <div className="relative h-8 sm:h-9 flex items-center shrink-0">
               <Image
-                src="/images/logo-single.png"
-                alt="Deep Digital Labs"
-                width={1536}
-                height={1024}
+                src="/images/logo-full.png"
+                alt="Deep Digital Labs - Pune"
+                width={600}
+                height={203}
                 priority
-                unoptimized
-                className="h-8 sm:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                className="h-7 sm:h-8 w-auto object-contain transition-transform duration-200 group-hover:scale-102"
               />
             </div>
-            <span className="text-sm sm:text-base md:text-lg font-bold tracking-tight text-neutral-900 dark:text-white font-display whitespace-nowrap">
-              Deep <span className="text-[#E8623C]">Digital</span> Labs
-            </span>
           </Link>
 
           {/* Desktop Nav Links */}
@@ -251,6 +248,16 @@ export function Navbar() {
 
           {/* Desktop Right Actions */}
           <div className="hidden sm:flex items-center gap-2.5">
+            <a
+              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20an%20inquiry%20about%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-neutral-700 dark:text-neutral-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-neutral-100 dark:hover:bg-white/5 transition-colors border border-transparent hover:border-emerald-500/20"
+            >
+              <MessageSquare className="w-3.5 h-3.5 text-emerald-500" />
+              <span className="hidden xl:inline">+91 77560 63128</span>
+              <span className="xl:hidden">WhatsApp</span>
+            </a>
             <button
               onClick={() => setDiscoveryModalOpen(true)}
               className="inline-flex items-center gap-2 bg-[#E8623C] hover:bg-[#D7532F] text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-xs active:scale-98 cursor-pointer"
@@ -261,13 +268,17 @@ export function Navbar() {
           </div>
 
           {/* Mobile Actions */}
-          <div className="flex lg:hidden items-center gap-1.5">
-            <button
-              onClick={() => setDiscoveryModalOpen(true)}
-              className="bg-[#E8623C] text-white px-2.5 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1 cursor-pointer"
+          <div className="flex lg:hidden items-center gap-2">
+            <a
+              href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20an%20inquiry%20about%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-1.5 rounded-lg text-xs font-semibold inline-flex items-center gap-1 cursor-pointer"
+              aria-label="Chat on WhatsApp"
             >
-              Start a Project
-            </button>
+              <MessageSquare className="w-3.5 h-3.5" />
+              <span>WhatsApp</span>
+            </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-1.5 rounded-lg text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-white/10 transition-colors"

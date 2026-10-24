@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { 
   Building2, 
@@ -43,6 +43,16 @@ export function IndustryServicesDirectory() {
   const [selectedSolution, setSelectedSolution] = useState<string>('All Solutions');
   const [selectedCategory, setSelectedCategory] = useState<string>('All Industries');
   const [searchQuery, setSearchQuery] = useState<string>('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const cat = params.get('category');
+      if (cat) {
+        setSelectedCategory(cat);
+      }
+    }
+  }, []);
 
   const isFiltered = selectedSolution !== 'All Solutions' || selectedCategory !== 'All Industries' || searchQuery.trim() !== '';
 

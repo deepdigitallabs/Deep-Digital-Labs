@@ -98,79 +98,79 @@ export function Footer() {
             </div>
           </div>
 
-          {/* 1. Services */}
-          <div className="col-span-1 lg:col-span-2 space-y-3">
+          {/* 1. Services & Solutions (Merged) */}
+          <div className="col-span-1 lg:col-span-3 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white font-mono">
-              Services
+              Services &amp; Solutions
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="/services/websites-web-apps" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Web Apps &amp; SaaS
+                  Business Websites &amp; Portals
                 </Link>
               </li>
               <li>
                 <Link href="/services/business-software-saas" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Business Software
+                  Custom ERP &amp; Billing Software
                 </Link>
               </li>
               <li>
                 <Link href="/services/mobile-app-development" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Mobile Apps
+                  Flutter Mobile Apps (iOS &amp; Android)
                 </Link>
               </li>
               <li>
                 <Link href="/services/chat-bot-development" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  AI &amp; Automation
+                  AI Chatbots &amp; WhatsApp Automation
                 </Link>
               </li>
               <li>
                 <Link href="/services/digital-growth-seo" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Growth &amp; SEO
+                  Local SEO &amp; Google Maps Growth
                 </Link>
               </li>
               <li>
                 <Link href="/ecommerce-website-design-pune" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Pune E-Commerce
+                  Pune E-Commerce Web Stores
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* 2. Capabilities */}
+          {/* 2. Pune Localities Served */}
           <div className="col-span-1 lg:col-span-2 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white font-mono">
-              Capabilities
+              Pune Areas Served
             </h3>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
               <li>
-                <Link href="/services/websites-web-apps" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Business Websites
+                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
+                  Baner &amp; Balewadi
                 </Link>
               </li>
               <li>
-                <Link href="/services/business-software-saas" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  ERP &amp; Software
+                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
+                  Hinjewadi Tech Hub
                 </Link>
               </li>
               <li>
-                <Link href="/services/mobile-app-development" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Mobile Apps
+                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
+                  Kothrud &amp; Karve Nagar
                 </Link>
               </li>
               <li>
-                <Link href="/services/chat-bot-development" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  AI &amp; Automation
+                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
+                  Wakad &amp; Pimple Saudagar
                 </Link>
               </li>
               <li>
-                <Link href="/services/digital-growth-seo" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  SEO &amp; Visibility
+                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
+                  Pimpri-Chinchwad (PCMC)
                 </Link>
               </li>
               <li>
-                <Link href="/ecommerce-website-design-pune" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Pune E-Commerce
+                <Link href="/pune-website-development-company" className="hover:text-[#E8623C] dark:hover:text-[#E8623C] transition-colors py-0.5 block">
+                  Viman Nagar &amp; Kharadi
                 </Link>
               </li>
             </ul>
@@ -184,12 +184,12 @@ export function Footer() {
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="/about" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  About Us
+                  About Deepak &amp; Team
                 </Link>
               </li>
               <li>
                 <Link href="/case-studies" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Case Studies
+                  Verified Case Studies
                 </Link>
               </li>
               <li>
@@ -198,22 +198,27 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Insights &amp; Blog
+                <Link href="/industries" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
+                  Industries Directory
                 </Link>
               </li>
               <li>
-                <Link href="/pune-website-development-company" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
-                  Pune Center
+                <Link href="/blog" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
+                  Tech Insights &amp; Guides
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5 block">
+                  Contact Pune Studio
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* 4. Connect */}
-          <div className="col-span-1 lg:col-span-2 space-y-3">
+          <div className="col-span-1 lg:col-span-3 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white font-mono">
-              Connect
+              Direct Contact
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
@@ -221,10 +226,19 @@ export function Footer() {
                   href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20want%20to%20discuss%20a%20project." 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-neutral-600 hover:text-emerald-500 dark:text-neutral-400 dark:hover:text-emerald-400 transition-colors py-0.5"
+                >
+                  <MessageSquare className="w-3.5 h-3.5 text-emerald-500" />
+                  <span>WhatsApp: +91 77560 63128</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="tel:+917756063128" 
                   className="inline-flex items-center gap-2 text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5"
                 >
-                  <MessageSquare className="w-3.5 h-3.5" />
-                  <span>WhatsApp Chat</span>
+                  <Phone className="w-3.5 h-3.5 text-[#E8623C]" />
+                  <span>Call: +91 77560 63128</span>
                 </a>
               </li>
               <li>
@@ -232,19 +246,19 @@ export function Footer() {
                   href="mailto:deepdigitallabs@gmail.com" 
                   className="inline-flex items-center gap-2 text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5"
                 >
-                  <Mail className="w-3.5 h-3.5" />
-                  <span>Email Us</span>
+                  <Mail className="w-3.5 h-3.5 text-[#E8623C]" />
+                  <span>deepdigitallabs@gmail.com</span>
                 </a>
               </li>
               <li>
                 <a 
-                  href="https://www.instagram.com/deepdigitallabs/" 
+                  href="https://maps.google.com/?q=Deep+Digital+Labs+Pune" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5"
+                  className="inline-flex items-center gap-2 text-neutral-600 hover:text-amber-500 dark:text-neutral-400 dark:hover:text-amber-400 transition-colors py-0.5 font-medium"
                 >
-                  <InstagramIcon className="w-3.5 h-3.5" />
-                  <span>Instagram</span>
+                  <MapPin className="w-3.5 h-3.5 text-amber-500" />
+                  <span>Google Business: 5.0 ★★★★★</span>
                 </a>
               </li>
               <li>
@@ -255,7 +269,18 @@ export function Footer() {
                   className="inline-flex items-center gap-2 text-neutral-600 hover:text-[#E8623C] dark:text-neutral-400 dark:hover:text-[#E8623C] transition-colors py-0.5"
                 >
                   <LinkedInIcon className="w-3.5 h-3.5" />
-                  <span>LinkedIn</span>
+                  <span>LinkedIn · Deep Digital Labs</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.instagram.com/deepdigitallabs/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-neutral-600 hover:text-pink-500 dark:text-neutral-400 dark:hover:text-pink-400 transition-colors py-0.5"
+                >
+                  <InstagramIcon className="w-3.5 h-3.5 text-pink-500" />
+                  <span>Instagram: @deepdigitallabs</span>
                 </a>
               </li>
             </ul>
