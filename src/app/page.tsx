@@ -66,7 +66,7 @@ export default function HomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [contactName, setContactName] = useState('');
   const [contactPhone, setContactPhone] = useState('');
-  const [contactService, setContactService] = useState('Starter Website (₹499/mo)');
+  const [contactService, setContactService] = useState('Business Website Development (from ₹499/mo)');
   const [contactMessage, setContactMessage] = useState('');
   const [contactSubmitted, setContactSubmitted] = useState(false);
 
@@ -949,49 +949,61 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-             SECTION 8: ACCESSIBLE MONTHLY SUBSCRIPTION PLANS
+             SECTION 8: TRANSPARENT PRICING FOR ALL 5 CORE SERVICES
              ========================================================================= */}
       <section className="w-full py-20 relative bg-white dark:bg-[#0B0D11] border-b border-neutral-200 dark:border-white/10" id="pricing">
         <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           
           <div className="flex flex-col gap-2 mb-14 text-center items-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-mono text-xs font-semibold">
-              Zero Heavy Upfront Costs · Hosting &amp; Updates Included
+              Transparent Pricing · Zero Hidden Platform Fees · Flexible Plans
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-neutral-900 dark:text-white">
-              Accessible monthly plans. Zero stress.
+              Transparent plans for all 5 core services.
             </h2>
-            <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl">
-              Get your business online today with cloud hosting, SSL, security, and updates included. Cancel or upgrade anytime.
+            <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl">
+              Whether you need a quick business website, local SEO ranking, 24/7 AI chatbots, custom ERP software, or a mobile app — select the service package tailored to your goals.
             </p>
           </div>
 
-          {/* 3 Tier Architecture */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 items-stretch">
+          {/* 6 Grid Architecture: 5 Core Services + Dedicated Growth Partner */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             
-            {/* Plan 1: Starter Digital — ₹499/mo */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between">
+            {/* Service 1: Business Website Development */}
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between hover:border-[#E8623C]/50 transition-all">
               <div className="flex flex-col gap-4">
                 <div>
-                  <span className="font-mono text-xs text-neutral-500 uppercase font-bold tracking-wider">STARTER DIGITAL</span>
-                  <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mt-1">Basic Website</h3>
-                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2">
-                    Ideal for local shops, clinics, traders, and solo professionals who need a fast, clean digital presence.
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <span className="font-mono text-xs text-[#E8623C] uppercase font-bold tracking-wider">01. WEB PRESENCE</span>
+                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-[#E8623C]/10 text-[#E8623C]">
+                      Most Requested
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2.5 mt-2">
+                    <div className="w-8 h-8 rounded-lg bg-orange-500/10 text-[#E8623C] flex items-center justify-center shrink-0">
+                      <Globe className="w-4 h-4" />
+                    </div>
+                    <h3 className="text-xl font-bold font-display text-neutral-900 dark:text-white">
+                      Business Website Development
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed">
+                    Fast, modern mobile-friendly websites that turn local visitors into phone calls and WhatsApp inquiries.
                   </p>
                 </div>
                 <div className="py-4 border-y border-neutral-100 dark:border-white/10">
-                  <span className="font-mono text-xs text-neutral-500 font-medium">MONTHLY PLAN</span>
-                  <div className="text-3xl sm:text-4xl font-bold font-display text-neutral-900 dark:text-white mt-1">
-                    ₹499 <span className="text-sm font-normal text-neutral-500">/ month</span>
+                  <span className="font-mono text-xs text-neutral-500 font-medium">PLANS STARTING FROM</span>
+                  <div className="text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
+                    ₹499 <span className="text-xs font-normal text-neutral-500">/ mo</span> <span className="text-xs font-normal text-neutral-400">or ₹9,999 fixed</span>
                   </div>
                   <span className="font-mono text-xs text-emerald-600 dark:text-emerald-400 font-semibold">Launch in 3 to 5 days</span>
                 </div>
                 <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Up to 5 mobile-optimized pages</li>
                   <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Direct WhatsApp chat button &amp; click-to-call</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Google Map location &amp; contact card</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Cloud hosting, domain &amp; SSL included</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Monthly content &amp; image updates included</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Google Map location &amp; address integration</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Free SSL, domain setup &amp; cloud hosting</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> 100% code ownership (no platform ransom)</li>
                 </ul>
               </div>
               <div className="pt-6">
@@ -999,39 +1011,234 @@ export default function HomePage() {
                   onClick={() => setCallModalOpen(true)}
                   className="w-full inline-flex items-center justify-center py-3 rounded-xl bg-neutral-100 dark:bg-white/5 hover:bg-neutral-200 dark:hover:bg-white/10 text-neutral-900 dark:text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer border border-neutral-200 dark:border-white/10"
                 >
-                  Start for ₹499/mo
+                  Start Website Plan
                 </button>
               </div>
             </div>
 
-            {/* Plan 2: Business & SEO — ₹999/mo (MOST POPULAR) */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border-2 border-[#E8623C] shadow-sm flex flex-col justify-between relative">
+            {/* Service 2: SEO & Digital Growth */}
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between hover:border-emerald-500/50 transition-all">
               <div className="flex flex-col gap-4">
                 <div>
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-mono text-xs text-[#E8623C] uppercase font-bold tracking-wider">COMPLETE PRESENCE</span>
-                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-[#E8623C]/10 text-[#E8623C]">
-                      Most Popular
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <span className="font-mono text-xs text-emerald-600 dark:text-emerald-400 uppercase font-bold tracking-wider">02. LOCAL SEO</span>
+                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                      Google Maps Rank
                     </span>
                   </div>
-                  <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mt-1">Business &amp; Local SEO</h3>
-                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2">
-                    For growing Pune companies, CA firms, manufacturers, and trade agencies wanting search ranking and inquiries.
+                  <div className="flex items-center gap-2.5 mt-2">
+                    <div className="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                      <TrendingUp className="w-4 h-4" />
+                    </div>
+                    <h3 className="text-xl font-bold font-display text-neutral-900 dark:text-white">
+                      SEO &amp; Digital Growth
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed">
+                    Put your business at the top of Google Maps and Pune local searches when customers look for your services.
                   </p>
                 </div>
                 <div className="py-4 border-y border-neutral-100 dark:border-white/10">
-                  <span className="font-mono text-xs text-neutral-500 font-medium">MONTHLY PLAN</span>
-                  <div className="text-3xl sm:text-4xl font-bold font-display text-neutral-900 dark:text-white mt-1">
-                    ₹999 <span className="text-sm font-normal text-neutral-500">/ month</span>
+                  <span className="font-mono text-xs text-neutral-500 font-medium">PLANS STARTING FROM</span>
+                  <div className="text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
+                    ₹999 <span className="text-xs font-normal text-neutral-500">/ mo</span>
                   </div>
-                  <span className="font-mono text-xs text-[#E8623C] font-semibold">Priority launch &amp; ranking setup</span>
+                  <span className="font-mono text-xs text-[#E8623C] font-semibold">Continuous local optimization</span>
                 </div>
                 <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Full multi-page site &amp; product/service catalog</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Pune Local SEO &amp; Google Maps ranking setup</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Sub-second 0.5s mobile speed guarantee</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Inquiry capture forms with WhatsApp alerts</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Priority weekly updates, backups &amp; uptime care</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Google Business Profile ranking optimization</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Pune local area keywords (Baner, PCMC, etc.)</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Technical on-page SEO &amp; speed audits</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Review generation guidance &amp; map citations</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Monthly call &amp; ranking performance reports</li>
+                </ul>
+              </div>
+              <div className="pt-6">
+                <button
+                  onClick={() => setCallModalOpen(true)}
+                  className="w-full inline-flex items-center justify-center py-3 rounded-xl bg-neutral-100 dark:bg-white/5 hover:bg-neutral-200 dark:hover:bg-white/10 text-neutral-900 dark:text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer border border-neutral-200 dark:border-white/10"
+                >
+                  Start SEO Plan (₹999/mo)
+                </button>
+              </div>
+            </div>
+
+            {/* Service 3: AI Chatbots & Workflow Automation */}
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between hover:border-purple-500/50 transition-all">
+              <div className="flex flex-col gap-4">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <span className="font-mono text-xs text-purple-600 dark:text-purple-400 uppercase font-bold tracking-wider">03. AUTOMATION</span>
+                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400">
+                      24/7 WhatsApp AI
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2.5 mt-2">
+                    <div className="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
+                      <Bot className="w-4 h-4" />
+                    </div>
+                    <h3 className="text-xl font-bold font-display text-neutral-900 dark:text-white">
+                      AI Chatbots &amp; Automation
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed">
+                    Automate manual follow-ups, connect your forms to WhatsApp, and answer customer queries 24/7.
+                  </p>
+                </div>
+                <div className="py-4 border-y border-neutral-100 dark:border-white/10">
+                  <span className="font-mono text-xs text-neutral-500 font-medium">PLANS STARTING FROM</span>
+                  <div className="text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
+                    ₹1,499 <span className="text-xs font-normal text-neutral-500">/ mo</span>
+                  </div>
+                  <span className="font-mono text-xs text-purple-600 dark:text-purple-400 font-semibold">Plug-and-play workflow</span>
+                </div>
+                <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> 24/7 WhatsApp AI automated response bot</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Instant lead capture to Google Sheets / CRM</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Instant WhatsApp notification to sales team</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Automated booking &amp; catalog inquiry flows</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Zero manual repetitive data entry</li>
+                </ul>
+              </div>
+              <div className="pt-6">
+                <button
+                  onClick={() => setCallModalOpen(true)}
+                  className="w-full inline-flex items-center justify-center py-3 rounded-xl bg-neutral-100 dark:bg-white/5 hover:bg-neutral-200 dark:hover:bg-white/10 text-neutral-900 dark:text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer border border-neutral-200 dark:border-white/10"
+                >
+                  Start Automation (₹1,499/mo)
+                </button>
+              </div>
+            </div>
+
+            {/* Service 4: Custom Business Software & SaaS */}
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between hover:border-blue-500/50 transition-all">
+              <div className="flex flex-col gap-4">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <span className="font-mono text-xs text-blue-600 dark:text-blue-400 uppercase font-bold tracking-wider">04. CLOUD SOFTWARE</span>
+                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400">
+                      Operations ERP
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2.5 mt-2">
+                    <div className="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
+                      <Database className="w-4 h-4" />
+                    </div>
+                    <h3 className="text-xl font-bold font-display text-neutral-900 dark:text-white">
+                      Custom Business Software &amp; SaaS
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed">
+                    Custom CRMs, mini-ERPs, billing portals, and dashboards tailored to your exact business workflow.
+                  </p>
+                </div>
+                <div className="py-4 border-y border-neutral-100 dark:border-white/10">
+                  <span className="font-mono text-xs text-neutral-500 font-medium">PLANS STARTING FROM</span>
+                  <div className="text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
+                    ₹1,999 <span className="text-xs font-normal text-neutral-500">/ mo</span> <span className="text-xs font-normal text-neutral-400">or milestone</span>
+                  </div>
+                  <span className="font-mono text-xs text-blue-600 dark:text-blue-400 font-semibold">Bespoke system architecture</span>
+                </div>
+                <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Custom billing, invoice generation &amp; GST logic</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Role-based logins for staff, accountants &amp; admin</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Real-time inventory tracking &amp; dispatch status</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Automated WhatsApp invoice &amp; report sending</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> 100% database &amp; software repository ownership</li>
+                </ul>
+              </div>
+              <div className="pt-6">
+                <button
+                  onClick={() => setCallModalOpen(true)}
+                  className="w-full inline-flex items-center justify-center py-3 rounded-xl bg-neutral-100 dark:bg-white/5 hover:bg-neutral-200 dark:hover:bg-white/10 text-neutral-900 dark:text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer border border-neutral-200 dark:border-white/10"
+                >
+                  Discuss Custom System
+                </button>
+              </div>
+            </div>
+
+            {/* Service 5: Mobile App Development */}
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between hover:border-amber-500/50 transition-all">
+              <div className="flex flex-col gap-4">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <span className="font-mono text-xs text-amber-600 dark:text-amber-400 uppercase font-bold tracking-wider">05. MOBILE APPS</span>
+                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400">
+                      Android &amp; iOS
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2.5 mt-2">
+                    <div className="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                      <Smartphone className="w-4 h-4" />
+                    </div>
+                    <h3 className="text-xl font-bold font-display text-neutral-900 dark:text-white">
+                      Mobile App Development
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed">
+                    Android and iOS apps for your customers and on-field team members built with Flutter for native speed.
+                  </p>
+                </div>
+                <div className="py-4 border-y border-neutral-100 dark:border-white/10">
+                  <span className="font-mono text-xs text-neutral-500 font-medium">PLANS STARTING FROM</span>
+                  <div className="text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
+                    ₹2,499 <span className="text-xs font-normal text-neutral-500">/ mo</span> <span className="text-xs font-normal text-neutral-400">or milestone</span>
+                  </div>
+                  <span className="font-mono text-xs text-amber-600 dark:text-amber-400 font-semibold">Cross-platform Flutter build</span>
+                </div>
+                <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Native Android &amp; iOS mobile application</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Offline data caching for rural/weak connectivity</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Instant push notifications &amp; order updates</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Payment gateway integration &amp; WhatsApp order flow</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Play Store &amp; App Store deployment assistance</li>
+                </ul>
+              </div>
+              <div className="pt-6">
+                <button
+                  onClick={() => setCallModalOpen(true)}
+                  className="w-full inline-flex items-center justify-center py-3 rounded-xl bg-neutral-100 dark:bg-white/5 hover:bg-neutral-200 dark:hover:bg-white/10 text-neutral-900 dark:text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer border border-neutral-200 dark:border-white/10"
+                >
+                  Launch Mobile App
+                </button>
+              </div>
+            </div>
+
+            {/* Service 6: Dedicated Growth Partner */}
+            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border-2 border-[#E8623C] shadow-sm flex flex-col justify-between hover:border-[#E8623C] transition-all">
+              <div className="flex flex-col gap-4">
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <span className="font-mono text-xs text-[#E8623C] uppercase font-bold tracking-wider">06. ALL-IN-ONE TEAM</span>
+                    <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-[#E8623C]/10 text-[#E8623C]">
+                      Full Tech Partner
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2.5 mt-2">
+                    <div className="w-8 h-8 rounded-lg bg-orange-500/10 text-[#E8623C] flex items-center justify-center shrink-0">
+                      <Sparkles className="w-4 h-4" />
+                    </div>
+                    <h3 className="text-xl font-bold font-display text-neutral-900 dark:text-white">
+                      Dedicated Growth Partner
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2.5 leading-relaxed">
+                    Your on-call senior engineering team for continuous development, feature additions, speed audits, and updates.
+                  </p>
+                </div>
+                <div className="py-4 border-y border-neutral-100 dark:border-white/10">
+                  <span className="font-mono text-xs text-neutral-500 font-medium">MONTHLY RETAINER</span>
+                  <div className="text-3xl font-bold font-display text-neutral-900 dark:text-white mt-1">
+                    ₹4,999 <span className="text-xs font-normal text-neutral-500">/ mo</span>
+                  </div>
+                  <span className="font-mono text-xs text-[#E8623C] font-semibold">Priority 24-48h turnaround</span>
+                </div>
+                <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Direct WhatsApp access to lead engineering team</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Rapid turnarounds on new landing pages &amp; features</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Continuous security, backups &amp; uptime monitoring</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Monthly Google search rankings &amp; speed audits</li>
+                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Flexible scope (cancel or pause anytime)</li>
                 </ul>
               </div>
               <div className="pt-6">
@@ -1039,42 +1246,7 @@ export default function HomePage() {
                   onClick={() => setCallModalOpen(true)}
                   className="w-full inline-flex items-center justify-center py-3 rounded-xl bg-[#E8623C] hover:bg-[#D7532F] text-white font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-xs active:scale-[0.98]"
                 >
-                  Choose ₹999/mo Plan
-                </button>
-              </div>
-            </div>
-
-            {/* Plan 3: Custom Systems & E-Commerce — ₹1,999/mo */}
-            <div className="bg-white dark:bg-[#12151C] rounded-2xl p-7 sm:p-8 border border-neutral-200/90 dark:border-white/10 shadow-xs flex flex-col justify-between">
-              <div className="flex flex-col gap-4">
-                <div>
-                  <span className="font-mono text-xs text-neutral-500 uppercase font-bold tracking-wider">TAILORED SYSTEMS</span>
-                  <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white mt-1">Custom Software &amp; Apps</h3>
-                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2">
-                    For businesses needing billing apps, customer portals, inventory tracking, mobile apps, or ongoing automation.
-                  </p>
-                </div>
-                <div className="py-4 border-y border-neutral-100 dark:border-white/10">
-                  <span className="font-mono text-xs text-neutral-500 font-medium">MONTHLY PLAN</span>
-                  <div className="text-3xl sm:text-4xl font-bold font-display text-neutral-900 dark:text-white mt-1">
-                    ₹1,999 <span className="text-sm font-normal text-neutral-500">/ month</span>
-                  </div>
-                  <span className="font-mono text-xs text-[#E8623C] font-semibold">Dedicated developer sprints</span>
-                </div>
-                <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Custom billing, CRM or booking system</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Android &amp; iOS mobile application maintenance</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Role-based logins for staff &amp; administrators</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> WhatsApp automated messages &amp; payment gateway</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-[#E8623C] shrink-0" /> Continuous feature improvements &amp; direct support</li>
-                </ul>
-              </div>
-              <div className="pt-6">
-                <button
-                  onClick={() => setCallModalOpen(true)}
-                  className="w-full inline-flex items-center justify-center py-3 rounded-xl bg-neutral-100 dark:bg-white/5 hover:bg-neutral-200 dark:hover:bg-white/10 text-neutral-900 dark:text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer border border-neutral-200 dark:border-white/10"
-                >
-                  Start for ₹1,999/mo
+                  Join Growth Partner
                 </button>
               </div>
             </div>
@@ -1274,11 +1446,12 @@ export default function HomePage() {
                       onChange={(e) => setContactService(e.target.value)}
                       className="w-full px-4 py-2.5 rounded-xl bg-neutral-50 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-sm text-neutral-900 dark:text-white focus:outline-none focus:border-[#E8623C]"
                     >
-                      <option value="Starter Website (₹499/mo)">Starter Website (₹499 / month)</option>
-                      <option value="Business & SEO Website (₹999/mo)">Business &amp; Local SEO (₹999 / month)</option>
-                      <option value="Custom Software & Apps (₹1,999/mo)">Custom Software &amp; Apps (₹1,999 / month)</option>
-                      <option value="Mobile App Development">Mobile App Development (Android &amp; iOS)</option>
-                      <option value="One-Time Custom Milestone Project">One-Time Custom Milestone Project</option>
+                      <option value="Business Website Development (from ₹499/mo)">Business Website Development (from ₹499/mo or ₹9,999)</option>
+                      <option value="SEO & Digital Growth (from ₹999/mo)">SEO &amp; Digital Growth (from ₹999/mo)</option>
+                      <option value="AI Chatbots & Automation (from ₹1,499/mo)">AI Chatbots &amp; Workflow Automation (from ₹1,499/mo)</option>
+                      <option value="Custom Business Software & SaaS (from ₹1,999/mo)">Custom Business Software &amp; SaaS (from ₹1,999/mo)</option>
+                      <option value="Mobile App Development (from ₹2,499/mo)">Mobile App Development (from ₹2,499/mo)</option>
+                      <option value="Dedicated Growth Partner (₹4,999/mo)">Dedicated Growth Partner (₹4,999/mo retainer)</option>
                     </select>
                   </div>
 
