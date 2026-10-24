@@ -384,43 +384,43 @@ export default function WhyUsPage() {
         </div>
       </section>
 
-      {/* FINAL CALL TO ACTION (Navy #1B1F4B With Animated Background) */}
-      <section className="py-24 sm:py-32 bg-[#1B1F4B] text-white relative overflow-hidden bg-[radial-gradient(#ffffff15_1px,transparent_1px)] [background-size:24px_24px]">
-        {/* Animated Background Mesh Orbs */}
+      {/* FINAL CALL TO ACTION (Soft Lavender #F7F5FF With Animated Brand Mesh) */}
+      <section className="py-24 sm:py-32 bg-[#F7F5FF] text-[#4B5070] relative overflow-hidden bg-[radial-gradient(rgba(27,31,75,0.08)_1.2px,transparent_1.2px)] [background-size:24px_24px] border-t border-neutral-200/70">
+        {/* Animated Background Mesh Orbs (Tuned for Soft Lavender) */}
         <div 
           aria-hidden="true" 
-          className="pointer-events-none absolute -top-32 -left-20 w-[600px] h-[450px] bg-gradient-to-br from-[#FF7A1A]/30 via-[#E8338C]/25 to-transparent rounded-full blur-3xl -z-10 animate-mesh-pulse" 
+          className="pointer-events-none absolute -top-32 -left-20 w-[600px] h-[450px] bg-gradient-to-br from-[#FF7A1A]/16 via-[#E8338C]/14 to-transparent rounded-full blur-3xl -z-10 animate-mesh-pulse" 
         />
         <div 
           aria-hidden="true" 
-          className="pointer-events-none absolute -bottom-32 -right-20 w-[650px] h-[500px] bg-gradient-to-tl from-[#6A3DE8]/35 via-[#E8338C]/20 to-transparent rounded-full blur-3xl -z-10 animate-float-slow" 
+          className="pointer-events-none absolute -bottom-32 -right-20 w-[650px] h-[500px] bg-gradient-to-tl from-[#6A3DE8]/18 via-[#E8338C]/12 to-transparent rounded-full blur-3xl -z-10 animate-float-slow" 
         />
         <div 
           aria-hidden="true" 
-          className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[350px] bg-gradient-to-r from-[#FFB81C]/20 via-[#FF7A1A]/15 to-[#E8338C]/15 rounded-full blur-3xl -z-10 animate-float-reverse" 
+          className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-gradient-to-r from-[#FFB81C]/14 via-[#FF7A1A]/10 to-[#E8338C]/10 rounded-full blur-3xl -z-10 animate-float-reverse" 
         />
 
         {/* Floating Decorative Rings */}
         <div 
           aria-hidden="true"
-          className="pointer-events-none absolute top-10 right-12 w-40 h-40 rounded-full border border-white/10 animate-float-slow -z-10 hidden md:block" 
+          className="pointer-events-none absolute top-10 right-12 w-40 h-40 rounded-full border border-[#1B1F4B]/10 animate-float-slow -z-10 hidden md:block" 
         />
         <div 
           aria-hidden="true"
-          className="pointer-events-none absolute bottom-12 left-12 w-28 h-28 rounded-full border border-white/10 animate-float -z-10 hidden md:block" 
+          className="pointer-events-none absolute bottom-12 left-12 w-28 h-28 rounded-full border border-[#1B1F4B]/10 animate-float -z-10 hidden md:block" 
         />
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-7 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-semibold backdrop-blur-md shadow-lg shadow-black/10">
-            <Sparkles className="w-3.5 h-3.5 text-[#FFB81C] animate-pulse" />
-            <span className="text-white">Direct WhatsApp &amp; Inquiries</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-neutral-200/90 text-xs font-semibold text-[#1B1F4B] shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#FF7A1A] animate-pulse" />
+            <span>Direct WhatsApp &amp; Inquiries</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-display leading-[1.12]">
-            Ready to build something that <span className="bg-gradient-to-r from-[#FFB81C] via-[#FF7A1A] to-[#E8338C] bg-clip-text text-transparent">works</span>?
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#1B1F4B] font-display leading-[1.12]">
+            Ready to build something that <span className="brand-gradient-text">works</span>?
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-[#4B5070] max-w-2xl mx-auto leading-relaxed">
             Tell us about your business goals. We’ll review your requirements and reply directly on WhatsApp with honest advice and a clear quote.
           </p>
 
@@ -447,7 +447,7 @@ export default function WhyUsPage() {
             </a>
           </div>
 
-          <p className="text-xs text-slate-400 font-medium pt-1">
+          <p className="text-xs text-[#4B5070]/80 font-medium pt-1">
             ⚡ Quick response under 15 minutes · No sales pressure · Free consultation
           </p>
         </div>
