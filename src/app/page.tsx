@@ -186,11 +186,6 @@ export default function HomePage() {
             {/* Left Column: Heading, Subline & CTAs */}
             <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
               
-              {/* Availability Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-neutral-200/80 bg-white text-xs font-semibold text-[#1B1F4B] shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
-                <span>Pune Studio · Available for New Projects</span>
-              </div>
 
               {/* H1 with Gradient & Blinking Cursor on Key Word */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.12] text-[#1B1F4B] tracking-tight">

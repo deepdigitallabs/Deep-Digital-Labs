@@ -39,43 +39,43 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#1B1F4B] border-t border-white/10 pt-16 pb-12 relative text-white transition-colors duration-150">
+    <footer className="bg-[#F7F5FF] border-t border-neutral-200/80 pt-16 pb-12 relative text-[#4B5070] transition-colors duration-150">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Main 4-Column Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-neutral-200/70">
           
           {/* Brand Info (4 Columns) */}
           <div className="sm:col-span-2 lg:col-span-4 space-y-4">
-            <Link href="/" className="inline-flex items-center group bg-white rounded-2xl px-4 py-2 shadow-sm" aria-label="Deep Digital Labs Home">
+            <Link href="/" className="inline-flex items-center group" aria-label="Deep Digital Labs Home">
               <Image 
                 src="/images/logo-full.png" 
                 alt="Deep Digital Labs" 
                 width={600} 
                 height={203} 
-                className="h-9 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                className="h-10 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               />
             </Link>
 
-            <p className="text-sm text-neutral-300 max-w-sm leading-relaxed">
+            <p className="text-sm text-[#4B5070] max-w-sm leading-relaxed">
               We build websites, custom business software, and mobile apps for businesses in Pune and across India.
             </p>
 
             {/* Quick Contact & Location */}
-            <div className="space-y-2 pt-1 text-xs text-neutral-300">
+            <div className="space-y-2 pt-1 text-xs text-[#4B5070]">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#FF7A1A] shrink-0" />
                 <span>Pune, Maharashtra, India</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#FF7A1A] shrink-0" />
-                <a href="tel:+917756063128" className="hover:text-white transition-colors font-medium">
+                <a href="tel:+917756063128" className="hover:text-[#E8338C] transition-colors font-medium">
                   +91 77560 63128
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#FF7A1A] shrink-0" />
-                <a href="mailto:deepdigitallabs@gmail.com" className="hover:text-white transition-colors font-medium">
+                <a href="mailto:deepdigitallabs@gmail.com" className="hover:text-[#E8338C] transition-colors font-medium">
                   deepdigitallabs@gmail.com
                 </a>
               </div>
@@ -83,12 +83,12 @@ export function Footer() {
 
             {/* Trust Badges */}
             <div className="flex flex-wrap items-center gap-2 pt-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-medium text-neutral-200">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-neutral-200/80 text-xs font-semibold text-[#1B1F4B] shadow-2xs">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#E8338C]" />
                 You own 100% of code
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-medium text-neutral-200">
-                <Zap className="w-3.5 h-3.5 text-[#FFB81C]" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-neutral-200/80 text-xs font-semibold text-[#1B1F4B] shadow-2xs">
+                <Zap className="w-3.5 h-3.5 text-[#FF7A1A]" />
                 Fast on mobile
               </span>
             </div>
@@ -96,37 +96,37 @@ export function Footer() {
 
           {/* 1. Services */}
           <div className="lg:col-span-3 space-y-3">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#1B1F4B] font-mono">
               Services
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services/websites-web-apps" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/services/websites-web-apps" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   Business Websites
                 </Link>
               </li>
               <li>
-                <Link href="/services/business-software-saas" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/services/business-software-saas" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   Custom Business Software
                 </Link>
               </li>
               <li>
-                <Link href="/services/mobile-app-development" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/services/mobile-app-development" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   Mobile Apps (Android &amp; iOS)
                 </Link>
               </li>
               <li>
-                <Link href="/services/chat-bot-development" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/services/chat-bot-development" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   WhatsApp &amp; AI Chatbots
                 </Link>
               </li>
               <li>
-                <Link href="/services/digital-growth-seo" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/services/digital-growth-seo" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   Local SEO &amp; Google Maps
                 </Link>
               </li>
               <li>
-                <Link href="/ecommerce-website-design-pune" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/ecommerce-website-design-pune" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   E-Commerce Websites
                 </Link>
               </li>
@@ -135,37 +135,37 @@ export function Footer() {
 
           {/* 2. Company */}
           <div className="lg:col-span-2 space-y-3">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#1B1F4B] font-mono">
               Company
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/case-studies" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/case-studies" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   Client Case Studies
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/about" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   About Our Team
                 </Link>
               </li>
               <li>
-                <Link href="/why-us" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/why-us" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   Why Choose Us
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/blog" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   Blog &amp; Free Guides
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/contact" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   Contact Studio
                 </Link>
               </li>
               <li>
-                <Link href="/#faq" className="text-neutral-300 hover:text-white transition-colors py-0.5 block">
+                <Link href="/#faq" className="text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 block font-medium">
                   FAQs
                 </Link>
               </li>
@@ -174,7 +174,7 @@ export function Footer() {
 
           {/* 3. Direct Contact */}
           <div className="sm:col-span-2 lg:col-span-3 space-y-3">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-white font-mono">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#1B1F4B] font-mono">
               Direct Contact
             </h3>
             <ul className="space-y-2.5 text-sm">
@@ -183,7 +183,7 @@ export function Footer() {
                   href="https://wa.me/917756063128?text=Hi%20Deep%20Digital%20Labs,%20I%20have%20an%20inquiry%20about%20a%20project." 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors py-0.5 font-medium"
+                  className="inline-flex items-center gap-2 text-[#25D366] hover:text-[#20ba5a] transition-colors py-0.5 font-bold"
                 >
                   <MessageSquare className="w-4 h-4 text-[#25D366]" />
                   <span>WhatsApp: +91 77560 63128</span>
@@ -192,7 +192,7 @@ export function Footer() {
               <li>
                 <a 
                   href="tel:+917756063128" 
-                  className="inline-flex items-center gap-2 text-neutral-300 hover:text-white transition-colors py-0.5"
+                  className="inline-flex items-center gap-2 text-[#4B5070] hover:text-[#1B1F4B] transition-colors py-0.5 font-medium"
                 >
                   <Phone className="w-4 h-4 text-[#FF7A1A]" />
                   <span>Call: +91 77560 63128</span>
@@ -201,7 +201,7 @@ export function Footer() {
               <li>
                 <a 
                   href="mailto:deepdigitallabs@gmail.com" 
-                  className="inline-flex items-center gap-2 text-neutral-300 hover:text-white transition-colors py-0.5"
+                  className="inline-flex items-center gap-2 text-[#4B5070] hover:text-[#1B1F4B] transition-colors py-0.5 font-medium"
                 >
                   <Mail className="w-4 h-4 text-[#E8338C]" />
                   <span>deepdigitallabs@gmail.com</span>
@@ -212,9 +212,9 @@ export function Footer() {
                   href="https://maps.google.com/?q=Deep+Digital+Labs+Pune" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-neutral-300 hover:text-[#FFB81C] transition-colors py-0.5"
+                  className="inline-flex items-center gap-2 text-[#4B5070] hover:text-[#FF7A1A] transition-colors py-0.5 font-medium"
                 >
-                  <MapPin className="w-4 h-4 text-[#FFB81C]" />
+                  <MapPin className="w-4 h-4 text-[#FF7A1A]" />
                   <span>Pune Studio (5.0 ★ Google)</span>
                 </a>
               </li>
@@ -223,7 +223,7 @@ export function Footer() {
                   href="https://www.linkedin.com/company/deepdigitallabs/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-neutral-300 hover:text-white transition-colors py-0.5"
+                  className="inline-flex items-center gap-2 text-[#4B5070] hover:text-[#6A3DE8] transition-colors py-0.5 font-medium"
                 >
                   <LinkedInIcon className="w-4 h-4" />
                   <span>LinkedIn</span>
@@ -234,7 +234,7 @@ export function Footer() {
                   href="https://www.instagram.com/deepdigitallabs/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-neutral-300 hover:text-[#E8338C] transition-colors py-0.5"
+                  className="inline-flex items-center gap-2 text-[#4B5070] hover:text-[#E8338C] transition-colors py-0.5 font-medium"
                 >
                   <InstagramIcon className="w-3.5 h-3.5 text-[#E8338C]" />
                   <span>Instagram: @deepdigitallabs</span>
@@ -246,29 +246,29 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-400">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#4B5070]">
           <div className="text-center sm:text-left">
             © 2026 Deep Digital Labs. All rights reserved.
           </div>
           
-          <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-neutral-200 text-[11px] font-mono">
+          <div className="flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-neutral-200/80 text-[#1B1F4B] text-[11px] font-mono shadow-2xs">
             <span>Crafted in Pune • Built for Indian Scale</span>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-6">
-            <Link href="/privacy" className="hover:text-white transition-colors py-1">
+            <Link href="/privacy" className="hover:text-[#E8338C] transition-colors py-1">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-white transition-colors py-1">
+            <Link href="/terms" className="hover:text-[#E8338C] transition-colors py-1">
               Terms of Service
             </Link>
-            <Link href="/sitemap.xml" className="hover:text-white transition-colors py-1">
+            <Link href="/sitemap.xml" className="hover:text-[#E8338C] transition-colors py-1">
               Sitemap
             </Link>
             <button
               onClick={scrollToTop}
               type="button"
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/15 transition-all cursor-pointer font-medium text-xs"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white hover:bg-neutral-100 text-[#1B1F4B] hover:text-[#E8338C] border border-neutral-200/80 transition-all cursor-pointer font-medium text-xs shadow-2xs"
               aria-label="Scroll back to top of page"
             >
               <span>Back to top</span>
