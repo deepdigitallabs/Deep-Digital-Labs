@@ -1072,64 +1072,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* =========================================================================
-             SECTION 8B: MEET THE LEAD DEVELOPER (AUTHENTICITY & TRUST)
-             ========================================================================= */}
-      <section className="w-full py-16 bg-neutral-50/70 dark:bg-white/[0.02] border-b border-neutral-200 dark:border-white/10">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="bg-white dark:bg-[#12151C] rounded-3xl border border-neutral-200/90 dark:border-white/10 p-7 sm:p-10 shadow-xs flex flex-col md:flex-row items-center gap-8">
-            <div className="w-24 h-24 sm:w-28 sm:sh-28 rounded-2xl bg-gradient-to-tr from-[#1E50FF] via-[#7F26C6] to-[#E8623C] text-white font-display font-black text-3xl sm:text-4xl flex items-center justify-center shrink-0 shadow-md">
-              DD
-            </div>
-            <div className="flex flex-col gap-3 text-center md:text-left flex-1">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <div>
-                  <h3 className="text-2xl font-bold font-display text-neutral-900 dark:text-white">
-                    Deepak Dukare
-                  </h3>
-                  <p className="text-xs font-mono font-medium text-[#E8623C]">
-                    Founder &amp; Senior Lead Engineer · Pune, India
-                  </p>
-                </div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono text-xs font-semibold w-fit mx-auto sm:mx-0">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  Available for new projects
-                </div>
-              </div>
 
-              <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
-                When you partner with Deep Digital Labs, you speak and collaborate directly with me. No junior interns, no middlemen, and no games. I architect high-performance websites and automated software specifically tailored to help Pune and Maharashtra businesses grow revenue.
-              </p>
-
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
-                <a
-                  href="tel:+917756063128"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-xs font-semibold text-neutral-900 dark:text-white hover:border-[#E8623C] transition-colors"
-                >
-                  <Phone className="w-3.5 h-3.5 text-[#E8623C]" />
-                  <span>Call +91 77560 63128</span>
-                </a>
-                <a
-                  href="https://wa.me/917756063128?text=Hi%20Deepak,%20I%20am%20interested%20in%20discussing%20a%20project%20for%20my%20business."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#25D366]/10 border border-[#25D366]/30 text-xs font-semibold text-[#128C7E] dark:text-[#25D366] hover:bg-[#25D366]/20 transition-colors"
-                >
-                  <MessageSquare className="w-3.5 h-3.5" />
-                  <span>Direct WhatsApp</span>
-                </a>
-                <a
-                  href="mailto:deepdigitallabs@gmail.com"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 text-xs font-semibold text-neutral-900 dark:text-white hover:border-[#E8623C] transition-colors"
-                >
-                  <Mail className="w-3.5 h-3.5 text-[#E8623C]" />
-                  <span>Email Deepak</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* =========================================================================
              SECTION 9: FAQS (HIGH-TRUST ACCORDION & 100% CRAWLABLE IN DOM)
